@@ -21,3 +21,7 @@ e.g.
 $ ruby unicorn_test.rb
 ```
 
+## Exercises
+
+Each sub-directory has its own README.
+
