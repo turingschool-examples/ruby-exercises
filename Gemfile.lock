@@ -2,9 +2,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.2.1)
+    minitest-homework (0.0.1)
+      minitest (~> 5.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   minitest (~> 5.2)
+  minitest-homework
