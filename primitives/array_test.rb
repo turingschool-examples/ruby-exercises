@@ -157,13 +157,11 @@ class ArrayTest < Minitest::Homework
     assert_equal __, [].shift
     assert_equal __, [:a].shift
     assert_equal __, [:a, :b].shift
-    assert_equal __, [:a, :b].shift
   end
 
   def test_pop
     assert_equal __, [].pop
     assert_equal __, [:a].pop
-    assert_equal __, [:a, :b].pop
     assert_equal __, [:a, :b].pop
   end
 
