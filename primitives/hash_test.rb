@@ -72,7 +72,7 @@ class HashTest < Minitest::Homework
 
   def test_merge
     h1 = {}.merge({})
-    h2 = {}.merge({"a" => "apple")}
+    h2 = {}.merge({"a" => "apple"})
     h3 = {"a" => "apple"}.merge({"b" => "banana"})
     h4 = {"a" => "apple"}.merge({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.merge({"b" => "breadfruit"})
@@ -86,7 +86,7 @@ class HashTest < Minitest::Homework
 
   def test_update
     h1 = {}.update({})
-    h2 = {}.update({"a" => "apple")}
+    h2 = {}.update({"a" => "apple"})
     h3 = {"a" => "apple"}.update({"b" => "banana"})
     h4 = {"a" => "apple"}.update({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.update({"b" => "breadfruit"})
