@@ -112,7 +112,6 @@ class ArrayTest < Minitest::Homework
     assert_equal __, a2
     assert_equal __, a3
     assert_equal __, a4
-    assert_equal __, a5
   end
 
   def test_pipe
