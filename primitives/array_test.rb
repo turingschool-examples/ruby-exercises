@@ -153,7 +153,7 @@ class ArrayTest < Minitest::Homework
     assert_equal __, [1, "apple", :c].push(["fish", 7, :x])
   end
 
-  def test_unshift
+  def test_shift
     assert_equal __, [].shift
     assert_equal __, [:a].shift
     assert_equal __, [:a, :b].shift
@@ -167,7 +167,7 @@ class ArrayTest < Minitest::Homework
     assert_equal __, [:a, :b].pop
   end
 
-  def test_shift
+  def test_unshift
     assert_equal __, [].unshift(:a)
     assert_equal __, [].unshift(nil)
     assert_equal __, [].unshift([])
