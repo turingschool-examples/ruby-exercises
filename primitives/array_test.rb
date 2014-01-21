@@ -154,10 +154,10 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_unshift
-    assert_equal __, [].unshift
-    assert_equal __, [:a].unshift
-    assert_equal __, [:a, :b].unshift
-    assert_equal __, [:a, :b].unshift
+    assert_equal __, [].shift
+    assert_equal __, [:a].shift
+    assert_equal __, [:a, :b].shift
+    assert_equal __, [:a, :b].shift
   end
 
   def test_pop
