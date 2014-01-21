@@ -1,4 +1,3 @@
-# encoding: utf-8
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
@@ -215,6 +214,18 @@ class ArrayTest < Minitest::Homework
     veggie = veggies.delete_at(1)
     assert_equal __, veggie
     assert_equal __, veggies
+  end
+
+  def test_compact
+    assert_equal __, ["a", "b", "c"].compact
+    assert_equal __, ["a", nil, "b", "c", nil, nil].compact
+    assert_equal __, [nil].compact
+  end
+
+  def test_flatten
+    assert_equal __, [:a, :b, :c].flatten
+    assert_equal __, [:a, [:b, :c]].flatten
+    assert_equal __, [:a, [:b, [:c]], [:d], :e, [:f, :g]].flatten
   end
 
   # Uhm. Halp?
