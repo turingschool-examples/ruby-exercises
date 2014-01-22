@@ -42,6 +42,6 @@ class BlockTest < Minitest::Homework
     invoker2 = Proc.new { |&proc| proc.call }
     return_a = Proc.new { 'a' }
     assert_equal __, invoker1.call(return_a)
-    assert_equal __, invoker1.call(&return_a)
+    assert_equal __, invoker2.call(&return_a)
   end
 end
