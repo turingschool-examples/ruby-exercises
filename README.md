@@ -23,6 +23,13 @@ $ ruby unicorn_test.rb
 
 ## Exercises
 
+* core-types
+* shovel-and-shift
+* comparisons
+* command-query
+* mythical-creatures
+* objects-and-methods
+
 Each sub-directory has its own README.
 
 ## License
