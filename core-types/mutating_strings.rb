@@ -41,7 +41,7 @@ class MutatingStringTest < Minitest::Homework
 
   def test_upcase_1
     s1 = "run!"
-    s2 = s1.capitalize
+    s2 = s1.upcase
     maybe s1.object_id == s2.object_id
     assert_equal __, s1
     assert_equal __, s2
@@ -49,7 +49,7 @@ class MutatingStringTest < Minitest::Homework
 
   def test_upcase_2
     s1 = "run!"
-    s2 = s1.capitalize!
+    s2 = s1.upcase!
     maybe s1.object_id == s2.object_id
     assert_equal __, s1
     assert_equal __, s2
