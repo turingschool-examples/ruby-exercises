@@ -58,7 +58,7 @@ class MutatingStringTest < Minitest::Homework
 
   def test_downcase_1
     s1 = "I'M OVER HERE"
-    s2 = s2.downcase
+    s2 = s1.downcase
     maybe s1.object_id == s2.object_id
     assert_equal __, s1
     assert_equal __, s2
@@ -66,7 +66,7 @@ class MutatingStringTest < Minitest::Homework
 
   def test_downcase_2
     s1 = "I'M OVER HERE"
-    s2 = s2.downcase!
+    s2 = s1.downcase!
     maybe s1.object_id == s2.object_id
     assert_equal __, s1
     assert_equal __, s2
