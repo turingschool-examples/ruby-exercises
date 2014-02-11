@@ -41,6 +41,9 @@ class ArrayTest < Minitest::Homework
 
   def test_join
     assert_equal __, [].join
+    assert_equal __, [].join(' ')
+    assert_equal __, [].join(' - ')
+    assert_equal __, [].join(' and ')
     assert_equal __, ["a", "b", "c"].join
     assert_equal __, ["a", "b", "c"].join("")
     assert_equal __, ["a", "b", "c"].join(" ")
