@@ -32,9 +32,9 @@ class BlockTest < Minitest::Homework
   end
 
   def test_passing_blocks_as_arguments_1
-    upcase = Proc.new { |string| string.upcase }
+    loud = Proc.new { |string| string.upcase }
     assert_equal __, ["a", "b", "c"].map { |string| string.upcase }
-    assert_equal __, ["a", "b", "c"].map(&upcase)
+    assert_equal __, ["a", "b", "c"].map(&loud)
   end
 
   def test_passing_and_receiving_blocks_as_arguments
