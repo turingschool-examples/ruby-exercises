@@ -93,15 +93,18 @@ class ArrayTest < Minitest::Homework
 
   def test_shovel
     a1 = [] << []
-    a1 = [] << nil
-    a2 = [] << :a
-    a3 = [:a] << :b
-    a4 = [:a, :b] << :c
+    a2 = [] << nil
+    a3 = [] << :a
+    a4 = [:a] << :b
+    a5 = [:a, :b] << :c
+    a6 = [:a, :b] << :b
 
     assert_equal __, a1
     assert_equal __, a2
     assert_equal __, a3
     assert_equal __, a4
+    assert_equal __, a5
+    assert_equal __, a6
   end
 
   def test_minus
@@ -109,12 +112,13 @@ class ArrayTest < Minitest::Homework
     a2 = [:a] - []
     a3 = [:a, :b, :c] - [:a]
     a4 = [:a, :b, :c] - [:a, :b]
-    a4 = [:a, :b, :a, :c, :a] - [:a]
+    a5 = [:a, :b, :a, :c, :a] - [:a]
 
     assert_equal __, a1
     assert_equal __, a2
     assert_equal __, a3
     assert_equal __, a4
+    assert_equal __, a5
   end
 
   def test_pipe
@@ -122,11 +126,13 @@ class ArrayTest < Minitest::Homework
     a2 = [] | [:a]
     a3 = [:a] | [:b]
     a4 = [:a, :b] | [:b, :c]
+    a5 = [:a, :b, :b] | [:b, :b, :c]
 
     assert_equal __, a1
     assert_equal __, a2
     assert_equal __, a3
     assert_equal __, a4
+    assert_equal __, a5
   end
 
   def test_ampersand
@@ -134,11 +140,13 @@ class ArrayTest < Minitest::Homework
     a2 = [] & [:a]
     a3 = [:a] & [:b]
     a4 = [:a, :b] & [:b, :c]
+    a5 = [:a, :b, :b] & [:b, :b, :c]
 
     assert_equal __, a1
     assert_equal __, a2
     assert_equal __, a3
     assert_equal __, a4
+    assert_equal __, a5
   end
 
   def test_uniq
