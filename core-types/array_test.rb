@@ -149,6 +149,33 @@ class ArrayTest < Minitest::Homework
     assert_equal __, a5
   end
 
+  class Wrapper
+    attr_reader :value
+    def initialize(value)
+      @value = value
+    end
+
+    def inspect
+      "#<Wrapper #{object_id}>"
+    end
+  end
+
+  def test_intersection_of_objects
+    a = Wrapper.new(:a)
+    b = Wrapper.new(:b)
+    b1 = Wrapper.new(:b)
+    b2 = Wrapper.new(:b)
+    c = Wrapper.new(:c)
+
+    a1 = [a, b] & [b, c]
+    a2 = [a, b1] & [b2, c]
+    a3 = [a, b1, b2] & [b1, b2, c]
+
+    assert_equal [b], a1
+    assert_equal [], a2
+    assert_equal [b1, b2], a3
+  end
+
   def test_uniq
     assert_equal __, [].uniq
     assert_equal __, [:a].uniq
