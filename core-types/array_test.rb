@@ -213,11 +213,13 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_parallel_assignment
-    fruit = ["apple", "banana", "cherry"]
-    a, b, c = fruit
+    fruit = ["apple", "banana", "cherry", "dewberry"]
+
+    a, b, c, d = fruit
     assert_equal __, a
     assert_equal __, b
     assert_equal __, c
+    assert_equal __, d
 
     a, b = fruit
     assert_equal __, a
@@ -230,6 +232,11 @@ class ArrayTest < Minitest::Homework
     *a, b = fruit
     assert_equal __, a
     assert_equal __, b
+
+    a, *b, c = fruit
+    assert_equal __, a
+    assert_equal __, b
+    assert_equal __, c
   end
 
   def test_delete
