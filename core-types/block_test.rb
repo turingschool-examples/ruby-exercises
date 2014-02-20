@@ -12,7 +12,6 @@ class BlockTest < Minitest::Homework
     assert_equal __, Proc.new { 1 }.call
     assert_equal __, Proc.new { |arg| :abc }.call(1)
     assert_equal __, Proc.new { |arg| arg }.call(1)
-    assert_equal __, Proc.new { |arg1, arg2| arg1 + arg2 }.call(1, 2)
   end
 
   def test_environment_visibility
