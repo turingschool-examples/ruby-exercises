@@ -233,6 +233,16 @@ class ArrayTest < Minitest::Homework
     assert_equal __, a
     assert_equal __, b
 
+    a, b, *c = fruit
+    assert_equal __, a
+    assert_equal __, b
+    assert_equal __, c
+
+    *a, b, c = fruit
+    assert_equal __, a
+    assert_equal __, b
+    assert_equal __, c
+
     a, *b, c = fruit
     assert_equal __, a
     assert_equal __, b
