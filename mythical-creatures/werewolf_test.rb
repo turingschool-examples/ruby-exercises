@@ -10,33 +10,39 @@ class WerewolfTest < Minitest::Test
   end
 
   def test_it_has_a_location
+    skip
     werewolf = Werewolf.new("David","London")
     assert_equal "London", werewolf.location
   end
 
   def test_it_is_by_default_in_human_form
+    skip
     werewolf = Werewolf.new("David","London")
     assert werewolf.human?
   end
 
   def test_it_can_change
+    skip
     werewolf = Werewolf.new("David","London")
     assert werewolf.respond_to?(:change!)
   end
 
   def test_when_starting_as_a_human_changing_means_it_is_no_longer_human
+    skip
     werewolf = Werewolf.new("David","London")
     werewolf.change!
     refute werewolf.human?
   end
 
   def test_when_starting_as_a_human_changing_turns_it_into_a_werewolf
+    skip
     werewolf = Werewolf.new("David","London")
     werewolf.change!
     assert werewolf.werewolf?
   end
 
   def test_when_starting_as_a_human_changing_a_second_time_it_becomes_human_again
+    skip
     werewolf = Werewolf.new("David","London")
     assert werewolf.human?
     werewolf.change!
@@ -45,6 +51,7 @@ class WerewolfTest < Minitest::Test
   end
 
   def test_when_starting_as_a_werewolf_changing_a_second_time_it_becomes_werewolf_again
+    skip
     werewolf = Werewolf.new("David","London")
     werewolf.change!
     assert werewolf.werewolf?
