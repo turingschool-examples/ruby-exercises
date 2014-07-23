@@ -72,6 +72,10 @@ class CentaurTest < Minitest::Test
   def test_it_can_lay_down
     skip
     centaur = Centaur.new("George","Palomino")
+    centaur.respond_to?(:lay_down)
+  end
+  
+  def test_after_laying_down_it_is_not_standing
     centaur.lay_down
     refute centaur.standing?
     assert centaur.laying?
@@ -80,7 +84,8 @@ class CentaurTest < Minitest::Test
   def test_it_can_sleep_when_laying_down
     skip
     centaur = Centaur.new("George","Palomino")
-    centaur.respond_to?(:lay_down)
+    centaur.lay_down
+    refute_equal "NO!", centaur.sleep
   end
 
   def test_when_laying_down_it_cannot_shoot_a_bow
