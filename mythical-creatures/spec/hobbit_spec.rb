@@ -1,7 +1,7 @@
 gem 'minitest' '~>5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../hobbit'
+require_relative '../lib/hobbit'
 
 describe Hobbit do
   before do

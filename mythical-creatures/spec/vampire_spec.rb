@@ -1,7 +1,7 @@
 gem 'minitest' '~>5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../vampire'
+require_relative '../lib/vampire'
 
 describe Vampire do
   before do

@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'werewolf'
+require_relative '../lib/werewolf'
 
 class WerewolfTest < Minitest::Test
   def test_it_has_a_name
