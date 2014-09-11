@@ -13,6 +13,4 @@ class Wizard
   def incantation(spell)
     "sudo #{spell}"
   end
-
-
 end
