@@ -18,9 +18,8 @@ describe Pipe do
     expect(@puffing).to be_falsey
   end
 
-  describe "without tobacco it won't light" do
+  describe "lighting the pipe" do
     it "without tobacco it won't light" do
-      # pipe.light
       expect(pipe.light).to be_falsey
     end
   end

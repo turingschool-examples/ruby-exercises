@@ -1,6 +1,4 @@
-require_relative 'wizard'
-
-class Pipe < Wizard
+class Pipe
   def initialize
     @lit = false
     @tobacco = 0
