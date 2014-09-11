@@ -1,23 +1,19 @@
 class Werewolf
-  attr_reader :name
+  attr_reader :name, :location
+  attr_accessor :human
+
   def initialize(name, location = 'London')
     @name = name
     @location = location
     @human = true
   end
 
-  attr_reader :location
-
   def human?
     @human
   end
 
   def change!
-    if @human
-      @human = false
-    else
-      @human = true
-    end
+    @human = !@human
   end
 
   def werewolf?
