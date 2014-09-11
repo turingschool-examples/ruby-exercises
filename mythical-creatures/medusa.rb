@@ -1,5 +1,5 @@
 class Medusa
-  attr_reader :name
+  attr_reader :name, :statues
 
   def initialize(name)
     @name = name
@@ -10,11 +10,6 @@ class Medusa
     @statues << victim
     victim.turn_to_stone
   end
-
-  def statues
-    @statues
-  end
-
 end
 
 class Person
