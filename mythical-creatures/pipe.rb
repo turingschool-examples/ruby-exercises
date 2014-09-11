@@ -1,7 +1,7 @@
 require_relative 'wizard'
 
 class Pipe < Wizard
-  def initialize      # pipe starts out unlit, no puffing, no tobacco
+  def initialize
     @lit = false
     @tobacco = 0
     @puff = false
@@ -11,12 +11,12 @@ class Pipe < Wizard
     @tobacco > 0
   end
 
-  def fill            # @tobacco is int to allow consumption on action
+  def fill
     puts 'Your pipe is full.'
     @tobacco = 4
   end
 
-  def light           # You must both fill and puff on to light!
+  def light           # You must both fill and puff to light!
     if tobacco_left? && @puff
       puts 'Your pipe is lit.'
       @lit = true
