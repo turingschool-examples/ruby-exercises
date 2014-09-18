@@ -1,6 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
-require 'minitest/pride'
+
 require_relative 'clearance'
 require_relative 'item'
 
@@ -12,7 +12,6 @@ class ClearanceTest < Minitest::Test
   end
 
   def test_highest_percent_off_with_one_item
-    skip
     clearance = Clearance.new
     clearance << Item.new("socks", price: 5, discount: 1)
     assert_equal "socks", clearance.best_deal
