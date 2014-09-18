@@ -1,6 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
-require 'minitest/pride'
+
 require_relative 'adult'
 
 class AdultTest < Minitest::Test
@@ -10,7 +10,6 @@ class AdultTest < Minitest::Test
   end
 
   def test_adult_does_not_get_drunk_too_easily
-    skip
     adult = Adult.new
 
     adult.consume_an_alcoholic_beverage
