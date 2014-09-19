@@ -1,6 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
-require 'minitest/pride'
+
 require_relative 'pills'
 
 class PillsTest < Minitest::Test
@@ -10,14 +10,12 @@ class PillsTest < Minitest::Test
   end
 
   def test_popping_a_pill
-    skip
     pills = Pills.new
     pills.pop
     assert_equal 59, pills.count
   end
 
   def test_popping_more_than_one_pill
-    skip
     pills = Pills.new
     pills.pop
     pills.pop

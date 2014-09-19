@@ -1,6 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
-require 'minitest/pride'
+
 require_relative 'milk_bottle'
 
 class MilkBottleTest < Minitest::Test
@@ -10,7 +10,6 @@ class MilkBottleTest < Minitest::Test
   end
 
   def test_spill_some_milk
-    skip
     bottle = MilkBottle.new
     bottle.spill
     refute bottle.full?, "The bottle should no longer be full."

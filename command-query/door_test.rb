@@ -1,6 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
-require 'minitest/pride'
+
 require_relative 'door'
 
 class DoorTest < Minitest::Test
@@ -10,7 +10,6 @@ class DoorTest < Minitest::Test
   end
 
   def test_unlock_the_door
-    skip
     door = Door.new
     door.unlock
     refute door.locked?, "The door should now be unlocked."

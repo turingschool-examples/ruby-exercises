@@ -1,6 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
-require 'minitest/pride'
+
 require_relative 'person'
 
 class PersonTest < Minitest::Test
@@ -10,7 +10,6 @@ class PersonTest < Minitest::Test
   end
 
   def test_a_person_gets_older
-    skip
     person = Person.new
     person.happy_birthday
     assert_equal 1, person.age
