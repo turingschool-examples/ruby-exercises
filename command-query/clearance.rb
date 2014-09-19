@@ -4,7 +4,13 @@ class Clearance
   end
 
   def best_deal
-
+    if @clearance.count < 1
+      nil
+    else
+      item = @clearance.each do |item|
+        item.price <
+      item.name
+    end
   end
 
   def << item
