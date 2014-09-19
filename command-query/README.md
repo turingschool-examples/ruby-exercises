@@ -16,29 +16,29 @@ These exercises focus on these two types of operations.
 
 ## Exercises
 
-- `leather_chair_test.rb`
-- `tire_test.rb`
-- `pills_test.rb`
-- `floor_test.rb`
-- `milk_bottle_test.rb`
-- `person_test.rb`
-- `door_test.rb`
-- `teeth_test.rb`
-- `music_test.rb`
-- `drops_test.rb`
-- `light_test.rb`
-- `baby_test.rb`
-- `kid_test.rb`
-- `beers_test.rb`
-- `teenager_test.rb`
-- `adult_test.rb`
-- `roll_call_test.rb`
-- `santa_test.rb`
+- `leather_chair_test.rb` DONE
+- `tire_test.rb` DONE
+- `pills_test.rb` DONE
+- `floor_test.rb` DONE
+- `milk_bottle_test.rb` DONE
+- `person_test.rb` DONE
+- `door_test.rb` DONE
+- `teeth_test.rb` DONE
+- `music_test.rb` DONE
+- `drops_test.rb` DONE
+- `light_test.rb` DONE
+- `baby_test.rb`  DONE
+- `kid_test.rb` DONE
+- `beers_test.rb` DONE
+- `teenager_test.rb` DONE
+- `adult_test.rb` DONE
+- `roll_call_test.rb` DONE
+- `santa_test.rb` DONE
 - `dog_test.rb`
 - `children_test.rb`
 - `water_test.rb`
-- `appointments_test.rb`
-- `yak_test.rb`
+- `appointments_test.rb` DONE
+- `yak_test.rb` DONE
 - `money_test.rb`
 - `cupcake_test.rb`
 - `student_test.rb`

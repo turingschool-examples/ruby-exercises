@@ -11,7 +11,6 @@ class LeatherChairTest < Minitest::Test
   end
 
   def test_exposing_a_chair_to_sunlight_makes_it_fade
-    skip
     chair = LeatherChair.new
     chair.expose_to_sunlight
     assert chair.faded?, "Exposed chairs are faded."

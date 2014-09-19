@@ -10,7 +10,6 @@ class MusicTest < Minitest::Test
   end
 
   def test_music_is_loud_after_turning_up_the_volume
-    skip
     music = Music.new
     music.turn_up
     assert music.loud?

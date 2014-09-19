@@ -10,7 +10,6 @@ class MilkBottleTest < Minitest::Test
   end
 
   def test_spill_some_milk
-    skip
     bottle = MilkBottle.new
     bottle.spill
     refute bottle.full?, "The bottle should no longer be full."
