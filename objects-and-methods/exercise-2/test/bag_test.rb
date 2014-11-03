@@ -105,7 +105,7 @@ class BagTest < Minitest::Test
     bag << Candy.new("Lifesavers")
 
     candy = bag.take(1)
-    assert_equal "Lifesavers", candy.type
+    assert_equal "Lifesavers", candy.first.type
   end
 end
 
