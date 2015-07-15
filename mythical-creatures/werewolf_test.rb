@@ -60,4 +60,19 @@ class WerewolfTest < Minitest::Test
     assert werewolf.werewolf?
   end
 
+  def test_is_not_hungry_by_default
+    skip
+    # your code here
+  end
+
+  def test_becomes_hungry_after_changing_to_a_werewolf
+    skip
+    # your code here
+  end
+
+  def test_remains_hungry_after_changing_back_to_a_human
+    skip
+    # your code here
+  end
+
 end

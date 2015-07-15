@@ -58,5 +58,27 @@ class HobbitTest < Minitest::Test
     hobbit.celebrate_birthday
     assert hobbit.adult?
   end
+
+  def test_is_old_at_age_of_101
+    skip
+    # create a hobbit
+    # have hobbit age 101 years
+    # check that hobbit.old? returns true
+  end
+
+  def test_hobbit_has_the_ring_if_its_name_is_frodo
+    skip
+    # create a hobbit named Frodo
+    # create a second hobbit named Sam
+    # check that .has_ring? for Frodo returns true
+    # check that .has_ring? for Sam returns false
+  end
+
+  def test_hobbits_are_short
+    skip
+    # create a hobbit
+    # check that .is_short? returns true
+  end
+
 end
 

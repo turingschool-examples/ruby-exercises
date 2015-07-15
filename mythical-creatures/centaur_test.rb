@@ -133,4 +133,19 @@ class CentaurTest < Minitest::Test
     assert_equal "Clop clop clop clop!!!", centaur.run
   end
 
+  def test_becomes_rested_after_drinking_a_potion
+    skip
+    # your code here
+  end
+
+  def test_can_only_drink_potion_while_standing
+    skip
+    # your code here
+  end
+
+  def test_gets_sick_if_drinks_potion_while_rested
+    skip
+    # your code here
+  end
+
 end
