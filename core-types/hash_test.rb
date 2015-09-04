@@ -60,8 +60,13 @@ class HashTest < Minitest::Homework
   end
 
   def test_invert
-    assert_equal __, {"a" => "apple", "b" => "banana"}.invert
-    assert_equal __, {1 => "one", 2 => "two"}.invert
+    h1 = {"a" => "apple", "b" => "banana"}.invert
+    expected_h1 = __
+    assert_equal expected_h1, h1
+    
+    h2 = {1 => "one", 2 => "two"}.invert
+    expected_h2 = __
+    assert_equal expected_h2, h2
   end
 
   def test_length
@@ -76,12 +81,18 @@ class HashTest < Minitest::Homework
     h3 = {"a" => "apple"}.merge({"b" => "banana"})
     h4 = {"a" => "apple"}.merge({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.merge({"b" => "breadfruit"})
+    
+    expected_h1 = __
+    expected_h2 = __
+    expected_h3 = __
+    expected_h4 = __
+    expected_h5 = __
 
-    assert_equal __, h1
-    assert_equal __, h2
-    assert_equal __, h3
-    assert_equal __, h4
-    assert_equal __, h5
+    assert_equal expected_h1, h1
+    assert_equal expected_h2, h2
+    assert_equal expected_h3, h3
+    assert_equal expected_h4, h4
+    assert_equal expected_h5, h5
   end
 
   def test_update
@@ -90,11 +101,17 @@ class HashTest < Minitest::Homework
     h3 = {"a" => "apple"}.update({"b" => "banana"})
     h4 = {"a" => "apple"}.update({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.update({"b" => "breadfruit"})
+    
+    expected_h1 = __
+    expected_h2 = __
+    expected_h3 = __
+    expected_h4 = __
+    expected_h5 = __
 
-    assert_equal __, h1
-    assert_equal __, h2
-    assert_equal __, h3
-    assert_equal __, h4
-    assert_equal __, h5
+    assert_equal expected_h1, h1
+    assert_equal expected_h2, h2
+    assert_equal expected_h3, h3
+    assert_equal expected_h4, h4
+    assert_equal expected_h5, h5
   end
 end
