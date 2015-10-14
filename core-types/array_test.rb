@@ -7,8 +7,8 @@ class ArrayTest < Minitest::Homework
   be_gentle!
 
   def test_empty
-    maybe [].empty?
-    maybe [1, 2, 3].empty?
+    assert_equal __, [].empty?
+    assert_equal __, [1,2,3].empty?
   end
 
   def test_first

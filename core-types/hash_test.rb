@@ -7,10 +7,8 @@ class HashTest < Minitest::Homework
   be_gentle!
 
   def test_empty
-    boolean = {}.empty?
-    maybe boolean
-    boolean = {"a" => "apple"}.empty?
-    maybe boolean
+    assert_equal __, {}.empty?
+    assert_equal __, {"a" => "apple"}.empty?
   end
 
   def test_access
@@ -63,7 +61,7 @@ class HashTest < Minitest::Homework
     h1 = {"a" => "apple", "b" => "banana"}.invert
     expected_h1 = __
     assert_equal expected_h1, h1
-    
+
     h2 = {1 => "one", 2 => "two"}.invert
     expected_h2 = __
     assert_equal expected_h2, h2
