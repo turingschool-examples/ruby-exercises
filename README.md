@@ -5,11 +5,15 @@ A collection of exercises to practice various Ruby concepts.
 ## Getting Started
 
 ```
+$ git clone git@github.com:turingschool/ruby-exercises.git
+$ cd ruby-exercises
 $ gem install bundler
 $ bundle install
 ```
 
 ## Running the Tests
+
+These exercises are executed using minitest. You'll run the test to validate your answer to each exercise.
 
 ```
 $ ruby path/to/test_file.rb
@@ -18,7 +22,7 @@ $ ruby path/to/test_file.rb
 e.g.
 
 ```
-$ ruby unicorn_test.rb
+$ ruby core_types/array_test.rb
 ```
 
 ## Exercises
