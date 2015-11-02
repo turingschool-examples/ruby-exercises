@@ -15,7 +15,7 @@ class MedusaTest < Minitest::Test
 
     assert medusa.respond_to?(:stare)
   end
-skip
+
   def test_has_statues
     skip
     medusa = Medusa.new("Cassiopeia")
