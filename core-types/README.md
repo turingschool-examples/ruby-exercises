@@ -1,19 +1,28 @@
 # Core Types
 
-Do these in any order.
+## Starting with Array Exercises
+
+If you've never used Git you can follow these instructions from your terminal:
+
+```
+$ cd your_project_folder
+$ git clone https://github.com/turingschool/ruby-exercises.git
+$ cd ruby-exercises/core-types
+$ gem install bundler
+$ bundle
+```
+
+Then you can run the Array exercises like this:
+
+```
+$ ruby array_test.rb
+```
+
+The object of this exercise is to make the tests pass.
 
 This will only show you one failure at a time, and it will tell you how many
 passing assertions you have. Read the error message carefully to figure out
 which line of the test suite is failing.
-
-Start by running `bundle install` to make sure that you have all of the
-software that you need.
-
-The object of this exercise is to make the tests pass.
-
-Start off by running the test file in your terminal. For example if you wanted
-to start on the array exercise, you would run this command in the terminal:
-`ruby array_test.rb`
 
 This will run the test file and you will get some error. Read the error and
 make the changes to the array_test.rb file that you need to. Save the file,
