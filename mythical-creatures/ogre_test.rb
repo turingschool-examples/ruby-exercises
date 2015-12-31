@@ -5,7 +5,7 @@ require_relative 'ogre'
 class OgreTest < Minitest::Test
   def test_it_has_a_name
     ogre = Ogre.new('Brak')
-    assert_equal 'Brak', ogre.namegit
+    assert_equal 'Brak', ogre.name
   end
 
   def test_it_can_live_somewhere_by_default
