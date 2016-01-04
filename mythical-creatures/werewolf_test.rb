@@ -70,7 +70,25 @@ class WerewolfTest < Minitest::Test
     # your code here
   end
 
-  def test_remains_hungry_after_changing_back_to_a_human
+  class Victim
+    attr_accessor :status
+
+    def initialize
+      @status = :alive
+    end
+  end
+
+  def test_consumes_a_victim
+    skip
+    # your code here
+  end
+
+  def test_a_werewolf_who_has_consumed_a_victim_is_no_longer_hungry
+    skip
+    # your code here
+  end
+
+  def test_a_werewolf_who_has_consumed_a_victim_makes_the_victim_dead
     skip
     # your code here
   end
