@@ -45,15 +45,4 @@ class MedusaTest < Minitest::Test
     # your code here
   end
 
-  def test_is_alive_by_default
-    skip
-    # your code here
-  end
-
-  def test_is_not_alive_after_five_victims
-    skip
-    # your code here
-  end
-
-
 end
