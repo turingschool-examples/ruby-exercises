@@ -24,7 +24,7 @@ class OgreTest < Minitest::Test
   def test_it_can_meet_humans
     ogre = Ogre.new('Brak')
     human = Human.new
-    assert 'Jane', human.name
+    assert_equal 'Jane', human.name
 
     ogre.encounter
 
@@ -39,10 +39,10 @@ class OgreTest < Minitest::Test
     ogre.encounter
     ogre.encounter
 
-    assert true, human.notices_ogre?
+    assert human.notices_ogre?
   end
 
-  def test_human_notices_ogre_the_sisxth_time
+  def test_human_notices_ogre_the_sixth_time
     ogre = Ogre.new('Brak')
     human = Human.new
 
@@ -50,7 +50,7 @@ class OgreTest < Minitest::Test
       ogre.encounter
     end
 
-    assert true, human.notices_ogre?
+    assert human.notices_ogre?
   end
 
   def test_it_can_swing_a_club
@@ -76,10 +76,10 @@ class OgreTest < Minitest::Test
       ogre.encounter
     end
 
-    assert 0, ogre.encounter_counter
-    assert 2, ogre.swings
-    assert true, ogre.hit?(human)
-    assert_equal true, human.knocked_out?
+    assert_equal 6, ogre.encounter_counter
+    assert_equal 2, ogre.swings
+    assert ogre.hit?(human)
+    assert human.knocked_out?
   end
 
   def test_human_wakes_up_when_ogre_apologizes
@@ -88,6 +88,6 @@ class OgreTest < Minitest::Test
 
     ogre.apologize(human)
 
-    assert_equal false, human.knocked_out?
+    refute human.knocked_out?
   end
 end
