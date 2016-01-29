@@ -27,7 +27,7 @@ class CharacterCountTest < Minitest::Test
     result = cc.count(" ")
     expected = 1
 
-    assert_equal expected, new
+    assert_equal expected, result
   end
 
   def test_it_can_handle_sentences
