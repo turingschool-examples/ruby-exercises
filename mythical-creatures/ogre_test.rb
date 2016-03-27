@@ -24,7 +24,7 @@ class OgreTest < Minitest::Test
     skip
     ogre = Ogre.new('Brak')
     human = Human.new
-    assert 'Jane', human.name
+    assert_equal 'Jane', human.name
     ogre.encounter(human)
     assert_equal 1, human.encounter_counter
   end
@@ -86,8 +86,8 @@ class OgreTest < Minitest::Test
       ogre.encounter(human)
     end
 
-    assert 2, human.encounter_counter
-    assert 2, ogre.swings
+    assert_equal 6, ogre.encounter_counter
+    assert_equal 2, ogre.swings
     assert human.knocked_out?
   end
 
