@@ -1,5 +1,5 @@
 # Ruby Flex-ercises
-Flex your coding muscles
+##### Flex your coding muscles
 
 ------
 
@@ -7,7 +7,7 @@ So, you're feeling good about Ruby basics...
 
 -----
 
-##### Welcome to Ruby Flex-ercises!
+### Welcome to Ruby Flex-ercises!
 
 Ruby Flex-ercises is Ruby objects and methods coding exercise suite including exercises using more advanced enumerables, arrays, and hashes.
 
