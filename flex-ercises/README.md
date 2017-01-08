@@ -1,5 +1,5 @@
 # Ruby Flex-ercises
-##### Flex your coding muscles
+### Flex your coding muscles
 
 ------
 
