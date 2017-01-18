@@ -2,6 +2,7 @@ gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
 require_relative 'medusa'
+require_relative 'person'
 
 class MedusaTest < Minitest::Test
   def test_it_has_a_name
@@ -10,13 +11,11 @@ class MedusaTest < Minitest::Test
   end
 
   def test_when_first_created_she_has_no_statues
-    skip
     medusa = Medusa.new("Cassiopeia")
     assert medusa.statues.empty?
   end
 
   def test_when_staring_at_a_person_she_gains_a_statue
-    skip
     medusa = Medusa.new("Cassiopeia")
     victim = Person.new("Perseus")
 
@@ -26,7 +25,6 @@ class MedusaTest < Minitest::Test
   end
 
   def test_when_staring_at_a_person_that_person_turns_to_stone
-    skip
     medusa = Medusa.new("Cassiopeia")
     victim = Person.new("Perseus")
 
@@ -36,7 +34,23 @@ class MedusaTest < Minitest::Test
   end
 
   def test_can_only_have_three_victims
-    skip
+    medusa = Medusa.new("Cassiopeia")
+    victim = Person.new("Perseus")
+    victim1 = Person.new("Perseus1")
+    victim2 = Person.new("Perseus2")
+    victim3 = Person.new("Perseus3")
+    medusa.stare(victim)
+    assert victim.stoned?
+    medusa.stare(victim1)
+
+
+    assert victim1.stoned?
+    medusa.stare(victim2)
+
+    assert victim2.stoned?
+    medusa.stare(victim3)
+
+    refute victim3.stoned?
     # your code here
   end
 
