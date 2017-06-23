@@ -1,12 +1,9 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 
-class ShiftFixnumTest < Minitest::Homework
-  self.be_gentle!
-
-  def test_object_ids_of_fixnums
+class ShiftIntegerTest < Minitest::Test
+  def test_object_ids_of_integers
     i1 = 1
     i2 = 1
     maybe i1.object_id == i2.object_id
@@ -16,7 +13,8 @@ class ShiftFixnumTest < Minitest::Homework
     maybe (i1 + i2).object_id == 3.object_id
   end
 
-  def test_fixnums_in_binary
+  def test_integers_in_binary
+    skip
     assert_equal __, 1.to_s(2)
     assert_equal __, 2.to_s(2)
     assert_equal __, 3.to_s(2)
@@ -29,7 +27,8 @@ class ShiftFixnumTest < Minitest::Homework
     assert_equal __, 10.to_s(2)
   end
 
-  def test_shift_left_on_fixnum
+  def test_shift_left_on_integer
+    skip
     i1 = 1 << 1
     i2 = 1 << 2
     i3 = 1 << 3
@@ -53,7 +52,8 @@ class ShiftFixnumTest < Minitest::Homework
     assert_equal __, i6.to_s(2)
   end
 
-  def test_shift_left_on_fixnum_with_negative_numbers
+  def test_shift_left_on_integer_with_negative_numbers
+    skip
     i1 = 64 << -1
     i2 = 64 << -2
     i3 = 64 << -3
@@ -69,7 +69,8 @@ class ShiftFixnumTest < Minitest::Homework
     assert_equal __, i6
   end
 
-  def test_shift_right_on_fixnum
+  def test_shift_right_on_integer
+    skip
     i1 = 64 >> 1
     i2 = 64 >> 2
     i3 = 64 >> 3
@@ -85,7 +86,8 @@ class ShiftFixnumTest < Minitest::Homework
     assert_equal __, i6
   end
 
-  def test_shift_right_on_fixnum_with_negative_numbers
+  def test_shift_right_on_integer_with_negative_numbers
+    skip
     i1 = 1 >> -1
     i2 = 1 >> -2
     i3 = 1 >> -3
@@ -101,7 +103,8 @@ class ShiftFixnumTest < Minitest::Homework
     assert_equal __, i6
   end
 
-  def test_more_shifty_business_on_fixnum
+  def test_more_shifty_business_on_integer
+    skip
     i1 = 7 << 1
     i2 = 7 << 2
     i3 = 7 << 3

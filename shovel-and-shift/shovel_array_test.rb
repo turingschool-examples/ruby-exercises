@@ -1,11 +1,8 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 
-class ShovelArrayTest < Minitest::Homework
-  self.be_gentle!
-
+class ShovelArrayTest < Minitest::Test
   def test_array_equality
     a1 = []
     a2 = []
@@ -14,6 +11,7 @@ class ShovelArrayTest < Minitest::Homework
   end
 
   def test_shovel_into_array
+    skip
     a1 = []
     a2 = a1
     a2 << "a"
@@ -26,6 +24,7 @@ class ShovelArrayTest < Minitest::Homework
   end
 
   def test_add_two_arrays
+    skip
     a1 = []
     a2 = a1
     a2 = a2 + ["a"]
@@ -38,6 +37,7 @@ class ShovelArrayTest < Minitest::Homework
   # How is shoveling different from adding?
 
   def test_shovel_on_array_inside_hash
+    skip
     hash = {"letters" => [], "numbers" => []}
 
     hash["letters"] << "a"

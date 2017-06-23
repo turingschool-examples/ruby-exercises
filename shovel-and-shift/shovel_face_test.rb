@@ -1,10 +1,9 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 require_relative 'face'
 
-class ShovelFaceTest < Minitest::Homework
+class ShovelFaceTest < Minitest::Test
   def test_shovel_on_face
     face = Face.new
     face << "apple"

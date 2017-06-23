@@ -1,12 +1,9 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 require 'date'
 
-class ShiftDateTest < Minitest::Homework
-  self.be_gentle!
-
+class ShiftDateTest < Minitest::Test
   def test_shift_left_on_date
     date = Date.new(2013, 11, 2)
     assert_equal __, date.strftime('%e %b, %Y')
@@ -23,6 +20,7 @@ class ShiftDateTest < Minitest::Homework
   end
 
   def test_shift_right_on_date
+    skip
     date = Date.new(2013, 10, 31)
     assert_equal __, date.strftime('%e %b, %Y')
 
