@@ -1,29 +1,29 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 
-class ArrayTest < Minitest::Homework
-  be_gentle!
-
+class ArrayTest < Minitest::Test
   def test_empty
     assert_equal __, [].empty?
     assert_equal __, [1,2,3].empty?
   end
 
   def test_first
+    skip
     assert_equal __, [].first
     assert_equal __, [:a, :b, :c].first
     assert_equal __, ["spoon"].first
   end
 
   def test_last
+    skip
     assert_equal __, [].last
     assert_equal __, [:a, :b, :c].last
     assert_equal __, ["spoon"].last
   end
 
   def test_access
+    skip
     assert_equal __, [][0]
     assert_equal __, ["a", "b", "c"][0]
     assert_equal __, ["a", "b", "c"][1]
@@ -33,6 +33,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_index
+    skip
     assert_equal __, ["a", "b", "c"].index("a")
     assert_equal __, ["a", "b", "c"].index("b")
     assert_equal __, ["a", "b", "c"].index("c")
@@ -40,6 +41,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_join
+    skip
     assert_equal __, [].join
     assert_equal __, [].join(' ')
     assert_equal __, [].join(' - ')
@@ -52,6 +54,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_length
+    skip
     assert_equal __, [].length
     assert_equal __, [:a].length
     assert_equal __, [:a, :b].length
@@ -59,11 +62,13 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_reverse
+    skip
     assert_equal __, [1, 2, 3].reverse
     assert_equal __, [:a, :b, :c].reverse
   end
 
   def test_take
+    skip
     assert_equal __, [].take(1)
     assert_equal __, [].take(2)
     assert_equal __, ["a", "b", "c", "d", "e"].take(3)
@@ -74,6 +79,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_plus
+    skip
     a1 = [] + []
     a2 = [] + [:a]
     a3 = [:a] + [:b]
@@ -86,12 +92,14 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_concat
+    skip
     assert_equal __, [].concat([:a])
     assert_equal __, [:a].concat([:b])
     assert_equal __, [:a, :b].concat([:b, :c])
   end
 
   def test_shovel
+    skip
     a1 = [] << []
     a2 = [] << nil
     a3 = [] << :a
@@ -108,6 +116,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_minus
+    skip
     a1 = [] - []
     a2 = [:a] - []
     a3 = [:a, :b, :c] - [:a]
@@ -122,6 +131,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_pipe
+    skip
     a1 = [] | []
     a2 = [] | [:a]
     a3 = [:a] | [:b]
@@ -136,6 +146,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_ampersand
+    skip
     a1 = [] & []
     a2 = [] & [:a]
     a3 = [:a] & [:b]
@@ -161,6 +172,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_intersection_of_objects
+    skip
     a = Wrapper.new(:a)
     b = Wrapper.new(:b)
     b1 = Wrapper.new(:b)
@@ -177,12 +189,14 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_uniq
+    skip
     assert_equal __, [].uniq
     assert_equal __, [:a].uniq
     assert_equal __, [:a, :a, :a, :b].uniq
   end
 
   def test_push
+    skip
     assert_equal __, [].push(:a)
     assert_equal __, [].push(nil)
     assert_equal __, [].push([])
@@ -192,18 +206,21 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_shift
+    skip
     assert_equal __, [].shift
     assert_equal __, [:a].shift
     assert_equal __, [:a, :b].shift
   end
 
   def test_pop
+    skip
     assert_equal __, [].pop
     assert_equal __, [:a].pop
     assert_equal __, [:a, :b].pop
   end
 
   def test_unshift
+    skip
     assert_equal __, [].unshift(:a)
     assert_equal __, [].unshift(nil)
     assert_equal __, [].unshift([])
@@ -213,6 +230,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_parallel_assignment
+    skip
     fruit = ["apple", "banana", "cherry", "dewberry"]
 
     a, b, c, d = fruit
@@ -250,6 +268,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_delete
+    skip
     protein = ["fish", "bacon", "chicken", "bacon", "bacon", "steak"]
 
     deleted = protein.delete("fish")
@@ -262,6 +281,7 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_delete_at
+    skip
     veggies = ["carrot", "parsnip", "courgette"]
     veggie = veggies.delete_at(1)
     assert_equal __, veggie
@@ -269,12 +289,14 @@ class ArrayTest < Minitest::Homework
   end
 
   def test_compact
+    skip
     assert_equal __, ["a", "b", "c"].compact
     assert_equal __, ["a", nil, "b", "c", nil, nil].compact
     assert_equal __, [nil].compact
   end
 
   def test_flatten
+    skip
     assert_equal __, [:a, :b, :c].flatten
     assert_equal __, [:a, [:b, :c]].flatten
     assert_equal __, [:a, [:b, [:c]], [:d], :e, [:f, :g]].flatten
@@ -282,11 +304,13 @@ class ArrayTest < Minitest::Homework
 
   # Uhm. Halp?
   def test_shuffle
+    skip
     # Go try this in IRB a few times
     # ["a", "b", "c", "d"].shuffle
   end
 
   def test_sample
+    skip
     # Go try this in IRB a few times
     # ["a", "b", "c", "d"].sample
   end

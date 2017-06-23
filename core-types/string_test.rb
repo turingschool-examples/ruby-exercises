@@ -2,25 +2,25 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 
-class StringTest < Minitest::Homework
-  be_gentle!
-
+class StringTest < Minitest::Test
   def test_capitalize
     assert_equal __, "alice".capitalize
     assert_equal __, "alice smith".capitalize
   end
 
   def test_upcase
+    skip
     assert_equal __, "run!".upcase
   end
 
   def test_downcase
+    skip
     assert_equal __, "I'M OVER HERE".downcase
   end
 
   def test_check_if_all_caps
+    skip
     maybe "abc".upcase == "abc"
     maybe "ABC".upcase == "ABC"
     maybe "Hæ?".upcase == "Hæ?"
@@ -28,6 +28,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_if_all_lowercase
+    skip
     maybe "abc".downcase == "abc"
     maybe "ABC".downcase == "ABC"
     maybe "Æsj!".downcase == "Æsj!"
@@ -35,12 +36,14 @@ class StringTest < Minitest::Homework
   end
 
   def test_upper_and_lower_case
+    skip
     maybe "abc".downcase == "abc".upcase
     maybe "1, 2, 3".downcase == "1, 2, 3".upcase
     maybe "%$#!!1!".downcase == "%$#!!1!".upcase
   end
 
   def test_chop
+    skip
     assert_equal __, "hello!!!".chop
     assert_equal __, "hello?!".chop
     assert_equal __, "hello.".chop
@@ -48,24 +51,28 @@ class StringTest < Minitest::Homework
   end
 
   def test_chomp
+    skip
     assert_equal __, "go\n\n".chomp
     assert_equal __, "go\n".chomp
     assert_equal __, "go".chomp
   end
 
   def test_delete
+    skip
     assert_equal __, "eeny, meeny, miny, moe".delete("e")
     assert_equal __, "eeny, meeny, miny, moe".delete("m")
     assert_equal __, "eeny, meeny, miny, moe".delete("n")
   end
 
   def test_reverse
+    skip
     assert_equal __, "ZOMG SO MUCH FUN!!1!".reverse
     assert_equal __, "bubbly pies".reverse
     assert_equal __, "racecar".reverse
   end
 
   def test_squeeze
+    skip
     assert_equal __, "Granny juggles puppies in the moonlight".squeeze
     assert_equal __, "Sunny summer days playing hoops on the roof".squeeze('o')
     assert_equal __, "You fool! You cannot choose to cook cheese with a spoon".squeeze('ne')
@@ -73,12 +80,14 @@ class StringTest < Minitest::Homework
   end
 
   def test_strip
+    skip
     assert_equal __, "   \n  \tto the    moon\n\n\t    ".strip
     assert_equal __, "   \n  \tto the    moon\n\n\t    ".rstrip
     assert_equal __, "   \n  \tto the    moon\n\n\t    ".lstrip
   end
 
   def test_next
+    skip
     assert_equal __, "a".next
     assert_equal __, "z".next
     assert_equal __, "aa".next
@@ -89,6 +98,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_length
+    skip
     assert_equal __, "".length
     assert_equal __, "A".length
     assert_equal __, "Ø".length
@@ -100,11 +110,13 @@ class StringTest < Minitest::Homework
   end
 
   def test_count
+    skip
     assert_equal __, "sound of fury signifying nothing".count('o')
     assert_equal __, "David Cook is frankly unkind".count('aeiou')
   end
 
   def test_shovel
+    skip
     assert_equal __, "" << ""
     assert_equal __, "a" << "b"
     assert_equal __, "hello" << "?"
@@ -112,6 +124,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_concat
+    skip
     assert_equal __, "".concat("")
     assert_equal __, "a".concat("b")
     assert_equal __, "hello".concat("?")
@@ -119,18 +132,21 @@ class StringTest < Minitest::Homework
   end
 
   def test_plus
+    skip
     assert_equal __, "" + ""
     assert_equal __, "a" + "b"
     assert_equal __, "hello" + "?"
   end
 
   def test_multiply
+    skip
     assert_equal __, "" * 3
     assert_equal __, "!" * 3
     assert_equal __, "ho! " * 3
   end
 
   def test_center
+    skip
     s = "abc"
     assert_equal __, s.center(5)
     assert_equal __, s.center(6)
@@ -139,6 +155,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_ljust
+    skip
     s = "abc"
     assert_equal __, s.ljust(5)
     assert_equal __, s.ljust(9)
@@ -146,6 +163,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_rjust
+    skip
     s = "abc"
     assert_equal __, s.rjust(5)
     assert_equal __, s.rjust(9)
@@ -153,6 +171,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_empty
+    skip
     maybe "".empty?
     maybe "  ".empty?
     maybe "\n".empty?
@@ -160,6 +179,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_include
+    skip
     maybe "".include?("a")
     maybe "happy".include?("p")
     maybe "happy".include?("py")
@@ -167,6 +187,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_start_with
+    skip
     maybe "".start_with?("")
     maybe "hello?".start_with?("?")
     maybe "hello".start_with?("h")
@@ -175,6 +196,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_end_with
+    skip
     maybe "".end_with?("")
     maybe "coffee?".end_with?("?")
     maybe "coffee".end_with?("e")
@@ -183,6 +205,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_index
+    skip
     assert_equal __, "purple".index("p")
     assert_equal __, "purple".index("u")
     assert_equal __, "purple".index("e")
@@ -190,6 +213,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_square_brackets
+    skip
     assert_equal __, "music"[0]
     assert_equal __, "music"[3]
     assert_equal __, "music"[-1]
@@ -202,6 +226,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_square_brackets_equal
+    skip
     s = "cut"
     assert_equal __, s
     s[0] = "y"
@@ -215,11 +240,13 @@ class StringTest < Minitest::Homework
   end
 
   def test_interpolation
+    skip
     s = "world"
     assert_equal __, "Hello, #{s}!"
   end
 
   def test_format_specification
+    skip
     assert_equal __, "" % ""
     assert_equal __, "Be %s" % "safe"
     assert_equal __, "(%s) %s-%s" % ["800", "555", "1234"]
@@ -233,6 +260,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_tr
+    skip
     assert_equal __, "would".tr('w', 'c')
     assert_equal __, "should".tr('ou', 'ei')
     assert_equal __, "write".tr('aeiou', '*')
@@ -242,6 +270,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_sub
+    skip
     assert_equal __, "kicking".sub('k', 't')
     assert_equal __, "kicking".sub('f', 't')
     assert_equal __, "kicking".sub('ki', 'to')
@@ -249,6 +278,7 @@ class StringTest < Minitest::Homework
   end
 
   def test_gsub
+    skip
     assert_equal __, "kicking".gsub('k', 't')
     assert_equal __, "kicking".gsub('f', 't')
     assert_equal __, "kicking".gsub('ki', 'to')
