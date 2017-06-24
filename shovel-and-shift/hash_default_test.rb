@@ -1,11 +1,8 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 
-class HashDefaultTest < Minitest::Homework
-  self.be_gentle!
-
+class HashDefaultTest < Minitest::Test
   def test_sometimes_syntax_error
     # These all work.
     assert_equal({}, {})
@@ -18,6 +15,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_default_array_as_argument
+    skip
     lists = Hash.new([])
 
     assert_equal __, lists
@@ -27,6 +25,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_default_array_as_block
+    skip
     lists = Hash.new { [] }
 
     assert_equal __, lists
@@ -36,6 +35,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_default_string_as_argument
+    skip
     lists = Hash.new("")
 
     assert_equal __, lists
@@ -45,6 +45,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_default_string_as_block
+    skip
     lists = Hash.new { "" }
 
     assert_equal __, lists
@@ -54,6 +55,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_default_numbers_as_argument
+    skip
     lists = Hash.new(0)
 
     assert_equal __, lists
@@ -63,6 +65,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_default_numbers_as_block
+    skip
     lists = Hash.new { 0 }
 
     assert_equal __, lists
@@ -72,6 +75,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_grade_school_1
+    skip
     school = Hash.new([])
     assert_equal __, lists
 
@@ -86,6 +90,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_grade_school_2
+    skip
     school = Hash.new { [] }
     assert_equal __, school
 
@@ -100,6 +105,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_grade_school_3
+    skip
     school = Hash.new { |hash, key| hash[key] = [] }
     assert_equal __, school
 
@@ -114,6 +120,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_grade_school_4
+    skip
     school = Hash.new([])
     assert_equal __, school
 
@@ -128,6 +135,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_word_stem_1
+    skip
     words = Hash.new('de')
     assert_equal __, words
 
@@ -147,6 +155,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_word_stem_2
+    skip
     words = Hash.new { 'de' }
     assert_equal __, words
 
@@ -166,6 +175,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_word_stem_3
+    skip
     words = Hash.new { |hash, key| hash[key] = 'de' }
     assert_equal __, words
 
@@ -185,6 +195,7 @@ class HashDefaultTest < Minitest::Homework
   end
 
   def test_word_stem_4
+    skip
     words = Hash.new('de')
     assert_equal __, words
 

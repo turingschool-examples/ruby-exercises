@@ -1,7 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 
 class Cupcake
   include Comparable
@@ -17,9 +16,7 @@ class Cupcake
   end
 end
 
-class CupcakeComparisonsTest < Minitest::Homework
-  be_gentle!
-
+class CupcakeComparisonsTest < Minitest::Test
   def test_equality
     c1 = Cupcake.new("chocolate", 45)
     c2 = Cupcake.new("chocolate", 45)
@@ -32,6 +29,7 @@ class CupcakeComparisonsTest < Minitest::Homework
   end
 
   def test_unequal
+    skip
     carrot = Cupcake.new("carrot", 30)
     chocolate = Cupcake.new("chocolate", 45)
     maybe carrot == chocolate
@@ -42,6 +40,7 @@ class CupcakeComparisonsTest < Minitest::Homework
   end
 
   def test_between
+    skip
     carrot = Cupcake.new("carrot", 30)
     chocolate = Cupcake.new("chocolate", 45)
     caramel = Cupcake.new("caramel", 50)
@@ -51,6 +50,7 @@ class CupcakeComparisonsTest < Minitest::Homework
   end
 
   def test_sort
+    skip
     chocolate = Cupcake.new("chocolate", 45)
     caramel = Cupcake.new("caramel", 50)
     carrot = Cupcake.new("carrot", 30)

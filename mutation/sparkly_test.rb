@@ -1,7 +1,6 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 require_relative 'sparkly'
 
 class SparklyTest < Minitest::Test
@@ -14,6 +13,7 @@ class SparklyTest < Minitest::Test
   end
 
   def test_sparklify_has_a_tricky_bug
+    skip
     s = "hello"
     sparkly1 = Sparkly.new(s).to_s
     assert_equal "hello *.*:*.*", sparkly1
@@ -23,6 +23,7 @@ class SparklyTest < Minitest::Test
   end
 
   def test_sparklify_is_kind_of_dangerous
+    skip
     s = "hello"
     3.times do
       Sparkly.new(s).to_s

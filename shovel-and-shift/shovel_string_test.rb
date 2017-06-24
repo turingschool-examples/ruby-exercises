@@ -1,11 +1,8 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 
-class ShovelStringTest < Minitest::Homework
-  be_gentle!
-
+class ShovelStringTest < Minitest::Test
   def test_string_equality
     s1 = ""
     s2 = ""
@@ -14,6 +11,7 @@ class ShovelStringTest < Minitest::Homework
   end
 
   def test_shovel_emptiness
+    skip
     s1 = ""
     s2 = s1 << ""
     maybe s1.object_id == s2.object_id
@@ -21,6 +19,7 @@ class ShovelStringTest < Minitest::Homework
   end
 
   def test_add_emptiness
+    skip
     s1 = ""
     s2 = s1 + ""
     maybe s1.object_id == s2.object_id
@@ -28,6 +27,7 @@ class ShovelStringTest < Minitest::Homework
   end
 
   def test_shovel_onto_a_string
+    skip
     s1 = ""
     s2 = s1
     s2 << "a"
@@ -41,6 +41,7 @@ class ShovelStringTest < Minitest::Homework
   # Explain in English what `<<` does to a string.
 
   def test_add_two_strings
+    skip
     s1 = ""
     s2 = s1
     s2 = s2 + "a"

@@ -1,23 +1,22 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 
 class HashTest < Minitest::Homework
-  be_gentle!
-
   def test_empty
     assert_equal __, {}.empty?
     assert_equal __, {"a" => "apple"}.empty?
   end
 
   def test_access
+    skip
     ages = {16 => ["Alice", "Bob"], 24 => ["Charlie", "Dave"], 37 => ["Eve"]}
     assert_equal __, ages[16]
     assert_equal __, ages[37]
   end
 
   def test_assignment
+    skip
     stuff = {"a" => ["aardvark", "apple"], "b" => ["butcher", "ballerina"]}
     stuff["c"] = ["cook", "caramel candy"]
     assert_equal __, stuff["c"]
@@ -28,18 +27,21 @@ class HashTest < Minitest::Homework
   end
 
   def test_keys
+    skip
     assert_equal __, {}.keys
     assert_equal __, {1 => "one", 2 => "two"}.keys
     assert_equal __, {"a" => "apple", "banana" => "b"}.keys
   end
 
   def test_values
+    skip
     assert_equal __, {}.values
     assert_equal __, {1 => "one", 2 => "two"}.values
     assert_equal __, {"a" => "apple", "banana" => "b"}.values
   end
 
   def test_include
+    skip
     boolean = {}.include?("a")
     maybe boolean
     boolean = {"a" => "apple"}.include?("a")
@@ -49,6 +51,7 @@ class HashTest < Minitest::Homework
   end
 
   def test_member
+    skip
     boolean = {}.member?("a")
     maybe boolean
     boolean = {"a" => "apple"}.member?("a")
@@ -58,6 +61,7 @@ class HashTest < Minitest::Homework
   end
 
   def test_invert
+    skip
     h1 = {"a" => "apple", "b" => "banana"}.invert
     expected_h1 = __
     assert_equal expected_h1, h1
@@ -68,18 +72,20 @@ class HashTest < Minitest::Homework
   end
 
   def test_length
+    skip
     assert_equal __, {}.length
     assert_equal __, {"a" => "apple"}.length
     assert_equal __, {"a" => "apple", "b" => "banana"}.length
   end
 
   def test_merge
+    skip
     h1 = {}.merge({})
     h2 = {}.merge({"a" => "apple"})
     h3 = {"a" => "apple"}.merge({"b" => "banana"})
     h4 = {"a" => "apple"}.merge({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.merge({"b" => "breadfruit"})
-    
+
     expected_h1 = __
     expected_h2 = __
     expected_h3 = __
@@ -94,12 +100,13 @@ class HashTest < Minitest::Homework
   end
 
   def test_update
+    skip
     h1 = {}.update({})
     h2 = {}.update({"a" => "apple"})
     h3 = {"a" => "apple"}.update({"b" => "banana"})
     h4 = {"a" => "apple"}.update({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.update({"b" => "breadfruit"})
-    
+
     expected_h1 = __
     expected_h2 = __
     expected_h3 = __

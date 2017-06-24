@@ -1,12 +1,9 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'minitest/homework'
 require 'csv'
 
-class ShovelCSVTest < Minitest::Homework
-  self.be_gentle!
-
+class ShovelCSVTest < Minitest::Test
   def test_shovel_on_csv
     row = CSV::Row.new(["name", "age"], ["Alice", 23])
 
