@@ -75,4 +75,67 @@ class IntsAndFloatsTest < Minitest::Test
     maybe 0.zero?
     maybe 1.zero?
   end
+
+  def test_round
+    skip
+    assert_equal __, 34.56.round
+    assert_equal __, 00.23.round
+    assert_equal __, 87.round
+    assert_equal __, 0.round
+    assert_equal __, -83.82.round
+  end
+
+  def test_to_f
+    skip
+    assert_equal __, 8.to_f
+    assert_equal __, 8.9.to_f
+    assert_equal __, 0.9.to_f
+    assert_equal __, -83.82.to_f
+  end
+
+  def test_to_i
+    skip
+    assert_equal __, 8.to_i
+    assert_equal __, 8.9.to_i
+    assert_equal __, 0.9.to_i
+    assert_equal __, 0.23.to_i
+    assert_equal __, -83.82.to_i
+  end
+
+  def test_to_s
+    skip
+    assert_equal __, 8.to_s
+    assert_equal __, 8.9.to_s
+    assert_equal __, 0.9.to_s
+    assert_equal __, 0.23.to_s
+    assert_equal __, -83.82.to_s
+  end
+
+  def test_floor
+    skip
+    assert_equal __, 8.floor
+    assert_equal __, 8.9.floor
+    assert_equal __, 0.9.floor
+    assert_equal __, 0.23.floor
+    assert_equal __, -83.82.floor
+  end
+
+  def test_ceil
+    skip
+    assert_equal __, 8.ceil
+    assert_equal __, 8.9.ceil
+    assert_equal __, 0.9.ceil
+    assert_equal __, 0.23.ceil
+    assert_equal __, -83.82.ceil
+  end
+
+  def test_abs
+    skip
+    assert_equal __, 8.abs
+    assert_equal __, 8.9.abs
+    assert_equal __, 0.9.abs
+    assert_equal __, 0.23.abs
+    assert_equal __, -83.82.abs
+  end
+
 end
