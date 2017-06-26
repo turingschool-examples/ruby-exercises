@@ -1,6 +1,6 @@
 # Core Types
 
-## Starting with Array Exercises
+## Starting with String Exercises
 
 If you've never used Git you can follow these instructions from your terminal:
 
@@ -12,10 +12,10 @@ $ gem install bundler
 $ bundle
 ```
 
-Then you can run the Array exercises like this:
+Then you can run the String exercises like this:
 
 ```
-$ ruby array_test.rb
+$ ruby string_test.rb
 ```
 
 The object of this exercise is to make the tests pass.
@@ -25,15 +25,15 @@ passing assertions you have. Read the error message carefully to figure out
 which line of the test suite is failing.
 
 This will run the test file and you will get some error. Read the error and
-make the changes to the array_test.rb file that you need to. Save the file,
+make the changes to the string_test.rb file that you need to. Save the file,
 and then re-run it. You can hit the up arrow on your keyboard to have the
 terminal bring up the last command you ran.
 
-Specifically, after you've replaced the maybes in the test_empty test in
-array_test.rb, it's just predicting what the tests want, and then replacing
-the underscores with what you think is required, and running the test file
-over again, until you've done so for each of the tests in the file, and they
-all pass.
+Specifically, after you've replaced the maybes with assert or refute in the
+test_empty test in string_test.rb, it's just predicting what the tests want,
+and then replacing the underscores with what you think is required, and running
+the test file over again, until you've done so for each of the tests in the
+file, and they all pass.
 
 Feel free to change the content of the tests after you have made them all
 pass in order to get a better understanding of how things work, and definitely
