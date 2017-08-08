@@ -2,7 +2,7 @@ gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-class HashTest < Minitest::Homework
+class HashTest < Minitest::Test
   def test_empty
     assert_equal __, {}.empty?
     assert_equal __, {"a" => "apple"}.empty?
