@@ -1,5 +1,5 @@
 # encoding: utf-8
-gem 'minitest', '~> 5.2'
+gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
@@ -79,7 +79,7 @@ class IntsAndFloatsTest < Minitest::Test
   def test_round
     skip
     assert_equal __, 34.56.round
-    assert_equal __, 00.23.round
+    assert_equal __, 0.23.round
     assert_equal __, 87.round
     assert_equal __, 0.round
     assert_equal __, -83.82.round
