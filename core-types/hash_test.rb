@@ -60,6 +60,7 @@ class HashTest < Minitest::Test
     plants[:snapdragon] = ["Black Prince", "Madame Butterfly"]
     plants[:hollyhock] = ["Majorette Mix"]
     plants[:dahlia] += ["Jitterbug"]
+    
     expected_dahlias = __
     
     assert_equal expected_dahlias, plants[:dahlia]
@@ -146,6 +147,7 @@ class HashTest < Minitest::Test
     skip
     h1 = {"a" => "apple", "b" => "banana"}.invert
     h2 = {1 => "one", 2 => "two"}.invert
+    
     expected_h1 = __
     expected_h2 = __
     
@@ -160,6 +162,7 @@ class HashTest < Minitest::Test
       apples: ["green", "red", "yellow"], 
       potatoes: ["brown", "red", "purple"]
     }.invert
+    
     expected_food_colors = __
     expected_foods_with_many_colors = __
     
@@ -182,6 +185,7 @@ class HashTest < Minitest::Test
     h3 = apple.merge({"b" => "banana"})
     h4 = apple.merge({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.merge({"b" => "breadfruit"})
+    
     expected_h1 = __
     expected_h2 = __
     expected_apple = __
@@ -199,26 +203,25 @@ class HashTest < Minitest::Test
 
   def test_merge_with_symbols
     skip
-    new_restaurants = {}.merge({
-      cultura: "Latin American", 
-      wallys: "Wisconsin treats"
-      })
+    new_restaurants = {cultura: "Latin American", wallys: "Wisconsin treats"}
+    favorite_restaurants = {}.merge(new_restaurants)
     name_lengths = {maeby: 5}.merge({selena: 6})
     saturn = {saturn: 7}
     planet_rings = saturn.merge({jupiter: 3, uranus: 13, neptune: 6})
-    tv_characters = {
-        battlestar: ["Starbuck", "Apollo", "Boomer"],
-        futurama: ["Fry", "Leela", "Bender", "Zoidberg"]
-      }.merge({breaking_bad: "Walter White"})
+    battlestar_characters = {battlestar: ["Starbuck", "Apollo", "Boomer"]}
+    futurama_characters = {futurama: ["Fry", "Leela", "Bender", "Zoidberg"]}
+    tv_characters = battlestar_characters.merge(futurama_characters)
+    tv_characters = tv_characters.merge({breaking_bad: "Walter White"})
     shape_sides = {circle: 1}.merge({square: 4, circle: "infinite"})
-    expected_new_restaurants = __
+    
+    expected_favorite_restaurants = __
     expected_name_lengths = __
     expected_planet_rings = __
     expected_saturn = __
     expected_tv_characters = __
     expected_shape_sides = __
 
-    assert_equal expected_new_restaurants, new_restaurants
+    assert_equal expected_favorite_restaurants, favorite_restaurants
     assert_equal expected_name_lengths, name_lengths
     assert_equal expected_planet_rings, planet_rings
     assert_equal expected_saturn, saturn
@@ -234,6 +237,7 @@ class HashTest < Minitest::Test
     h3 = apple.update({"b" => "banana"})
     h4 = apple.update({"a" => "avocado", "b" => "banana"})
     h5 = {"a" => "apple", "b" => "banana"}.update({"b" => "breadfruit"})
+    
     expected_h1 = __
     expected_h2 = __
     expected_apple = __
@@ -251,20 +255,19 @@ class HashTest < Minitest::Test
   
   def test_update_with_symbols
     skip
-    new_restaurants = {}.update({
-      "cultura": "Latin American", 
-      "wallys": "Wisconsin treats"
-      })
+    new_restaurants = {"cultura": "Latin American", "wallys": "Wisconsin treats"}
+    favorite_restaurants = {}.update(new_restaurants)
     name_lengths = {maeby: 5}.update({selena: 6})
     name_lengths_2 = {maeby: 5}.update({selena: 6, "maeby": 5})
     saturn = {saturn: 7}
     planet_rings = saturn.update({jupiter: 3, uranus: 13, neptune: 6})
-    tv_characters = {
-        battlestar: ["Starbuck", "Apollo", "Boomer"],
-        'futurama': ["Fry", "Leela", "Bender", "Zoidberg"]
-      }.update({breaking_bad: "Walter White"})
+    battlestar_characters = {battlestar: ["Starbuck", "Apollo", "Boomer"]}
+    futurama_characters = {futurama: ["Fry", "Leela", "Bender", "Zoidberg"]}
+    tv_characters = battlestar_characters.update(futurama_characters)
+    tv_characters.update({breaking_bad: "Walter White"})
     shape_sides = {circle: 1}.update({square: 4, "circle": "infinite"})
-    expected_new_restaurants = __
+    
+    expected_favorite_restaurants = __
     expected_name_lengths = __
     expected_name_lengths_2 = __
     expected_planet_rings = __
@@ -272,7 +275,7 @@ class HashTest < Minitest::Test
     expected_tv_characters = __
     expected_shape_sides = __
     
-    assert_equal expected_new_restaurants, new_restaurants
+    assert_equal expected_favorite_restaurants, favorite_restaurants
     assert_equal expected_name_lengths, name_lengths
     assert_equal expected_name_lengths_2, name_lengths_2
     assert_equal expected_planet_rings, planet_rings
