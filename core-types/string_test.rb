@@ -23,7 +23,6 @@ class StringTest < Minitest::Test
     skip
     maybe "abc".upcase == "abc"
     maybe "ABC".upcase == "ABC"
-    maybe "Hæ?".upcase == "Hæ?"
     maybe "1, 2, 3".upcase == "1, 2, 3"
   end
 
@@ -31,7 +30,6 @@ class StringTest < Minitest::Test
     skip
     maybe "abc".downcase == "abc"
     maybe "ABC".downcase == "ABC"
-    maybe "Æsj!".downcase == "Æsj!"
     maybe "1, 2, 3".downcase == "1, 2, 3"
   end
 
