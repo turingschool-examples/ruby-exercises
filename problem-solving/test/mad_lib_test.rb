@@ -4,7 +4,7 @@ require "./lib/mad_lib"
 class MadLibTest < Minitest::Test
 
   def test_it_can_create_a_mad_lib
-    madlib = madlib.new
+    madlib = Madlib.new
 
     madlib.noun("dog")
     madlib.verb("walk")
@@ -17,7 +17,7 @@ class MadLibTest < Minitest::Test
   end
 
   def test_it_can_create_a_different_mad_lib
-    madlib = madlib.new
+    madlib = Madlib.new
 
     madlib.noun("capybara")
     madlib.verb("pet")
