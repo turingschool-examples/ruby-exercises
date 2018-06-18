@@ -150,7 +150,7 @@ class ArraysTest < Minitest::Test
     skip
     vowels = ["a", "e", "y", "i", "o", "u", "y"]
     # Call a method on the vowels variable to remove "y"
-    
+
     assert_equal ["a", "e", "i", "o", "u"], vowels
   end
 
@@ -187,8 +187,8 @@ class ArraysTest < Minitest::Test
     # Call a method on the dice variable to get a random element out
     # of the array
     roll = dice
-    assert dice <= 6
-    assert dice >= 1
+    assert rol <= 6
+    assert roll >= 1
     assert_instance_of Integer, roll
   end
 
