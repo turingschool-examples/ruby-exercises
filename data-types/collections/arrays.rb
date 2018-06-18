@@ -3,18 +3,21 @@ require 'minitest/pride'
 
 class ArraysTest < Minitest::Test
   def test_0
+    skip
     # In the line below, create a new empty array
     empty =
     assert_equal [], empty
   end
 
   def test_1
+    skip
     # In the line below, create and array with the numbers 1 - 5
     nums = ______
     assert_equal [1,2,3,4,5], nums
   end
 
   def test_2
+    skip
     nums = [1,2,3]
     # In the line below, call a method on the nums variable
     # defined above to access the second element
@@ -24,6 +27,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_22
+    skip
     # In the line below, call a method on the nums variable
     # defined above to access the last element
     nums = [1,2,3]
@@ -39,6 +43,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_3
+    skip
     hummus = ["tahini", "chickpeas", "lemons"]
     # Call a method on the hummus variable that will
     # tell us how many elements there are in the array
@@ -46,6 +51,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_4
+    skip
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # In the line below, add the element "Brazil" to the end of the world_cup array
 
@@ -57,6 +63,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_a
+    skip
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # Call a method on the world_cup variable to remove and return
     # the last element of the array
@@ -66,6 +73,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_5
+    skip
     karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
     # Call a method on the karaoke variable to ask whether "Toxic"
     # is an element or not
@@ -79,6 +87,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_b
+    skip
     band = ["Guitar", "Drums", "Bass"]
     # Call a method on the band variable to add the element "Vocals"
     # to the beginning of the array
@@ -87,6 +96,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_c
+    skip
     garden = ["Tulips", "Tomatoes", "Basil", "Peppers"]
     # Call a method to remove and return the first element from the garden array
     first_element = garden
@@ -95,6 +105,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_6
+    skip
     teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
     # Call a method on the teams variable to get the second, third, and fourth teams
     some_teams = teams
@@ -106,6 +117,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_7
+    skip
     fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
     # Call a method on the fourteeners variable to remove the nils
     fourteeners = fourteeners
@@ -113,6 +125,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_8
+    skip
     pokemon = [["Squirtle", "Charmander", "Bulbasaur"], ["Pikachu"], "Staryu"]
     # Call a method on the pokemon variable to remove the nesting
     pokemon = pokemon
@@ -120,6 +133,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_9
+    skip
     scores = [23, 56, 34, 29, 48]
     # Call a method on the scores variables that will
     # move the elements two spots to the left
@@ -133,6 +147,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_10
+    skip
     vowels = ["a", "e", "y", "i", "o", "u", "y"]
     # Call a method on the vowels variable to remove "y"
     vowels = vowels
@@ -140,6 +155,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_11
+    skip
     furniture = ["couch", "bed", "table"]
     # Call a method on the furniture variable to add the element
     # "dresser" in between the elements "couch" and "bed"
@@ -148,6 +164,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_12
+    skip
     children = ["Sarah", "Owen", "Peter"]
     # Call a method on the children variable to combine them into
     # one string like this: "Sarah, Owen, Peter"
@@ -156,6 +173,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_13
+    skip
     ascending = [1,2,3,4,5]
     # Call a method on the ascending variable to create an array
     # with the elements in the opposite order
@@ -164,6 +182,7 @@ class ArraysTest < Minitest::Test
   end
 
   def test_14
+    skip
     dice = [1,2,3,4,5,6]
     # Call a method on the dice variable to get a random element out
     # of the array
