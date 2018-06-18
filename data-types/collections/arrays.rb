@@ -62,7 +62,7 @@ class ArraysTest < Minitest::Test
     # the last element of the array
     last_element = world_cup
     assert_equal "Portugal", last_element
-    assert_equal ["Germany", "Mexico", "Iceland"]
+    assert_equal ["Germany", "Mexico", "Iceland"], world_cup
   end
 
   def test_5
