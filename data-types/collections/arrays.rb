@@ -109,9 +109,9 @@ class ArraysTest < Minitest::Test
     teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
     # Call a method on the teams variable to get the second, third, and fourth teams
     some_teams = teams
-    assert_equal ["Avalance", "Nuggets", "Broncos"], some_teams
+    assert_equal ["Avalanche", "Nuggets", "Broncos"], some_teams
 
-    # Now call a method on the teams variable to get the first and second teams
+    # Now use a different method on the teams variable to get the first and second teams
     some_teams = teams
     assert_equal ["Rockies", "Avalanche"], some_teams
   end
