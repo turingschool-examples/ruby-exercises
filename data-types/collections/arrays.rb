@@ -187,7 +187,7 @@ class ArraysTest < Minitest::Test
     # Call a method on the dice variable to get a random element out
     # of the array
     roll = dice
-    assert rol <= 6
+    assert roll <= 6
     assert roll >= 1
     assert_instance_of Integer, roll
   end
