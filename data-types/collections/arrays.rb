@@ -189,6 +189,9 @@ class ArraysTest < Minitest::Test
     roll = dice
     assert roll <= 6
     assert roll >= 1
+    # Note, this assertion assumes the Ruby Version is 2.4 or higher.
+    # This test will fail with expecting roll to be a FixNum if the
+    # Ruby version is 2.3 or earlier
     assert_instance_of Integer, roll
   end
 
