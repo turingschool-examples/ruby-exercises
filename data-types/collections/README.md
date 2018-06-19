@@ -22,7 +22,6 @@ Hashes:
 * []
 * []=
 * delete
-* include?
 * keys
 * values
 * length/size
