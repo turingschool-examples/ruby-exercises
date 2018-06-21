@@ -47,6 +47,7 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_4
+    skip
     rainbow = {
       first: "red",
       second: "orange",
@@ -73,6 +74,7 @@ class SelectPatternTest < Minitest::Test
 
 
   def test_5
+    skip
     furniture = ["dining table", "bed", "coffee table", "deck chairs"]
     words_with_c = []
     #Your Code Here
@@ -81,6 +83,7 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_6
+    skip
     furniture = {
       dining_room: "dining table",
       bedroom: "bed",
@@ -98,6 +101,7 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_7
+    skip
     meals = ["chips and salsa", "chicken alfredo", "banana pudding"]
     #Your Code Here
 
@@ -105,6 +109,7 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_8
+    skip
     meal = {
       appetizer: "chips and salsa",
       entre: "chicken alfredo",
@@ -121,6 +126,7 @@ class SelectPatternTest < Minitest::Test
 
 
   def test_9
+    skip
     prices = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
     #Your Code Here
 
@@ -128,6 +134,7 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_10
+    skip
     items = {
       tv: 3,
       toaster: 1.4,
