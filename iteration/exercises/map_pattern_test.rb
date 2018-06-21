@@ -92,6 +92,7 @@ class MapPatternTest < Minitest::Test
 
   def test_7
     names = ["alice", "bob", "charlie", "david", "eve"]
+    #Your Code Here
 
     assert_equal [5, 3, 7, 5, 3], lengths
   end
@@ -104,6 +105,7 @@ class MapPatternTest < Minitest::Test
       uncle: "david",
       sister: "eve"
     }
+    #Your Code Here
 
     expected = {
       mother: 5,
@@ -117,6 +119,7 @@ class MapPatternTest < Minitest::Test
 
   def test_9
     names = ["alice", "bob", "charlie", "david", "eve"]
+    #Your Code Here
 
     assert_equal ["ecila", "bob", "eilrahc", "divad", "eve"], backwards
   end
@@ -129,7 +132,8 @@ class MapPatternTest < Minitest::Test
       uncle: "david",
       sister: "eve"
     }
-
+    #Your Code Here
+    
     expected = {
       mother: "ecila",
       father: "bob",
