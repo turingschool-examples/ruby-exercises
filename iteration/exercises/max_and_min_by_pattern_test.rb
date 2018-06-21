@@ -37,7 +37,7 @@ class MaxAndMinByPatternTest < Minitest::Test
       # Your Code Here
     end
 
-    assert_equal "banana", shortest_word
+    assert_equal "nuts", shortest_word
   end
 
   def test_4
@@ -54,7 +54,7 @@ class MaxAndMinByPatternTest < Minitest::Test
       # Your Code Here
     end
 
-    assert_equal "banana", shortest_word
+    assert_equal "nuts", shortest_word
   end
 
   def test_5
