@@ -101,12 +101,13 @@ class MaxAndMinByPatternTest < Minitest::Test
     }
     # Your Code Here
 
-    assert_equal [:miguel, 50], oldest
+    expected = {name: "miguel", age: 50}
+    assert_equal expected, oldest
   end
 
   def test_9
     skip
-    programmers = ["katrina", "sandi", "jim", "aaron", "desi"], ["abby", "jon", "susan"]
+    programmers = [["katrina", "sandi", "jim", "aaron", "desi"], ["abby", "jon", "susan"]]
     # Your Code Here
 
     assert_equal ["abby", "jon", "susan"], fewest_programmers
