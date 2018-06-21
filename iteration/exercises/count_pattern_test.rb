@@ -1,68 +1,129 @@
-gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
 class CountPatternTest < Minitest::Test
 
-  def test_count_count_words_with_e
-    words = ["thing", "phone", "bark", "belt", "shoe", "bath"]
-    tally = 0
-    words.each do |word|
-      tally += 1 if word.include?('e')
+  def test_1
+    ages = [39, 45, 29, 24, 50]
+    younger_than_thirty = 0
+    ages.each do |age|
+      if age < 30
+        younger_than_thirty += 1
+      end
     end
-    assert_equal 3, tally
+    assert_equal 2, younger_than_thirty
   end
 
-  def test_count_numbers_greater_than_17
-    numbers = [9, 18, 12, 17, 1, 3, 99]
-    tally = 0
-    numbers.each do |number|
-      # Your code goes here
+  def test_2
+    ages = {
+      abdi: 39,
+      hassan: 45,
+      ladonna: 29,
+      margaret: 24,
+      miguel: 50
+    }
+    younger_than_thirty = 0
+    ages.each do |name, age|
+      if age < 30
+        younger_than_thirty += 1
+      end
     end
-    assert_equal 2, tally
+    assert_equal 2, younger_than_thirty
   end
 
-  def test_count_words_that_are_uppercase
+  def test_3
     skip
-    words = ["trousers", "SOCKS", "sweater", "Cap", "SHOE", "TIE"]
-    tally = 0
-    # Your code goes here
-    assert_equal 3, tally
+    ages = [39, 45, 29, 24, 50]
+    older_than_fifty = 0
+    ages.each do |age|
+      # Your Code Here
+    end
+
+    assert_equal 0, older_than_fifty
   end
 
-  def test_count_words_ending_in_ing
+  def test_4
     skip
-    words = ["thought", "brake", "shin", "juice", "trash"]
-    # Your code goes here
-    assert_equal 0, tally
+    ages = {
+      abdi: 39,
+      hassan: 45,
+      ladonna: 29,
+      margaret: 24,
+      miguel: 50
+    }
+    older_than_fifty = 0
+    ages.each do |name, age|
+      # Your Code Here
+    end
+
+    assert_equal 0, older_than_fifty
   end
 
-  def test_count_even_numbers
+  def test_5
     skip
-    numbers = [9, 2, 1, 3, 18, 39, 71, 4, 6]
-    # Your code goes here
-    assert_equal 4, tally
+    ages = [39, 45, 29, 24, 50]
+    multiple_of_three = 0
+    # Your Code Here
+
+    assert_equal 3, multiple_of_three
   end
 
-  def test_count_multiples_of_5
+  def test_6
     skip
-    numbers = [2, 5, 19, 25, 35, 67]
-    # Your code goes here
-    assert_equal 3, tally
+    ages = {
+      abdi: 39,
+      hassan: 45,
+      ladonna: 29,
+      margaret: 24,
+      miguel: 50
+    }
+    multiple_of_three = 0
+    # Your Code Here
+
+    assert_equal 3, multiple_of_three
   end
 
-  def test_count_round_prices
+  def test_7
+    skip
+    family = ["alice", "bob", "charlie", "david", "eve"]
+    # Your Code Here
+
+    assert_equal 2, names_with_three_letters
+  end
+
+  def test_8
+    skip
+    family = {
+      mother: "alice",
+      father: "bob",
+      brother: "charlie",
+      uncle: "david",
+      sister: "eve"
+    }
+    # Your Code Here
+
+    assert_equal 2, names_with_three_letters
+  end
+
+  def test_9
     skip
     prices = [1.0, 3.9, 5.99, 18.5, 20.0]
     # Your code goes here
-    assert_equal 2, tally
+
+    assert_equal 2, whole_numbers
   end
 
-  def test_count_four_letter_words
+  def test_10
     skip
-    words = ["bake", "bark", "corn", "apple", "wart", "bird", "umbrella", "fart"]
-    # Your code goes here
-    assert_equal 6, tally
-  end
+    prices = {
+      "shoes" => 1.0,
+      "backpack" => 3.9,
+      "books" => 5.99,
+      "posters" => 18.5,
+      "food" => 20.0
+    }
+    # Your Code Here
 
+    assert_equal 2, whole_numbers
+  end
 end
