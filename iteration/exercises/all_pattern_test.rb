@@ -1,89 +1,121 @@
-gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
 class AllPatternTest < Minitest::Test
-
-  def test_all_zeros
-    numbers = [0, 0, 0, 0, 0, 0, 0]
+  def test_1
+    account_balances = [0, 0, 0, 0, 0, 0, 0]
     all_zeros = true
-    numbers.each do |number|
-      all_zeros = false unless number.zero?
+    account_balances.each do |balance|
+      all_zeros = false unless balance.zero?
     end
-    assert all_zeros
+    assert_equal true, all_zeros
   end
 
-  def test_not_all_zeros
-    numbers = [0, 0, 0, 0, 1, 0, 0, 0]
+  def test_2
+    account_balances = {
+      checking: 0,
+      saving: 0,
+      retirement_401k: 0,
+      retirement_ira: 0,
+    }
     all_zeros = true
-    numbers.each do |number|
-      # Your code goes here
+    account_balances.each do |account, balance|
+      if !balance.zero?
+        all_zeros = false
+      end
     end
-    refute all_zeros
+    assert_equal true, all_zeros
   end
 
-  def test_all_gone
-    skip
-    words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
-    all_gone = true
-    # Your code goes here
-    assert all_gone
-  end
-
-  def test_not_all_gone
-    skip
-    words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
-    # Your code goes here
-    refute all_gone
-  end
-
-  def test_all_empty
-    skip
-    strings = ["", "", "", "", "", "", ""]
-    # Your code goes here
-    assert all_empty
-  end
-
-  def test_not_all_empty
-    skip
-    strings = ["", "", "", "full", "", "", ""]
-    # Your code goes here
-    refute all_empty
-  end
-
-  def test_not_all_uppercase
-    skip
-    words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
-    # Your code goes here
-    refute all_caps
-  end
-
-  def test_all_lies
-    skip
-    lies = [false, false, false, false]
-    # Your code goes here
-    assert all_lies
-  end
-
-  def test_all_multiples_of_7
-    skip
-    numbers = [42, 14, 35, 49, 28, 56, 21, 7]
-    # Your code goes here
-    assert all_multiples_of_7
-  end
-
-  def test_not_all_3_digits_long
-    skip
-    numbers = [981, 831, 509, 332, 892, 8999, 110]
-    # Your code goes here
-    refute all_3_digits
-  end
-
-  def test_all_4_letter_words
+  def test_3
     skip
     words = ["love", "hate", "fire", "bird", "call"]
-    # Your code goes here
-    assert all_4_letters
+    all_four_letters = true
+    words.each do |word|
+      # Your Code Here
+    end
+    assert_equal true, all_four_letters
   end
 
+  def test_4
+    skip
+    words = {
+      one: "love",
+      two: "hate",
+      three: "fire",
+      four: "bird",
+      five: "call"
+    }
+    all_four_letters = true
+    words.each do |position, word|
+      # Your Code Here
+    end
+    assert_equal true, all_four_letters
+  end
+
+  def test_5
+    skip
+    statuses = [:busy, :busy, :busy]
+    all_busy = true
+    # Your Code Here
+
+    assert_equal true, all_busy
+  end
+
+  def test_6
+    skip
+    friend_status = {
+      "Megan" => :busy,
+      "Sarah" => :busy,
+      "Duncan" => :busy,
+    }
+    all_busy = true
+    # Your Code Here
+
+    assert_equal true, all_busy
+  end
+
+  def test_7
+    skip
+    zip_codes = [94381, 831, 50009, 36232, 8992, 89999, 11110]
+    # Your Code Here
+
+    assert_equal false, all_five_digits
+  end
+
+  def test_8
+    skip
+    zip_codes = {
+      "Megan" => 94381,
+      "Sarah" => 831,
+      "Duncan" => 50009,
+      "Raymart" => 36232,
+      "Alec" => 89092,
+      "Cameron" => 89999,
+      "Joshua" => 11110
+    }
+    # Your Code Here
+
+    assert_equal false, all_five_digits
+  end
+
+  def test_9
+    skip
+    snacks = ["GARLIC PLANTAINS", "SNICKERDOODLES", "Pretzels"]
+    # Your Code Here
+
+    assert_equal false, all_caps
+  end
+
+  def test_10
+    skip
+    snacks = {
+      savory: "GARLIC PLANTAINS",
+      sweet: "SNICKERDOODLES",
+      salty: "Pretzels"
+    }
+    # Your Code Here
+
+    assert_equal false, all_caps
+  end
 end
