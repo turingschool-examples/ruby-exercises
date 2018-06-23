@@ -4,62 +4,191 @@ require 'minitest/pride'
 
 class ReducePatternTest < Minitest::Test
 
-  def test_sum_a_list_of_numbers
-    numbers = [32, 1, 21, 5, 81, 333]
-    sum = 0
-    numbers.each do |number|
-      sum = sum + number
-    end
-    assert_equal 473, sum
-  end
-
-  def test_subtract_list_of_numbers
+  def test_1
     numbers = [28, 12, 38, 1, 91]
+    # Iterate over the numbers array defined above,
+    # to find the difference of all the numbers
     difference = 0
     numbers.each do |number|
-      # Your code goes here
+      diference = difference - number
     end
     assert_equal -170, difference
   end
 
-  def test_multiply_list_of_numbers
+  def test_2
+    bills = {
+      rent: 800,
+      car: 240,
+      insurance: 110,
+      medical: 1112
+    }
+    # Iterate over the bills hash defined above
+    # to find the difference of all the values
+
+    difference = 0
+    bills.each do |(category, amount)|
+      difference -= amount
+    end
+    assert_equal -2162, difference
+  end
+
+  def test_3
     skip
     numbers = [2, 3, 5, 7]
+    # Iterate over the numbers array defined above
+    # to find the product of all the numbers
+
     product = 1
-    # Your code goes here
+    numbers.each do |number|
+      # Your code goes here
+    end
     assert_equal 210, product
   end
 
-  def test_capitalize_keywords_in_phrase_one_fish_two_fish_red_fish_blue_fish
+  def test_4
     skip
-    keywords = ["fish", "blue"]
-    phrase = 'one fish two fish red fish blue fish'
-    # Your code goes here
-    assert_equal 'one FISH two FISH red FISH BLUE FISH', phrase
+    scrabble_score = {
+      letter_total: 23,
+      word_muliplier: 3,
+      bonus: 2
+    }
+    # Iterate over the scarbble_score hash defined above
+    # to find the product of all the values
+
+    product = 1
+    scrabble_score.each do |(key, value)|
+      # Your Code Here
+    end
+    assert_equal 138, product
   end
 
-  def test_divide_560_by_a_bunch_of_numbers
+  def test_5
     skip
-    numbers = [2, 2, 2, 5, 7]
-    quotient = 560
-    # Your code goes here
-    assert_equal 2, quotient
+    airlines = ["Southwest", "Delta", "United", "Frontier"]
+    # Iterate over the airlines array defined above to
+    # create a hash with the name of the airline as the
+    # key and the length of the name as the value
+
+    number_of_letters = {}
+    # Your Code Here
+
+    expected = {
+      "Southest" => 9,
+      "Delta" => 5,
+      "United" => 6,
+      "Frontier" => 8
+    }
+    assert_equal expected, number_of_letters
   end
 
-  def test_subtract_smallest_values_from_100
+  def test_6
     skip
-    elements = [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]
-    difference = 100
-    # Your code goes here
-    assert_equal 88, difference
+    topping_calories = {
+      pepperoni: 430,
+      sausage: 400,
+      olives: 10,
+      peppers: 10,
+      onions: 20
+    }
+    # Iterate over the topping_calories hash defined above
+    # to create an array of all the toppings
+
+    toppings = []
+    # Your Code Here
+
+    assert_equal ["pepperoni", "sausage", ""], toppings
   end
 
-  def test_add_all_the_second_values_together
+  def test_7
     skip
     elements = [["a", 1], ["b", 9], ["c", 21]]
-    sum = 0
-    # Your code goes here
-    assert_equal 31, sum
+    # Iterate over the elements array defined above
+    # to find the sum of all the integers
+
+    # Your Code Here
+
+    assert_equal 31, sum_of_second_values
+
   end
 
+  def test_8
+    skip
+    toppings = {
+      pepperoni: {
+        calories: 430,
+        quantity: 5
+      },
+      sausage: {
+        calories: 400,
+        quantity: 10
+      },
+      olives: {
+        calories: 10,
+        quantity: 20
+      },
+      peppers: {
+        calories: 10,
+        quantity: 20
+      },
+      onions: {
+        calories: 20,
+        quantity: 20
+      }
+    }
+    # Iterate over the toppings array defined above to find
+    # total calories. You will need to multiply each toppings
+    # calorie count by the quantity
+
+    # Your Code Here
+
+    assert_equal 6950, total_calories
+  end
+
+  def test_9
+    skip
+    grades = {
+      quizzes: [8, 5, 3, 6, 5],
+      tests: [23, 21, 24],
+      essays: [10, 11, 10],
+      final: [47]
+    }
+    # Iterate over the elemnts array defined above
+    # to calculate the final grade. The final grade is
+    # calculated by averaging each category together and
+    # summing all of the averages
+
+    # Your code goes here
+
+    assert_equal 85.40, final_grade
+  end
+
+  def test_10
+    skip
+    menu = {
+      empanadas: {
+        flavors: ["chicken", "potato", "steak", "veggie"],
+        gluten_free: false
+      },
+      scones: {
+        flavors: ["blueberry", "vanilla"]
+        gluten_free: false
+      },
+      parfaits: {
+        flavors: ["blueberry", "strawberry", "cherry"],
+        gluten_free: true
+      }
+    }
+
+    # Iterate over the menu hash above to create a printable
+    # version of the menu
+
+    # Your Code Here
+
+    expected =  "Menu:\n"\
+                "- chicken, potato, steak, and veggie empanadas (non gluten free)\n"\
+                "- blueberry, and vanilla scones (non gluten free)\n"\
+                "- blueberry, strawberry, cherry parfaits (gluten free)\n"
+
+    assert_equal expected, printable_menu
+  end
 end
