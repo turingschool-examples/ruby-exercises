@@ -1,4 +1,3 @@
-gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
@@ -10,7 +9,7 @@ class ReducePatternTest < Minitest::Test
     # to find the difference of all the numbers
     difference = 0
     numbers.each do |number|
-      diference = difference - number
+      difference = difference - number
     end
     assert_equal -170, difference
   end
@@ -29,7 +28,7 @@ class ReducePatternTest < Minitest::Test
     bills.each do |(category, amount)|
       difference -= amount
     end
-    assert_equal -2162, difference
+    assert_equal -2262, difference
   end
 
   def test_3
@@ -170,7 +169,7 @@ class ReducePatternTest < Minitest::Test
         gluten_free: false
       },
       scones: {
-        flavors: ["blueberry", "vanilla"]
+        flavors: ["blueberry", "vanilla"],
         gluten_free: false
       },
       parfaits: {
