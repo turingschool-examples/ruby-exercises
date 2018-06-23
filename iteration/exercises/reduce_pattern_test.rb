@@ -72,7 +72,7 @@ class ReducePatternTest < Minitest::Test
     # Your Code Here
 
     expected = {
-      "Southest" => 9,
+      "Southwest" => 9,
       "Delta" => 5,
       "United" => 6,
       "Frontier" => 8
