@@ -32,20 +32,18 @@ class ReducePatternTest < Minitest::Test
   end
 
   def test_3
-    skip
     numbers = [2, 3, 5, 7]
     # Iterate over the numbers array defined above
     # to find the product of all the numbers
 
     product = 1
     numbers.each do |number|
-      # Your code goes here
+      # Your Code Here
     end
     assert_equal 210, product
   end
 
   def test_4
-    skip
     scrabble_score = {
       letter_total: 23,
       word_muliplier: 3,
@@ -62,7 +60,6 @@ class ReducePatternTest < Minitest::Test
   end
 
   def test_5
-    skip
     airlines = ["Southwest", "Delta", "United", "Frontier"]
     # Iterate over the airlines array defined above to
     # create a hash with the name of the airline as the
@@ -81,7 +78,6 @@ class ReducePatternTest < Minitest::Test
   end
 
   def test_6
-    skip
     topping_calories = {
       pepperoni: 430,
       sausage: 400,
@@ -95,11 +91,10 @@ class ReducePatternTest < Minitest::Test
     toppings = []
     # Your Code Here
 
-    assert_equal ["pepperoni", "sausage", ""], toppings
+    assert_equal ["pepperoni", "sausage", "olives", "peppers", "onions"], toppings
   end
 
   def test_7
-    skip
     elements = [["a", 1], ["b", 9], ["c", 21]]
     # Iterate over the elements array defined above
     # to find the sum of all the integers
@@ -111,7 +106,6 @@ class ReducePatternTest < Minitest::Test
   end
 
   def test_8
-    skip
     toppings = {
       pepperoni: {
         calories: 430,
@@ -135,7 +129,7 @@ class ReducePatternTest < Minitest::Test
       }
     }
     # Iterate over the toppings array defined above to find
-    # total calories. You will need to multiply each toppings
+    # total calories. You will need to multiply each topping's
     # calorie count by the quantity
 
     # Your Code Here
@@ -144,14 +138,13 @@ class ReducePatternTest < Minitest::Test
   end
 
   def test_9
-    skip
     grades = {
       quizzes: [8, 5, 3, 6, 5],
       tests: [23, 21, 24],
       essays: [10, 11, 10],
       final: [47]
     }
-    # Iterate over the elemnts array defined above
+    # Iterate over the elements array defined above
     # to calculate the final grade. The final grade is
     # calculated by averaging each category together and
     # summing all of the averages
@@ -162,7 +155,6 @@ class ReducePatternTest < Minitest::Test
   end
 
   def test_10
-    skip
     menu = {
       empanadas: {
         flavors: ["chicken", "potato", "steak", "veggie"],
@@ -186,7 +178,7 @@ class ReducePatternTest < Minitest::Test
     expected =  "Menu:\n"\
                 "- chicken, potato, steak, and veggie empanadas (non gluten free)\n"\
                 "- blueberry, and vanilla scones (non gluten free)\n"\
-                "- blueberry, strawberry, cherry parfaits (gluten free)\n"
+                "- blueberry, strawberry, and cherry parfaits (gluten free)\n"
 
     assert_equal expected, printable_menu
   end
