@@ -1,4 +1,4 @@
-The arrays.rb and hashes.rb files contain several exercises for you to complete. Before you begin, look at the Ruby Docs for Arrays and Hashes. Research the following methods and make sure you know how they work. You will need them to complete the exercises. Additionally, the exercises will require you to look up other methods not listed here.
+The files in this directory contain several exercises for you to complete. Before you begin, look at the Ruby Docs for Arrays and Hashes. Research the following methods and make sure you know how they work. You will need them to complete the exercises. Additionally, the exercises will require you to look up other methods not listed here.
 
 Arrays:
 
