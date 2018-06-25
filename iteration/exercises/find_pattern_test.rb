@@ -4,82 +4,145 @@ require 'minitest/pride'
 
 class FindPatternTest < Minitest::Test
 
-  def test_find_first_seven_letter_word
-    words = ["capricious", "berry", "unicorn", "bag", "apple", "festering", "pretzel", "pencil"]
-    found = nil
-    words.each do |word|
-      if word.length == 7
-        found = word
+  def test_1
+    ages = [39, 45, 29, 24, 50]
+    younger_than_thirty = nil
+    ages.each do |age|
+      if age < 30
+        younger_than_thirty = age
         break
       end
     end
-    assert_equal "unicorn", found
+    assert_equal 29, younger_than_thirty
   end
 
-  def test_no_waldo
-    words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
-    found = nil
-    words.each do |word|
-      # Your code goes here
+  def test_2
+    ages = {
+      abdi: 39,
+      hassan: 45,
+      ladonna: 29,
+      margaret: 24,
+      miguel: 50
+    }
+    younger_than_thirty = nil
+    ages.each do |name, age|
+      if age < 30
+        younger_than_thirty = name
+        break
+      end
     end
-    assert_equal nil, found
+    assert_equal :ladonna, younger_than_thirty
   end
 
-  def test_find_waldo
+  def test_3
     skip
-    words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
-    found = nil
-    # Your code goes here
-    assert_equal "waldo", found
+    ages = [39, 45, 29, 24, 50]
+    older_than_fifty = nil
+    ages.each do |age|
+      # Your Code Here
+    end
+
+    assert_nil older_than_fifty
   end
 
-  def test_cannot_find_3_letter_words
+  def test_4
     skip
-    words = ["piglet", "porridge", "bear", "blueberry"]
-    # Your code goes here
-    assert_equal nil, found
+    ages = {
+      abdi: 39,
+      hassan: 45,
+      ladonna: 29,
+      margaret: 24,
+      miguel: 50
+    }
+    older_than_fifty = nil
+    ages.each do |name, age|
+      # Your Code Here
+    end
+
+    assert_nil older_than_fifty
   end
 
-  def test_find_13
+  def test_5
     skip
-    numbers = [2, 13, 19, 8, 3, 27]
-    # Your code goes here
-    assert_equal 13, found
+    ages = [39, 45, 29, 24, 50]
+    multiple_of_three = nil
+    # Your Code Here
+
+    assert_equal 39, multiple_of_three
   end
 
-  def test_find_first_even_number
+  def test_6
+    skip
+    ages = {
+      abdi: 39,
+      hassan: 45,
+      ladonna: 29,
+      margaret: 24,
+      miguel: 50
+    }
+    multiple_of_three = nil
+    # Your Code Here
+    end
+
+    assert_equal :abdi, multiple_of_three
+  end
+
+  def test_7
+    skip
+    people = ["Willie", "Carmen Sandiego", "Bryan", "Faith", "Zac"]
+    # Your Code Here
+
+    assert_equal "Carmen Sandiego", carmen
+  end
+
+  def test_8
+    skip
+    places = {
+      Bangkok: "Willie",
+      Santa_Fe: "Carmen Sandiego",
+      Rome: "Bryan",
+      Munich: "Faith",
+      Mogudishu: "Zac"
+    }
+    # Your Code Here
+
+    assert_equal :Santa_Fe, where_is_carmen_sandiego
+  end
+
+  def test_9
     skip
     numbers = [3, 7, 13, 11, 10, 2, 17]
-    # Your code goes here
-    assert_equal 10, found
+    # Your Code Here
+
+    assert_equal 10, even
   end
 
-  def test_find_first_multiple_of_3
+  def test_10
     skip
-    numbers = [2, 8, 9, 27, 24, 5]
-    # Your code goes here
-    assert_equal 9, found
+    purchases = {
+      "shoes" => :paid,
+      "backpack" => :paid,
+      "books" => :pending,
+      "posters" => :paid,
+      "food" => :pending
+    }
+    # Your Code Here
+
+    assert_equal :books, pending
   end
 
-  def test_find_first_word_starting_with_q
+  def test_11
     skip
-    words = ["weirdo", "quill", "fast", "quaint", "quitter", "koala"]
-    # Your code goes here
-    assert_equal "quill", found
-  end
+    purchases = {
+      "shoes" => :paid,
+      "backpack" => :paid,
+      "books" => :pending,
+      "posters" => :paid,
+      "food" => :pending
+    }
+    # Your Code Here
 
-  def test_find_first_word_ending_with_er
-    skip
-    words = ["biggest", "pour", "blight", "finger", "pie", "border"]
-    # Your code goes here
-    assert_equal "finger", found
-  end
-
-  def test_find_first_number_greater_than_20
-    skip
-    numbers = [1, 8, 19, 21, 29, 31, 34]
-    # Your code goes here
-    assert_equal 21, found
+    assert_equal "backpack", starts_with_b
   end
 
 end
