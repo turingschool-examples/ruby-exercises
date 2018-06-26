@@ -37,7 +37,7 @@ class EnumerablesTest < Minitest::Test
     skip
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
     # Your Code Here
-    assert_equal nil, found
+    assert_nil found
   end
 
   def test_pick_floats
