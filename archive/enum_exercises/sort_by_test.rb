@@ -47,5 +47,4 @@ class SortByTest < Minitest::Test
     # Your code goes here
     assert_equal [11.0, 10.01, 3.02, 7.9, 9.91], sorted
   end
-
 end

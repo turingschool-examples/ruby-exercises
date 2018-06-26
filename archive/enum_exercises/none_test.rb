@@ -47,5 +47,4 @@ class NoneTest < Minitest::Test
     # Your code goes here
     assert none_even
   end
-
 end

@@ -81,4 +81,5 @@ class FindUsingMaxByTest < Minitest::Test
 
     assert_equal :java, fewest_programmers.first
   end
+  
 end

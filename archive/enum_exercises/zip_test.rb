@@ -49,5 +49,4 @@ class ZipTest < Minitest::Test
     # Your code goes here
     assert_equal [["shoes", "red"], ["tie", "pink"], ["umbrella", "black"]], fashion
   end
-
 end

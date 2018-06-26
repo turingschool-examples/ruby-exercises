@@ -3,6 +3,26 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 class GroupByTest < Minitest::Test
+  def test_squares
+    skip
+    numbers = [1, 2, 3, 4, 5]
+    # Your code goes here
+    assert_equal [1, 4, 9, 16, 25], squares
+  end
+
+  def test_normalize_zip_codes
+    skip
+    numbers = [234, 10, 9119, 38881]
+    # Your code goes here
+    assert_equal ["00234", "00010", "09119", "38881"], zip_codes
+  end
+
+  def test_words_with_no_vowels
+    skip
+    words = ["green", "sheep", "travel", "least", "boat"]
+    # Your code goes here
+    assert_equal ["grn", "shp", "trvl", "lst", "bt"], without_vowels
+  end
 
   def test_group_words_by_length
     words = ["sue", "alice", "steve", "sally", "adam", "fort", "tops", "dog", "cat"]
@@ -53,5 +73,4 @@ class GroupByTest < Minitest::Test
     expected = {1=>[1, 3], 2=>[93, 21], 3=>[503, 239], 4=>[4938, 3932], 5=>[19982], 6=>[501787]}
     assert_equal expected, grouped
   end
-
 end

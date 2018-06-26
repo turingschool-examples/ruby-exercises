@@ -82,5 +82,4 @@ class SelectTest < Minitest::Test
     # Your code goes here
     assert_equal [{:dog=>"fido"}, {:stuff=>"things"}], hashes
   end
-
 end

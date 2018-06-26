@@ -61,5 +61,4 @@ class MapTest < Minitest::Test
     # Your code goes here
     assert_equal ["do", "ca", "mous", "fro", "platypu"], trimmed
   end
-
 end

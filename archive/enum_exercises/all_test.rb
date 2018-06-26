@@ -82,5 +82,4 @@ class AllTest < Minitest::Test
     # Your code goes here
     assert all_4_letters
   end
-
 end
