@@ -3,7 +3,6 @@ require 'minitest/pride'
 
 class IntsAndFloatsTests < Minitest::Test
   def test_1
-    skip
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
@@ -72,6 +71,17 @@ class IntsAndFloatsTests < Minitest::Test
   end
 
   def test_8
+    skip
+    pi = 3.14
+    # Using the variable defined above,
+    # round the number to one decimal place
+    rounded = _________
+    assert_equal 3.1, rounded
+  end
+
+
+
+  def test_9
     skip
     pi = 3.14
     # Using the variable defined above,
