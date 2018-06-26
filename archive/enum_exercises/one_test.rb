@@ -47,5 +47,4 @@ class OneTest < Minitest::Test
     # Your code goes here
     refute exactly_one_even_number
   end
-
 end

@@ -54,5 +54,4 @@ class AnyTest < Minitest::Test
     # Your code goes here
     refute multiples_of_5
   end
-
 end

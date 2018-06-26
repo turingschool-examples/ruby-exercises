@@ -59,5 +59,4 @@ class ReduceTest < Minitest::Test
     # Your code goes here
     assert_equal 31, result
   end
-
 end

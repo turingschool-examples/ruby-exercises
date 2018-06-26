@@ -75,5 +75,4 @@ class FindTest < Minitest::Test
     # Your code goes here
     assert_equal 21, found
   end
-
 end

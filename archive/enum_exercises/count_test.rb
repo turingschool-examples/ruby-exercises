@@ -61,5 +61,4 @@ class CountTest < Minitest::Test
     # Your code goes here
     assert_equal 6, tally
   end
-
 end

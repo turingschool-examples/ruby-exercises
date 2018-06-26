@@ -103,5 +103,5 @@ class RejectTest < Minitest::Test
     # Your code goes here
     assert_equal ["cat", 23, "aimless", 43], remaining
   end
-
+  
 end
