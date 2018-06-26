@@ -3,72 +3,75 @@ require 'minitest/pride'
 
 class EnumerablesTest < Minitest::Test
   def test_squares
-    skip
     numbers = [1, 2, 3, 4, 5]
-    actual = # Your code goes here
+    actual = numbers.map do |number|
+      number ** 2
+    end
     assert_equal [1, 4, 9, 16, 25], actual
   end
 
   def test_find_waldo
     skip
     words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
-    actual = # Your code goes here
+    actual = words.find do |word|
+      # Your Code Here
+    end
     assert_equal "waldo", actual
   end
 
   def test_pick_words_with_three_letters
     skip
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
-    actual = # Your code goes here
+    actual = # Your Code Here
     assert_equal ["bad", "cat", "dog", "red"], actual
   end
 
   def test_normalize_zip_codes
     skip
     numbers = [234, 10, 9119, 38881]
-    actual = # Your code goes here
+    # Your Code Here
     assert_equal ["00234", "00010", "09119", "38881"], actual
   end
 
   def test_no_waldo
+    skip
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
-    found = words.find do |word|
-      actual = # Your code goes here
-    end
-    assert_equal nil, actual
+    # Your Code Here
+    assert_equal nil, found
   end
 
   def test_pick_floats
     skip
     numbers = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
-    actual = # Your code goes here
+    # Your Code Here
     assert_equal [1.4, 3.5, 4.9, 9.1, 8.0], actual
   end
 
   def test_words_with_no_vowels
     skip
     words = ["green", "sheep", "travel", "least", "boat"]
-    actual = # Your code goes here
+    # Your Code Here
     assert_equal ["grn", "shp", "trvl", "lst", "bt"], actual
   end
 
   def test_has_at_least_one_zero
     skip
     numbers = [2, 0, 9, 3, 0, 1]
-    actual = #Your code goes here
-    assert actual
+    # Your Code Here
+    assert_equal true, actual
   end
 
   def test_all_gone
     skip
     words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
-    actual = # Your code goes here
-    assert actual
+    # Your Code Here
+    assert_equal true, actual
   end
 
   def test_count_numbers_greater_than_17
+    skip
     numbers = [9, 18, 12, 17, 1, 3, 99]
-    actual = # Your code goes here
+    # Your Code Here
     assert_equal 2, actual
   end
 
@@ -76,7 +79,7 @@ class EnumerablesTest < Minitest::Test
     skip
     arrays = [[:a, :b, :c], [1, 2, 3, 4, 5], ["zoo", :things, :stuff]]
 
-    actual = # Your code goes here
+    # Your Code Here
 
     assert_equal [1, 2, 3, 4, 5], actual
   end
@@ -84,7 +87,7 @@ class EnumerablesTest < Minitest::Test
   def test_group_words_by_first_letter
     skip
     words = ["ant", "axis", "albatross", "bolt", "badge", "butter", "car", "cdr", "column"]
-    actual = # Your code goes here
+    # Your Code Here
     expected = {"a"=>["ant", "axis", "albatross"], "b"=>["bolt", "badge", "butter"], "c"=>["car", "cdr", "column"]}
     assert_equal expected, actual
   end
@@ -92,18 +95,19 @@ class EnumerablesTest < Minitest::Test
   def test_none_are_negative
     skip
     numbers = [9, 3, 1, 8, 3, 3, 5]
-    actual = # Your code goes here
-    assert actual
+    # Your Code Here
+    assert true, actual
   end
 
   def test_one_time
     skip
     words = ["morning", "time", "evening", "noon", "dusk", "dawn"]
     actual = # Your code goes here
-    assert actual
+    assert_equal true, actual
   end
 
   def test_sum_a_list_of_numbers
+    skip
     numbers = [32, 1, 21, 5, 81, 333]
     # initial value is 0
     actual = # Your code here
@@ -113,41 +117,43 @@ class EnumerablesTest < Minitest::Test
   def test_remove_numbers_divisible_by_3
     skip
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-    actual = # Your code goes here
+    # Your Code Here
     assert_equal [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20], actual
   end
 
   def test_sort_alphabetically
+    skip
     words = ["broccoli", "Carrots", "FISH", "Bacon", "candy"]
-    actual = # Your code here
+    # Your Code Here
     assert_equal ["Bacon", "broccoli", "candy", "Carrots", "FISH"], actual
   end
 
   def test_speed_interview_pairs
+    skip
     list1 = ["Alice", "Bob", "Charlie"]
     list2 = ["Xenia", "Yves", "Zach"]
-    actual = # Your code here
+    # Your Code Here
     assert_equal [["Alice", "Xenia"], ["Bob", "Yves"], ["Charlie", "Zach"]], actual
   end
 
   def test_all_4_letter_words
     skip
     words = ["love", "hate", "fire", "bird", "call"]
-    actual = # Your code goes here
-    assert actual
+    # Your Code Here
+    assert_equal true, actual
   end
 
   def test_has_a_multi_word_phrase
     skip
     phrases = ["Sure!", "OK.", "I have no idea.", "Really?Whatever."]
-    actual = # Your code goes here
-    assert actual
+    # Your Code Here
+    assert_equal true, actual
   end
 
   def test_count_words_that_are_uppercase
     skip
     words = ["trousers", "SOCKS", "sweater", "Cap", "SHOE", "TIE"]
-    actual = # Your code goes here
+    # Your Code Here
     assert_equal 3, actual
   end
 
@@ -155,7 +161,7 @@ class EnumerablesTest < Minitest::Test
     skip
     numbers = [1, 10, 100, 1000, 10000, 1000000]
 
-    actual = # write code here
+    # Your Code Here
 
     assert_equal 1, actual
   end
@@ -178,6 +184,7 @@ class EnumerablesTest < Minitest::Test
   end
 
   def test_none_are_broken
+    skip
     things = ["functional", "working", "works", "fixed", "good"]
     actual = # Your code here
     assert actual
