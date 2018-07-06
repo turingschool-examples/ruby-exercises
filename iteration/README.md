@@ -7,13 +7,8 @@ Suggested Order:
 * map_pattern_test.rb
 * find_pattern_test.rb
 * select_pattern_test.rb
-* group_by_pattern_test.rb
-* any_pattern_test.rb
 * count_pattern_test.rb
 * all_pattern_test.rb
-* none_pattern_test.rb
-* one_pattern_test.rb
-* sort_by_pattern_test.rb
-* reject_pattern_test.rb
-* zip_pattern_test.rb
-* reduce_pattern_test.rb
+* max_and_min_by_pattern_test.rb
+* inject_pattern_test.rb
+* group_by_pattern_test.rb
