@@ -4,12 +4,12 @@ require 'minitest/pride'
 class HashesTest < Minitest::Test
 
   def test_1
-    # In the line below, create a new empty hash called empty
+    # In the line  below, create a new empty hash called empty
     empty = ______
     assert_equal ({}), empty
   end
 
-  def test_3
+  def test_2
     # In the line below, create a hash called ages. The hash should
     # have a key of "ben" with a value of 4 and a key of "kelly" with
     # a value of 6
@@ -19,7 +19,7 @@ class HashesTest < Minitest::Test
     assert_equal 6, ages["kelly"]
   end
 
-  def test_4
+  def test_3
     # In the line below, create a hash called ages. The hash should
     # have a key of :ben with a value of 4 and a key of :kelly with
     # a value of 6.
@@ -36,7 +36,7 @@ class HashesTest < Minitest::Test
     assert_equal 6, ages[:kelly]
   end
 
-  def test_a
+  def test_4
     # In the line below, create a new hash with
     # a default value of zero
     ingredients = ________
@@ -114,7 +114,7 @@ class HashesTest < Minitest::Test
     assert_equal "Grapes Of Wrath", grapes
   end
 
-  def test_6
+  def test_10
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -132,7 +132,7 @@ class HashesTest < Minitest::Test
     assert_equal expected, books
   end
 
-  def test_7
+  def test_11
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -148,7 +148,7 @@ class HashesTest < Minitest::Test
     assert_equal expected, books
   end
 
-  def test_8
+  def test_12
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -162,7 +162,7 @@ class HashesTest < Minitest::Test
     assert_equal expected, books
   end
 
-  def test_9
+  def test_13
     ages = {
       "Jimmy" => 4,
       "Julio" => 8,
@@ -174,7 +174,7 @@ class HashesTest < Minitest::Test
     assert_equal 9, ages["Julio"]
   end
 
-  def test_10
+  def test_14
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -186,7 +186,7 @@ class HashesTest < Minitest::Test
     assert_equal 9, ages[:Julio]
   end
 
-  def test_11
+  def test_15
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -198,7 +198,7 @@ class HashesTest < Minitest::Test
     assert_equal [:Jimmy, :Julio, :Juliet], names
   end
 
-  def test_11
+  def test_16
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -210,7 +210,7 @@ class HashesTest < Minitest::Test
     assert_equal [4, 8, 9], ages
   end
 
-  def test_12
+  def test_17
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -222,7 +222,7 @@ class HashesTest < Minitest::Test
     assert_equal 3, num_pairs
   end
 
-  def test_13
+  def test_18
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -239,7 +239,7 @@ class HashesTest < Minitest::Test
     assert_equal false, jackie_in_hash
   end
 
-  def test_13
+  def test_19
     ages = {
       Jimmy: 4,
       Julio: 8,
