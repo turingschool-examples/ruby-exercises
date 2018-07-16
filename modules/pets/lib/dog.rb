@@ -4,8 +4,6 @@ class Dog
   def initialize(name)
     @name = name
     @tricks = []
-    @sound = "Woof"
-    @toy = "ball"
   end
 
   def cute?
@@ -13,11 +11,11 @@ class Dog
   end
 
   def speak
-    "#{@sound}, my name is #{@name}"
+    "Woof, my name is #{@name}"
   end
 
   def play
-    "Playing with #{@toy}"
+    "Playing with ball"
   end
 
   def learn_trick(trick)

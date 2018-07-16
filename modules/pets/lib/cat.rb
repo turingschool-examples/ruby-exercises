@@ -3,8 +3,6 @@ class Cat
 
   def initialize(name)
     @name = name
-    @sound = "Meow"
-    @toy = "string"
   end
 
   def cute?
@@ -12,11 +10,11 @@ class Cat
   end
 
   def speak
-    "#{@sound}, my name is #{@name}"
+    "Meow, my name is #{@name}"
   end
 
   def play
-    "Playing with #{@toy}"
+    "Playing with string"
   end
 
 end
