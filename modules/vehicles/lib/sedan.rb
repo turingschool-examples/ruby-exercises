@@ -10,12 +10,15 @@ class Sedan
   end
 
   def num_wheels
-    4
+    return 4
+  end
+
+  def paint(new_color)
+    @color = new_color
   end
 
   def drive(miles)
     @odometer += miles
     puts "Driving #{miles} miles."
   end
-
 end

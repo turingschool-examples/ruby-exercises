@@ -16,7 +16,12 @@ class TruckTest < Minitest::Test
     assert_equal "blue", @truck.color
   end
 
-  def test_num_wheels
+  def test_it_can_be_painted
+    @truck.paint("green")
+    assert_equal "green", @truck.color
+  end
+
+  def test_it_has_four_wheels
     assert_equal 4, @truck.num_wheels
   end
 
@@ -30,43 +35,20 @@ class TruckTest < Minitest::Test
     assert_equal cargo, truck.cargo
   end
 
-  def test_load_cargo
+  def test_it_can_load_cargo
     @truck.load_cargo("Tools")
     @truck.load_cargo("Snowboard")
     @truck.load_cargo("Tent")
     assert_equal ["Tools", "Snowboard", "Tent"], @truck.cargo
   end
 
-  def test_fuel_starts_at_zero
-    assert_equal 0, @truck.fuel
-  end
-
-  def test_it_can_refuel
-    @truck.refuel(4)
-    assert_equal 4, @truck.fuel
-    @truck.refuel(9)
-    assert_equal 13, @truck.fuel
-  end
-
   def test_odometer_starts_at_zero
     assert_equal 0, @truck.odometer
   end
 
-  def test_it_cannot_drive_without_fuel
-    @truck.refuel(2)
-    assert_equal "Not enough fuel", @truck.drive(4)
-    assert_equal 0, @truck.odometer
-  end
-
-  def test_it_can_drive_when_it_has_fuel
-    @truck.refuel(9)
-    assert_equal "Driving 9 miles", @truck.drive(9)
-    assert_equal 9, @truck.odometer
-  end
-
-  def test_driving_reduces_fuel
-    @truck.refuel(9)
-    @truck.drive(2)
-    assert_equal 7, @truck.fuel
+  def test_when_it_drives_the_odometer_is_updated
+    @truck.drive(5)
+    @truck.drive(17)
+    assert_equal 22, @truck.odometer
   end
 end
