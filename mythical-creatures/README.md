@@ -1,6 +1,26 @@
 # Mythical Creatures
 
-A collection of simple exercises to practice Ruby and TDD
+A collection of exercises to practice Ruby and TDD
+
+## How to Run
+
+In order to complete these exercises create a class for each of the mythical creatures in the `test` directory.
+
+Navigate to the `mythical-creatures` directory in your terminal, and then run your first test:
+
+```
+ruby test/unicorn_test.rb
+```
+
+That will likely produce an error saying that no `unicorn.rb` file exists.
+
+If you get an error regarding `minitest` you may need to run the following command from your terminal:
+
+```
+gem install minitest
+```
+
+Otherwise, Create that file in the `lib` directory (`touch lib/unicorn.rb`) and then run your test again. Continue to follow the errors that your test provides until the test passes. Then, unskip the next test by removing the line that says `skip`. Continue until all tests pass for all creatures.
 
 ## Suggested Order
 

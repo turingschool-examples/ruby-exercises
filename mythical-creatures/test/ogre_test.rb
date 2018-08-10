@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'ogre'
+require_relative '../lib/ogre'
 
 class OgreTest < Minitest::Test
   def test_it_has_a_name
