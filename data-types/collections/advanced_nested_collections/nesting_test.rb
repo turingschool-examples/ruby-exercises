@@ -68,9 +68,9 @@ class NestedTest < MiniTest::Test
   def test_list_of_employees_across_all_restaurants
     skip
     #=======================
-    # exmployee_names = <your code here>
+    # employee_names = <your code here>
     #=======================
-    assert_equal ["Jeff","Zach","Samantha","Bob","Sue","James","Alvin","Simon","Theodore"], exmployee_names
+    assert_equal ["Jeff","Zach","Samantha","Bob","Sue","James","Alvin","Simon","Theodore"], employee_names
   end
 
   def test_list_of_all_ingredients_across_all_restaurants
