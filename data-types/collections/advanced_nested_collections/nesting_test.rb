@@ -4,15 +4,15 @@ require 'minitest/pride'
 
 # The intent of this exercise is to practice working with nested collections.
 # Some tests will be able to pass without any enumeration, and others will require 
-# more complex iteration multiple portions of the nested collection.
-#  
+# more complex iteration over multiple portions of the nested collection.
+
 # All tests can be completed without using any enumerable other than #each.
 # My suggestion would be to complete all tests using only #each, and then
-# going back over each test and refactor using a different enumerable.
-# 
-# The collection your going to be using lives in ./nesting.rb and is called stores.  
+# to go back over each test and refactor it using a different enumerable.
+
+# The collection you're going to be using lives in ./nesting.rb and is called stores.  
 # If you spot an error or want to make this exercise better, please let us know!
-#
+
 class NestedTest < MiniTest::Test
 
   def test_list_of_olive_garden_employess
