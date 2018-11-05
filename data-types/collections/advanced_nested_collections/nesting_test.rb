@@ -106,10 +106,14 @@ class NestedTest < MiniTest::Test
     assert_equal 27, full_menu_price
   end
 
+  def test_readable_menu_for_dennys
+
+  end
+
   def test_menu_accross_all_restaurants
      skip
     #=======================
-     full_menu = stores.map{|name,store|store[:dishes]}.flatten.group_by{|dish| dish[:name]}
+    #  full_menu = <your code here>
     #=======================
     expected = ({"Risotto"=>
                       {:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
@@ -129,7 +133,6 @@ class NestedTest < MiniTest::Test
                     {:name=>"Fries", :ingredients=>["Potatoes", "Salt"], :price=>2}
                   })
     assert_equal expected, full_menu
-    
   end
   def test_all_ingredients_for_Macdonalds
     skip
