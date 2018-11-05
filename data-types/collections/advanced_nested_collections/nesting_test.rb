@@ -106,8 +106,14 @@ class NestedTest < MiniTest::Test
     assert_equal 27, full_menu_price
   end
 
-  def test_readable_menu_for_dennys
-
+  def test_all_ingredients_for_Macdonalds
+    skip
+    #=======================
+    # olive_garden_menu = <your code here>
+    #=======================
+    expected = ({"Risotto"=>{:name=>"Risotto", :ingredients=>["Rice", "Cheese", "Butter"], :price=>12},
+                  "Steak"=>{:name=>"Steak", :ingredients=>["Beef", "Garlic"], :price=>15}})
+    assert_equal expected, olive_garden_menu
   end
 
   def test_menu_accross_all_restaurants
@@ -134,13 +140,5 @@ class NestedTest < MiniTest::Test
                   })
     assert_equal expected, full_menu
   end
-  def test_all_ingredients_for_Macdonalds
-    skip
-    #=======================
-    # all_macdonalds_ingredients = <your code here>
-    #=======================
-    assert_equal ["Bun","Hamburger","Ketchup","pickles","Potatoes","Salt"], all_macdonalds_ingredients
-  end
+
 end
-
-
