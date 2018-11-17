@@ -24,7 +24,7 @@ class MadLibTest < Minitest::Test
     madlib.adjective("purple")
     madlib.adverb("intensely")
     result = madlib.result
-    expected = "Do you walk your blue dog quickly? That's hilarious!"
+    expected = "Do you pet your purple capybara intensely? That's hilarious!"
 
     assert_equal expected, result
   end

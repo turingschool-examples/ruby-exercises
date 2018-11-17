@@ -15,8 +15,8 @@ class RetirementTest < Minitest::Test
   def test_it_tells_me_when_i_should_retire_with_different_ages
     retire = Retirement.new
 
-    result = retire.calculate(25, 65)
-    expected = "You have 40 years left until you can retire. It is 2015, so you can retire in 2055."
+    result = retire.calculate(39, 70)
+    expected = "You have 31 years left until you can retire. It is 2015, so you can retire in 2046."
 
     assert_equal expected, result
   end
