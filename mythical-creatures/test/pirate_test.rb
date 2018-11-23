@@ -45,23 +45,17 @@ class PirateTest < Minitest::Test
     assert pirate.cursed?
   end
 
-  def test_a_pirate_can_rob_ships
-    skip
-    # create a pirate
-    # check that a pirate has a rob_ship method
-  end
-
   def test_a_pirate_has_booty
     skip
     # create a pirate
-    # pirate starts with 0 booty
+    # check that the pirate starts with 0 booty
   end
 
-  def test_a_pirate_gets_100_booty_for_robbon
+  def test_a_pirate_gets_100_booty_for_robbing_ships
     skip
     # create a pirate
-    # pirate robs ship
-    # check pirate has 100 booty
+    # rob some ships
+    # check that the pirate got 100 booty for each ship it robbed
   end
 
 end
