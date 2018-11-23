@@ -3,14 +3,14 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 # The intent of this exercise is to practice working with nested collections.
-# Some tests will be able to pass without any enumeration, and others will require 
+# Some tests will be able to pass without any enumeration, and others will require
 # more complex iteration over multiple portions of the nested collection.
 
 # All tests can be completed without using any enumerable other than #each.
 # My suggestion would be to complete all tests using only #each, and then
 # to go back over each test and refactor it using a different enumerable.
 
-# The collection you're going to be using lives in ./nesting.rb and is called stores.  
+# The collection you're going to be using lives in ./nesting.rb and is called stores.
 # If you spot an error or want to make this exercise better, please let us know!
 
 class NestedTest < MiniTest::Test
@@ -48,7 +48,7 @@ class NestedTest < MiniTest::Test
     #=======================
     assert_equal ['Bun','Hamburger','Ketchup','pickles'], big_mac_ingredients
   end
-  
+
   def test_list_of_restaurants
     skip
     #=======================
@@ -106,7 +106,7 @@ class NestedTest < MiniTest::Test
     assert_equal 27, full_menu_price
   end
 
-  def test_all_ingredients_for_Macdonalds
+  def test_full_menu_for_olive_garden
     skip
     #=======================
     # olive_garden_menu = <your code here>
