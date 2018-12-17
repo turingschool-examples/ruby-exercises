@@ -49,7 +49,7 @@ class StringComparisonsTest < Minitest::Test
     maybe s1 >= s2
   end
 
-  def test_the_name_number
+  def test_the_same_number
     skip
     s1 = "1"
     s2 = "1.0"
