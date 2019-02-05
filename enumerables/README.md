@@ -1,8 +1,5 @@
-The enumerable_exercises_test.rb file has a number of exercises to help you better work with enumerables in ruby.  Below is a list of enumerables that will help you complete the exercises - research each of them on the Ruby Docs for Enumerables to learn more about what they do and how they are used.  There are additional methods that you will need to complete the exercises; each of these additional methods can be found in the Ruby Docs for Enumerables.
+If you haven't already, first complete the Enumerable Exercises Repo: https://github.com/turingschool/enums-exercises. The Enumerable Exercises Repo will help you learn about all the important enumerables and how they work. After you are familiar with several enumerables, the exercises in this folder will help you work on your problem solving with enumerables. You will need to select which enumerable will best fit the problem.
 
-* map
-* find
-* group_by
-* all
-* select
-* count
+For the `enumerables_one_test`, you will only need `map`, `find`, and `find_all` to complete the tasks.
+
+For `enumerables_exercises_test`, you will need to consider all enumerables and pick which one will be the best choice.
