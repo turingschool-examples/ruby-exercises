@@ -1,0 +1,21 @@
+  def test_<%= name %>
+    <% unless loop? %>
+    skip
+    <% end %>
+    <%= input_variable %> = <%= input %>
+    <% if assignment? %>
+    <%= output_variable %> = []
+    <% end %>
+    <% if loop? %>
+    <%= input_variable %>.each do |<%= block_variable %>|
+      <% if example? %>
+      <%= output_variable %> << <%= block %>
+      <% else %>
+      # Your code goes here
+      <% end %>
+    end
+    <% else %>
+    # Your code goes here
+    <% end %>
+    assert_equal <%= output %>, <%= output_variable %>
+  end

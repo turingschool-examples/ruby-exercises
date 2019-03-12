@@ -1,0 +1,22 @@
+  def test_<%= name %>
+    <% unless loop? %>
+    skip
+    <% end %>
+    <%= input_variable %> = <%= input %>
+    <% if assignment? %>
+    count = 0
+    <% end %>
+    <% if loop? %>
+    <%= input_variable %>.each do |<%= block_variable %>|
+      <% if example? %>
+      count += 1 if <%= block %>
+      <% else %>
+      # Your code goes here
+      <% end %>
+    end
+    <% else %>
+    # Your code goes here
+    <% end %>
+    <%= output_variable %> = count == 1
+    <%= output %> <%= output_variable %>
+  end

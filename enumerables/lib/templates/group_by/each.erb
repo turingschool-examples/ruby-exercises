@@ -1,0 +1,22 @@
+  def test_<%= name %>
+    <% unless loop? %>
+    skip
+    <% end %>
+    <%= input_variable %> = <%= input %>
+    <% if assignment? %>
+    <%= output_variable %> = Hash.new {|hash, key| hash[key] = []}
+    <% end %>
+    <% if loop? %>
+    <%= input_variable %>.each do |<%= block_variable %>|
+      <% if example? %>
+      <%= output_variable %>[<%= block %>] << <%= block_variable %>
+      <% else %>
+      # Your code goes here
+      <% end %>
+    end
+    <% else %>
+    # Your code goes here
+    <% end %>
+    expected = <%= output %>
+    assert_equal expected, <%= output_variable %>
+  end

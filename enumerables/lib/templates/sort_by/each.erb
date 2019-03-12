@@ -1,0 +1,28 @@
+  def test_<%= name %>
+    <% unless loop? %>
+    skip
+    <% end %>
+    <%= input_variable %> = <%= input %>
+    <% if assignment? %>
+    transformed = []
+    <% end %>
+    <% if loop? %>
+    <%= input_variable %>.each do |<%= block_variable %>|
+      <% if example? %>
+      transformed << [<%= block %>, <%= block_variable %>]
+      <% else %>
+      # Your code goes here
+      <% end %>
+    end
+    <% else %>
+    # Your code goes here
+    <% end %>
+    <% if assignment? %>
+    transformed = transformed.sort
+    <%= output_variable %> = []
+    transformed.each do |sort_key, <%= block_variable %>|
+      <%= output_variable %> << <%= block_variable %>
+    end
+    <% end %>
+    assert_equal <%= output %>, <%= output_variable %>
+  end

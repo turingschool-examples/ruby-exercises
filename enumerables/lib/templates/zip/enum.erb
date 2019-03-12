@@ -1,0 +1,13 @@
+  def test_<%= name %>
+    <% unless loop? %>
+    skip
+    <% end %>
+    <%= block_variable %>1 = <%= input.first %>
+    <%= block_variable %>2 = <%= input.last %>
+    <% if example? %>
+    <%= output_variable %> = <%= block_variable %>1.zip(<%= block_variable %>2)
+    <% else %>
+    # Your code goes here
+    <% end %>
+    assert_equal <%= output %>, <%= output_variable %>
+  end

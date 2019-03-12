@@ -1,0 +1,21 @@
+  def test_<%= name %>
+    <% unless loop? %>
+    skip
+    <% end %>
+    <%= input_variable %> = <%= input %>
+    <% if !loop? && assignment? %>
+    # initial value is <%= initial_value %>
+    <% end %>
+    <% if loop? %>
+    result = <%= input_variable %>.reduce(<%= initial_value %>) do |<%= output_variable %>, <%= block_variable %>|
+      <% if example? %>
+      <%= block %>
+      <% else %>
+      # Your code goes here
+      <% end %>
+    end
+    <% else %>
+    # Your code goes here
+    <% end %>
+    assert_equal <%= output %>, result
+  end
