@@ -35,6 +35,13 @@ Here is a very rough suggested timeline for working on the exercises. This is ju
     * Unicorn
     * Vampire
     * Dragon
+  * enumerables/exercises
+    * find_pattern_test
+    * find_test
+    * map_pattern_test
+    * map_test
+    * select_pattern_test
+    * select_test
 
 * Week 2
   * data-types/collections/hashes.rb
@@ -62,7 +69,7 @@ Here is a very rough suggested timeline for working on the exercises. This is ju
     * wallet_test.rb
 
 * Week 4+
-	* Enumerables
+	* Enumerables/exercises
 	* Iteration
 	* Command and Query
 	* Complete/Redo Mythical Creatures
