@@ -1,6 +1,6 @@
 # Enums Exercises
 
-## How the Exercises are Organized
+## How exercises_1 are Organized
 
 These exercises are broken up by method -- each enumerable method will be covered by
 2 test files. In one test file, we'll practice using the enumerable
@@ -76,130 +76,15 @@ Here's how we recommend you work through the exercises:
 * Repeat for each matching pair of exercises
 * Commit your solutions after finishing each file
 
-__Recommended Practice After Everything Above Is Complete__
 
- After you are familiar with several enumerables, the exercises in this folder will help you work on your problem solving with enumerables. You will need to select which enumerable will best fit the problem.
+## How exercises_2 are Organized
+
+After you are familiar with several enumerables, the exercises in this folder will help you work on your problem solving with enumerables. You will need to select which enumerable will best fit the problem.
 
 For the `enumerables_one_test`, you will only need `map`, `find`, and `find_all` to complete the tasks.
 
 For `enumerables_exercises_test`, you will need to consider all enumerables and pick which one will be the best choice.
 
-## Contributing Patches
-
-### Fixing Errors in Exercises
-
-If you find an error in one of the exercises, then it needs to be fixed upstream in the generators or templates.
-
-For example, someone discovered that there were two tests with the same name in the `all_pattern_test.rb` exercise:
-
-```ruby
-def test_all_gone
-  skip
-  words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
-  all_gone = true
-  # Your code goes here
-  assert all_gone
-end
-
-def test_all_gone
-  skip
-  words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
-  # Your code goes here
-  refute all_gone
-end
-```
-
-The second test should have been named `test_not_all_gone`.
-
-In order to fix this, we need to locate the problem generator: `lib/generator/all_problem.rb`.
-
-```ruby
-exercise << Problem.new(
-  "all_gone",
-  {"words" => %w(gone gone gone gone gone gone gone)},
-  {"all_gone" => "assert"},
-  "word == 'gone'"
-).assignment!
-
-exercise << Problem.new(
-  "all_gone",
-  {"words" => %w(gone gone gone gone gone there gone gone)},
-  {"all_gone" => "refute"},
-  "word == 'gone'"
-)
-```
-
-The name of the second problem can be changed.
-
-Then regenerate the exercises with:
-
-```bash
-rake generate
-```
-
-Finally, run the tests:
-
-```bash
-rake test
-```
-
-### Creating New Exercises
-
-Check out master:
-
-```bash
-$ git checkout master
-```
-
-Create a new branch:
-
-```bash
-$ git checkout -b new-exercises
-```
-
-Make up one extra test for each test suite. Remember to delete the implementation once it's passing, and add a `skip` to it.
-
-```bash
-$ git diff
-$ git add -A
-$ git commit -m "Add more exercises"
-```
-
-Push your branch up to GitHub:
-
-```bash
-$ git push -u origin new-exercises
-```
-
-Submit a pull request (go to the front page of your own `enums-exercises` repository, there should be a button to compare/create a pull request for the branch that you just pushed up).
-
-### Keeping in sync with the upstream repository
-
-`origin` is your fork of the project. We'll need to connect to the upstream repository.
-
-To do this, add a new remote named upstream that points to the Turing School repository:
-
-```bash
-$ git remote add upstream git@github.com:turingschool/enums-exercises.git
-```
-
-Then pull down the updated version of upstream:
-
-```bash
-$ git fetch upstream
-```
-
-And now make sure you're on master:
-
-```bash
-$ git checkout master
-$ git branch # should say *master
-```
-
-Make master point to the exact commit that upstream/master is pointing at:
-
-```bash
-$ git reset --hard upstream/master
 ```
 
 ## License

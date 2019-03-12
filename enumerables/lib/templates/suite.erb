@@ -1,9 +1,0 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
-
-class <%= name %> < Minitest::Test
-<% problems.each do |problem| %>
-<%= problem.render(template_name) %>
-<% end %>
-end
