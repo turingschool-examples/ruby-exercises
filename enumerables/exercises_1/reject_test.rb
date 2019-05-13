@@ -17,7 +17,7 @@ class RejectTest < Minitest::Test
     remaining = letters.reject do |letter|
       # Your code goes here
     end
-    assert_equal ["l", "l", " ", "r", " ", "b", "s", " ", "r", " ", "b", "l", "n", "g", " ", "t", " ", "s"], remaining
+    assert_equal ["l", "l", " ", "y", "r", " ", "b", "s", " ", "r", " ", "b", "l", "n", "g", " ", "t", " ", "s"], remaining
   end
 
   def test_remove_numbers_divisible_by_3
