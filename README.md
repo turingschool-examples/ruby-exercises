@@ -4,7 +4,7 @@ This is a collection of exercises to practice various aspects of Ruby. Each fold
 
 ## Getting Started
 
-If you are new to Ruby, please see [This Guide](https://gist.github.com/josh-works/ac68a974cb9e0d73d663ea6c8cf3e8d8) for help getting started with the Ruby Exercises.
+If you are new to Ruby, please see [this guide, which includes video walk throughs for these exercises](https://josh.works/turing-backend-prep-01-intro) for help getting started with the Ruby Exercises.
 
 ## Setup
 
