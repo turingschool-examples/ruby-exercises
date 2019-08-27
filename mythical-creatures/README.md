@@ -43,6 +43,7 @@ For the majority of the class we use minitest because there's so little to
 learn about the API. But a huge part of the Ruby community favors the
 expressiveness of RSpec.
 
+* [How to use RSpec without Rails](https://gist.github.com/ap2322/d8081e38d448acccf2cdc25308be565f) for these exercises.
 * [You can check out one of our tutorials about RSpec](http://tutorials.jumpstartlab.com/topics/internal_testing/rspec_and_bdd.html)
 or [this blog post](http://gregelizondo.github.io/2014/03/03/getting-started-with-rspec-and-unit-testing.html)
 * Pick three of the creatures and implement RSpec tests for each
