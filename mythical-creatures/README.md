@@ -24,10 +24,10 @@ Otherwise, Create that file in the `lib` directory (`touch lib/unicorn.rb`) and 
 
 ## Suggested Order
 
-* `unicorn_test.rb`
+* `unicorn_test.rb` [video walk-through](https://youtu.be/mocwGsu41yw)
 * `vampire_test.rb`
-* `dragon_test.rb`
-* `hobbit_test.rb`
+* `dragon_test.rb` [video walk-through](https://youtu.be/NIPerY-xuCk)
+* `hobbit_test.rb` [video walk-through](https://youtu.be/uYGS-DCNR-0)
 * `pirate_test.rb`
 * `wizard_test.rb`
 * `medusa_test.rb`
