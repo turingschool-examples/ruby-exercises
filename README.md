@@ -6,6 +6,8 @@ Practicing in this manner (small, bite-sized problems that you can do repeatedly
 
 Each folder in this repository is a set of related exercises. Open up the folder and read the README to learn more about them.
 
+_Note: If you've just stumbled across this repository online, and are looking to work through these exercises, consider working through these [setup instructions](http://mod0.turing.io/setup-instructions) and [this guide to installing rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment), as these two items are pre-requisites to working on these ruby exercises below._
+
 ## Getting Started
 
 If you are new to Ruby, please see [Turing Prep Chapter 1: Make Mod 1 Easier Than It Otherwise Would Be](https://josh.works/turing-backend-prep-01-intro) for help getting started with these Exercises.
@@ -15,7 +17,7 @@ If you are new to Ruby, please see [Turing Prep Chapter 1: Make Mod 1 Easier Tha
 1. Clone this repository
 1. From the command line, `cd` into the `ruby-exercises` directory.
 1. From the command line, run `bundle`
-  * If you get an error saying that the command `bundle` was not found, first run `gem install bundler` and then try again.
+  * If you get an error saying that the command `bundle` was not found, first run `gem install bundler` and then try again. If `gem install bundler` doesn't work, make sure you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and [installed rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment)
 
 ## Order
 
