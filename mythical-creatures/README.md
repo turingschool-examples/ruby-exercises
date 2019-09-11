@@ -2,6 +2,8 @@
 
 A collection of exercises to practice Ruby, and test-driven design (TDD).
 
+Here's a guide that might be helpful in understanding the principles covered in these tests: [josh.works/turing-backend-prep-mythical-creatures](https://josh.works/turing-backend-prep-mythical-creatures).
+
 ## How to Run
 
 In order to complete these exercises create a class for each of the mythical creatures in the `test` directory.
