@@ -1,6 +1,8 @@
 # Mythical Creatures
 
-A collection of exercises to practice Ruby and TDD
+A collection of exercises to practice Ruby, and test-driven design (TDD).
+
+Here's a guide that might be helpful in understanding the principles covered in these tests: [josh.works/turing-backend-prep-mythical-creatures](https://josh.works/turing-backend-prep-mythical-creatures).
 
 ## How to Run
 
@@ -24,10 +26,10 @@ Otherwise, Create that file in the `lib` directory (`touch lib/unicorn.rb`) and 
 
 ## Suggested Order
 
-* `unicorn_test.rb`
+* `unicorn_test.rb` [video walk-through](https://youtu.be/mocwGsu41yw) (watch this first)
 * `vampire_test.rb`
-* `dragon_test.rb`
-* `hobbit_test.rb`
+* `dragon_test.rb` [video walk-through](https://youtu.be/NIPerY-xuCk)
+* `hobbit_test.rb` [video walk-through](https://youtu.be/uYGS-DCNR-0)
 * `pirate_test.rb`
 * `wizard_test.rb`
 * `medusa_test.rb`
