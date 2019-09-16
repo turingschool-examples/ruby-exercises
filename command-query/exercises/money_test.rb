@@ -27,8 +27,9 @@ class MoneyTest < Minitest::Test
     money.spend(7)
     assert_equal 31, money.amount
   end
-  
+
   def test_cant_spend_money_that_you_dont_have
+    skip
     money = Money.new
     money.earn(75)
     money.spend(75)
