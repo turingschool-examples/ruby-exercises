@@ -65,6 +65,7 @@ class BonusQuestionsTest < Minitest::Test
   end
 
   def test_first_weird_thing_using_find
+    skip
     thing1 = Thing.new('odd')
     thing2 = Thing.new('cool')
     thing3 = Thing.new('weird')
@@ -93,4 +94,3 @@ class BonusQuestionsTest < Minitest::Test
     assert_equal unicorn4, found
   end
 end
-
