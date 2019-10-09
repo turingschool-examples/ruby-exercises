@@ -32,4 +32,14 @@ class RoomTest < Minitest::Test
     assert_equal Room, room_2.class
   end
 
+  def test_it_is_a_new_room
+    room_3 = Room.new(:living_room, 25, 15)
+    assert_equal Room, room_3.class
+  end
+
+  def test_it_is_a_new_room
+    room_4 = Room.new(:basement, 30, 41)
+    assert_equal Room, room_4.class
+  end
+
 end
