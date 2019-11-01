@@ -14,9 +14,22 @@ If you are new to Ruby, please see [Turing Prep Chapter 1: Make Mod 1 Easier Tha
 
 ## Setup
 
-1. Clone this repository
-1. From the command line, `cd` into the `ruby-exercises` directory.
-1. From the command line, run `bundle`.
+### 1. Clone this repository
+
+(You don't need to fork this repository, just clone it to your laptop)
+
+in your `/turing` directory on your laptop (or whatever directory you want this repository to live inside of), run 
+
+```
+// using ssh keys
+git clone git@github.com:turingschool/ruby-exercises.git
+// using https, if the above doesn't work:
+git clone https://github.com/turingschool/ruby-exercises.git
+```  
+
+### 2. From the command line, `cd` into the `ruby-exercises` directory.
+
+### 3. From the command line, run `bundle`
 
 You _should_ see something like this: 
 
@@ -55,6 +68,10 @@ Great question, dear reader.
 If you don't have `bundler` installed yet, you'll get the `command 'bundle' not found` error. At which point you need to install `bundler` with ruby. The way you install new gems in Ruby is by typing `gem install <gem_name>`. 
 
 Here's an exhaustive amount of information about gems, if you're so inclined: [guides.rubygems.org/what-is-a-gem](https://guides.rubygems.org/what-is-a-gem/)
+
+-------------------
+
+once `bundle` has run successfully, you're good to go! Read on to figure out the _order_ in which you should start this collection of exercises.
 
 ## Order
 
