@@ -16,8 +16,45 @@ If you are new to Ruby, please see [Turing Prep Chapter 1: Make Mod 1 Easier Tha
 
 1. Clone this repository
 1. From the command line, `cd` into the `ruby-exercises` directory.
-1. From the command line, run `bundle`
-  * If you get an error saying that the command `bundle` was not found, first run `gem install bundler` and then try again. If `gem install bundler` doesn't work, make sure you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and [installed rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment). [Other troubleshooting help here](https://josh.works/turing-backend-prep-troubleshooting-guide)
+1. From the command line, run `bundle`.
+
+You _should_ see something like this: 
+
+```
+$ bundle
+Fetching gem metadata from https://rubygems.org/.............
+Using bundler 2.0.2
+Fetching minitest 5.2.1
+Installing minitest 5.2.1
+Bundle complete! 1 Gemfile dependency, 2 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+```
+If you see that, great!
+
+If you see something like:
+
+```
+bash: command not found: bundle
+```
+
+you need to install the `bundler` gem. Run:
+
+```
+$ gem install bundler
+```
+If `gem install bundler` doesn't work, you probably either don't have `rbenv` installed, or you've not yet installed ruby. Make sure you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and [installed rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment). 
+
+> Hey, hold up. What is this `bundle` thing, and what does it do? what does `gem install bundler` do?
+
+Great question, dear reader. 
+
+`bundler` is Ruby's [package manager](https://bundler.io/). If you want to install extra code that works with Ruby, you'll use `bundler` to do it. Once you _have_ the `bundler` installed, it is "used" by typing `bundle` into your terminal. 
+
+(The short version is, it looks at whatever is in your `Gemfile` and `Gemfile.lock` files, and installs all required gems)
+
+If you don't have `bundler` installed yet, you'll get the `command 'bundle' not found` error. At which point you need to install `bundler` with ruby. The way you install new gems in Ruby is by typing `gem install <gem_name>`. 
+
+Here's an exhaustive amount of information about gems, if you're so inclined: [guides.rubygems.org/what-is-a-gem](https://guides.rubygems.org/what-is-a-gem/)
 
 ## Order
 
