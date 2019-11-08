@@ -30,13 +30,12 @@ When you cloned this repo and ran `bundle` you installed the `minitest`.
 
 Many of the `.rb` files in this repo begin with calling `minitest`, like:
 
-```
-gem 'minitest', '~> 5.2'
+```ruby
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/unicorn'
+require 'pry'
 
-class UnicornTest < Minitest::Test
+class StringTest < Minitest::Test
 ```
 So what is minitest and what's going on above? Great question! 
 
