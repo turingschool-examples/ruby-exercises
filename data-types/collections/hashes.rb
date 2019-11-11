@@ -1,16 +1,4 @@
-#hashes.rb contains a series of methods that need to be completed by you.
 
-#For each method,
-#1. Read the comments and attempt to add or modify the code to complete.
-#3. run the file from the terminal to test your code: $ruby hashes.rb
-#4. When it runs, terminal will output some stats:
- # - # of runs (# of methods run)
- # - # of assertions (# of assertion tests made)
- # - # of failures (# of assertions that ran but failed)
- # - # of errors (# of methods that couldn't run due to an error)
- # - # of skips (# of methods skipped because the 'skip' command is in the method)
-
-#As you sucessfully complete the methods you'll see your # of assertions increase.  If you see any failures or errors increase it means your method was not modified correctly - revisit your code and try again.
 
 require 'minitest/autorun'
 require 'minitest/pride'
@@ -57,7 +45,9 @@ class HashesTest < Minitest::Test
   end
 
   def test_5
-    # In the line below, define the ingredients variable as a hash w/ the first key of "tomatoes" with a value of 0 and the second key of :carrots with a value of 0
+    # In the line below, define the ingredients variable as a hash w/ the
+    # first key of "tomatoes" with a value of 0 and the second key of
+    # :carrots with a value of 0
     ingredients = ______
 
     assert_equal "tomatoes", ingredients.keys[0]
