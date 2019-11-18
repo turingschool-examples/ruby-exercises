@@ -8,16 +8,82 @@ Each folder in this repository is a set of related exercises. Open up the folder
 
 _Note: If you've just stumbled across this repository online, and are looking to work through these exercises, consider working through these [setup instructions](http://mod0.turing.io/setup-instructions) and [this guide to installing rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment), as these two items are pre-requisites to working on these ruby exercises below._
 
+## Structure of this repository
+- Every folder/directory in this repo contains a related set of exercises.
+- These folders can be tackled in any order depending on what skills you want to develop.
+- Each folder contains a `README.md` file that provides a summary of what skills you will develop with these exercises
+- Each exercise file within the folder will begin with comments providing more detail on:
+ - What skill you'll develop with this exercise and how this exercise will help you develop that skill
+ - A description of the exercise, and how you'll know that you've completed the exercise
+ - How you need to manipulate or work with this file to complete the exercise.
+- some exercises will require you to manipulate the "current" file and run it. Other exercises will require you to create _new_ files and then reference those files for the "current" file to work.
+
 ## Getting Started
 
 If you are new to Ruby, please see [Turing Prep Chapter 1: Make Mod 1 Easier Than It Otherwise Would Be](https://josh.works/turing-backend-prep-01-intro) for help getting started with these exercises.
 
 ## Setup
 
-1. Clone this repository
-1. From the command line, `cd` into the `ruby-exercises` directory.
-1. From the command line, run `bundle`
-  * If you get an error saying that the command `bundle` was not found, first run `gem install bundler` and then try again. If `gem install bundler` doesn't work, make sure you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and [installed rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment). [Other troubleshooting help here](https://josh.works/turing-backend-prep-troubleshooting-guide)
+### 1. Clone this repository
+
+You don't need to fork this repository; clone it to your laptop
+
+in your `/turing` directory on your laptop (or whatever directory you want this repository to live inside of), run:
+
+```
+// using ssh keys
+git clone git@github.com:turingschool/ruby-exercises.git
+// using https, if the above doesn't work:
+git clone https://github.com/turingschool/ruby-exercises.git
+```  
+
+Once this command runs, you'll now have a "local" copy of this entire repository, living right on your laptop. 
+
+### 2. From the command line, `cd` into the `ruby-exercises` directory.
+
+### 3. From the command line, run `bundle`
+
+You _should_ see something like this: 
+
+```
+$ bundle
+Fetching gem metadata from https://rubygems.org/.............
+Using bundler 2.0.2
+Fetching minitest 5.2.1
+Installing minitest 5.2.1
+Bundle complete! 1 Gemfile dependency, 2 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+```
+If you see that, great!
+
+If you see something like:
+
+```
+bash: command not found: bundle
+```
+
+you need to install the `bundler` gem. Run:
+
+```
+$ gem install bundler
+```
+If `gem install bundler` doesn't work, you probably either don't have `rbenv` installed, or you've not yet installed ruby. Make sure you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and [installed rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment). 
+
+> Hey, hold up. What is this `bundle` thing, and what does it do? what does `gem install bundler` do?
+
+Great question, dear reader. 
+
+`bundler` is Ruby's [package manager](https://bundler.io/). If you want to install extra code that works with Ruby, you'll use `bundler` to do it. Once you _have_ the `bundler` installed, it is "used" by typing `bundle` into your terminal. 
+
+(The short version is, it looks at whatever is in your `Gemfile` and `Gemfile.lock` files, and installs all required gems)
+
+If you don't have `bundler` installed yet, you'll get the `command 'bundle' not found` error. At which point you need to install `bundler` with ruby. The way you install new gems in Ruby is by typing `gem install <gem_name>`. 
+
+Here's an exhaustive amount of information about gems, if you're so inclined: [guides.rubygems.org/what-is-a-gem](https://guides.rubygems.org/what-is-a-gem/)
+
+-------------------
+
+once `bundle` has run successfully, you're good to go! Read on to figure out the _order_ in which you should start this collection of exercises.
 
 ## Order
 
@@ -44,6 +110,8 @@ Then delete the code from your editor and make the tests pass a second time.
 The process of writing the code down by hand and rebuilding it feels _so hard_ when you first start it. Once you get in the habit, you'll experience the benefits. You'll learn 5x more if you write code down by hand, and redo each exercise at least once, after your initial pass through. 
 
 ----------------------------------
+
+## Suggested order
 
 This repository of exercises is one of the best tools you've got to learn Ruby. Every minute spent here is time _very_ well spent. 
 
