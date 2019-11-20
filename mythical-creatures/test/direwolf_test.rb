@@ -88,23 +88,23 @@ class DirewolfTest < Minitest::Test
 
   def test_direwolf_can_only_protect_two_starks_at_a_time
     skip
-    
-    wolf_1 = Direwolf.new('Summer', "Winterfell")
-    wolf_2 = Direwolf.new('Lady', "Winterfell")
-    stark_1 = Stark.new('Sansa')
-    stark_2 = Stark.new('John')
-    stark_3 = Stark.new('Rob')
-    stark_4 = Stark.new('Bran')
-    stark_5 = Stark.new('Arya')
 
-    wolf_1.protects(stark_1)
-    wolf_1.protects(stark_2)
-    wolf_2.protects(stark_3)
-    wolf_2.protects(stark_4)
-    wolf_2.protects(stark_5)
+    summer_wolf = Direwolf.new('Summer', "Winterfell")
+    lady_wolf = Direwolf.new('Lady', "Winterfell")
+    sansa_stark = Stark.new('Sansa')
+    john_stark = Stark.new('John')
+    ron_stark = Stark.new('Rob')
+    bran_stark = Stark.new('Bran')
+    arya_stark = Stark.new('Arya')
 
-    assert_equal 2, wolf_1.starks_to_protect.length
-    assert_equal 2, wolf_2.starks_to_protect.length
+    summer_wolf.protects(sansa_stark)
+    summer_wolf.protects(john_stark)
+    lady_wolf.protects(ron_stark)
+    lady_wolf.protects(bran_stark)
+    lady_wolf.protects(arya_stark)
+
+    assert_equal 2, summer_wolf.starks_to_protect.length
+    assert_equal 2, lady_wolf.starks_to_protect.length
   end
 
   def test_starks_start_off_unsafe
@@ -112,7 +112,7 @@ class DirewolfTest < Minitest::Test
 
     stark = Stark.new('John', "The Wall")
 
-    assert_equal false, stark.safe?
+    refute stark.safe?
     assert_equal 'Winter is Coming', stark.house_words
   end
 
@@ -120,67 +120,70 @@ class DirewolfTest < Minitest::Test
     skip
 
     wolf = Direwolf.new('Nymeria', "Winterfell")
-    stark_1 = Stark.new('Arya')
-    stark_2 = Stark.new('Sansa')
+    arya_stark = Stark.new('Arya')
+    sansa_stark = Stark.new('Sansa')
 
-    refute stark_1.safe?
-    wolf.protects(stark_1)
-    assert stark_1.safe?
-    refute stark_2.safe?
-    assert_equal 'The North Remembers', stark_1.house_words
-    assert_equal 'Winter is Coming', stark_2.house_words
+    wolf.protects(arya_stark)
+
+    assert arya_stark.safe?
+    refute sansa_stark.safe?
+    assert_equal 'The North Remembers', arya_stark.house_words
+    assert_equal 'Winter is Coming', sansa_stark.house_words
   end
 
-  def test_hunts_white_walkers_when_not_protecting_starks
+  def test_hunts_white_walkers
     skip
 
     wolf = Direwolf.new('Nymeria', "Winterfell")
-    stark_2 = Stark.new('Sansa')
 
     assert wolf.hunts_white_walkers?
-    wolf.protects(stark_2)
+  end
+
+  def test_hunts_white_walkers_but_not_if_protecting_starks
+    skip
+
+    wolf = Direwolf.new('Nymeria', "Winterfell")
+    stark = Stark.new('Sansa')
+
+    wolf.protects(stark)
     refute wolf.hunts_white_walkers?
   end
 
-  def test_wolves_can_stop_protecting_starks_and_they_become_unsafe_if_left
+  def test_wolves_can_leave_and_stop_protecting_starks
     skip
 
-    wolf_1 = Direwolf.new('Summer', "Winterfell")
-    wolf_2 = Direwolf.new('Lady', "Winterfell")
-    stark_1 = Stark.new('Sansa')
-    stark_2 = Stark.new('Arya')
+    summer_wolf = Direwolf.new('Summer', "Winterfell")
+    lady_wolf = Direwolf.new('Lady', "Winterfell")
+    sansa_stark = Stark.new('Sansa')
+    arya_stark = Stark.new('Arya')
 
-    wolf_1.protects(stark_2)
-    assert stark_2.safe?
-    wolf_2.protects(stark_1)
-    wolf_1.leaves(stark_2)
+    summer_wolf.protects(arya_stark)
+    lady_wolf.protects(sansa_stark)
+    summer_wolf.leaves(arya_stark)
 
 
-    assert_equal [],  wolf_1.starks_to_protect
-    assert_equal 'Sansa', wolf_2.starks_to_protect[0].name
-    assert_instance_of Array, wolf_2.starks_to_protect
-    refute stark_2.safe?
+    assert_equal [],  summer_wolf.starks_to_protect
+    assert_equal 'Sansa', lady_wolf.starks_to_protect[0].name
+    assert_instance_of Array, lady_wolf.starks_to_protect
+    refute arya_stark.safe?
   end
 
-  def test_if_stark_not_protected_when_direwolf_leaves_then_stark_returned
+  def test_if_stark_not_protected_when_direwolf_leaves_then_that_stark_is_the_return_value
     skip
 
-    wolf_1 = Direwolf.new('Summer', "Winterfell")
-    wolf_2 = Direwolf.new('Lady', "Winterfell")
-    stark_1 = Stark.new('Sansa')
-    stark_2 = Stark.new('Arya')
-    stark_3 = Stark.new('Rickon')
+    summer_wolf = Direwolf.new('Summer', "Winterfell")
+    lady_wolf = Direwolf.new('Lady', "Winterfell")
+    sansa_stark = Stark.new('Sansa')
+    arya_stark = Stark.new('Arya')
+    rickon_stark = Stark.new('Rickon')
 
-    wolf_1.protects(stark_2)
-    assert stark_2.safe?
-    wolf_2.protects(stark_1)
-    wolf_1.leaves(stark_2)
-    never_protected = wolf_2.leaves(stark_3)
+    summer_wolf.protects(arya_stark)
+    lady_wolf.protects(sansa_stark)
+    summer_wolf.leaves(arya_stark)
 
-    assert_equal 'Rickon', never_protected.name
-    assert_instance_of Stark, never_protected
-    assert_equal 'Winter is Coming', stark_2.house_words
-    assert_equal 'The North Remembers', stark_1.house_words
-    assert_equal 'Winter is Coming', stark_3.house_words
+    expected = lady_wolf.leaves(rickon_stark)
+
+    assert_equal expected.name, 'Rickon'
+    assert_instance_of expected, Stark
   end
 end
