@@ -36,6 +36,7 @@ Otherwise, Create that file in the `lib` directory (`touch lib/unicorn.rb`) and 
 * `werewolf_test.rb`
 * `centaur_test.rb`
 * `ogre_test.rb`
+* `direwolf_test.rb`
 
 ## Extra Challenges
 
