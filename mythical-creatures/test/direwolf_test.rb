@@ -1,7 +1,5 @@
 require "minitest/autorun"
 require "minitest/pride"
-require_relative 'direwolf'
-require_relative 'stark'
 
 class DirewolfTest < Minitest::Test
 
