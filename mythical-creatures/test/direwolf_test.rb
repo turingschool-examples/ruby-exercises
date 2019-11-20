@@ -91,18 +91,21 @@ class DirewolfTest < Minitest::Test
     lady_wolf = Direwolf.new('Lady', "Winterfell")
     sansa_stark = Stark.new('Sansa')
     john_stark = Stark.new('John')
-    ron_stark = Stark.new('Rob')
+    rob_stark = Stark.new('Rob')
     bran_stark = Stark.new('Bran')
     arya_stark = Stark.new('Arya')
 
     summer_wolf.protects(sansa_stark)
     summer_wolf.protects(john_stark)
-    lady_wolf.protects(ron_stark)
+    lady_wolf.protects(rob_stark)
     lady_wolf.protects(bran_stark)
     lady_wolf.protects(arya_stark)
 
-    assert_equal 2, summer_wolf.starks_to_protect.length
-    assert_equal 2, lady_wolf.starks_to_protect.length
+    assert_includes summer_wolf.starks_to_protect, sansa_stark
+    assert_includes summer_wolf.starks_to_protect, john_stark
+    assert_includes lady_wolf.starks_to_protect, rob_stark
+    assert_includes lady_wolf.starks_to_protect, bran_stark
+    refute_includes lady_wolf.starks_to_protect, arya_stark
   end
 
   def test_starks_start_off_unsafe
