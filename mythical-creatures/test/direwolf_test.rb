@@ -1,6 +1,8 @@
 require "minitest/autorun"
 require "minitest/pride"
 
+#New creature
+
 class DirewolfTest < Minitest::Test
 
   def test_direwolf_has_a_name
