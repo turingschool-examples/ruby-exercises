@@ -184,7 +184,7 @@ class DirewolfTest < Minitest::Test
 
     expected = lady_wolf.leaves(rickon_stark)
 
-    assert_instance_of expected, Stark
-    assert_equal expected.name, 'Rickon'
+    assert_instance_of Stark, expected
+    assert_equal 'Rickon', expected.name
   end
 end
