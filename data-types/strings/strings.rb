@@ -37,10 +37,9 @@ class StringTest < Minitest::Test
   end
 
   def test_4
-    skip
     rhyme = "peter piper picked a peck of picked peppers"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
+    actual = rhyme.reverse
     expected = "sreppep dekcip fo kcep a dekcip repip retep"
 
     assert_equal expected, actual
