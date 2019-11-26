@@ -28,10 +28,9 @@ class StringTest < Minitest::Test
   end
 
   def test_3
-    skip
     name = "AlIcE"
     # In place of the line below, call a method to achieve the expected output.
-    actual = name._____
+    actual = name.downcase
     expected = "alice"
 
     assert_equal expected, actual
