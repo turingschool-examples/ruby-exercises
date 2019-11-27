@@ -172,10 +172,9 @@ class StringTest < Minitest::Test
   end
 
   def test_19
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'lol'
-    actual = greeting._____
+    actual = greeting.include? 'lol'
     expected = false
 
     assert_equal expected, actual
