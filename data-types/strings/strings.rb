@@ -181,30 +181,29 @@ class StringTest < Minitest::Test
   end
 
   def test_20
-    skip
     greeting = "Hello World, my name is"
     name = "Harry Potter"
     # In place of the line below, use string manipulation to combine the
     #greeting and name variables to acheive the expected outcome
-    actual = _________
+    actual = greeting + " " + name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
 
     # See if you can use another method to achieve the same goal:
-    actual = ________
+    actual = greeting + " #{name}"
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
 
     # Again, using a different method:
-    actual = ________
+    actual = "#{greeting} #{name}"
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
 
     # Once more, using a different method:
-    actual = ________
+    actual = "#{greeting}" + " " + name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
