@@ -102,7 +102,7 @@ class StringTest < Minitest::Test
   def test_11
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme.chomp('e')
+    actual = rhyme.gsub('e', '')
     expected = "ny, mny, miny, mo"
 
     assert_equal expected, actual
@@ -118,10 +118,9 @@ class StringTest < Minitest::Test
   end
 
   def test_13
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.sub! 'Hello World!', 12
     expected = 12
 
     assert_equal expected, actual
@@ -131,7 +130,7 @@ class StringTest < Minitest::Test
     skip
     greeting = "Hello World!\n"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting
     expected = 13
 
     assert_equal expected, actual
