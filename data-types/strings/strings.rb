@@ -9,121 +9,109 @@ require 'pry'
 
 class StringTest < Minitest::Test
   def test_1
-    skip
     name = "alice"
     # In place of the line below, call a method on the name variable
     # defined above to acheive the expected output.
-    actual = name._____
+    actual = name.capitalize
     expected = "Alice"
 
     assert_equal expected, actual
   end
 
   def test_2
-    skip
     name = "aLiCe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = name._____
+    actual = name.upcase
     expected = "ALICE"
 
     assert_equal expected, actual
   end
 
   def test_3
-    skip
     name = "AlIcE"
     # In place of the line below, call a method to achieve the expected output.
-    actual = name._____
+    actual = name.downcase
     expected = "alice"
 
     assert_equal expected, actual
   end
 
   def test_4
-    skip
     rhyme = "peter piper picked a peck of picked peppers"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
+    actual = rhyme.reverse
     expected = "sreppep dekcip fo kcep a dekcip repip retep"
 
     assert_equal expected, actual
   end
 
   def test_5
-    skip
     word = "ticking"
     # In place of the line below, call a method to achieve the expected output.
-    actual = word.______
+    actual = word.gsub(/t/, "k")
     expected = "kicking"
 
     assert_equal expected, actual
   end
 
   def test_6
-    skip
     word = "ticking"
     # In place of the line below, call a method to achieve the expected output.
-    actual = word.______
+    actual = word.gsub(/ti/, 'clo')
     expected = "clocking"
 
     assert_equal expected, actual
   end
 
   def test_7
-    skip
     words = "five sleepy kittens"
     # In place of the line below, call a method to achieve the expected output.
-    actual = words.______
+    actual = words.gsub(/e/, '*')
     expected = "fiv* sl**py kitt*ns"
 
     assert_equal expected, actual
   end
 
   def test_8
-    skip
     greeting = "Hello!!"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
+    actual = greeting.chop
     expected = "Hello!"
 
     assert_equal expected, actual
   end
 
   def test_9
-    skip
     greeting = "Hello!!\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
+    actual = greeting.chop
     expected = "Hello!!"
 
     assert_equal expected, actual
   end
 
   def test_10
-    skip
     greeting = "Hello!!\n\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
+    actual = greeting.chop
     expected = "Hello!!\n"
 
     assert_equal expected, actual
   end
 
   def test_11
-    skip
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
+    actual = rhyme.chomp('e')
     expected = "ny, mny, miny, mo"
 
     assert_equal expected, actual
   end
 
   def test_12
-    skip
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
+    actual = rhyme.gsub(/[eo]/, "")
     expected = "ny, mny, mny, m"
 
     assert_equal expected, actual
