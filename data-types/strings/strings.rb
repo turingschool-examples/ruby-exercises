@@ -129,7 +129,7 @@ class StringTest < Minitest::Test
   def test_14
     greeting = "Hello World!\n"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting.sub('Hello World!', '13').to_i
+    actual = greeting.length
     expected = 13
 
     assert_equal expected, actual
