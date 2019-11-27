@@ -111,7 +111,7 @@ class StringTest < Minitest::Test
   def test_12
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme.gsub(/[eo]/, "")
+    actual = rhyme.gsub(/[eio]/, "")
     expected = "ny, mny, mny, m"
 
     assert_equal expected, actual
