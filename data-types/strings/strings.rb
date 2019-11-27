@@ -102,7 +102,7 @@ class StringTest < Minitest::Test
   def test_11
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme.chomp('e')
+    actual = rhyme.gsub('e', '')
     expected = "ny, mny, miny, mo"
 
     assert_equal expected, actual
@@ -111,127 +111,117 @@ class StringTest < Minitest::Test
   def test_12
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme.gsub(/[eo]/, "")
+    actual = rhyme.gsub(/[eio]/, "")
     expected = "ny, mny, mny, m"
 
     assert_equal expected, actual
   end
 
   def test_13
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.bytesize
     expected = 12
 
     assert_equal expected, actual
   end
 
   def test_14
-    skip
     greeting = "Hello World!\n"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.length
     expected = 13
 
     assert_equal expected, actual
   end
 
   def test_15
-    skip
     greeting = "Hello       World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
+    actual = greeting.bytesize
     expected = 18
 
     assert_equal expected, actual
   end
 
   def test_16
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of 'o' in the string
-    actual = greeting._____
+    actual = greeting.count 'o'
     expected = 2
 
     assert_equal expected, actual
   end
 
   def test_17
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of vowels in the string
-    actual = greeting._____
+    actual = greeting.count "aeiou"
     expected = 3
 
     assert_equal expected, actual
   end
 
   def test_18
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'llo'
-    actual = greeting._____
+    actual = greeting.include? 'llo'
     expected = true
 
     assert_equal expected, actual
   end
 
   def test_19
-    skip
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'lol'
-    actual = greeting._____
+    actual = greeting.include? 'lol'
     expected = false
 
     assert_equal expected, actual
   end
 
   def test_20
-    skip
     greeting = "Hello World, my name is"
     name = "Harry Potter"
     # In place of the line below, use string manipulation to combine the
     #greeting and name variables to acheive the expected outcome
-    actual = _________
+    actual = greeting + " " + name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
 
     # See if you can use another method to achieve the same goal:
-    actual = ________
+    actual = greeting + " #{name}"
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
 
     # Again, using a different method:
-    actual = ________
+    actual = "#{greeting} #{name}"
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
 
     # Once more, using a different method:
-    actual = ________
+    actual = "#{greeting}" + " " + name
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
   end
 
   def test_21
-    skip
     phrase = "   \n  \tto the    moon\n\n\t    "
     # In place of the line below, call a method to acheive the expected outcome
-    actual = phrase._____
+    actual = phrase.strip
     expected = "to the    moon"
 
     assert_equal expected, actual
   end
 
   def test_22
-    skip
     phrase = "   \n  \tto the    moon\n\n\t    "
     # In place of the line below, call a method to acheive the expected outcome
-    actual = phrase._____
+    actual = phrase.rstrip
     expected = "   \n  \tto the    moon"
 
     assert_equal expected, actual
