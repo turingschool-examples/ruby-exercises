@@ -82,10 +82,9 @@ class StringTest < Minitest::Test
   end
 
   def test_9
-    skip
     greeting = "Hello!!\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
+    actual = greeting.chop
     expected = "Hello!!"
 
     assert_equal expected, actual
