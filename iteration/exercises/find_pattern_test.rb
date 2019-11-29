@@ -1,10 +1,10 @@
-gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 
 class FindPatternTest < Minitest::Test
 
   def test_1
+    skip
     ages = [39, 45, 29, 24, 50]
     younger_than_thirty = nil
     ages.each do |age|
@@ -17,6 +17,7 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_2
+    skip
     ages = {
       abdi: 39,
       hassan: 45,
@@ -82,7 +83,7 @@ class FindPatternTest < Minitest::Test
     }
     multiple_of_three = nil
     # Your Code Here
-    end
+    
 
     assert_equal :abdi, multiple_of_three
   end
