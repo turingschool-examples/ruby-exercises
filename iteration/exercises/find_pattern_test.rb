@@ -126,10 +126,14 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_9
-    skip
     numbers = [3, 7, 13, 11, 10, 2, 17]
-    # Your Code Here
-
+    even = nil
+    numbers.each do |num|
+      if num % 2 == 0
+        even = num
+        break
+      end
+    end
     assert_equal 10, even
   end
 
