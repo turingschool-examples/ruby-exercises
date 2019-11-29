@@ -96,10 +96,14 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_7
-    skip
     people = ["Willie", "Carmen Sandiego", "Bryan", "Faith", "Zac"]
-    # Your Code Here
-
+    carmen = nil
+    people.each do |name|
+      if name == "Carmen Sandiego"
+        carmen = name
+        break
+      end 
+    end
     assert_equal "Carmen Sandiego", carmen
   end
 
