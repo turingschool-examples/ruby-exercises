@@ -67,14 +67,14 @@ class MapPatternTest < Minitest::Test
     numbers = [1, 2, 3, 4, 5]
     squares = []
     numbers.each do |number|
-      squares << number * number
+      squares << number ** 2
+      # or squares << number * number
     end
     expected = [1, 4, 9, 16, 25]
     assert_equal expected, squares
   end
 
   def test_6
-    skip
     numbers = {
       one: 1,
       two: 2,
@@ -83,8 +83,9 @@ class MapPatternTest < Minitest::Test
       five: 5
     }
     squares = {}
-    # Your Code Here
-
+    numbers.each do |key, value|
+      squares[key] = value ** 2
+    end
     expected = {
       one: 1,
       two: 4,
