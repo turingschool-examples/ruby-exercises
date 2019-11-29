@@ -138,7 +138,6 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_10
-    skip
     purchases = {
       "shoes" => :paid,
       "backpack" => :paid,
@@ -146,8 +145,13 @@ class FindPatternTest < Minitest::Test
       "posters" => :paid,
       "food" => :pending
     }
-    # Your Code Here
-
+    pending = nil
+    purchases.each do |item, status|
+      if status == :pending
+        pending = item.to_sym
+        break
+      end  
+    end
     assert_equal :books, pending
   end
 
