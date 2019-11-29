@@ -138,7 +138,6 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_10
-    skip
     family = {
       mother: "alice",
       father: "bob",
@@ -146,8 +145,10 @@ class MapPatternTest < Minitest::Test
       uncle: "david",
       sister: "eve"
     }
-    #Your Code Here
-    
+    backwards = {}
+    family.each do |role, name|
+      backwards[role] = name.reverse
+    end
     expected = {
       mother: "ecila",
       father: "bob",
