@@ -34,13 +34,12 @@ class MapPatternTest < Minitest::Test
     numbers = [1, 2, 3, 4, 5]
     doubles = []
     numbers.each do |number|
-      doubles << number * 2
+      doubles.push number * 2
     end
     assert_equal [2, 4, 6, 8, 10], doubles
   end
 
   def test_4
-    skip
     numbers = {
       one: 1,
       two: 2,
@@ -50,7 +49,7 @@ class MapPatternTest < Minitest::Test
     }
     doubles = {}
     numbers.each do |name, number|
-      # Your Code Here
+      doubles < (name number * 2)  
     end
     expected = {
       one: 2,
