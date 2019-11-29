@@ -4,7 +4,6 @@ require 'minitest/pride'
 class FindPatternTest < Minitest::Test
 
   def test_1
-    skip
     ages = [39, 45, 29, 24, 50]
     younger_than_thirty = nil
     ages.each do |age|
@@ -17,7 +16,6 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_2
-    skip
     ages = {
       abdi: 39,
       hassan: 45,
@@ -36,13 +34,14 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_3
-    skip
     ages = [39, 45, 29, 24, 50]
     older_than_fifty = nil
     ages.each do |age|
-      # Your Code Here
+      if age > 50
+        older_than_fifty = age
+        break
+      end
     end
-
     assert_nil older_than_fifty
   end
 
