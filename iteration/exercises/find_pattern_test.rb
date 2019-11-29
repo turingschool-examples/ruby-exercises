@@ -108,7 +108,6 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_8
-    skip
     places = {
       Bangkok: "Willie",
       Santa_Fe: "Carmen Sandiego",
@@ -116,8 +115,13 @@ class FindPatternTest < Minitest::Test
       Munich: "Faith",
       Mogudishu: "Zac"
     }
-    # Your Code Here
-
+    where_is_carmen_sandiego = nil
+    places.each do |city, name|
+      if name == "Carmen Sandiego"
+        where_is_carmen_sandiego = city
+        break
+      end
+    end
     assert_equal :Santa_Fe, where_is_carmen_sandiego
   end
 
