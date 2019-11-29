@@ -97,10 +97,11 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_7
-    skip
     names = ["alice", "bob", "charlie", "david", "eve"]
-    #Your Code Here
-
+    lengths = []
+    names.each do |name|
+      lengths << name.length
+    end
     assert_equal [5, 3, 7, 5, 3], lengths
   end
 
