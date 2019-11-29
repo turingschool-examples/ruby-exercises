@@ -156,7 +156,6 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_11
-    skip
     purchases = {
       "shoes" => :paid,
       "backpack" => :paid,
@@ -164,8 +163,13 @@ class FindPatternTest < Minitest::Test
       "posters" => :paid,
       "food" => :pending
     }
-    # Your Code Here
-
+    starts_with_b = nil
+    purchases.each do |item, status|
+      if item.chr == "b"
+        starts_with_b = item
+        break
+      end
+    end
     assert_equal "backpack", starts_with_b
   end
 
