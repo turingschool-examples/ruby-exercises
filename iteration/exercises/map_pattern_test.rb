@@ -106,7 +106,6 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_8
-    skip
     family = {
       mother: "alice",
       father: "bob",
@@ -114,7 +113,10 @@ class MapPatternTest < Minitest::Test
       uncle: "david",
       sister: "eve"
     }
-    #Your Code Here
+    lengths = {}
+    family.each do |role, name|
+      lengths[role] = name.length
+    end
 
     expected = {
       mother: 5,
