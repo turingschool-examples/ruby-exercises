@@ -65,10 +65,14 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_5
-    skip
     ages = [39, 45, 29, 24, 50]
     multiple_of_three = nil
-    # Your Code Here
+    ages.each do |num|
+      if num % 3 == 0
+        multiple_of_three = num
+        break
+      end
+    end
 
     assert_equal 39, multiple_of_three
   end
