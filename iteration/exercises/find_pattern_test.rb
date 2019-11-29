@@ -78,7 +78,6 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_6
-    skip
     ages = {
       abdi: 39,
       hassan: 45,
@@ -87,9 +86,12 @@ class FindPatternTest < Minitest::Test
       miguel: 50
     }
     multiple_of_three = nil
-    # Your Code Here
-    
-
+    ages.each do |name, age|
+      if age % 3 == 0
+        multiple_of_three = name
+        break
+      end
+    end
     assert_equal :abdi, multiple_of_three
   end
 
