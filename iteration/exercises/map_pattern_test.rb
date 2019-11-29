@@ -129,10 +129,11 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_9
-    skip
     names = ["alice", "bob", "charlie", "david", "eve"]
-    #Your Code Here
-
+    backwards = []
+    names.each do |name|
+      backwards << name.reverse
+    end
     assert_equal ["ecila", "bob", "eilrahc", "divad", "eve"], backwards
   end
 
