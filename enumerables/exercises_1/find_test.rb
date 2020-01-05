@@ -17,7 +17,7 @@ class FindTest < Minitest::Test
     found = words.find do |word|
       # Your code goes here
     end
-    assert_equal nil, found
+    assert_nil(found)
   end
 
   def test_find_waldo
@@ -31,7 +31,7 @@ class FindTest < Minitest::Test
     skip
     words = ["piglet", "porridge", "bear", "blueberry"]
     # Your code goes here
-    assert_equal nil, found
+    assert_nil(found)
   end
 
   def test_find_13
