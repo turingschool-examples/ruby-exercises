@@ -190,13 +190,6 @@ class EnumerablesTest < Minitest::Test
     assert actual
   end
 
-  def test_one_time
-    skip
-    words = ["morning", "time", "evening", "noon", "dusk", "dawn"]
-    actual = # Your code goes here
-    assert actual
-  end
-
   def test_multiply_list_of_numbers
     skip
     numbers = [2, 3, 5, 7]
