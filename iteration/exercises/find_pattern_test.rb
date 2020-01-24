@@ -82,7 +82,6 @@ class FindPatternTest < Minitest::Test
     }
     multiple_of_three = nil
     # Your Code Here
-    end
 
     assert_equal :abdi, multiple_of_three
   end
