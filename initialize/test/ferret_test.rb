@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/ferret'
+require_relative '../lib/ferret'
 
 class FerretTest < Minitest::Test
   def test_it_exists

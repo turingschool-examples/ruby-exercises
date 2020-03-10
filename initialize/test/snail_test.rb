@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/snail'
+require_relative '../lib/snail'
 
 class SnailTest < Minitest::Test
   def test_it_exists

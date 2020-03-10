@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/narwhal'
+require_relative '../lib/narwhal'
 
 class NarwhalTest < Minitest::Test
   def test_it_exists

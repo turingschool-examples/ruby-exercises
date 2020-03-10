@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/kangaroo'
+require_relative '../lib/kangaroo'
 
 class KangarooTest < Minitest::Test
   def test_it_exists

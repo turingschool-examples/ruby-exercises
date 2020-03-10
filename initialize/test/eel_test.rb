@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/eel'
+require_relative '../lib/eel'
 
 class EelTest < Minitest::Test
   def test_it_exists
