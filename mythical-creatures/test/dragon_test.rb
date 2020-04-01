@@ -4,6 +4,8 @@ require 'minitest/pride'
 require_relative '../lib/dragon'
 
 class DragonTest < Minitest::Test
+  # feel free to check out this video walk-through at some point:
+  # https://youtu.be/NIPerY-xuCk
   def test_it_has_a_name
     dragon = Dragon.new("Ramoth", :gold, "Lessa")
     assert_equal "Ramoth", dragon.name

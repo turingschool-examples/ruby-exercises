@@ -3,6 +3,10 @@ require 'minitest/pride'
 require_relative '../lib/ogre'
 
 class OgreTest < Minitest::Test
+  # Once you're done with this mythical creature, take a look at this article
+  # about improving your code by getting rid of `attr_accessors`, and why you'd
+  # want to do so: https://josh.works/mythical-creature-refactor-ogre
+  # (includes a 2-min video walk-through)
   def test_it_has_a_name
     ogre = Ogre.new('Brak')
     assert_equal 'Brak', ogre.name

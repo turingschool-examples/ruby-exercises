@@ -32,10 +32,10 @@ Otherwise, Create that file in the `lib` directory (`touch lib/unicorn.rb`) and 
 * `hobbit_test.rb` [video walk-through](https://youtu.be/uYGS-DCNR-0)
 * `pirate_test.rb`
 * `wizard_test.rb`
-* `medusa_test.rb`
+* `medusa_test.rb` [video walk-through](https://www.youtube.com/watch?v=hzFW_BRdHLY)
 * `werewolf_test.rb`
 * `centaur_test.rb`
-* `ogre_test.rb`
+* `ogre_test.rb` [video walk-through _of a refactor_](https://youtu.be/Z_e7p8cDF1Q)
 * `direwolf_test.rb`
 
 ## Extra Challenges

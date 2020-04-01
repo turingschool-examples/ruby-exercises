@@ -157,10 +157,10 @@ This repository of exercises is one of the best tools you've got to learn Ruby. 
   * datatypes/collections/advanced_nested_collections.rb [video walk-through](https://youtu.be/9AaElA4elDU)
   * object-and-methods/exercise-2
   * mythical-creatures
-    * Medusa
+    * Medusa [video walk-through](https://www.youtube.com/watch?v=hzFW_BRdHLY)
     * Werewolf
     * Centaur
-    * Ogre
+    * Ogre [video walk-through _of a refactor_](https://youtu.be/Z_e7p8cDF1Q)
   * command-query
     * adult_test.rb
     * roll_call_test.rb

@@ -4,6 +4,8 @@ require 'minitest/pride'
 require_relative '../lib/unicorn'
 
 class UnicornTest < Minitest::Test
+  # feel free to check out this video walk-through:
+  # https://youtu.be/mocwGsu41yw 
 
   def test_it_has_a_name
     # hint - you will need to create a new file! Re-read the README!
