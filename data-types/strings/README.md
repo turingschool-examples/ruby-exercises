@@ -9,6 +9,7 @@ There are additional methods that you will need to complete the exercises; each 
 * `String#chomp`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-chomp)
 * `String#chop`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-chop)
 * `String#delete`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-delete)
+* `String#gsub`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-gsub)
 * `String#include?`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-include-3F)
 * `String#length`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-length)
 * `String#reverse`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-reverse)
