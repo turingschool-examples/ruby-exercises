@@ -5,6 +5,7 @@ Below is a list of methods that will help you complete the exercises - research 
 There are additional methods that you will need to complete the exercises; each of these additional methods can be found in the Ruby Docs for Strings.
 
 * `String#capitalize`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-capitalize)
+* `String#count`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-count)
 * `String#concat`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-concat)
 * `String#chomp`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-chomp)
 * `String#chop`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-chop)
@@ -19,6 +20,8 @@ There are additional methods that you will need to complete the exercises; each 
 
 Here's a [companion piece to working through these exercises](https://josh.works/turing-backend-prep-02-first-tests-and-making-them-pass).
 
+
+<!-- TODO replace this video w/new vide -->
 An alumn has put together [a video walkthrough](https://www.youtube.com/watch?v=BKqo2w0W7S0) for this `strings.rb` test, as well. 
 
 These two resources, combined, should help get you up and running. 
