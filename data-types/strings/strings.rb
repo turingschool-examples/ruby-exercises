@@ -1,10 +1,9 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'pry'
 
 # There's a video walk-through of this exercise available here:
-# https://www.youtube.com/watch?v=BKqo2w0W7S0
-# and a rambling blog post on this general topic here:
+# https://youtu.be/6l2vqV99VMM
+# and a helpful blog post on this general topic here:
 # https://josh.works/turing-backend-prep-02-first-tests-and-making-them-pass
 
 class StringTest < Minitest::Test
