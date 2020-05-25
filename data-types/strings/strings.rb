@@ -207,21 +207,30 @@ class StringTest < Minitest::Test
     #greeting and name variables to acheive the expected outcome
     actual = _________
     expected = "Hello World, my name is Harry Potter"
-
-    assert_equal expected, actual
-
-    # See if you can use another method to achieve the same goal:
+  end
+  
+  def test_21
+    skip
+    # See if you can use another method than the last test to achieve the same goal:
+    greeting = "Hello World, my name is"
+    name = "Harry Potter"
     actual = ________
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
-
+  end
+  
+  def test_22
+    skip
     # Again, using a different method:
     actual = ________
     expected = "Hello World, my name is Harry Potter"
 
     assert_equal expected, actual
-
+  end
+  
+  def test_23
+    skip
     # Once more, using a different method:
     actual = ________
     expected = "Hello World, my name is Harry Potter"
@@ -231,30 +240,10 @@ class StringTest < Minitest::Test
 
   def test_21
     skip
-    phrase = "   \n  \tto the    moon\n\n\t    "
+    phrase = "  \n\t to the moon\n\n\t    "
     # In place of the line below, call a method to acheive the expected outcome
-    actual = phrase._____
-    expected = "to the    moon"
-
-    assert_equal expected, actual
-  end
-
-  def test_22
-    skip
-    phrase = "   \n  \tto the    moon\n\n\t    "
-    # In place of the line below, call a method to acheive the expected outcome
-    actual = phrase._____
-    expected = "   \n  \tto the    moon"
-
-    assert_equal expected, actual
-  end
-
-  def test_23
-    skip
-    phrase = "   \n  \tto the    moon\n\n\t    "
-    # In place of the line below, call a method to acheive the expected outcome
-    actual = phrase._____
-    expected = "  to the    moon\n\n\t    "
+    actual = ________
+    expected = "to the moon"
 
     assert_equal expected, actual
   end
