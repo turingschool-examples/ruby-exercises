@@ -14,7 +14,7 @@ Each folder in this repository is a set of related exercises. Open up the folder
   
 If you're new here, watch this getting-started video. We'll install the ruby-exercises directory, figure out how to get set up to practice some `ruby`, and then we'll work through the _complete_ full exercises:
 
-[![Intro to ruby-exercises and strings.rb (YouTube)](images/embedded-video-screenshot-getting-started.jpg)]((https://youtu.be/aeAkLxr5diE))
+[![Intro to ruby-exercises and strings.rb (YouTube)](/images/embedded-video-screenshot-getting-started.jpg)]((https://youtu.be/aeAkLxr5diE))
 
 ## Setup
 
