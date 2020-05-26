@@ -41,17 +41,27 @@ Once this command runs, you'll now have a "local" copy of this entire repository
 
 ### 2. From the command line, `cd` into the `ruby-exercises` directory.
 
-### 3. From the command line, run `bundle`
+### 2. Install `bundler` gem
+
+run `gem install bundler` in your terminal
+
+### 3. From the command line, run `bundle install`
 
 You _should_ see something like this: 
 
 ```
-$ bundle
-Fetching gem metadata from https://rubygems.org/.............
-Using bundler 2.0.2
+$ bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Using bundler 2.1.4
+Fetching coderay 1.1.2
+Installing coderay 1.1.2
+Fetching method_source 1.0.0
+Installing method_source 1.0.0
 Fetching minitest 5.2.1
 Installing minitest 5.2.1
-Bundle complete! 1 Gemfile dependency, 2 gems now installed.
+Fetching pry 0.13.1
+Installing pry 0.13.1
+Bundle complete! 2 Gemfile dependencies, 5 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
 ```
 If you see that, great!
