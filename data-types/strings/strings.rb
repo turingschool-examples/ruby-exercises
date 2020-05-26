@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 # There's a video walk-through of this exercise available here:
-# https://youtu.be/6l2vqV99VMM
+# https://youtu.be/fgSdZoyiwN8
 # and a helpful blog post on this general topic here:
 # https://josh.works/turing-backend-prep-02-first-tests-and-making-them-pass
 
@@ -237,7 +237,7 @@ class StringTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_21
+  def test_24
     skip
     phrase = "  \n\t to the moon\n\n\t    "
     # In place of the line below, call a method to acheive the expected outcome
