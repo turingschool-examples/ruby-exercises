@@ -14,7 +14,7 @@ Each folder in this repository is a set of related exercises. Open up the folder
   
 If you're new here, watch this getting-started video. We'll install the ruby-exercises directory, figure out how to get set up to practice some `ruby`, and then we'll work through the _complete_ full exercises:
 
-[![Intro to ruby-exercises and strings.rb (YouTube)](images/embedded-video-screenshot-getting-started.jpg)]((https://youtu.be/fgSdZoyiwN8))
+[![Intro to ruby-exercises and strings.rb (YouTube)](images/embedded-video-screenshot-getting-started.jpg)]((https://youtu.be/aeAkLxr5diE))
 
 ## Setup
 
@@ -91,7 +91,7 @@ And read through the `README.md` for further instructions!
 
 If you want to view the instructions in your web browser, you can view them here: [data-types/strings/README.md](https://github.com/turingschool/ruby-exercises/tree/master/data-types/strings)
 
-Otherwise, please work through [this video guide](https://youtu.be/fgSdZoyiwN8) to fully understand how to run these exercises. They can be mostly self-explanitory, but even if you know exactly how to make these tests pass, you'll gain value from the video. 
+Otherwise, please work through [this video guide](https://youtu.be/aeAkLxr5diE) to fully understand how to run these exercises. They can be mostly self-explanitory, but even if you know exactly how to make these tests pass, you'll gain value from the video. 
 
 ----------------------------------
 
@@ -101,7 +101,7 @@ This repository of exercises is one of the best tools you've got to learn Ruby. 
 
 * Week 1
   * data-types
-    * strings (start here!!!) video walk-through](https://youtu.be/fgSdZoyiwN8)
+    * strings (start here!!!) video walk-through](https://youtu.be/aeAkLxr5diE)
     * ints_and_floats
     * collections/arrays [video walk-through](https://youtu.be/RUnd1Uu0AyE)
   * initialize

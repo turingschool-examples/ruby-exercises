@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 # There's a video walk-through of this exercise available here:
-# https://youtu.be/fgSdZoyiwN8
+# https://youtu.be/aeAkLxr5diE
 # and a helpful blog post on this general topic here:
 # https://josh.works/turing-backend-prep-02-first-tests-and-making-them-pass
 
