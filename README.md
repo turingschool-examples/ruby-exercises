@@ -101,7 +101,7 @@ This repository of exercises is one of the best tools you've got to learn Ruby. 
 
 * Week 1
   * data-types
-    * strings (start here!!!) video walk-through](https://youtu.be/aeAkLxr5diE)
+    * strings (start here!!!) [video walk-through](https://youtu.be/aeAkLxr5diE)
     * ints_and_floats
     * collections/arrays [video walk-through](https://youtu.be/RUnd1Uu0AyE)
   * initialize
