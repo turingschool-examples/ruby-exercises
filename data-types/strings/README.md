@@ -21,7 +21,7 @@ There are additional methods that you will need to complete the exercises; each 
 
 [Here's a walk-through to this exercise](https://youtu.be/aeAkLxr5diE). It touches on far more than just the exact solutions to given answers, so please give it a watch, or at least watch a few chunks of it:
 
-[![Intro to ruby-exercises and strings.rb (YouTube)](/images/embedded-video-screenshot-getting-started.jpg)]((https://youtu.be/aeAkLxr5diE))
+[![Intro to ruby-exercises and strings.rb (YouTube)](/images/embedded-video-screenshot-getting-started.jpg)](https://youtu.be/aeAkLxr5diE)
 
 #### What is minitest?
 
