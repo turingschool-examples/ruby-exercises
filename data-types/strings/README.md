@@ -19,9 +19,9 @@ There are additional methods that you will need to complete the exercises; each 
 * `String#upcase`[docs](https://ruby-doc.org/core-2.6.5/String.html#method-i-upcase)
 
 
-Here's a walk-through to this exercise. It touches on far more than just the exact solutions to given answers, so please give it a watch, or at least watch a few chunks of it:
+[Here's a walk-through to this exercise](https://youtu.be/aeAkLxr5diE). It touches on far more than just the exact solutions to given answers, so please give it a watch, or at least watch a few chunks of it:
 
-[![Intro to ruby-exercises and strings.rb (YouTube)](/images/embedded-video-screenshot-getting-started.jpg)]((https://youtu.be/6l2vqV99VMM))
+[![Intro to ruby-exercises and strings.rb (YouTube)](/images/embedded-video-screenshot-getting-started.jpg)]((https://youtu.be/aeAkLxr5diE))
 
 #### What is minitest?
 
