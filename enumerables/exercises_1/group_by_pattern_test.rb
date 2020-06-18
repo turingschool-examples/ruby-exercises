@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 
 class GroupByPatternTest < Minitest::Test
-
+  
   def test_group_words_by_length
     words = ["sue", "alice", "steve", "sally", "adam", "fort", "tops", "dog", "cat"]
     grouped = Hash.new {|hash, key| hash[key] = []}
