@@ -14,15 +14,15 @@ Navigate to the `mythical-creatures` directory in your terminal, and then run yo
 ruby test/unicorn_test.rb
 ```
 
-That will likely produce an error saying that no `unicorn.rb` file exists.
-
-If you get an error regarding `minitest` you may need to run the following command from your terminal:
+If you get an error regarding a certain gem not being installed, you may need to run the following command from your terminal:
 
 ```
-gem install minitest
+bundle install
 ```
 
-Otherwise, Create that file in the `lib` directory (`touch lib/unicorn.rb`) and then run your test again. Continue to follow the errors that your test provides until the test passes. Then, unskip the next test by removing the line that says `skip`. Continue until all tests pass for all creatures.
+There's a video walk-through of the setup and the whole `unicorn_test.rb` file here: [https://youtu.be/mocwGsu41yw](https://youtu.be/mocwGsu41yw).
+
+Continue to follow the errors that your test provides until the test passes. Then, unskip the next test by removing the line that says `skip`. Continue until all tests pass for all creatures.
 
 ## Suggested Order
 
