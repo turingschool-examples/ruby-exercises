@@ -23,6 +23,12 @@ You'll have to _create_ the missing file. Look in the `lib` directory, see how t
 
 So, create a `beaver.rb` file in the `lib` directory, and try it again!
 
+## Learning about Initialization
+
+You'll be well served to read [Classes and Objects - Part I (LaunchSchool)](https://launchschool.com/books/oo_ruby/read/classes_and_objects_part1). 
+
+These exercises pair very well with the above written explanations. 
+
 -------------------------------
 
 The difficulty of these exercises steps up when you get to `kangaroo_test.rb`, so once you've completed a few of them, consider jumping tracks to look at the `mythical-creatures` exercises.
