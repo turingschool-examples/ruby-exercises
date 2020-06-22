@@ -6,7 +6,7 @@ require_relative '../lib/unicorn'
 class UnicornTest < Minitest::Test
 
   def test_it_has_a_name
-    # hint - you will need to create a new file! Re-read the README!
+    # hint - you might need to create a new file! Re-read the README!
     unicorn = Unicorn.new("Robert")
     assert_equal "Robert", unicorn.name
   end
