@@ -20,65 +20,122 @@ class FindPatternTest < Minitest::Test
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
     found = nil
     words.each do |word|
-      # Your code goes here
+      nil
     end
-    assert_equal nil, found
+    assert_nil nil, found
   end
-
   def test_find_waldo
-    skip
+    # skip
     words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
     found = nil
-    # Your code goes here
+    words.each do |word|
+      if word == "waldo"
+        found = "waldo"
+      end
+    end
     assert_equal "waldo", found
   end
 
   def test_cannot_find_3_letter_words
-    skip
+    # skip
     words = ["piglet", "porridge", "bear", "blueberry"]
-    # Your code goes here
-    assert_equal nil, found
+    found = nil
+    words.each do |word|
+      if word.length < 3
+        found = "Small words rock!"
+      else
+        found = nil
+      end
+    end
+    assert_nil nil, found
   end
 
   def test_find_13
-    skip
+    # skip
     numbers = [2, 13, 19, 8, 3, 27]
-    # Your code goes here
+    found = 0
+    numbers.each do |number|
+      if number == 13
+        found = number
+      end
+    end
     assert_equal 13, found
   end
 
   def test_find_first_even_number
-    skip
+    # skip
     numbers = [3, 7, 13, 11, 10, 2, 17]
-    # Your code goes here
+    found = 0
+    found_items = []
+    numbers.each do |number|
+      if (number.even?)
+        found_items << number
+      end
+      found = found_items.first
+    end
+
     assert_equal 10, found
   end
 
   def test_find_first_multiple_of_3
-    skip
+    # skip
     numbers = [2, 8, 9, 27, 24, 5]
-    # Your code goes here
+    found = 0
+    found_items = []
+    numbers.each do |number|
+      if number % 3 == 0
+        found_items << number
+      end
+      # require "pry"; binding.pry
+      found = found_items.first
+    end
+
     assert_equal 9, found
   end
 
   def test_find_first_word_starting_with_q
-    skip
+    # skip
     words = ["weirdo", "quill", "fast", "quaint", "quitter", "koala"]
-    # Your code goes here
+    found = nil
+    found_items = []
+    words.each do |word|
+      first_letter = word[0]
+      if first_letter == "q"
+        # require "pry"; binding.pry
+        found_items << word
+      end
+      found = found_items.first
+    end
     assert_equal "quill", found
   end
 
   def test_find_first_word_ending_with_er
-    skip
+    # skip
     words = ["biggest", "pour", "blight", "finger", "pie", "border"]
-    # Your code goes here
+    found = nil
+    found_items = []
+    words.each do |word|
+      word[-2,2]
+      last_letter = word[-2, 2]
+      if last_letter == "er"
+        found_items << word
+      end
+      found = found_items.first
+    end
     assert_equal "finger", found
   end
 
   def test_find_first_number_greater_than_20
-    skip
+    # skip
     numbers = [1, 8, 19, 21, 29, 31, 34]
-    # Your code goes here
+    found = nil
+    found_items = []
+    numbers.each do |number|
+      if number > 20
+        found_items << number
+      end
+      found = found_items.first
+    end
     assert_equal 21, found
   end
 
