@@ -45,13 +45,12 @@ class HashesTest < Minitest::Test
   end
 
   def test_5
-    # Define an ingredients hash with default values of 0
-    # create the first key "tomatoes" with a value of 0
-    # and a second key :carrots with a value of 0
+    # In the line below, create a new hash with
+    # default values of zero
+    # create a "tomatoes" key with a value of 0
+    # and a :carrots key with a value of 0
     ingredients = ______
 
-    assert_equal "tomatoes", ingredients.keys[0]
-    assert_equal :carrots, ingredients.keys[1]
     assert_equal 0, ingredients["tomatoes"]
     assert_equal 0, ingredients[:carrots]
   end
