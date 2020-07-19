@@ -95,6 +95,12 @@ class OgreTest < Minitest::Test
     skip
     ogre = Ogre.new('Brak')
     human = Human.new
+    
+    6.times do
+      ogre.encounter(human)
+    end
+
+    assert human.knocked_out?
 
     ogre.apologize(human)
     refute human.knocked_out?

@@ -4,7 +4,7 @@ First of all, **thank you** for helping with the Enums exercises!
 
 ## Issues
 
-Please file issues on the [GitHub issues list](https://github.com/JumpstartLab/enums-exercises/issues) and give as much detail as possible.
+Please file issues on the [GitHub issues list](https://github.com/turingschool/ruby-exercises/issues) and give as much detail as possible.
 
 ## Philosophy
 
@@ -22,7 +22,7 @@ test suites, one for `#each` and one for the enumerable method itself.
 Each test suite is built up in the following way:
 
 1. A test that is passing, which shows the basic pattern.
-2. A test where the block of the loop is missisg.
+2. A test where the block of the loop is missing.
 3. A test where the entire loop is missing.
 4. Any number of tests where all but the input data and the assertion
 are missing.

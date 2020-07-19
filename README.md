@@ -6,50 +6,112 @@ Practicing in this manner (small, bite-sized problems that you can do repeatedly
 
 Each folder in this repository is a set of related exercises. Open up the folder and read the README to learn more about them.
 
-_Note: If you've just stumbled across this repository online, and are looking to work through these exercises, consider working through these [setup instructions](http://mod0.turing.io/setup-instructions) and [this guide to installing rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment), as these two items are pre-requisites to working on these ruby exercises below._
+## Structure of this repository
+- Each folder contains a `README.md` file that provides a summary of what skills you will develop with these exercises
+- Each exercise file within the folder will begin with comments providing more detail on:
+  1. How you need to manipulate or work with this file to complete the exercise.
+  2. Some exercises will require you to manipulate the "current" file and run it. Other exercises will require you to create _new_ files and then reference those files for the "current" file to work.
+  
+If you're new here, watch this getting-started video. We'll install the ruby-exercises directory, figure out how to get set up to practice some `ruby`, and then we'll work through the _complete_ full exercises:
 
-## Getting Started
-
-If you are new to Ruby, please see [Turing Prep Chapter 1: Make Mod 1 Easier Than It Otherwise Would Be](https://josh.works/turing-backend-prep-01-intro) for help getting started with these exercises.
+[![Intro to ruby-exercises and strings.rb (YouTube)](/images/embedded-video-screenshot-getting-started.jpg)](https://youtu.be/aeAkLxr5diE)
 
 ## Setup
 
-1. Clone this repository
-1. From the command line, `cd` into the `ruby-exercises` directory.
-1. From the command line, run `bundle`
-  * If you get an error saying that the command `bundle` was not found, first run `gem install bundler` and then try again. If `gem install bundler` doesn't work, make sure you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and [installed rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment). [Other troubleshooting help here](https://josh.works/turing-backend-prep-troubleshooting-guide)
+### 1. Clone this repository
 
-## Order
+You don't need to fork this repository; clone it to your laptop
 
-Here is a very rough suggested timeline for working on the exercises. This is just a suggestion, as the exercises can be completed in any order. 
+in your `/turing` directory on your laptop (or whatever directory you want this repository to live inside of), run:
 
-Where there are video walk-throughs, it could be useful to watch the whole video. These walkthroughs touch on many useful concepts and tools you'll use for the rest of your time at Turing (and your job!), like `how to google well`, `terminal shortcuts`, `Atom configurations you should check out`, `pry and using a debugger`, and lots more. The time you spend watching and studying these walkthroughs will save you multiples of that time down the road.
+```
+// using ssh keys
+git clone git@github.com:turingschool/ruby-exercises.git
+// using https, if the above doesn't work:
+git clone https://github.com/turingschool/ruby-exercises.git
+```  
 
-> Isn't having a video walkthrough of one of these exercises a little like cheating?
+Once this command runs, you'll now have a "local" copy of this entire repository, living right on your laptop. 
 
-Great question! These videos pair well with your learning goals for a few reasons:
+### 2. From the command line, `cd` into the `ruby-exercises` directory.
 
-1. There are only a few video walk-throughs. If you do _all_ of the exercises, you'll do many exercises without any assistance.
-1. The things you learn from the walk-throughs will enable you to learn more and better understand what you're doing.
-3. You don't _have_ to watch the videos before you start solving these exercises. You can use them _just_ when you get stuck. Each video has an "index" of what is covered at each point in the video, and where in the video I address a given test. For example, you can be stuck half-way through the `advanced_nested_collections` exercise, click through to the video, and jump right to the test you're working on. 
+### 2. Install `bundler` gem
 
-## Suggested workflow
+run `gem install bundler` in your terminal
 
-After you do one of these exercises, please please please jot down _on a piece of paper_ some (or all) of the code that you wrote. Here's [how one this random alum approaches learning, _actual learning_ of complex technical material](https://josh.works/learning-how-to-learn)
+### 3. From the command line, run `bundle install`
 
-Then delete the code from your editor and make the tests pass a second time.
+You _should_ see something like this: 
 
-[Here's a way of organizing a paper notebook that could be helpful right about now](https://josh.works/how-i-take-notes-aka-add-an-index-to-your-notebook)
+```
+$ bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Using bundler 2.1.4
+Fetching coderay 1.1.2
+Installing coderay 1.1.2
+Fetching method_source 1.0.0
+Installing method_source 1.0.0
+Fetching minitest 5.2.1
+Installing minitest 5.2.1
+Fetching pry 0.13.1
+Installing pry 0.13.1
+Bundle complete! 2 Gemfile dependencies, 5 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+```
+If you see that, great!
 
-The process of writing the code down by hand and rebuilding it feels _so hard_ when you first start it. Once you get in the habit, you'll experience the benefits. You'll learn 5x more if you write code down by hand, and redo each exercise at least once, after your initial pass through. 
+If you get an error like:
+
+```
+zsh: command not found: bundle
+```
+
+you need to install the `bundler` gem. Run:
+
+```
+$ gem install bundler
+```
+
+If this command throws an error, you either:
+  1. Don't have `rbenv` installed
+  2. You've not yet installed a version of Ruby. 
+
+Please check that you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and this guide to [install rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment). 
+
+> Hey, hold up. What is this `bundle` thing, and what does it do? what does `gem install bundler` do?
+
+Great question! 
+
+`bundler` is Ruby's [package manager](https://bundler.io/). If you want to install extra code that works with Ruby, you'll use `bundler` to do it. Once you _have_ the `bundler` installed, it is "used" by typing `bundle` into your terminal. 
+
+It is used in conjunction with the `Gemfile` and `Gemfile.lock` files you see in this repository, to manage Ruby gems.
+
+Here's an exhaustive amount of information about gems, if you're so inclined: [guides.rubygems.org/what-is-a-gem](https://guides.rubygems.org/what-is-a-gem/)
+
+-------------------
+
+Once `bundle` has run successfully, open up the first test!
+
+```
+$ cd data-types/strings
+$ atom .
+```
+
+And read through the `README.md` for further instructions!
+
+If you want to view the instructions in your web browser, you can view them here: [data-types/strings/README.md](https://github.com/turingschool/ruby-exercises/tree/master/data-types/strings)
+
+Otherwise, please work through [this video guide](https://youtu.be/aeAkLxr5diE) to fully understand how to run these exercises. They can be mostly self-explanitory, but even if you know exactly how to make these tests pass, you'll gain value from the video. 
 
 ----------------------------------
+
+## Suggested order
 
 This repository of exercises is one of the best tools you've got to learn Ruby. Every minute spent here is time _very_ well spent. 
 
 * Week 1
   * data-types
-    * strings [video walk-through](https://youtu.be/BKqo2w0W7S0)
+    * strings (start here!!!) [video walk-through](https://youtu.be/aeAkLxr5diE)
     * ints_and_floats
     * collections/arrays [video walk-through](https://youtu.be/RUnd1Uu0AyE)
   * initialize

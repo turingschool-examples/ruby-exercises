@@ -14,6 +14,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_doubles
+    skip
     numbers = [1, 2, 3, 4, 5]
     doubles = []
     numbers.each do |number|
