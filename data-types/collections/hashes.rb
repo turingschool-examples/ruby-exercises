@@ -1,3 +1,5 @@
+
+
 require 'minitest/autorun'
 require 'minitest/pride'
 
@@ -44,8 +46,10 @@ class HashesTest < Minitest::Test
 
   def test_5
     # In the line below, create a new hash with
-    # a default value of zero
+    # default values of zero
+    # create a "tomatoes" key and a :carrots key
     ingredients = ______
+
     assert_equal 0, ingredients["tomatoes"]
     assert_equal 0, ingredients[:carrots]
   end
@@ -160,7 +164,7 @@ class HashesTest < Minitest::Test
       Harper_Lee: "To Kill a Mockingbird"
     }
     # Using the books hash defined above,
-    # delete the key :Harper+Lee
+    # delete the key :Harper_Lee
     ______
     expected = {
       John_Steinbeck: "Grapes of Wrath"
