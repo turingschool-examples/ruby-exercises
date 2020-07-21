@@ -37,6 +37,7 @@ Continue to follow the errors that your test provides until the test passes. The
 * `centaur_test.rb`
 * `ogre_test.rb`
 * `direwolf_test.rb`
+* `the_journey_test.rb` (see below)
 
 ## Extra Challenges
 
@@ -68,3 +69,13 @@ tests exercising some of the following concepts:
 * Using methods to change the internal state of an instance
 * Using methods to query the internal state of an instance
 * Functionality that necessitates the internal use of an Array
+
+### So you feel like going on a journey?
+
+ Are you up for an adventure traveller? This test involves the creation of new creatures as well as calling upon
+ creatures from times once past.
+
+ To get gold you are required to complete quests that act as mini exercisms; you will see three kinds:
+ 1. The number of times a letter is different.
+ 2. Adding up the sum of a number and then squaring it i.e. for 5 => 225 = (1 + 2 + 3 + 4 + 5)**
+ 3. Turning a num into a roman numeral.
