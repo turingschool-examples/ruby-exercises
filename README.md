@@ -1,8 +1,8 @@
 # Ruby Exercises
 
-This is a collection of exercises to practice various aspects of Ruby. 
+This is a collection of exercises to practice various aspects of Ruby.
 
-Practicing in this manner (small, bite-sized problems that you can do repeatedly) is a _fantastic_ way to solidify programming concepts. 
+Practicing in this manner (small, bite-sized problems that you can do repeatedly) is a _fantastic_ way to solidify programming concepts.
 
 Each folder in this repository is a set of related exercises. Open up the folder and read the README to learn more about them.
 
@@ -11,7 +11,7 @@ Each folder in this repository is a set of related exercises. Open up the folder
 - Each exercise file within the folder will begin with comments providing more detail on:
   1. How you need to manipulate or work with this file to complete the exercise.
   2. Some exercises will require you to manipulate the "current" file and run it. Other exercises will require you to create _new_ files and then reference those files for the "current" file to work.
-  
+
 If you're new here, watch this getting-started video. We'll install the ruby-exercises directory, figure out how to get set up to practice some `ruby`, and then we'll work through the _complete_ full exercises:
 
 [![Intro to ruby-exercises and strings.rb (YouTube)](/images/embedded-video-screenshot-getting-started.jpg)](https://youtu.be/aeAkLxr5diE)
@@ -31,7 +31,7 @@ git clone git@github.com:turingschool/ruby-exercises.git
 git clone https://github.com/turingschool/ruby-exercises.git
 ```  
 
-Once this command runs, you'll now have a "local" copy of this entire repository, living right on your laptop. 
+Once this command runs, you'll now have a "local" copy of this entire repository, living right on your laptop.
 
 ### 2. From the command line, `cd` into the `ruby-exercises` directory.
 
@@ -41,7 +41,7 @@ run `gem install bundler` in your terminal
 
 ### 3. From the command line, run `bundle install`
 
-You _should_ see something like this: 
+You _should_ see something like this:
 
 ```
 $ bundle install
@@ -74,15 +74,15 @@ $ gem install bundler
 
 If this command throws an error, you either:
   1. Don't have `rbenv` installed
-  2. You've not yet installed a version of Ruby. 
+  2. You've not yet installed a version of Ruby.
 
-Please check that you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and this guide to [install rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment). 
+Please check that you've followed [mod0 setup instructions](http://mod0.turing.io/setup-instructions) and this guide to [install rbenv and a version of ruby](https://github.com/turingschool-examples/backend_module_0_capstone#environment).
 
 > Hey, hold up. What is this `bundle` thing, and what does it do? what does `gem install bundler` do?
 
-Great question! 
+Great question!
 
-`bundler` is Ruby's [package manager](https://bundler.io/). If you want to install extra code that works with Ruby, you'll use `bundler` to do it. Once you _have_ the `bundler` installed, it is "used" by typing `bundle` into your terminal. 
+`bundler` is Ruby's [package manager](https://bundler.io/). If you want to install extra code that works with Ruby, you'll use `bundler` to do it. Once you _have_ the `bundler` installed, it is "used" by typing `bundle` into your terminal.
 
 It is used in conjunction with the `Gemfile` and `Gemfile.lock` files you see in this repository, to manage Ruby gems.
 
@@ -99,15 +99,15 @@ $ atom .
 
 And read through the `README.md` for further instructions!
 
-If you want to view the instructions in your web browser, you can view them here: [data-types/strings/README.md](https://github.com/turingschool/ruby-exercises/tree/master/data-types/strings)
+If you want to view the instructions in your web browser, you can view them here: [data-types/strings/README.md](https://github.com/turingschool/ruby-exercises/tree/main/data-types/strings)
 
-Otherwise, please work through [this video guide](https://youtu.be/aeAkLxr5diE) to fully understand how to run these exercises. They can be mostly self-explanitory, but even if you know exactly how to make these tests pass, you'll gain value from the video. 
+Otherwise, please work through [this video guide](https://youtu.be/aeAkLxr5diE) to fully understand how to run these exercises. They can be mostly self-explanitory, but even if you know exactly how to make these tests pass, you'll gain value from the video.
 
 ----------------------------------
 
 ## Suggested order
 
-This repository of exercises is one of the best tools you've got to learn Ruby. Every minute spent here is time _very_ well spent. 
+This repository of exercises is one of the best tools you've got to learn Ruby. Every minute spent here is time _very_ well spent.
 
 * Week 1
   * data-types
