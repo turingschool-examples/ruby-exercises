@@ -31,6 +31,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_3
+    skip
     numbers = [1, 2, 3, 4, 5]
     doubles = []
     numbers.each do |number|
@@ -40,6 +41,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_4
+    skip
     numbers = {
       one: 1,
       two: 2,
@@ -62,6 +64,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_5
+    skip
     numbers = [1, 2, 3, 4, 5]
     squares = []
     # Your Code Here
@@ -70,6 +73,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_6
+    skip
     numbers = {
       one: 1,
       two: 2,
@@ -91,6 +95,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_7
+    skip
     names = ["alice", "bob", "charlie", "david", "eve"]
     #Your Code Here
 
@@ -98,6 +103,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_8
+    skip
     family = {
       mother: "alice",
       father: "bob",
@@ -118,6 +124,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_9
+    skip
     names = ["alice", "bob", "charlie", "david", "eve"]
     #Your Code Here
 
@@ -125,6 +132,7 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_10
+    skip
     family = {
       mother: "alice",
       father: "bob",
@@ -133,7 +141,7 @@ class MapPatternTest < Minitest::Test
       sister: "eve"
     }
     #Your Code Here
-    
+
     expected = {
       mother: "ecila",
       father: "bob",
