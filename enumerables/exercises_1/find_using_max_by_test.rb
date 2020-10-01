@@ -19,7 +19,7 @@ class FindUsingMaxByTest < Minitest::Test
     skip
     words = ["apple", "banana", "cherry", "date", "eggplant"]
 
-    found_word = words.max_by do |word|
+    found_word = words.min_by do |word|
       # write code here
     end
 
