@@ -1,2 +1,2 @@
-class Cupcake < Struct.new(:kind, :sugar)
+class Cupcake < Struct.new(:flavor, :sugar)
 end
