@@ -7,7 +7,7 @@ class AppleTest < Minitest::Test
 
   def test_a_new_apple_is_not_ripe
     apple = Apple.new
-    refute apple.ripe?
+    assert_equal false, apple.ripe?
   end
 
   def test_apple_is_not_ripe_until_3_wks
@@ -15,9 +15,9 @@ class AppleTest < Minitest::Test
     apple = Apple.new
 
     2.times {apple.wait_a_week}
-    refute apple.ripe?
+    assert_equal false, apple.ripe?
 
     1.times {apple.wait_a_week}
-    assert apple.ripe?
+    assert_equal true, apple.ripe?
   end
 end

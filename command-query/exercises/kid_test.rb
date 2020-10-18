@@ -22,15 +22,15 @@ class KidTest < Minitest::Test
   def test_kid_is_not_hyperactive
     skip
     kid = Kid.new
-    refute kid.hyperactive?
+    assert_equal false, kid.hyperactive?
   end
 
   def test_kid_is_hyperactive_after_60_grams_of_sugar
     skip
     kid = Kid.new
     11.times { kid.eat_candy }
-    refute kid.hyperactive?, "Not hyperactive yet..."
+    assert_equal false, kid.hyperactive?, "Not hyperactive yet..."
     kid.eat_candy
-    assert kid.hyperactive?, "OK, now the kid is hyperactive."
+    assert_equal true, kid.hyperactive?, "OK, now the kid is hyperactive."
   end
 end

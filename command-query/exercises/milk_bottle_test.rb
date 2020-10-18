@@ -6,13 +6,13 @@ require_relative 'milk_bottle'
 class MilkBottleTest < Minitest::Test
   def test_milk_bottles_start_off_full
     bottle = MilkBottle.new
-    assert bottle.full?, "The bottle should be full."
+    assert_equal true, bottle.full?, "The bottle should be full."
   end
 
   def test_spill_some_milk
     skip
     bottle = MilkBottle.new
     bottle.spill
-    refute bottle.full?, "The bottle should no longer be full."
+    assert_equal false, bottle.full?, "The bottle should no longer be full."
   end
 end
