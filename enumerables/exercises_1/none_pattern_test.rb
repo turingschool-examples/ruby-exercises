@@ -10,7 +10,7 @@ class NonePatternTest < Minitest::Test
     things.each do |thing|
       none_broken = false if thing == "broken"
     end
-    assert none_broken
+    assert_equal true, none_broken
   end
 
   def test_double_negative
@@ -19,7 +19,7 @@ class NonePatternTest < Minitest::Test
     numbers.each do |number|
       # Your code goes here
     end
-    refute not_none_negative
+    assert_equal false, not_none_negative
   end
 
   def test_none_are_negative
@@ -27,28 +27,28 @@ class NonePatternTest < Minitest::Test
     numbers = [9, 3, 1, 8, 3, 3, 5]
     none_negative = true
     # Your code goes here
-    assert none_negative
+    assert_equal true, none_negative
   end
 
   def test_none_shall_pass
     skip
     critters = ["elf", "hobbit", "dwarf", "wizard", "human"]
     # Your code goes here
-    assert none_shall_pass
+    assert_equal true, none_shall_pass
   end
 
   def test_one_or_more_shall_pass
     skip
     phrases = ["go", "left", "can cross", "shall pass", "must stay", "tarried"]
     # Your code goes here
-    refute none_shall_pass
+    assert_equal false, none_shall_pass
   end
 
   def test_none_even
     skip
     numbers = [3, 9, 15, 21, 19]
     # Your code goes here
-    assert none_even
+    assert_equal true, none_even
   end
 
 end
