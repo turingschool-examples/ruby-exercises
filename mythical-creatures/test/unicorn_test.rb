@@ -16,7 +16,6 @@ class UnicornTest < Minitest::Test
     unicorn = Unicorn.new("Margaret")
     assert_equal "white", unicorn.color
     assert_equal true, unicorn.white?
-    assert unicorn.white?
   end
 
   def test_it_does_not_have_to_be_white
@@ -24,7 +23,6 @@ class UnicornTest < Minitest::Test
     unicorn = Unicorn.new("Barbara", "purple")
     assert_equal "purple", unicorn.color
     assert_equal false, unicorn.white?
-    refute unicorn.white?
   end
 
   def test_unicorn_says_sparkly_stuff

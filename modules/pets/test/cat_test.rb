@@ -16,7 +16,7 @@ class CatTest < Minitest::Test
   end
 
   def test_it_is_cute
-    assert @cat.cute?
+    assert_equal true, @cat.cute?
   end
 
   def test_it_can_speak

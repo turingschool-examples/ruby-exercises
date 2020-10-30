@@ -9,7 +9,7 @@ class AllTest < Minitest::Test
     all_zeros = numbers.all? do |number|
       number.zero?
     end
-    assert all_zeros
+    assert_equal true, all_zeros
   end
 
   def test_not_all_zeros
@@ -17,69 +17,69 @@ class AllTest < Minitest::Test
     all_zeros = numbers.all? do |number|
       # Your code goes here
     end
-    refute all_zeros
+    assert_equal false, all_zeros
   end
 
   def test_all_gone
     skip
     words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
     # Your code goes here
-    assert all_gone
+    assert_equal true, all_gone
   end
 
   def test_not_all_gone
     skip
     words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
     # Your code goes here
-    refute all_gone
+    assert_equal false, all_gone
   end
 
   def test_all_empty
     skip
     strings = ["", "", "", "", "", "", ""]
     # Your code goes here
-    assert all_empty
+    assert_equal true, all_empty
   end
 
   def test_not_all_empty
     skip
     strings = ["", "", "", "full", "", "", ""]
     # Your code goes here
-    refute all_empty
+    assert_equal false, all_empty
   end
 
   def test_not_all_uppercase
     skip
     words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
     # Your code goes here
-    refute all_caps
+    assert_equal false, all_caps
   end
 
   def test_all_lies
     skip
     lies = [false, false, false, false]
     # Your code goes here
-    assert all_lies
+    assert_equal true, all_lies
   end
 
   def test_all_multiples_of_7
     skip
     numbers = [42, 14, 35, 49, 28, 56, 21, 7]
     # Your code goes here
-    assert all_multiples_of_7
+    assert_equal true, all_multiples_of_7
   end
 
   def test_not_all_3_digits_long
     skip
     numbers = [981, 831, 509, 332, 892, 8999, 110]
     # Your code goes here
-    refute all_3_digits
+    assert_equal false, all_3_digits
   end
 
   def test_all_4_letter_words
     skip
     words = ["love", "hate", "fire", "bird", "call"]
     # Your code goes here
-    assert all_4_letters
+    assert_equal true, all_4_letters
   end
 end
