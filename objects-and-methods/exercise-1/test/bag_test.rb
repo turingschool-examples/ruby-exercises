@@ -6,7 +6,7 @@ require_relative '../lib/candy'
 
 class BagTest < Minitest::Test
   def test_a_new_bag_is_empty
-    assert Bag.new.empty?
+    assert_equal true, Bag.new.empty?
   end
 
   def test_count_the_candies_in_an_empty_bag
@@ -31,7 +31,7 @@ class BagTest < Minitest::Test
     skip
     bag = Bag.new
     bag << Candy.new("Nerds")
-    refute bag.empty?
+    assert_equal false, bag.empty?
   end
 
   def test_bag_counts_candies
@@ -58,8 +58,7 @@ class BagTest < Minitest::Test
     bag = Bag.new
     bag << Candy.new("Lindt chocolate")
 
-    assert bag.contains?("Lindt chocolate")
-    refute bag.contains?("Hershey's chocolate")
+    assert_equal true, bag.contains?("Lindt chocolate")
+    assert_equal false, bag.contains?("Hershey's chocolate")
   end
 end
-

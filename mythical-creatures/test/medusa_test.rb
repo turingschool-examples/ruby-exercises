@@ -12,7 +12,7 @@ class MedusaTest < Minitest::Test
   def test_when_first_created_she_has_no_statues
     skip
     medusa = Medusa.new("Cassiopeia")
-    assert medusa.statues.empty?
+    assert_equal true, medusa.statues.empty?
   end
 
   def test_when_staring_at_a_person_she_gains_a_statue
@@ -30,9 +30,9 @@ class MedusaTest < Minitest::Test
     medusa = Medusa.new("Cassiopeia")
     victim = Person.new("Perseus")
 
-    refute victim.stoned?
+    assert_equal false, victim.stoned?
     medusa.stare(victim)
-    assert victim.stoned?
+    assert_equal true, victim.stoned?
   end
 
   def test_can_only_have_three_victims

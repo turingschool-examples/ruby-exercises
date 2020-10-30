@@ -36,10 +36,10 @@ class OgreTest < Minitest::Test
 
     ogre.encounter(human)
     ogre.encounter(human)
-    refute human.notices_ogre?
+    assert_equal false, human.notices_ogre?
 
     ogre.encounter(human)
-    assert human.notices_ogre?
+    assert_equal true, human.notices_ogre?
   end
 
   def test_human_notices_ogre_the_sixth_time
@@ -51,7 +51,7 @@ class OgreTest < Minitest::Test
       ogre.encounter(human)
     end
 
-    assert human.notices_ogre?
+    assert_equal true, human.notices_ogre?
   end
 
   def test_it_can_swing_a_club
@@ -68,13 +68,13 @@ class OgreTest < Minitest::Test
     human = Human.new
     ogre.encounter(human)
     assert_equal 0, ogre.swings
-    refute human.notices_ogre?
+    assert_equal false, human.notices_ogre?
 
     ogre.encounter(human)
     ogre.encounter(human)
 
     assert_equal 1, ogre.swings
-    assert human.notices_ogre?
+    assert_equal true, human.notices_ogre?
   end
 
   def test_it_hits_the_human_every_second_time_it_swings
@@ -88,21 +88,21 @@ class OgreTest < Minitest::Test
 
     assert_equal 6, ogre.encounter_counter
     assert_equal 2, ogre.swings
-    assert human.knocked_out?
+    assert_equal true, human.knocked_out?
   end
 
   def test_human_wakes_up_when_ogre_apologizes
     skip
     ogre = Ogre.new('Brak')
     human = Human.new
-    
+
     6.times do
       ogre.encounter(human)
     end
 
-    assert human.knocked_out?
+    assert_equal true, human.knocked_out?
 
     ogre.apologize(human)
-    refute human.knocked_out?
+    assert_equal false, human.knocked_out?
   end
 end

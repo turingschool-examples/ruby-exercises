@@ -12,8 +12,8 @@ class JourneyTest < Minitest::Test
   def test_what_is_a_tinker
     skip
     tinker = Tinker.new("Sunny")
-    assert_equal "Hello traveller, what might you need? Some barley, some rope,or how about some mead. 
-    I'm a tinker, a travelling thinker, and if you know what's best you shall pay me some heed. 
+    assert_equal "Hello traveller, what might you need? Some barley, some rope,or how about some mead.
+    I'm a tinker, a travelling thinker, and if you know what's best you shall pay me some heed.
     Here is my cart, its depths are beyond measure, and for a piece of gold you will get what you need!",
     tinker.greeting
   end
@@ -21,20 +21,20 @@ class JourneyTest < Minitest::Test
   def test_who_are_you
     skip
     traveller = Traveller.new("")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
   end
 
   def test_traveller_starts_with_zero_gold
     skip
     traveller = Traveller.new("")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
     assert_equal 0, traveller.coin_purse
   end
 
   def test_finishing_a_quest_is_rewarded_with_gold
     skip
     traveller = Traveller.new("")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
     traveller.quest('A', 'A')
     assert_equal 1, traveller.coin_purse
   end
@@ -42,7 +42,7 @@ class JourneyTest < Minitest::Test
   def test_you_really_thought_finishing_a_quest_was_that_easy
     skip
     traveller = Traveller.new("")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
     assert_equal 0, traveller.quest('A', 'A')
     assert_equal 1, traveller.quest('A', 'B')
     assert_equal 2, traveller.coin_purse
@@ -59,7 +59,7 @@ class JourneyTest < Minitest::Test
     skip
     tinker = Tinker.new("Hadrian")
     traveller = Traveller.new("")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
     assert_equal 1, traveller.quest('AB', 'AA')
 
     assert_equal 50, tinker.coin_purse
@@ -72,7 +72,7 @@ class JourneyTest < Minitest::Test
   def test_a_proper_quest_is_a_good_quest
     skip
     traveller = Traveller.new("")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
     assert_raises(ArgumentError) { traveller.quest('AB', 'ABA') }
   end
 
@@ -87,9 +87,9 @@ class JourneyTest < Minitest::Test
     assert_equal items, tinker.inventory
 
     traveller.purchase(tinker, "mirror")
-    assert traveller.inventory.has_value?('mirror')
+    assert_equal true, traveller.inventory.has_value?('mirror')
 
-    refute tinker.inventory.has_value?('mirror')
+    assert_equal false, tinker.inventory.has_value?('mirror')
     assert_equal 0, traveller.coin_purse
   end
 
@@ -109,7 +109,7 @@ class JourneyTest < Minitest::Test
     skip
     traveller = Traveller.new("")
     medusa = Medusa.new("Cassiopeia")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
 
     medusa.stare(traveller)
     assert_equal 1, medusa.statues.count
@@ -119,7 +119,7 @@ class JourneyTest < Minitest::Test
   def test_traveller_is_safe_if_he_has_a_mirror
     skip
     medusa = Medusa.new("Cassiopeia")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
 
     #insert code here to give your traveller a mirror
     #make sure your medusa tests still pass!
@@ -172,7 +172,7 @@ class JourneyTest < Minitest::Test
 
     traveller.power_of_vim(medusa)
     assert_equal 0, medusa.statues.count
-    refute traveller_companion.stoned
+    assert_equal false, traveller_companion.stoned
     #"oh and before I forget, take this with you", says the wizard
     traveller.quest_items("wolfsbane")
     items = {:magic_items => "wolfsbane", :items => "mirror"}
@@ -180,9 +180,9 @@ class JourneyTest < Minitest::Test
     assert_equal items, traveller.inventory
   end
 
-    #You and your companion have now been travelling for 3 fortnights when you stumble upon 
-    #a hidden entrance in the middle of a hollowed out willow tree. Your companion is a bit hesitant, 
-    #but your curiosity wins out and you now find yourself going deeper and deeper into what appears 
+    #You and your companion have now been travelling for 3 fortnights when you stumble upon
+    #a hidden entrance in the middle of a hollowed out willow tree. Your companion is a bit hesitant,
+    #but your curiosity wins out and you now find yourself going deeper and deeper into what appears
     #to be a dungeon. You are about to turn around when a man in tattered clothes suddenly blocks the exit.
     #"Who dares enter the lair of Horace!", he growls...
 
@@ -193,17 +193,17 @@ class JourneyTest < Minitest::Test
     werewolf = Werewolf.new("Horace", "The Black Forest")
 
     werewolf.change!
-    assert werewolf.werewolf?
+    assert_equal true, werewolf.werewolf?
 
     werewolf.bite(traveller)
-    refute traveller.bitten?
+    assert_equal false, traveller.bitten?
     werewolf.bite(traveller)
-    refute traveller.bitten?
+    assert_equal false, traveller.bitten?
   end
 
     #huh, what is going on? You keep on trying to bite me, yet there is no pain or bite marks?? - traveller
 
-    #growl, yarp, you... you have discovered my dark secret. I.. I am a werewolf with no teeth. 
+    #growl, yarp, you... you have discovered my dark secret. I.. I am a werewolf with no teeth.
     #It's a sad existance, please help me. - werewolf
 
   def test_give_the_werwolf_wolfsbane
@@ -211,7 +211,7 @@ class JourneyTest < Minitest::Test
     traveller = Traveller.new("")
     traveller_companion = Traveller.new("Deborah")
     werewolf = Werewolf.new("Horace", "The Black Forest")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
 
     werewolf_items = {:items => "climbing shoes"}
     assert_equal werewolf_items, werewolf.inventory
@@ -219,7 +219,7 @@ class JourneyTest < Minitest::Test
     #have this quote come from the werewolf class
   end
 
-    # Your traveller in despair splits off from the companion, going deeper and deeper into 
+    # Your traveller in despair splits off from the companion, going deeper and deeper into
     #uncharted and trecherous territory in search of answers...
 
   def test_meeting_a_sphinx
@@ -228,7 +228,7 @@ class JourneyTest < Minitest::Test
     sphinx = Sphinx.new("Erenna")
     assert_equal "Erenna", sphinx.name
 
-    #I sense a soul in search of answers. You wish to know how to cure the werewolf of his malady. 
+    #I sense a soul in search of answers. You wish to know how to cure the werewolf of his malady.
     #I have the answer, but first you must complete my challange. - sphinx
 
     assert_equal 'I', sphinx.sphinx_challenge(1)
@@ -267,7 +267,7 @@ class JourneyTest < Minitest::Test
 
     werewolf_items = {:items => "climbing shoes"}
     assert_equal werewolf_items, werewolf.inventory
-    assert_equal "I thought the daft malevolent transformations would never end! Thank you kind traveller!", 
+    assert_equal "I thought the daft malevolent transformations would never end! Thank you kind traveller!",
     traveller.give_item(werewolf, ["wolfsbane","pizza"])
     #have the words come from the werewolf class
     items = {:items => "climbing shoes", :magic_items => ["wolfsbane", "pizza"]}
@@ -275,16 +275,16 @@ class JourneyTest < Minitest::Test
 
     werewolf.use_items
     assert_equal Hash.new, werewolf.inventory
-    assert werewolf.human?
+    assert_equal true, werewolf.human?
     werewolf.change!
-    assert werewolf.human?
+    assert_equal true, werewolf.human?
     #make sure your werewolf tests still work!
   end
 
   def test_completion
     skip
     traveller = Traveller.new("")
-    assert traveller.name.length != 0
+    assert_equal true, traveller.name.length != 0
     assert_equal 'I rock', traveller.finale
   end
 end
