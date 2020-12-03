@@ -206,6 +206,8 @@ class StringTest < Minitest::Test
     #greeting and name variables to acheive the expected outcome
     actual = _________
     expected = "Hello World, my name is Harry Potter"
+    
+    assert_equal expected, actual
   end
   
   def test_21
