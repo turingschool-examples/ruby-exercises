@@ -42,18 +42,18 @@ class DragonTest < Minitest::Test
   def test_dragons_are_born_hungry
     skip
     dragon = Dragon.new("Canth", :brown, "F'nor")
-    assert dragon.hungry?
+    assert_equal true, dragon.hungry?
   end
 
   def test_dragons_eat_a_lot
     skip
     dragon = Dragon.new("Canth", :brown, "F'nor")
-    assert dragon.hungry?
+    assert_equal true, dragon.hungry?
     dragon.eat
-    assert dragon.hungry?
+    assert_equal true, dragon.hungry?
     dragon.eat
-    assert dragon.hungry?
+    assert_equal true, dragon.hungry?
     dragon.eat
-    refute dragon.hungry?
+    assert_equal false, dragon.hungry?
   end
 end

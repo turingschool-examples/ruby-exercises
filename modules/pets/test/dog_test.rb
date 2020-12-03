@@ -16,7 +16,7 @@ class DogTest < Minitest::Test
   end
 
   def test_it_is_cute
-    assert @dog.cute?
+    assert_equal true, @dog.cute?
   end
 
   def test_it_can_speak

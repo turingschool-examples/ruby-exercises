@@ -113,7 +113,7 @@ class DirewolfTest < Minitest::Test
 
     stark = Stark.new('John', "The Wall")
 
-    refute stark.safe?
+    assert_equal false, stark.safe?
     assert_equal 'Winter is Coming', stark.house_words
   end
 
@@ -126,8 +126,8 @@ class DirewolfTest < Minitest::Test
 
     wolf.protects(arya_stark)
 
-    assert arya_stark.safe?
-    refute sansa_stark.safe?
+    assert_equal true, arya_stark.safe?
+    assert_equal false, sansa_stark.safe?
     assert_equal 'The North Remembers', arya_stark.house_words
     assert_equal 'Winter is Coming', sansa_stark.house_words
   end
@@ -137,7 +137,7 @@ class DirewolfTest < Minitest::Test
 
     wolf = Direwolf.new('Nymeria', "Winterfell")
 
-    assert wolf.hunts_white_walkers?
+    assert_equal true, wolf.hunts_white_walkers?
   end
 
   def test_hunts_white_walkers_but_not_if_protecting_starks
@@ -147,7 +147,7 @@ class DirewolfTest < Minitest::Test
     stark = Stark.new('Sansa')
 
     wolf.protects(stark)
-    refute wolf.hunts_white_walkers?
+    assert_equal false, wolf.hunts_white_walkers?
   end
 
   def test_wolves_can_leave_and_stop_protecting_starks
@@ -166,7 +166,7 @@ class DirewolfTest < Minitest::Test
     assert_equal [],  summer_wolf.starks_to_protect
     assert_equal 'Sansa', lady_wolf.starks_to_protect[0].name
     assert_instance_of Array, lady_wolf.starks_to_protect
-    refute arya_stark.safe?
+    assert_equal false, arya_stark.safe?
   end
 
   def test_if_stark_not_protected_when_direwolf_leaves_then_that_stark_is_the_return_value

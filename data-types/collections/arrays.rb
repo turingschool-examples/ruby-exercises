@@ -187,8 +187,8 @@ class ArraysTest < Minitest::Test
     # Call a method on the dice variable to get a random element out
     # of the array
     roll = dice
-    assert roll <= 6
-    assert roll >= 1
+    assert_equal true, roll <= 6
+    assert_equal true, roll >= 1
     # Note, this assertion assumes the Ruby Version is 2.4 or higher.
     # This test will fail with expecting roll to be a FixNum if the
     # Ruby version is 2.3 or earlier

@@ -96,7 +96,7 @@ class EnumerablesTest < Minitest::Test
     skip
     numbers = [9, 3, 1, 8, 3, 3, 5]
     # Your Code Here
-    assert true, actual
+    assert_equal true, actual
   end
 
   def test_one_time
@@ -187,14 +187,14 @@ class EnumerablesTest < Minitest::Test
     skip
     things = ["functional", "working", "works", "fixed", "good"]
     actual = # Your code here
-    assert actual
+    assert_equal true, actual
   end
 
   def test_one_time
     skip
     words = ["morning", "time", "evening", "noon", "dusk", "dawn"]
     actual = # Your code goes here
-    assert actual
+    assert_equal true, actual
   end
 
   def test_multiply_list_of_numbers
@@ -238,7 +238,7 @@ class EnumerablesTest < Minitest::Test
     skip
     numbers = [42, 14, 35, 49, 28, 56, 21, 7]
     actual = # Your code goes here
-    assert actual
+    assert_equal true, actual
   end
 
   def test_sort_by_number_of_cents
@@ -282,7 +282,7 @@ class EnumerablesTest < Minitest::Test
     skip
     numbers = [8, 2, 10, 333, 9, 101]
     actual = # Your code goes here
-    assert actual
+    assert_equal true, actual
   end
 
   def test_group_by_number_of_zeros
@@ -304,6 +304,6 @@ class EnumerablesTest < Minitest::Test
     skip
     animals = ["elephant", "hippo", "jaguar", "python"]
     actual = # Your code goes here
-    refute actual
+    assert_equal false, actual
   end
 end

@@ -18,13 +18,13 @@ class WizardTest < Minitest::Test
   def test_is_bearded_by_default
     skip
     wizard = Wizard.new("Ben")
-    assert wizard.bearded?
+    assert_equal true, wizard.bearded?
   end
 
   def test_is_not_always_bearded
     skip
     wizard = Wizard.new("Valerie", bearded: false)
-    refute wizard.bearded?
+    assert_equal false, wizard.bearded?
   end
 
   def test_has_root_powers
@@ -61,4 +61,3 @@ class WizardTest < Minitest::Test
   end
 
 end
-

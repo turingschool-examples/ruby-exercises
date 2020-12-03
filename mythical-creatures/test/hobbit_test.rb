@@ -43,7 +43,7 @@ class HobbitTest < Minitest::Test
     32.times do
       hobbit.celebrate_birthday
     end
-    refute hobbit.adult?
+    assert_equal false, hobbit.adult?
   end
 
   def test_comes_of_age_at_33
@@ -52,11 +52,11 @@ class HobbitTest < Minitest::Test
     33.times do
       hobbit.celebrate_birthday
     end
-    assert hobbit.adult?
+    assert_equal true, hobbit.adult?
 
     # still adult, one year later
     hobbit.celebrate_birthday
-    assert hobbit.adult?
+    assert_equal true, hobbit.adult?
   end
 
   def test_is_old_at_age_of_101
@@ -81,4 +81,3 @@ class HobbitTest < Minitest::Test
   end
 
 end
-

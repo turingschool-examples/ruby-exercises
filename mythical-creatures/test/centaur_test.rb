@@ -30,23 +30,23 @@ class CentaurTest < Minitest::Test
   def test_when_first_created_it_is_not_cranky
     skip
     centaur = Centaur.new("George","Palomino")
-    refute centaur.cranky?
+    assert_equal false, centaur.cranky?
   end
 
   def test_when_first_created_it_is_standing_up
     skip
     centaur = Centaur.new("George","Palomino")
-    assert centaur.standing?
+    assert_equal true, centaur.standing?
   end
 
   def test_after_running_or_shooting_a_bow_three_times_it_gets_cranky
     skip
     centaur = Centaur.new("George","Palomino")
-    refute centaur.cranky?
+    assert_equal false, centaur.cranky?
     centaur.shoot
     centaur.run
     centaur.shoot
-    assert centaur.cranky?
+    assert_equal true, centaur.cranky?
   end
 
   def test_when_cranky_it_will_not_shoot_a_bow
@@ -73,8 +73,8 @@ class CentaurTest < Minitest::Test
     skip
     centaur = Centaur.new("George","Palomino")
     centaur.lay_down
-    refute centaur.standing?
-    assert centaur.laying?
+    assert_equal false, centaur.standing?
+    assert_equal true, centaur.laying?
   end
 
   def test_it_can_sleep_when_laying_down
@@ -103,7 +103,7 @@ class CentaurTest < Minitest::Test
     centaur = Centaur.new("George","Palomino")
     centaur.lay_down
     centaur.stand_up
-    assert centaur.standing?
+    assert_equal true, centaur.standing?
   end
 
   def test_after_sleeping_it_is_no_longer_cranky
@@ -114,12 +114,12 @@ class CentaurTest < Minitest::Test
     centaur.run
     centaur.shoot
 
-    assert centaur.cranky?
+    assert_equal true, centaur.cranky?
 
     centaur.lay_down
     centaur.sleep
 
-    refute centaur.cranky?
+    assert_equal false, centaur.cranky?
 
     centaur.stand_up
 
