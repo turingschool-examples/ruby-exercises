@@ -156,11 +156,10 @@ class ArraysTest < Minitest::Test
   end
 
   def test_13
-    skip
     ascending = [1,2,3,4,5]
     # Call a method on the ascending variable to create an array
     # with the elements in the opposite order
-    descending = ascending
+    descending = ascending.reverse
     assert_equal [5,4,3,2,1], descending
   end
 
