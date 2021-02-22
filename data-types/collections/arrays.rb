@@ -4,7 +4,7 @@ require 'minitest/pride'
 class ArraysTest < Minitest::Test
   def test_0
     # In the line below, create a new empty array
-    empty = Array.new 
+    empty = Array.new
     assert_equal [], empty
   end
 
@@ -24,17 +24,16 @@ class ArraysTest < Minitest::Test
   end
 
   def test_22
-    skip
     # In the line below, call a method on the nums variable
     # defined above to access the last element
     nums = [1,2,3]
-    actual = nums
+    actual = nums.last
     expected = 3
     assert_equal expected, actual
 
     # Now try to find another way to achieve the same effect
     nums = [1,2,3]
-    actual = nums
+    actual = nums.at(-1)
     expected = 3
     assert_equal expected, actual
   end
