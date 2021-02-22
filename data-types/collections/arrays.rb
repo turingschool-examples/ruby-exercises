@@ -57,11 +57,10 @@ class ArraysTest < Minitest::Test
   end
 
   def test_a
-    skip
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # Call a method on the world_cup variable to remove and return
     # the last element of the array
-    last_element = world_cup
+    last_element = world_cup.pop
     assert_equal "Portugal", last_element
     assert_equal ["Germany", "Mexico", "Iceland"], world_cup
   end
