@@ -66,16 +66,15 @@ class ArraysTest < Minitest::Test
   end
 
   def test_5
-    skip
     karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
     # Call a method on the karaoke variable to ask whether "Toxic"
     # is an element or not
-    toxic_in_array = karaoke
+    toxic_in_array = karaoke.include?('Toxic')
     assert_equal false, toxic_in_array
 
     # Now call a method on the karaoke variable to ask whether "Dancing Queen"
     # is an element or not
-    dancing_queen_in_array = karaoke
+    dancing_queen_in_array = karaoke.include?('Dancing Queen')
     assert_equal true, dancing_queen_in_array
   end
 
