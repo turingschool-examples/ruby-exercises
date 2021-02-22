@@ -133,10 +133,9 @@ class ArraysTest < Minitest::Test
   end
 
   def test_10
-    skip
     vowels = ["a", "e", "y", "i", "o", "u", "y"]
     # Call a method on the vowels variable to remove "y"
-
+    vowels.delete('y')
     assert_equal ["a", "e", "i", "o", "u"], vowels
   end
 
