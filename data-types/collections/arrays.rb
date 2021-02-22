@@ -4,7 +4,7 @@ require 'minitest/pride'
 class ArraysTest < Minitest::Test
   def test_0
     # In the line below, create a new empty array
-    empty = []
+    empty = Array.new 
     assert_equal [], empty
   end
 
