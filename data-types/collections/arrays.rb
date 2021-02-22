@@ -106,10 +106,9 @@ class ArraysTest < Minitest::Test
   end
 
   def test_7
-    skip
     fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
     # Call a method on the fourteeners variable to remove the nils
-    fourteeners = fourteeners
+    fourteeners = fourteeners.compact
     assert_equal ["Pikes Peak", "Mount Elbert", "Mount Evans"], fourteeners
   end
 
