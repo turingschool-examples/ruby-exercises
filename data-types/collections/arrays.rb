@@ -95,14 +95,13 @@ class ArraysTest < Minitest::Test
   end
 
   def test_6
-    skip
     teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
     # Call a method on the teams variable to get the second, third, and fourth teams
-    some_teams = teams
+    some_teams = teams[1..3]
     assert_equal ["Avalanche", "Nuggets", "Broncos"], some_teams
 
     # Now use a different method on the teams variable to get the first and second teams
-    some_teams = teams
+    some_teams = teams.take(2)
     assert_equal ["Rockies", "Avalanche"], some_teams
   end
 
