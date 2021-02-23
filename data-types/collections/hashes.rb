@@ -7,7 +7,7 @@ class HashesTest < Minitest::Test
 
   def test_1
     # In the line below, create a new empty hash called empty
-    empty = ______
+    empty = Hash.new
     assert_equal ({}), empty
   end
 
