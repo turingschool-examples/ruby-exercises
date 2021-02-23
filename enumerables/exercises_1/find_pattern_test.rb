@@ -73,9 +73,14 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_find_first_multiple_of_3
-    skip
     numbers = [2, 8, 9, 27, 24, 5]
-    # Your code goes here
+    found = nil
+    numbers.each do |number|
+      if (number % 3) == 0
+        found = number
+        break
+      end
+    end
     assert_equal 9, found
   end
 
