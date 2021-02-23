@@ -69,9 +69,10 @@ class FindTest < Minitest::Test
   end
 
   def test_find_first_word_ending_with_er
-    skip
     words = ["biggest", "pour", "blight", "finger", "pie", "border"]
-    # Your code goes here
+    found = words.find do |word|
+      word[-2..-1] == 'er'
+    end
     assert_equal "finger", found
   end
 
