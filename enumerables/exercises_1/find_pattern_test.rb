@@ -97,9 +97,14 @@ class FindPatternTest < Minitest::Test
   end
 
   def test_find_first_word_ending_with_er
-    skip
     words = ["biggest", "pour", "blight", "finger", "pie", "border"]
-    # Your code goes here
+    found = nil
+    words.each do |word|
+      if word[-2..-1] == 'er'
+        found = word
+        break
+      end 
+    end
     assert_equal "finger", found
   end
 
