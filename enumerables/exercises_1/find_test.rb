@@ -29,9 +29,10 @@ class FindTest < Minitest::Test
   end
 
   def test_cannot_find_3_letter_words
-    skip
     words = ["piglet", "porridge", "bear", "blueberry"]
-    # Your code goes here
+    found = words.find do |word|
+      word.length == 3
+    end
     assert_equal nil, found
   end
 
