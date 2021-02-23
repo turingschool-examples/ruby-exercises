@@ -10,4 +10,8 @@ class Vampire
   def thirsty?
     @is_thirsty
   end
+
+  def drink
+    @is_thirsty = true
+  end
 end

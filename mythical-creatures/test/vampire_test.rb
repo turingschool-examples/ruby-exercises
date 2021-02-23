@@ -30,7 +30,6 @@ class VampireTest < Minitest::Test
   end
 
   def test_it_is_not_thirsty_after_drinking
-    skip
     vampire = Vampire.new("Elizabeth Bathory")
     vampire.drink
     assert_equal false, vampire.thirsty?
