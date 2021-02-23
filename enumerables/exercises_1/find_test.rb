@@ -53,9 +53,10 @@ class FindTest < Minitest::Test
   end
 
   def test_find_first_multiple_of_3
-    skip
     numbers = [2, 8, 9, 27, 24, 5]
-    # Your code goes here
+    found = numbers.find do |number|
+      number % 3 == 0
+    end
     assert_equal 9, found
   end
 
