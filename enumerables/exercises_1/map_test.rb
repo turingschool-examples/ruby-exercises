@@ -61,9 +61,10 @@ class MapTest < Minitest::Test
   end
 
   def test_trim_last_letter
-    skip
     animals = ["dog", "cat", "mouse", "frog", "platypus"]
-    # Your code goes here
+    trimmed = animals.map do |animal|
+      animal[0..-2]
+    end
     assert_equal ["do", "ca", "mous", "fro", "platypu"], trimmed
   end
 
