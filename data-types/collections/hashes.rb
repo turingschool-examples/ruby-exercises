@@ -152,7 +152,7 @@ class HashesTest < Minitest::Test
     # Using the books hash defined above,
     # change the value associated with
     # :John_Steinbeck to "Of Mice and Men"
-    ______
+    books[:John_Steinbeck] = "Of Mice and Men"
     expected =  {
       John_Steinbeck: "Of Mice and Men",
       Harper_Lee: "To Kill a Mockingbird"
