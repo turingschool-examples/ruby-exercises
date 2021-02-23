@@ -45,9 +45,10 @@ class SelectTest < Minitest::Test
   end
 
   def test_pick_words_ending_in_ing
-    skip
     words = ["bring", "finger", "drought", "singing", "bingo", "purposeful"]
-    # Your code goes here
+    selected = words.select do |word|
+      word.end_with?('ing')
+    end
     assert_equal ["bring", "singing"], selected
   end
 
