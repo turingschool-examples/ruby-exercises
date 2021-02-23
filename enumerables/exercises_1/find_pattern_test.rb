@@ -103,15 +103,20 @@ class FindPatternTest < Minitest::Test
       if word[-2..-1] == 'er'
         found = word
         break
-      end 
+      end
     end
     assert_equal "finger", found
   end
 
   def test_find_first_number_greater_than_20
-    skip
     numbers = [1, 8, 19, 21, 29, 31, 34]
-    # Your code goes here
+    found = nil
+    numbers.each do |number|
+      if number > 20
+        found = number
+        break
+      end 
+    end
     assert_equal 21, found
   end
 
