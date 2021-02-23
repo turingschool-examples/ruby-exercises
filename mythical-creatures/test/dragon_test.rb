@@ -40,7 +40,6 @@ class DragonTest < Minitest::Test
   end
 
   def test_dragons_eat_a_lot
-    skip
     dragon = Dragon.new("Canth", :brown, "F'nor")
     assert_equal true, dragon.hungry?
     dragon.eat
