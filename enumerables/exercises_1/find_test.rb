@@ -37,9 +37,10 @@ class FindTest < Minitest::Test
   end
 
   def test_find_13
-    skip
     numbers = [2, 13, 19, 8, 3, 27]
-    # Your code goes here
+    found = numbers.find do |number|
+      number == 13
+    end
     assert_equal 13, found
   end
 
