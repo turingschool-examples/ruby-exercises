@@ -77,9 +77,11 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_pick_floats
-    skip
     numbers = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
-    # Your code goes here
+    floats = []
+    numbers.each do |number|
+      floats << number if number.class == Float
+    end
     assert_equal [1.4, 3.5, 4.9, 9.1, 8.0], floats
   end
 
