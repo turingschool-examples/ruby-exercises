@@ -13,7 +13,7 @@ class HashesTest < Minitest::Test
 
   def test_2
     # In the line below, create an empty hash with a default value 0
-    empty = ______
+    empty = Hash.new(0)
     assert_equal 0, empty[:not_found]
   end
 
