@@ -15,7 +15,7 @@ class SelectTest < Minitest::Test
   def test_pick_odd_numbers
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     odds = numbers.select do |number|
-      # Your code goes here
+      number.odd?
     end
     assert_equal [1, 3, 5, 7, 9], odds
   end
