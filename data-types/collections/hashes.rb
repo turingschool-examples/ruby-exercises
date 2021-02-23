@@ -63,7 +63,7 @@ class HashesTest < Minitest::Test
     }
     # Using the books hash defined above,
     # access the value "Grapes of Wrath"  in the line below
-    grapes = ______
+    grapes = books["John Steinbeck"]
     assert_equal "Grapes of Wrath", grapes
   end
 
