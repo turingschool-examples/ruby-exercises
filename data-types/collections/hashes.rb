@@ -167,7 +167,7 @@ class HashesTest < Minitest::Test
     }
     # Using the books hash defined above,
     # delete the key :Harper_Lee
-    ______
+    books.delete(:Harper_Lee)
     expected = {
       John_Steinbeck: "Grapes of Wrath"
     }
