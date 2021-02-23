@@ -35,15 +35,17 @@ class MapPatternTest < Minitest::Test
     names = ["alice", "bob", "charlie", "david", "eve"]
     lengths = []
     names.each do |name|
-      lengths << name.length 
+      lengths << name.length
     end
     assert_equal [5, 3, 7, 5, 3], lengths
   end
 
   def test_normalize_zip_codes
-    skip
     numbers = [234, 10, 9119, 38881]
-    # Your code goes here
+    zip_codes = []
+    numbers.each do |number|
+      zip_codes << "%05d" % number 
+    end
     assert_equal ["00234", "00010", "09119", "38881"], zip_codes
   end
 
