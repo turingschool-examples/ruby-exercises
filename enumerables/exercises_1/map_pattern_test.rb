@@ -44,15 +44,17 @@ class MapPatternTest < Minitest::Test
     numbers = [234, 10, 9119, 38881]
     zip_codes = []
     numbers.each do |number|
-      zip_codes << "%05d" % number 
+      zip_codes << "%05d" % number
     end
     assert_equal ["00234", "00010", "09119", "38881"], zip_codes
   end
 
   def test_backwards
-    skip
     names = ["alice", "bob", "charlie", "david", "eve"]
-    # Your code goes here
+    backwards = []
+    names.each do |name|
+      backwards << name.reverse
+    end
     assert_equal ["ecila", "bob", "eilrahc", "divad", "eve"], backwards
   end
 
