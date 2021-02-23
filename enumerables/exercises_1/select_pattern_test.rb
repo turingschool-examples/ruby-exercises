@@ -59,9 +59,11 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_pick_words_containing_e
-    skip
     words = ["four", "red", "five", "blue", "pizza", "purple"]
-    # Your code goes here
+    selected = []
+    words.each do |word|
+      selected << word if word.include?('e')
+    end
     assert_equal ["red", "five", "blue", "purple"], selected
   end
 
