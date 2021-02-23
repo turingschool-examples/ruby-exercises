@@ -21,9 +21,10 @@ class MapTest < Minitest::Test
   end
 
   def test_squares
-    skip
     numbers = [1, 2, 3, 4, 5]
-    # Your code goes here
+    squares = numbers.map do |number|
+      number * number
+    end
     assert_equal [1, 4, 9, 16, 25], squares
   end
 
