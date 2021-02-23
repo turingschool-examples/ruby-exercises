@@ -89,15 +89,17 @@ class SelectPatternTest < Minitest::Test
     elements = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
     arrays = []
     elements.each do |element|
-      arrays << element if element.class == Array  
+      arrays << element if element.class == Array
     end
     assert_equal [["dog"], [56, 3, 8]], arrays
   end
 
   def test_pick_hashes
-    skip
     elements = ["cat", {:dog=>"fido"}, 23, {:stuff=>"things"}, "aimless", 43]
-    # Your code goes here
+    hashes = []
+    elements.each do |element|
+      hashes << element if element.class == Hash
+    end
     assert_equal [{:dog=>"fido"}, {:stuff=>"things"}], hashes
   end
 
