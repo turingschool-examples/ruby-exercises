@@ -218,7 +218,7 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # get an array of all the ages
-    age_list = ______
+    age_list = ages.values
     assert_equal [4, 8, 9], age_list
   end
 
