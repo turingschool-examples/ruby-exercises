@@ -23,10 +23,11 @@ class MapPatternTest < Minitest::Test
   end
 
   def test_squares
-    skip
     numbers = [1, 2, 3, 4, 5]
     squares = []
-    # Your code goes here
+    numbers.each do |number|
+      squares << (number * number)
+    end
     assert_equal [1, 4, 9, 16, 25], squares
   end
 
