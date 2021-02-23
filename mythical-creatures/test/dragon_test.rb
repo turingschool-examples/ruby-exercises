@@ -10,7 +10,6 @@ class DragonTest < Minitest::Test
   end
 
   def test_it_has_a_rider
-    skip
     dragon = Dragon.new("Ramoth", :gold, "Lessa")
     assert_equal "Lessa", dragon.rider
   end
