@@ -13,10 +13,9 @@ class MapTest < Minitest::Test
   end
 
   def test_doubles
-    skip
     numbers = [1, 2, 3, 4, 5]
     doubles = numbers.map do |number|
-      # Your code goes here
+      number * 2
     end
     assert_equal [2, 4, 6, 8, 10], doubles
   end
