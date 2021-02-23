@@ -55,15 +55,20 @@ class FindPatternTest < Minitest::Test
     numbers.each do |number|
       if number == 13
         found = number
-      end 
+      end
     end
     assert_equal 13, found
   end
 
   def test_find_first_even_number
-    skip
     numbers = [3, 7, 13, 11, 10, 2, 17]
-    # Your code goes here
+    found = nil
+    numbers.each do |number|
+      if number.even?
+        found = number
+        break
+      end
+    end
     assert_equal 10, found
   end
 
