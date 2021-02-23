@@ -21,9 +21,10 @@ class FindTest < Minitest::Test
   end
 
   def test_find_waldo
-    skip
     words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
-    # Your code goes here
+    found = words.find do |word|
+      word == 'waldo'
+    end
     assert_equal "waldo", found
   end
 
