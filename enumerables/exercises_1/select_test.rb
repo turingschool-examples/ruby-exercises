@@ -77,9 +77,10 @@ class SelectTest < Minitest::Test
   end
 
   def test_pick_arrays
-    skip
     elements = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
-    # Your code goes here
+    arrays = elements.select do |element|
+      element.class == Array
+    end
     assert_equal [["dog"], [56, 3, 8]], arrays
   end
 
