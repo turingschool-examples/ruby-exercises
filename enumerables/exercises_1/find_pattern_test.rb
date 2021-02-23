@@ -44,15 +44,19 @@ class FindPatternTest < Minitest::Test
     words.each do |word|
       if word.length == 3
         found = word
-      end 
+      end
     end
     assert_nil found
   end
 
   def test_find_13
-    skip
     numbers = [2, 13, 19, 8, 3, 27]
-    # Your code goes here
+    found = nil
+    numbers.each do |number|
+      if number == 13
+        found = number
+      end 
+    end
     assert_equal 13, found
   end
 
