@@ -15,7 +15,6 @@ class DragonTest < Minitest::Test
   end
 
   def test_it_has_a_color
-    skip
     dragon = Dragon.new("Ramoth", :gold, "Lessa")
     assert_equal :gold, dragon.color
   end
