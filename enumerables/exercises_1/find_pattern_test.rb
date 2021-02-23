@@ -22,16 +22,19 @@ class FindPatternTest < Minitest::Test
     words.each do |word|
       if word == "waldo"
         found = words
-      end 
+      end
     end
     assert_nil found
   end
 
   def test_find_waldo
-    skip
     words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
     found = nil
-    # Your code goes here
+    words.each do |word|
+      if word == "waldo"
+        found = word
+      end 
+    end
     assert_equal "waldo", found
   end
 
