@@ -21,9 +21,10 @@ class SelectTest < Minitest::Test
   end
 
   def test_pick_words_with_three_letters
-    skip
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
-    # Your code goes here
+    selected = words.select do |word|
+      word.length == 3
+    end
     assert_equal ["bad", "cat", "dog", "red"], selected
   end
 
