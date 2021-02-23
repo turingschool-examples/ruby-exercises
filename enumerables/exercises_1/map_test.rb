@@ -53,9 +53,10 @@ class MapTest < Minitest::Test
   end
 
   def test_words_with_no_vowels
-    skip
     words = ["green", "sheep", "travel", "least", "boat"]
-    # Your code goes here
+    without_vowels = words.map do |word|
+      word.delete('aeiouy')
+    end
     assert_equal ["grn", "shp", "trvl", "lst", "bt"], without_vowels
   end
 
