@@ -33,15 +33,19 @@ class FindPatternTest < Minitest::Test
     words.each do |word|
       if word == "waldo"
         found = word
-      end 
+      end
     end
     assert_equal "waldo", found
   end
 
   def test_cannot_find_3_letter_words
-    skip
     words = ["piglet", "porridge", "bear", "blueberry"]
-    # Your code goes here
+    found = nil
+    words.each do |word|
+      if word.length == 3
+        found = word
+      end 
+    end
     assert_nil found
   end
 
