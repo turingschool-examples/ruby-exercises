@@ -77,9 +77,10 @@ class FindTest < Minitest::Test
   end
 
   def test_find_first_number_greater_than_20
-    skip
     numbers = [1, 8, 19, 21, 29, 31, 34]
-    # Your code goes here
+    found = numbers.find do |number|
+      number > 20
+    end
     assert_equal 21, found
   end
 
