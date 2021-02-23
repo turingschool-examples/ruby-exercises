@@ -20,7 +20,9 @@ class FindPatternTest < Minitest::Test
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
     found = nil
     words.each do |word|
-      # Your code goes here
+      if word == "waldo"
+        found = words
+      end 
     end
     assert_nil found
   end
