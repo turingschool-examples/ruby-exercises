@@ -41,23 +41,24 @@ class WizardTest < Minitest::Test
 
   def test_starts_rested
     skip
-    # create wizard
-    # .rested? returns true
+    wizard = Wizard.new("Leigh", bearded: false)
+    assert_equal true, wizard.rested?
   end
 
   def test_can_cast_spells
     skip
-    # create wizard
-    # .cast returns "MAGIC MISSILE!"
+    wizard = Wizard.new("Nick", bearded: false)
+    assert_equal "MAGIC MISSILE!", wizard.cast
   end
 
   def test_gets_tired_after_casting_three_spells
     skip
-    # create wizard
-    # casts spell twice
-    # check wizard is rested
-    # casts spell
-    # check wizard is not rested
+    wizard = Wizard.new("Brittany", bearded: false)
+    wizard.cast
+    wizard.cast
+    assert_equal true, wizard.rested?
+    wizard.cast
+    assert_equal false, wizard.rested?
   end
 
 end
