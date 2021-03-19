@@ -11,30 +11,39 @@ class Werewolf
     @name = name
     @location = location
     @human = true
-    @change = 0
-    @wolf = false
+    # @change = 0 # we don't need this change counter anymore
+    # @wolf = false
+    # we'll have `wolf` just read the opposite of `human`
     @hungry = false
     @eaten = []
   end
 
   def human?
-    @human
+    # @human
+    human # you don't need the `@` sign when reading instance variables
   end
 
   def change!
-    @change += 1
-      if @change.odd? == true
-       @human = false
-     elsif @change.odd? == false
-       @human = true
-    end
+    # lets set the value of `human` to the opposite of `human`:
+    @human = !human
+    # and make it hungry after changing!
+    @hungry = true
+    
+    # @change += 1
+    #   if @change.odd? == true
+    #    @human = false
+    #  elsif @change.odd? == false
+    #    @human = true
+    # end
   end
 
   def wolf?
-    if @human == false
-      @wolf = true
-      @hungry = true
-    end
+    # reading the opposite of human:
+    !human
+    # if @human == false
+    #   @wolf = true
+    #   @hungry = true
+    # end
   end
 
   def consumed(victim)
