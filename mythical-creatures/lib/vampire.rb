@@ -1,21 +1,31 @@
 class Vampire
   attr_reader :name,
                    :pet,
-                   :drink
+                   :drink,
+                   :thirsty # adding the attr_reader
 
   def initialize(name, pet = "bat")
     @name = name
     @pet = pet
-    @drink = 0
+    # @drink = 0 # don't need this anymore
+    @thirsty = true # set thirsty by default
   end
 
   def thirsty?
-    return false if @drink >= 1
-    else
-    true
+    # read the thirsty instance variable (ivar):
+    thirsty
+    
+    
+    # return false if @drink >= 1
+    # else
+    # true
   end
 
   def drink
-    @drink += 1
+    # and when the vampire drinks, set `thirsty` 
+    # to false:
+    
+    @thirsty = false
+    # @drink += 1
   end
 end
