@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-gem "minitest", "~>5.2"
+gem "rspec"
 gem "pry"
 gem "pry-byebug"
