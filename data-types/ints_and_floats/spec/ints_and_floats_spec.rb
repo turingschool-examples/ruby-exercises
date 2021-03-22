@@ -1,92 +1,81 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-class IntsAndFloatsTests < Minitest::Test
-  def test_1
+RSpec.describe 'ints and floats' do
+  it 'test 1' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # add the lucky number and the unlucky number
     sum = ________
-    assert_equal 20, sum
+    expect(sum).to eq(20)
   end
 
-  def test_2
-    skip
+  xit 'test 2' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # subtract the unlucky from the lucky
     difference = ________
     assert_equal -6, difference
+    expect(difference).to eq(-6)
   end
 
-  def test_3
-    skip
+  xit 'test 3' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # divide unlucky by lucky
     # NOTE: this is integer division
     quotient = ________
-    assert_equal 1, quotient
+    expect(quotient).to eq(1)
   end
 
-  def test_4
-    skip
+  xit 'test 4' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # divide unlucky by lucky
     quotient = ________
-    assert_equal 1.8571428571428572, quotient
+    expect(quotient).to eq(1.8571428571428572)
   end
 
-  def test_5
-    skip
+  xit 'test 5' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # find the remainder of the unlucky divided by the lucky
     remainder = ____________
-    assert_equal 6, remainder
+    expect(remainder).to eq(6)
   end
 
-  def test_6
-    skip
+  xit 'test 6' do
     lucky = 7
     # Using the variable defined above,
     # find out if the lucky number is even
     even = _________
-    assert_equal false, even
+    expect(even).to eq(false)
   end
 
-  def test_7
-    skip
+  xit 'test 7' do
     pi = 3.14
     # Using the variable defined above,
     # round the number to the nearest whole number
     rounded = _________
-    assert_equal 3, rounded
+    expect(rounded).to eq(3)
   end
 
-  def test_8
-    skip
+  xit 'test 8' do
     pi = 3.14
     # Using the variable defined above,
     # round the number to one decimal place
     rounded = _________
     assert_equal 3.1, rounded
+    expect(rounded).to eq(3.1)
   end
 
-
-
-  def test_9
-    skip
+  xit 'test 9' do
     pi = 3.14
     # Using the variable defined above,
     # round the number to the next highest whole number
     rounded = _________
-    assert_equal 4, rounded
+    expect(rounded).to eq(4)
   end
 end
