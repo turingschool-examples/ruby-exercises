@@ -1,39 +1,32 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-class NestesdCollectionsTest < Minitest::Test
-
-  def test_1
+RSpec.describe 'Nested Collections' do
+  it 'test 1' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # Retrive the second element
     second = coordinates[1]
 
-    assert_equal [87, 2], second
+    expect(second).to eq([87, 2])
   end
 
-  def test_2
-    skip
+  xit 'test 2' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # Retrive the value 39
     thirty_nine = _________
-    assert_equal 39, thirty_nine
+    expect(thirty_nine).to eq(39)
   end
 
-  def test_3
-    skip
+  xit 'test 3' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # set the last coordinates to [6, 55]
     _________
 
     expected = [[2,5],[87,2],[56,39],[6,55]]
-    assert_equal expected, coordinates
+    expect(coordinates).to eq(expected)
   end
 
-  def test_4
-    skip
+  xit 'test 4' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # set the second element of the last coordinates
@@ -41,22 +34,20 @@ class NestesdCollectionsTest < Minitest::Test
     ________
 
     expected = [[2,5],[87,2],[56,39],[3, 0]]
-    assert_equal expected, coordinates
+    expect(coordinates).to eq(expected)
   end
 
-  def test_5
-    skip
+  xit 'test 5' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # add the coordinate [4, 14]
     _________
 
     expected = [[2,5],[87,2],[56,39],[3,46],[4, 14]]
-    assert_equal expected, coordinates
+    expect(coordinates).to eq(expected)
   end
 
-  def test_6
-    skip
+  xit 'test 6' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -66,11 +57,10 @@ class NestesdCollectionsTest < Minitest::Test
     # retrieve all of the pitchers
     pitchers = _________
     expected = ["Kenny", "Joan", "Shabaz"]
-    assert_equal expected, pitchers
+    expect(pitchers).to eq(expected)
   end
 
-  def test_7
-    skip
+  xit 'test 7' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -85,11 +75,10 @@ class NestesdCollectionsTest < Minitest::Test
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
       catchers: ["Johnny"]
     }
-    assert_equal expected, team
+    expect(team).to eq(expected)
   end
 
-  def test_8
-    skip
+  xit 'test 8' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -106,11 +95,10 @@ class NestesdCollectionsTest < Minitest::Test
       catchers: ["Johnny"],
       coaches: []
     }
-    assert_equal expected, team
+    expect(team).to eq(expected)
   end
 
-  def test_9
-    skip
+  xit 'test 9' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -119,11 +107,10 @@ class NestesdCollectionsTest < Minitest::Test
     # Using the team variable defined above
     # Find out how many fielders there are
     num_fielders = ________
-    assert_equal 5, num_fielders
+    expect(num_fielders).to eq(5)
   end
 
-  def test_10
-    skip
+  xit 'test 10' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -132,11 +119,10 @@ class NestesdCollectionsTest < Minitest::Test
     # Using the team variable defined above
     # Find out if "Kenny" is a pitcher
     kenny_is_pitcher = ________
-    assert_equal true, kenny_is_pitcher
+    expect(kenny_is_pitcher).to eq(true)
   end
 
-  def test_11
-    skip
+  xit 'test 11' do
     # HINT: You may find it valuable to break the three_day_forecast variable
     # into multiple lines to make it more readable
 
@@ -146,103 +132,96 @@ class NestesdCollectionsTest < Minitest::Test
 
     actual = ________
     expected = 3456789765456787656
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_12
-    skip
+  xit 'test 12' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
     actual = ________
     expected = [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}]
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_13
-    skip
+  xit 'test 13' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
     actual = ________
     expected = "6-21-18"
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_14
-    skip
+  xit 'test 14' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
     actual = _________
     expected = [:days, "date", :ref_num]
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_15
-    skip
+  xit 'test 15' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
     actual = ________
     expected = 55
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_16
-    skip
+  xit 'test 16' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
     actual = ________
     expected = [:high, :low, :summary]
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_17
-    skip
+  xit 'test 17' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
     actual = ________
     expected = [77, 64, "Sunny"]
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_18
-    skip
+  xit 'test 18' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
     actual = _________
     expected = "date"
-    assert_equal expected, actual
+    expect(actual).to eq(expected)
   end
 
-  def test_19
-    skip
+  xit 'test 19' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # Change the high on the fist day to 99
     _______
     expected = {days: [{high: 99,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
-    assert_equal expected, three_day_forecast
+    expect(three_day_forecast).to eq(expected)
   end
 
-  def test_20
-    skip
+  xit 'test 20' do
     three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # Add a new key "time" with the value "12:30"
     _________
     expected = {"time" => "12:30", days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
-    assert_equal expected, three_day_forecast
+    expect(three_day_forecast).to eq(expected)
   end
 end
+
+
