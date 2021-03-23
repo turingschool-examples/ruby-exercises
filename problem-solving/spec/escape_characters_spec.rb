@@ -1,23 +1,22 @@
-require_relative "test_helper"
 require "./lib/escape_characters"
 
-class EscapeCharactersTest < Minitest::Test
+RSpec.describe EscapeCharacters do
 
-  def test_it_can_add_quotation_marks
+  it 'can add quotation marks' do
     ec = EscapeCharacters.new
 
     result = ec.quote("These aren't the droids you're looking for.")
     expected = "\"These aren't the droids you're looking for.\""
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_can_add_quotation_marks_to_something_else
+  it 'can add quotation marks to something else' do
     ec = EscapeCharacters.new
 
     result = ec.quote("By Horace's Beard!")
     expected = "\"By Horace's Beard!\""
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 end

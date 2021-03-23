@@ -1,45 +1,44 @@
-require_relative "test_helper"
 require "./lib/simple_math"
 
-class SimpleMathTest < Minitest::Test
+RSpec.describe SimpleMath do
 
-  def test_it_can_add_two_numbers
+  it 'can add two numbers' do
     sm = SimpleMath.new
 
     result = sm.add(2,2)
     expected = 4
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_can_add_two_different_numbers
+  it 'can add two different numbers' do
     sm = SimpleMath.new
 
     result = sm.add(5,3)
     expected = 8
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_can_subtract_two_numbers
+  it 'can subtract two numbers' do
     sm = SimpleMath.new
 
     result = sm.subtract(10,2)
     expected = 8
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_can_subtract_two_other_numbers
+  it 'can subtract two other numbers' do
     sm = SimpleMath.new
 
     result = sm.subtract(50,27)
     expected = 23
 
-    assert_equal expected, result
+    expect(result).to eq(expected)
   end
 
-  def test_it_can_multiply_two_numbers
+  it 'can multiply two numbers' do
 
     # instantiate the class
     #
@@ -50,7 +49,7 @@ class SimpleMathTest < Minitest::Test
   end
 
 
-  def test_it_can_multiply_two_other_numbers
+  it 'can multiply two other numbers' do
 
     # instantiate the class
     #
@@ -60,12 +59,11 @@ class SimpleMathTest < Minitest::Test
     # check results
   end
 
-  def test_it_can_divide_two_numbers
+  it 'can divide two numbers' do
     # your code goes here
   end
 
-  def test_it_can_divide_two_other_numbers
+  it 'can divide two other numbers' do
     # # your code goes here
   end
-
 end
