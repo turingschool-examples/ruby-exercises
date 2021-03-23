@@ -29,7 +29,7 @@ into how each method is put together under the hood.
 
 ```shell
 $ cd ruby-exercises/enumerables/exercises_1
-``` 
+```
 
 Open up `map_pattern_test.rb` and `map_test.rb` in Atom, side by side:
 
@@ -41,8 +41,8 @@ basis of all enumerables.
 
 For each method, there are two files of interest. Let's start with `map`:
 
-1. `exercises_1/map_pattern_test.rb`
-2. `exercises_1/map_test.rb`
+1. `exercises_1/spec/map_pattern_spec.rb`
+2. `exercises_1/spec/map_spec.rb`
 
 In the `map_pattern_test.rb` you'll find a collection of exercises which do what `map` is good at,
 but they do it just with `each`. This file will give us some insight into how map works internally,
@@ -55,12 +55,12 @@ can make our lives much easier!
 
 ### Running the Test Files
 
-To run each example, we'll simply use the `ruby` command in combination with the
+To run each example, we'll simply use the `rspec` command in combination with the
 path to that file. For example to run the 2 map files above, we would use:
 
 ```
-$ ruby exercises_1/map_pattern_test.rb
-$ ruby exercises_1/map_test.rb
+$ rspec exercises_1/spec/map_pattern_test.rb
+$ rspec exercises_1/spec/map_test.rb
 ```
 
 ### Recommended Order
@@ -94,11 +94,3 @@ Here's how we recommend you work through the exercises:
 * Run the `map_test.rb` and solve the same exercise
 * Repeat for each matching pair of exercises
 
-
-## How `exercises_2` are Organized
-
-After you are familiar with several enumerables, the exercises in this folder will help you work on your problem solving with enumerables. You will need to select which enumerable will best fit the problem.
-
-For the `basic_enumerables_test.rb`, you will only need `map`, `find`, and `find_all` to complete the tasks.
-
-For `all_enumerable_exercises_test.rb`, you will need to consider all enumerables and pick which one will be the best choice.
