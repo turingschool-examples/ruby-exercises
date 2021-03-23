@@ -1,68 +1,58 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'Count Pattern Test' do
 
-class CountPatternTest < Minitest::Test
-
-  def test_count_count_words_with_e
+  it 'counts words with an e' do
     words = ["thing", "phone", "bark", "belt", "shoe", "bath"]
     tally = 0
     words.each do |word|
       tally += 1 if word.include?('e')
     end
-    assert_equal 3, tally
+    expect(tally).to eq(3)
   end
 
-  def test_count_numbers_greater_than_17
+  xit 'counts numbers greater than 17' do
     numbers = [9, 18, 12, 17, 1, 3, 99]
     tally = 0
     numbers.each do |number|
       # Your code goes here
     end
-    assert_equal 2, tally
+    expect(tally).to eq(2)
   end
 
-  def test_count_words_that_are_uppercase
-    skip
+  xit 'words that are uppercase' do
     words = ["trousers", "SOCKS", "sweater", "Cap", "SHOE", "TIE"]
     tally = 0
     # Your code goes here
-    assert_equal 3, tally
+    expect(tally).to eq(3)
   end
 
-  def test_count_words_ending_in_ing
-    skip
+  xit 'words ending in ing' do
     words = ["thought", "brake", "shin", "juice", "trash"]
     # Your code goes here
-    assert_equal 0, tally
+    expect(tally).to eq(0)
   end
 
-  def test_count_even_numbers
-    skip
+  xit 'even numbers' do
     numbers = [9, 2, 1, 3, 18, 39, 71, 4, 6]
     # Your code goes here
-    assert_equal 4, tally
+    expect(tally).to eq(4)
   end
 
-  def test_count_multiples_of_5
-    skip
+  xit 'multiples of 5' do
     numbers = [2, 5, 19, 25, 35, 67]
     # Your code goes here
-    assert_equal 3, tally
+    expect(tally).to eq(3)
   end
 
-  def test_count_round_prices
-    skip
+  xit 'round prices' do
     prices = [1.0, 3.9, 5.99, 18.5, 20.0]
     # Your code goes here
-    assert_equal 2, tally
+    expect(tally).to eq(2)
   end
 
-  def test_count_four_letter_words
-    skip
+  xit 'four letter words' do
     words = ["bake", "bark", "corn", "apple", "wart", "bird", "umbrella", "fart"]
     # Your code goes here
-    assert_equal 6, tally
+    expect(tally).to eq(6)
   end
 
 end

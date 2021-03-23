@@ -1,51 +1,42 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'one' do
 
-class OneTest < Minitest::Test
-
-  def test_one_more
+  it 'one more' do
     words = ["bigger", "better", "more", "improved", "advantageous"]
     exactly_one = words.one? do |word|
       word == 'more'
     end
-    assert_equal true, exactly_one
+    expect(exactly_one).to eq(true)
   end
 
-  def test_not_even_one_ring
+  xit 'not even one ring' do
     ornaments = ["bracelet", "anklet", "earring"]
     exactly_one_ring = ornaments.one? do |ornament|
       # Your code goes here
     end
-    assert_equal false, exactly_one_ring
+    expect(exactly_one_ring).to eq(false)
   end
 
-  def test_not_just_one_ring
-    skip
+  xit 'not just one ring' do
     ornaments = ["bracelet", "ring", "ring", "anklet", "earring"]
     # Your code goes here
-    assert_equal false, exactly_one_ring
+    expect(exactly_one_ring).to eq(false)
   end
 
-  def test_one_time
-    skip
+  xit 'one time' do
     words = ["morning", "time", "evening", "noon", "dusk", "dawn"]
     # Your code goes here
-    assert_equal true, exactly_one_time
+    expect(exactly_one_time).to eq(true)
   end
 
-  def test_one_double_digit_number
-    skip
+  xit 'one double digit number' do
     numbers = [8, 2, 10, 333, 9, 101]
     # Your code goes here
-    assert_equal true, exactly_one_double_digit
+    expect(exactly_one_double_digit).to eq(true)
   end
 
-  def test_not_one_even_number
-    skip
+  xit 'not even one number' do
     numbers = [3, 20, 81, 10, 391, 32]
     # Your code goes here
-    assert_equal false, exactly_one_even_number
+    expect(exactly_one_even_number).to eq(false)
   end
-
 end

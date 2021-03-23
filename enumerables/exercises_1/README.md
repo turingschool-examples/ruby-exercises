@@ -4,7 +4,7 @@ That said, here's the summary:
 
 ------------------
 
-Open up `map_pattern_test.rb` and `map_test.rb` in Atom, side by side:
+Open up `map_pattern_spec.rb` and `map_spec.rb` in Atom, side by side:
 
 ![Set up map and map_pattern_test side by side](/images/enumerables-setup-map.jpg)
 
@@ -34,5 +34,5 @@ Here's the order to work through:
 * `group_by` (this one is tricky too!)
 * `zip`
 
-When done (or before you've finished all of these, if you feel like it) go check out exercises in the `exercises_2` directory. 
+When done (or before you've finished all of these, if you feel like it) go check out exercises in the `exercises_2` directory.
 

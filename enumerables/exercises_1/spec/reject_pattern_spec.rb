@@ -1,110 +1,94 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'reject pattern' do
 
-class RejectPatternTest < Minitest::Test
-
-  def test_remove_zeros
+  it 'removes zeroes' do
     numbers = [2, 93, 7, 0, 0, 1, 0, 31, 0, 368]
     filtered = []
     numbers.each do |number|
       filtered << number unless number.zero?
     end
-    assert_equal [2, 93, 7, 1, 31, 368], filtered
+    expect(filtered).to eq([2, 93, 7, 1, 31, 368])
   end
 
-  def test_remove_vowels
+  xit 'removes vowels' do
     letters = ["a", "l", "l", " ", "y", "o", "u", "r", " ", "b", "a", "s", "e", " ", "a", "r", "e", " ", "b", "e", "l", "o", "n", "g", " ", "t", "o", " ", "u", "s"]
     remaining = []
     letters.each do |letter|
       # Your code goes here
     end
-    assert_equal ["l", "l", " ", "r", " ", "b", "s", " ", "r", " ", "b", "l", "n", "g", " ", "t", " ", "s"], remaining
+    expect(remaining).to eq(["l", "l", " ", "r", " ", "b", "s", " ", "r", " ", "b", "l", "n", "g", " ", "t", " ", "s"])
   end
 
-  def test_remove_numbers_divisible_by_3
-    skip
+  xit 'removes numbers divisible by 3' do
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     remaining = []
     # Your code goes here
-    assert_equal [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20], remaining
+    expect(remaining).to eq([1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20])
   end
 
-  def test_remove_words_with_more_than_three_letters
+  xit 'removes words longer than 3 letters' do
     skip
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
     # Your code goes here
-    assert_equal ["bad", "cat", "dog", "red"], selected
+    expected(selected).to eq(["bad", "cat", "dog", "red"])
   end
 
-  def test_remove_words_ending_in_e
-    skip
+  xit 'removes words ending in e' do
     words = ["are", "you", "strike", "thinking", "belt", "piece", "warble", "sing", "pipe"]
     # Your code goes here
-    assert_equal ["you", "thinking", "belt", "sing"], selected
+    expected(selected).to eq(["you", "thinking", "belt", "sing"])
   end
 
-  def test_remove_words_ending_in_ing
-    skip
+  xit 'removes words ending in ing' do
     words = ["bring", "finger", "drought", "singing", "bingo", "purposeful"]
     # Your code goes here
-    assert_equal ["finger", "drought", "bingo", "purposeful"], selected
+    expect(selected).to eq(["finger", "drought", "bingo", "purposeful"])
   end
 
-  def test_remove_words_containing_e
-    skip
+  xit 'removes words containing e' do
     words = ["four", "red", "five", "blue", "pizza", "purple"]
     # Your code goes here
-    assert_equal ["four", "pizza"], selected
+    expect(selected).to eq(["four", "pizza"])
   end
 
-  def test_remove_dinosaurs
-    skip
+  xit 'removes dinosaurs' do
     animals = ["tyrannosaurus", "narwhal", "eel", "achillesaurus", "qingxiusaurus"]
     # Your code goes here
-    assert_equal ["narwhal", "eel"], notasaurus
+    expect(notasaurus).to eq(["narwhal", "eel"])
   end
 
-  def test_remove_numbers
-    skip
+  xit 'removes numbers' do
     elements = ["cat", "dog", 23, 81.1, 56, "aimless", 43]
     # Your code goes here
-    assert_equal ["cat", "dog", "aimless"], not_numbers
+    expected(not_numbers).to eq(["cat", "dog", "aimless"])
   end
 
-  def test_remove_floats
-    skip
+  xit 'removes floats' do
     elements = ["cat", "dog", 32.333, 23, 56, "aimless", 43.2]
     # Your code goes here
-    assert_equal ["cat", "dog", 23, 56, "aimless"], not_numbers
+    expect(not_numbers).to eq(["cat", "dog", 23, 56, "aimless"])
   end
 
-  def test_remove_animals_starting_with_vowels
-    skip
+  xit 'removes animals starting with vowels' do
     animals = ["aardvark", "bonobo", "cat", "dog", "elephant"]
     # Your code goes here
-    assert_equal ["bonobo", "cat", "dog"], remaining
+    expect(remaining).to eq(["bonobo", "cat", "dog"])
   end
 
-  def test_remove_capitalized_words
-    skip
+  xit 'removes upcased words' do
     words = ["CAT", "dog", "AIMLESS", "Trevor", "butter"]
     # Your code goes here
-    assert_equal ["dog", "Trevor", "butter"], remaining
+    expect(remaining).to eq(["dog", "Trevor", "butter"])
   end
 
-  def test_remove_arrays
-    skip
+  xit 'removes arrays' do
     elements = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
     # Your code goes here
-    assert_equal ["CAT", 23, "AIMLESS", 43, "butter"], remaining
+    expected(remaining).to eq(["CAT", 23, "AIMLESS", 43, "butter"])
   end
 
-  def test_remove_hashes
-    skip
+  xit 'removes hashes' do
     elements = ["cat", {:dog=>"fido"}, 23, {:stuff=>"things"}, "aimless", 43]
     # Your code goes here
-    assert_equal ["cat", 23, "aimless", 43], remaining
+    expect(remaining).to eq(["cat", 23, "aimless", 43])
   end
-
 end

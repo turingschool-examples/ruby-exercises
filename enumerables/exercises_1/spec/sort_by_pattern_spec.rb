@@ -1,10 +1,6 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'sort_by pattern' do
 
-class SortByPatternTest < Minitest::Test
-
-  def test_sort_alphabetically
+  it 'sorts alphabetically' do
     words = ["broccoli", "Carrots", "FISH", "Bacon", "candy"]
     transformed = []
     words.each do |word|
@@ -15,10 +11,10 @@ class SortByPatternTest < Minitest::Test
     transformed.each do |sort_key, word|
       sorted << word
     end
-    assert_equal ["Bacon", "broccoli", "candy", "Carrots", "FISH"], sorted
+    expect(sorted).to eq(["Bacon", "broccoli", "candy", "Carrots", "FISH"])
   end
 
-  def test_sort_alphabetically_by_last_letter
+  xit 'alphabetically by last letter' do
     things = ["pill", "box", "glass", "water", "sponge"]
     transformed = []
     things.each do |thing|
@@ -29,11 +25,10 @@ class SortByPatternTest < Minitest::Test
     transformed.each do |sort_key, thing|
       sorted << thing
     end
-    assert_equal ["sponge", "pill", "water", "glass", "box"], sorted
+    expect(sorted).to eq(["sponge", "pill", "water", "glass", "box"])
   end
 
-  def test_sort_by_distance
-    skip
+  xit 'sort by distance' do
     distances = ["1cm", "9cm", "30cm", "4cm", "2cm"]
     transformed = []
     # Your code goes here
@@ -42,28 +37,24 @@ class SortByPatternTest < Minitest::Test
     transformed.each do |sort_key, distance|
       sorted << distance
     end
-    assert_equal ["1cm", "2cm", "4cm", "9cm", "30cm"], sorted
+    expect(sorted).to eq(["1cm", "2cm", "4cm", "9cm", "30cm"])
   end
 
-  def test_sort_by_length
-    skip
+  xit 'by length' do
     words = ["heteromorph", "ancyloceratina", "bioengineering", "mathematical", "bug"]
     # Your code goes here
-    assert_equal ["bug", "heteromorph", "mathematical", "ancyloceratina", "bioengineering"], sorted
+    expect(sorted).to eq(["bug", "heteromorph", "mathematical", "ancyloceratina", "bioengineering"])
   end
 
-  def test_sort_by_proximity_to_ten
-    skip
+  xit 'by proximity to ten' do
     prices = [3.02, 9.91, 17.9, 10.01, 11.0]
     # Your code goes here
-    assert_equal [10.01, 9.91, 11.0, 3.02, 17.9], sorted
+    expect(sorted).to eq([10.01, 9.91, 11.0, 3.02, 17.9])
   end
 
-  def test_sort_by_number_of_cents
-    skip
+  xit 'by number of cents' do
     prices = [3.02, 9.91, 7.9, 10.01, 11.0]
     # Your code goes here
-    assert_equal [11.0, 10.01, 3.02, 7.9, 9.91], sorted
+    expect(sorted).to eq([11.0, 10.01, 3.02, 7.9, 9.91])
   end
-
 end
