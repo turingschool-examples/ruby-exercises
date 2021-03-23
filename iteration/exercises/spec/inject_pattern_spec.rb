@@ -1,9 +1,6 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'inject pattern test' do
 
-class InjectPatternTest < Minitest::Test
-
-  def test_1
+  it 'test 1' do
     numbers = [28, 12, 38, 1, 91]
     # Iterate over the numbers array defined above,
     # to find the difference of all the numbers
@@ -11,10 +8,10 @@ class InjectPatternTest < Minitest::Test
     numbers.each do |number|
       difference = difference - number
     end
-    assert_equal -170, difference
+    expect(difference).to eq(-170)
   end
 
-  def test_2
+  xit 'test 2' do
     bills = {
       rent: 800,
       car: 240,
@@ -28,10 +25,10 @@ class InjectPatternTest < Minitest::Test
     bills.each do |(category, amount)|
       difference -= amount
     end
-    assert_equal -2262, difference
+    expect(difference).to eq(-2262)
   end
 
-  def test_3
+  xit 'test 3' do
     numbers = [2, 3, 5, 7]
     # Iterate over the numbers array defined above
     # to find the product of all the numbers
@@ -40,10 +37,10 @@ class InjectPatternTest < Minitest::Test
     numbers.each do |number|
       # Your Code Here
     end
-    assert_equal 210, product
+    expect(product).to eq(210)
   end
 
-  def test_4
+  xit 'test 4' do
     scrabble_score = {
       letter_total: 23,
       word_muliplier: 3,
@@ -56,10 +53,10 @@ class InjectPatternTest < Minitest::Test
     scrabble_score.each do |(key, value)|
       # Your Code Here
     end
-    assert_equal 138, product
+    expect(product).to eq(138)
   end
 
-  def test_5
+  xit 'test 5' do
     airlines = ["Southwest", "Delta", "United", "Frontier"]
     # Iterate over the airlines array defined above to
     # create a hash with the name of the airline as the
@@ -74,10 +71,10 @@ class InjectPatternTest < Minitest::Test
       "United" => 6,
       "Frontier" => 8
     }
-    assert_equal expected, number_of_letters
+    expect(number_of_letters).to eq(expected)
   end
 
-  def test_6
+  xit 'test 6' do
     topping_calories = {
       pepperoni: 430,
       sausage: 400,
@@ -91,21 +88,20 @@ class InjectPatternTest < Minitest::Test
     toppings = []
     # Your Code Here
 
-    assert_equal ["pepperoni", "sausage", "olives", "peppers", "onions"], toppings
+    expect(toppings).to eq(["pepperoni", "sausage", "olives", "peppers", "onions"])
   end
 
-  def test_7
+  xit 'test 7' do
     elements = [["a", 1], ["b", 9], ["c", 21]]
     # Iterate over the elements array defined above
     # to find the sum of all the integers
 
     # Your Code Here
 
-    assert_equal 31, sum_of_second_values
-
+    expect(sum_of_second_values).to eq(31)
   end
 
-  def test_8
+  xit 'test 8' do
     toppings = {
       pepperoni: {
         calories: 430,
@@ -134,10 +130,10 @@ class InjectPatternTest < Minitest::Test
 
     # Your Code Here
 
-    assert_equal 6950, total_calories
+    expect(total_calories).to eq(6950)
   end
 
-  def test_9
+  xit 'test 9' do
     grades = {
       quizzes: [8, 5, 3, 6, 5],
       tests: [23, 21, 24],
@@ -151,10 +147,10 @@ class InjectPatternTest < Minitest::Test
 
     # Your code goes here
 
-    assert_equal 85.40, final_grade
+    expect(final_grade).to eq(85.40)
   end
 
-  def test_10
+  xit 'test 10' do
     menu = {
       empanadas: {
         flavors: ["chicken", "potato", "steak", "veggie"],
@@ -180,6 +176,6 @@ class InjectPatternTest < Minitest::Test
                 "- blueberry, and vanilla scones (non gluten free)\n"\
                 "- blueberry, strawberry, and cherry parfaits (gluten free)\n"
 
-    assert_equal expected, printable_menu
+    expected(printable_menu).to eq(expected)
   end
 end

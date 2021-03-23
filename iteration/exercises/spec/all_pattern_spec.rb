@@ -1,17 +1,14 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-class AllPatternTest < Minitest::Test
-  def test_1
+RSpec.describe 'all pattern' do
+  it 'test 1' do
     account_balances = [0, 0, 0, 0, 0, 0, 0]
     all_zeros = true
     account_balances.each do |balance|
       all_zeros = false unless balance.zero?
     end
-    assert_equal true, all_zeros
+    expect(all_zeros).to be true
   end
 
-  def test_2
+  it 'test 2' do
     account_balances = {
       checking: 0,
       saving: 0,
@@ -24,21 +21,19 @@ class AllPatternTest < Minitest::Test
         all_zeros = false
       end
     end
-    assert_equal true, all_zeros
+    expect(all_zeros).to be true
   end
 
-  def test_3
-    skip
+  xit 'test 3' do
     words = ["love", "hate", "fire", "bird", "call"]
     all_four_letters = true
     words.each do |word|
       # Your Code Here
     end
-    assert_equal true, all_four_letters
+    expect(all_four_letters).to be true
   end
 
-  def test_4
-    skip
+  xit 'test 4' do
     words = {
       one: "love",
       two: "hate",
@@ -50,20 +45,18 @@ class AllPatternTest < Minitest::Test
     words.each do |position, word|
       # Your Code Here
     end
-    assert_equal true, all_four_letters
+    expect(all_four_letters).to be true
   end
 
-  def test_5
-    skip
+  xit 'test 5' do
     statuses = [:busy, :busy, :busy]
     all_busy = true
     # Your Code Here
 
-    assert_equal true, all_busy
+    expect(all_busy).to be true
   end
 
-  def test_6
-    skip
+  xit 'test 6' do
     friend_status = {
       "Megan" => :busy,
       "Sarah" => :busy,
@@ -72,19 +65,17 @@ class AllPatternTest < Minitest::Test
     all_busy = true
     # Your Code Here
 
-    assert_equal true, all_busy
+    expect(all_busy).to be true
   end
 
-  def test_7
-    skip
+  xit 'test 7' do
     zip_codes = [94381, 831, 50009, 36232, 8992, 89999, 11110]
     # Your Code Here
 
-    assert_equal false, all_five_digits
+    expect(all_five_digits).to be false
   end
 
-  def test_8
-    skip
+  xit 'test 8' do
     zip_codes = {
       "Megan" => 94381,
       "Sarah" => 831,
@@ -96,19 +87,18 @@ class AllPatternTest < Minitest::Test
     }
     # Your Code Here
 
-    assert_equal false, all_five_digits
+    expect(all_five_digits).to be false
   end
 
-  def test_9
-    skip
+  xit 'test 9' do
     snacks = ["GARLIC PLANTAINS", "SNICKERDOODLES", "Pretzels"]
     # Your Code Here
 
     assert_equal false, all_caps
+    expect(all_caps).to be false
   end
 
-  def test_10
-    skip
+  xit 'test 10' do
     snacks = {
       savory: "GARLIC PLANTAINS",
       sweet: "SNICKERDOODLES",
@@ -116,6 +106,6 @@ class AllPatternTest < Minitest::Test
     }
     # Your Code Here
 
-    assert_equal false, all_caps
+    expect(all_caps).to be false
   end
 end

@@ -1,8 +1,5 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-class MaxAndMinByPatternTest < Minitest::Test
-  def test_1
+RSpec.describe 'max and min by pattern' do
+  it 'test 1'  do
     numbers = [1, 100, 1000, 1000000]
     greatest = numbers[0]
     numbers.each do |number|
@@ -10,10 +7,10 @@ class MaxAndMinByPatternTest < Minitest::Test
         greatest = number
       end
     end
-    assert_equal 1000000, greatest
+    expect(greatest).to eq(100000)
   end
 
-  def test_2
+  it 'test 2' do
     magnitudes = {
       ones: 1,
       hundreds: 100,
@@ -26,22 +23,20 @@ class MaxAndMinByPatternTest < Minitest::Test
         greatest = value
       end
     end
-    assert_equal 1000000, greatest
+    expect(greatest).to eq(1000000)
   end
 
-  def test_3
-    skip
+  xit 'test 3' do
     meals = ["banana", "nuts", "salad", "steak", "cake"]
     shortest_word = meals[0]
     meals.each do |meal|
       # Your Code Here
     end
 
-    assert_equal "nuts", shortest_word
+    expect(shortest_word).to eq("nuts")
   end
 
-  def test_4
-    skip
+  xit 'test 4' do
     meals = {
       breakfast: "banana",
       snack: "nuts",
@@ -54,21 +49,18 @@ class MaxAndMinByPatternTest < Minitest::Test
       # Your Code Here
     end
 
-    assert_equal "nuts", shortest_word
+    expect(shortest_word).to eq("nuts")
   end
 
-  def test_5
-    skip
+  xit 'test 5' do
     stats = [3001, 431, 1695, 0.27601, 0.340]
     most_digits = stats[0]
     # Your Code Here
 
-    assert_equal 0.27601, most_digits
+    expect(most_digits).to eq(0.27601)
   end
 
-
-  def test_6
-    skip
+  xit 'test 6' do
     stats = {
       games_played: 3001,
       home_runs: 431,
@@ -79,19 +71,17 @@ class MaxAndMinByPatternTest < Minitest::Test
     most_digits = stats[stats.keys.first]
     # Your Code Here
 
-    assert_equal 0.27601, most_digits
+    expect(most_digits).to eq(0.27601)
   end
 
-  def test_7
-    skip
+  xit 'test 7' do
     ages = [39, 45, 29, 24, 50]
     # Your Code Here
 
-    assert_equal 50, oldest
+    expect(oldest).to eq(50)
   end
 
-  def test_8
-    skip
+  xit 'test 8' do
     ages = {
       abdi: 39,
       hassan: 45,
@@ -102,22 +92,20 @@ class MaxAndMinByPatternTest < Minitest::Test
     # Your Code Here
 
     expected = {name: "miguel", age: 50}
-    assert_equal expected, oldest
+    expect(oldest).to eq(expected)
   end
 
-  def test_9
-    skip
+  xit 'test 9' do
     programmers = [["katrina", "sandi", "jim", "aaron", "desi"], ["abby", "jon", "susan"]]
     # Your Code Here
 
-    assert_equal ["abby", "jon", "susan"], fewest_programmers
+    expect(fewest_programmers).to eq(["abby", "jon", "susan"])
   end
 
-  def test_10
-    skip
+  xit 'test 10' do
     programmers = {ruby: ["katrina", "sandi", "jim", "aaron", "desi"], java: ["abby", "jon", "susan"]}
     # Your Code Here
 
-    assert_equal :java, fewest_programmers
+    expect(fewest_programmers).to eq(:java)
   end
 end

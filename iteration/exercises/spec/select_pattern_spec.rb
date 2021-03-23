@@ -1,19 +1,15 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'select pattern' do
 
-class SelectPatternTest < Minitest::Test
-
-  def test_1
+  it 'test 1' do
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     evens = []
     numbers.each do |number|
       evens << number if number.even?
     end
-    assert_equal [2, 4, 6, 8, 10], evens
+    expect(evens).to eq([2, 4, 6, 8, 10])
   end
 
-  def test_2
+  it 'test 2' do
     numbers = {
       one: 1,
       two: 2,
@@ -32,22 +28,20 @@ class SelectPatternTest < Minitest::Test
       two: 2,
       four: 4
     }
-    assert_equal expected, evens
+    expect(evens).to eq(expected)
   end
 
-  def test_3
-    skip
+  xit 'test 3' do
     rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
     greater_than_four = []
     rainbow.each do |color|
       #Your Code Here
     end
 
-    assert_equal ["orange", "yellow", "green", "indigo", "violet"], greater_than_four
+    expect(greater_than_four).to eq(["orange", "yellow", "green", "indigo", "violet"])
   end
 
-  def test_4
-    skip
+  xit 'test 4' do
     rainbow = {
       first: "red",
       second: "orange",
@@ -69,21 +63,18 @@ class SelectPatternTest < Minitest::Test
       sixth: "indigo",
       seventh: "violet"
     }
-    assert_equal expected, greater_than_four
+    expected(greater_than_four).to eq(expected)
   end
 
-
-  def test_5
-    skip
+  xit 'test 5' do
     furniture = ["dining table", "bed", "coffee table", "deck chairs"]
     words_with_c = []
     #Your Code Here
 
-    assert_equal ["coffee table", "deck chairs"], words_with_c
+    expect(words_with_c).to eq(["coffee table", "deck chairs"])
   end
 
-  def test_6
-    skip
+  xit 'test 6' do
     furniture = {
       dining_room: "dining table",
       bedroom: "bed",
@@ -97,19 +88,17 @@ class SelectPatternTest < Minitest::Test
       living_room: "coffee table",
       patio: "deck chairs"
     }
-    assert_equal expected, words_with_c
+    expect(words_with_c).to eq(expected)
   end
 
-  def test_7
-    skip
+  xit 'test 7' do
     meals = ["chips and salsa", "chicken alfredo", "banana pudding"]
     #Your Code Here
 
-    assert_equal ["chicken alfredo", "banana pudding"], two_words
+    expected(two_words).to eq(["chicken alfredo", "banana pudding"])
   end
 
-  def test_8
-    skip
+  xit 'test 8' do
     meal = {
       appetizer: "chips and salsa",
       entre: "chicken alfredo",
@@ -121,20 +110,18 @@ class SelectPatternTest < Minitest::Test
       entre: "chicken alfredo",
       dessert: "banana pudding"
     }
-    assert_equal expected, two_words
+    expect(two_words).to eq(expected)
   end
 
 
-  def test_9
-    skip
+  xit 'test 9' do
     prices = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
     #Your Code Here
 
-    assert_equal [1.4, 3.5, 4.9, 9.1, 8.0], floats
+    expect(floats).to eq([1.4, 3.5, 4.9, 9.1, 8.0])
   end
 
-  def test_10
-    skip
+  xit 'test 10' do
     items = {
       tv: 3,
       toaster: 1.4,
@@ -153,6 +140,7 @@ class SelectPatternTest < Minitest::Test
       sack_o_potatoes: 9.1,
       tonka_truck: 8.0
     }
-    assert_equal expected, floats
+    expect(floats).to eq(expected)
   end
 end
+

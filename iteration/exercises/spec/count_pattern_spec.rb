@@ -1,9 +1,6 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'count pattern' do
 
-class CountPatternTest < Minitest::Test
-
-  def test_1
+  it 'test 1' do
     ages = [39, 45, 29, 24, 50]
     younger_than_thirty = 0
     ages.each do |age|
@@ -11,10 +8,10 @@ class CountPatternTest < Minitest::Test
         younger_than_thirty += 1
       end
     end
-    assert_equal 2, younger_than_thirty
+    expect(younger_than_thirty).to eq(2)
   end
 
-  def test_2
+  xit 'test 2' do
     ages = {
       abdi: 39,
       hassan: 45,
@@ -28,22 +25,20 @@ class CountPatternTest < Minitest::Test
         younger_than_thirty += 1
       end
     end
-    assert_equal 2, younger_than_thirty
+    expect(younger_than_thirty).to eq(2)
   end
 
-  def test_3
-    skip
+  xit 'test 3' do
     ages = [39, 45, 29, 24, 50]
     older_than_fifty = 0
     ages.each do |age|
       # Your Code Here
     end
 
-    assert_equal 0, older_than_fifty
+    expect(older_than_fifty).to eq(0)
   end
 
-  def test_4
-    skip
+  xit 'test 4' do
     ages = {
       abdi: 39,
       hassan: 45,
@@ -56,20 +51,18 @@ class CountPatternTest < Minitest::Test
       # Your Code Here
     end
 
-    assert_equal 0, older_than_fifty
+    expect(older_than_fifty).to eq(0)
   end
 
-  def test_5
-    skip
+  xit 'test 5' do
     ages = [39, 45, 29, 24, 50]
     multiple_of_three = 0
     # Your Code Here
 
-    assert_equal 3, multiple_of_three
+    expect(multiple_of_three).to eq(3)
   end
 
-  def test_6
-    skip
+  xit 'test 6' do
     ages = {
       abdi: 39,
       hassan: 45,
@@ -80,19 +73,18 @@ class CountPatternTest < Minitest::Test
     multiple_of_three = 0
     # Your Code Here
 
-    assert_equal 3, multiple_of_three
+    expect(multiple_of_three).to eq(3)
   end
 
-  def test_7
-    skip
+  xit 'test 7' do
     family = ["alice", "bob", "charlie", "david", "eve"]
     # Your Code Here
 
     assert_equal 2, names_with_three_letters
+    expect(names_with_three_letters).to eq(2)
   end
 
-  def test_8
-    skip
+  xit 'test 8' do
     family = {
       mother: "alice",
       father: "bob",
@@ -103,18 +95,18 @@ class CountPatternTest < Minitest::Test
     # Your Code Here
 
     assert_equal 2, names_with_three_letters
+    expect(names_with_three_letters).to eq(2)
   end
 
-  def test_9
-    skip
+  xit 'test 9' do
     prices = [1.0, 3.9, 5.99, 18.5, 20.0]
     # Your code goes here
 
     assert_equal 2, whole_numbers
+    expect(whole_numbers).to eq(2)
   end
 
-  def test_10
-    skip
+  xit 'test 10' do
     prices = {
       "shoes" => 1.0,
       "backpack" => 3.9,
@@ -124,6 +116,6 @@ class CountPatternTest < Minitest::Test
     }
     # Your Code Here
 
-    assert_equal 2, whole_numbers
+    expect(whole_numbers).to eq(2)
   end
 end

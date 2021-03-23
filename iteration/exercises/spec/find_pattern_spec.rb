@@ -1,10 +1,6 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'find pattern' do
 
-class FindPatternTest < Minitest::Test
-
-  def test_1
+  it 'test 1' do
     ages = [39, 45, 29, 24, 50]
     younger_than_thirty = nil
     ages.each do |age|
@@ -13,10 +9,10 @@ class FindPatternTest < Minitest::Test
         break
       end
     end
-    assert_equal 29, younger_than_thirty
+    expect(younger_than_thirty).to eq(29)
   end
 
-  def test_2
+  it 'test 2' do
     ages = {
       abdi: 39,
       hassan: 45,
@@ -31,22 +27,20 @@ class FindPatternTest < Minitest::Test
         break
       end
     end
-    assert_equal :ladonna, younger_than_thirty
+    expect(younger_than_thirty).to eq(:ladonna)
   end
 
-  def test_3
-    skip
+  xit 'test 3' do
     ages = [39, 45, 29, 24, 50]
     older_than_fifty = nil
     ages.each do |age|
       # Your Code Here
     end
 
-    assert_nil older_than_fifty
+    expect(older_than_fifty).to be_nil
   end
 
-  def test_4
-    skip
+  xit 'test 4' do
     ages = {
       abdi: 39,
       hassan: 45,
@@ -59,20 +53,18 @@ class FindPatternTest < Minitest::Test
       # Your Code Here
     end
 
-    assert_nil older_than_fifty
+    expect(older_than_fifty).to be_nil
   end
 
-  def test_5
-    skip
+  xit 'test 5' do
     ages = [39, 45, 29, 24, 50]
     multiple_of_three = nil
     # Your Code Here
 
-    assert_equal 39, multiple_of_three
+    expect(multiple_of_three).to eq(39)
   end
 
-  def test_6
-    skip
+  xit 'test 6' do
     ages = {
       abdi: 39,
       hassan: 45,
@@ -83,19 +75,17 @@ class FindPatternTest < Minitest::Test
     multiple_of_three = nil
     # Your Code Here
 
-    assert_equal :abdi, multiple_of_three
+    expect(multiple_of_three).to eq(:abdi)
   end
 
-  def test_7
-    skip
+  xit 'test 7' do
     people = ["Willie", "Carmen Sandiego", "Bryan", "Faith", "Zac"]
     # Your Code Here
 
-    assert_equal "Carmen Sandiego", carmen
+    expect(carmen).to eq("Carmen Sandiego")
   end
 
-  def test_8
-    skip
+  xit 'test 8' do
     places = {
       Bangkok: "Willie",
       Santa_Fe: "Carmen Sandiego",
@@ -105,19 +95,17 @@ class FindPatternTest < Minitest::Test
     }
     # Your Code Here
 
-    assert_equal :Santa_Fe, where_is_carmen_sandiego
+    expect(where_is_carmen_sandiego).to eq(:Santa_Fe)
   end
 
-  def test_9
-    skip
+  xit 'test 9' do
     numbers = [3, 7, 13, 11, 10, 2, 17]
     # Your Code Here
 
-    assert_equal 10, even
+    expect(even).to eq(10)
   end
 
-  def test_10
-    skip
+  xit 'test 10' do
     purchases = {
       "shoes" => :paid,
       "backpack" => :paid,
@@ -127,11 +115,10 @@ class FindPatternTest < Minitest::Test
     }
     # Your Code Here
 
-    assert_equal :books, pending
+    expect(pending).to eq(:books)
   end
 
-  def test_11
-    skip
+  xit 'test 11' do
     purchases = {
       "shoes" => :paid,
       "backpack" => :paid,
@@ -141,7 +128,6 @@ class FindPatternTest < Minitest::Test
     }
     # Your Code Here
 
-    assert_equal "backpack", starts_with_b
+    expect(starts_with_b).to eq("backpack")
   end
-
 end

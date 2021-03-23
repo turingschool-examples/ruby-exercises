@@ -1,18 +1,15 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+RSpec.describe 'map pattern' do
 
-class MapPatternTest < Minitest::Test
-
-  def test_1
+  it 'test 1' do
     names = ["alice", "bob", "charlie"]
     capitalized_names = []
     names.each do |name|
       capitalized_names << name.capitalize
     end
-    assert_equal ["Alice", "Bob", "Charlie"], capitalized_names
+    expect(capitalized_names).to eq(["Alice", "Bob", "Charlie"])
   end
 
-  def test_2
+  xit 'test 2' do
     family = {
       mother: "alice",
       father: "bob",
@@ -27,21 +24,19 @@ class MapPatternTest < Minitest::Test
       father: "Bob",
       brother: "Charlie"
     }
-    assert_equal expected, capitalized_family
+    expect(capitalized_family).to eq(expected)
   end
 
-  def test_3
-    skip
+  xit 'test 3' do
     numbers = [1, 2, 3, 4, 5]
     doubles = []
     numbers.each do |number|
       # Your Code Here
     end
-    assert_equal [2, 4, 6, 8, 10], doubles
+    expect(doubles).to eq([2, 4, 6, 8, 10])
   end
 
-  def test_4
-    skip
+  xit 'test 4' do
     numbers = {
       one: 1,
       two: 2,
@@ -60,20 +55,18 @@ class MapPatternTest < Minitest::Test
       four: 8,
       five: 10
     }
-    assert_equal expected, doubles
+    expect(doubles).to eq(expected)
   end
 
-  def test_5
-    skip
+  xit 'test 5' do
     numbers = [1, 2, 3, 4, 5]
     squares = []
     # Your Code Here
 
-    assert_equal [1, 4, 9, 16, 25], squares
+    expect(squares).to eq([1, 4, 9, 16, 25])
   end
 
-  def test_6
-    skip
+  xit 'test 6' do
     numbers = {
       one: 1,
       two: 2,
@@ -91,19 +84,17 @@ class MapPatternTest < Minitest::Test
       four: 16,
       five: 25
     }
-    assert_equal expected, squares
+    expect(squares).to eq(expected)
   end
 
-  def test_7
-    skip
+  xit 'test 7' do
     names = ["alice", "bob", "charlie", "david", "eve"]
     #Your Code Here
 
-    assert_equal [5, 3, 7, 5, 3], lengths
+    expect(lengths).to eq([5, 3, 7, 5, 3])
   end
 
-  def test_8
-    skip
+  xit 'test 8' do
     family = {
       mother: "alice",
       father: "bob",
@@ -120,19 +111,17 @@ class MapPatternTest < Minitest::Test
       uncle: 5,
       sister: 3
     }
-    assert_equal expected, lengths
+    expect(lengths).to eq(expected)
   end
 
-  def test_9
-    skip
+  xit 'test 9' do
     names = ["alice", "bob", "charlie", "david", "eve"]
     #Your Code Here
 
-    assert_equal ["ecila", "bob", "eilrahc", "divad", "eve"], backwards
+    expect(backwards).to eq(["ecila", "bob", "eilrahc", "divad", "eve"])
   end
 
-  def test_10
-    skip
+  xit 'test 10' do
     family = {
       mother: "alice",
       father: "bob",
@@ -149,6 +138,7 @@ class MapPatternTest < Minitest::Test
       uncle: "divad",
       sister: "eve"
     }
-    assert_equal expected, backwards
+    expect(backwards).to eq(expected)
   end
 end
+
