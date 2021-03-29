@@ -18,7 +18,7 @@ RSpec.describe 'Hashes' do
     ages = ______
     expect(ages.length).to eq(2)
     expect(ages["ben"]).to eq(4)
-    expect(ages["kelly"].to eq(6)
+    expect(ages["kelly"]).to eq(6)
   end
 
   xit 'test 4' do
@@ -28,7 +28,7 @@ RSpec.describe 'Hashes' do
     ages = ______
     expect(ages.length).to eq(2)
     expect(ages["ben"]).to eq(4)
-    expect(ages["kelly"].to eq(6)
+    expect(ages["kelly"]).to eq(6)
 
            # There are two different syntaxes for doing this. Use the other way to
            # achieve the same result
@@ -187,7 +187,7 @@ RSpec.describe 'Hashes' do
     # Using the ages hash defined above
     # get an array of all the names
     names = ______
-    expect(names),to eq([:Jimmy, :Julio, :Juliet])
+    expect(names).to eq([:Jimmy, :Julio, :Juliet])
   end
 
   xit 'test 16' do
