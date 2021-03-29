@@ -14,7 +14,6 @@ RSpec.describe 'ints and floats' do
     # Using the two variables defined above,
     # subtract the unlucky from the lucky
     difference = ________
-    assert_equal -6, difference
     expect(difference).to eq(-6)
   end
 
@@ -67,7 +66,6 @@ RSpec.describe 'ints and floats' do
     # Using the variable defined above,
     # round the number to one decimal place
     rounded = _________
-    assert_equal 3.1, rounded
     expect(rounded).to eq(3.1)
   end
 
