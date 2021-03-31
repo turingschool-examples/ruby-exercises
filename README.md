@@ -26,9 +26,9 @@ in your `/turing` directory on your laptop (or whatever directory you want this 
 
 ```
 // using ssh keys
-git clone git@github.com:turingschool/ruby-exercises.git
+git clone git@github.com:josh-works/ruby-exercises.git
 // using https, if the above doesn't work:
-git clone https://github.com/turingschool/ruby-exercises.git
+git clone https://github.com/josh-works/ruby-exercises.git
 ```  
 
 Once this command runs, you'll now have a "local" copy of this entire repository, living right on your laptop.
