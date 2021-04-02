@@ -1,29 +1,32 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-require './lib/parrot'
+require 'rspec'
+require_relative '../lib/parrot'
 
-class ParrotTest < Minitest::Test
-  def test_it_exists
+RSpec.describe Parrot do
+  it 'exists' do
     words = ["Sugar", "Flashy", "Giant", "Whisper"]
     perry = Parrot.new({name: "Perry", known_words: words})
-    assert_instance_of Parrot, perry
+
+    expect(perry).to be_an_instance_of(Parrot)
   end
 
-  def test_it_has_a_name
+  it 'has a name' do
     words = ["Sugar", "Flashy", "Giant", "Whisper"]
     perry = Parrot.new({name: "Perry", known_words: words})
-    assert_equal "Perry", perry.name
+
+    expect(perry.name).to eq("Perry")
   end
 
-  def test_it_has_a_sound
+  it 'has a sound' do
     words = ["Sugar", "Flashy", "Giant", "Whisper"]
     perry = Parrot.new({name: "Perry", known_words: words})
-    assert_equal "Squawk!", perry.sound
+
+    expect(perry.sound).to eq('Squawk!')
   end
 
-  def test_it_knows_words
+  it 'knows words' do
     words = ["Sugar", "Flashy", "Giant", "Whisper"]
     perry = Parrot.new({name: "Perry", known_words: words})
-    assert_equal ["Sugar", "Flashy", "Giant", "Whisper"], perry.known_words
+
+    expect(perry.known_words).to eq(["Sugar", "Flashy", "Giant", "Whisper"])
   end
 end
