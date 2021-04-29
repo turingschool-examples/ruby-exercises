@@ -27,10 +27,10 @@ RSpec.describe 'Strings' do
     expect(actual).to eq(expected)
   end
 
-  xit 'test 4' do
+  it 'test 4' do
     rhyme = "peter piper picked a peck of picked peppers"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
+    actual = rhyme.reverse
     expected = "sreppep dekcip fo kcep a dekcip repip retep"
 
     expect(actual).to eq(expected)
