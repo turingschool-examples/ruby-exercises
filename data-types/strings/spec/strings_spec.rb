@@ -18,10 +18,10 @@ RSpec.describe 'Strings' do
     expect(actual).to eq(expected)
   end
 
-  xit 'test 3' do
+  it 'test 3' do
     name = "AlIcE"
     # In place of the line below, call a method to achieve the expected output.
-    actual = name._____
+    actual = name.downcase
     expected = "alice"
 
     expect(actual).to eq(expected)
