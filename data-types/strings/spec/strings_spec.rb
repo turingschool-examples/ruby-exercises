@@ -45,46 +45,46 @@ RSpec.describe 'Strings' do
     expect(actual).to eq(expected)
   end
 
-  xit 'test 6' do
+  it 'test 6' do
     word = "ticking"
     # In place of the line below, call a method to achieve the expected output.
-    actual = word.______
+    actual = word.gsub('ti', 'clo')
     expected = "clocking"
 
     expect(actual).to eq(expected)
   end
 
-  xit 'test 7' do
+  it 'test 7' do
     words = "five sleepy kittens"
     # In place of the line below, call a method to achieve the expected output.
-    actual = words.______
+    actual = words.gsub('e', '*')
     expected = "fiv* sl**py kitt*ns"
 
     expect(actual).to eq(expected)
   end
 
-  xit 'test 8' do
+  it 'test 8' do
     greeting = "Hello!!"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
+    actual = greeting[0..-2]
     expected = "Hello!"
 
     expect(actual).to eq(expected)
   end
 
-  xit 'test 9' do
+  it 'test 9' do
     greeting = "Hello!!\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
+    actual = greeting[0..-2]
     expected = "Hello!!"
 
     expect(actual).to eq(expected)
   end
 
-  xit 'test 10' do
+  it 'test 10' do
     greeting = "Hello!!\n\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
+    actual = greeting[0..-2]
     expected = "Hello!!\n"
 
     expect(actual).to eq(expected)
