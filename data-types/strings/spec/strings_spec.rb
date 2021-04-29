@@ -36,10 +36,10 @@ RSpec.describe 'Strings' do
     expect(actual).to eq(expected)
   end
 
-  xit 'test 5' do
+  it 'test 5' do
     word = "ticking"
     # In place of the line below, call a method to achieve the expected output.
-    actual = word.______
+    actual = word.gsub('t', 'k')
     expected = "kicking"
 
     expect(actual).to eq(expected)
