@@ -38,24 +38,26 @@ RSpec.describe 'Hashes' do
            # assert_equal 6, ages[:kelly]
   end
 
-  xit 'test 5' do
+  it 'test 5' do
     # In the line below, create a new hash with
     # default values of zero
     # create a "tomatoes" key and a :carrots key
-    ingredients = ______
+    ingredients = Hash.new(0)
+    ingredients["tomatoes"] = 0
+    ingredients[:carrots] = 0
 
     expect(ingredients["tomatoes"]).to eq(0)
     expect(ingredients[:carrots]).to eq(0)
   end
 
-  xit 'test 6' do
+  it 'test 6' do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
     }
     # Using the books hash defined above,
     # access the value "Grapes of Wrath"  in the line below
-    grapes = ______
+    grapes = books["John Steinbeck"]
     expect(grapes).to eq("Grapes of Wrath")
   end
 
