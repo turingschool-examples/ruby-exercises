@@ -68,51 +68,53 @@ RSpec.describe 'Arrays' do
     expect(world_cup).to eq(["Germany", "Mexico", "Iceland", "Portugal"])
   end
 
-  xit 'test 6' do
+  it 'test 6' do
     karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
     # Call a method on the karaoke variable to ask whether "Toxic"
     # is an element or not
-    toxic_in_array = karaoke
+    toxic_in_array = karaoke.include?("Toxic")
     expect(toxic_in_array).to eq(false)
 
     # Now call a method on the karaoke variable to ask whether "Dancing Queen"
     # is an element or not
-    dancing_queen_in_array = karaoke
+    dancing_queen_in_array = karaoke.include?("Dancing Queen")
     expect(dancing_queen_in_array).to eq(true)
   end
 
-  xit 'test 7' do
+  it 'test 7' do
     band = ["Guitar", "Drums", "Bass"]
     # Call a method on the band variable to add the element "Vocals"
     # to the beginning of the array
 
-    actual = band._____
+    actual = band.unshift("Vocals")
     expect(actual).to eq(["Vocals", "Guitar", "Drums", "Bass"])
+    actual = band.unshift("Banana")
+    expect(actual).to eq(["Banana", "Vocals", "Guitar", "Drums", "Bass"])
   end
 
-  xit 'test 8' do
+  it 'test 8' do
     garden = ["Tulips", "Tomatoes", "Basil", "Peppers"]
     # Call a method to remove and return the first element from the garden array
-    first_element = garden.______
+    first_element = garden.shift
     expect(garden).to eq(["Tomatoes", "Basil", "Peppers"])
     expect(first_element).to eq("Tulips")
   end
 
-  xit 'test 9' do
+  it 'test 9' do
     teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
     # Call a method on the teams variable to get the second, third, and fourth teams
-    some_teams = teams
+    some_teams = teams[1..3]
     expect(some_teams).to eq(["Avalanche", "Nuggets", "Broncos"])
 
     # Now use a different method on the teams variable to get the first and second teams
-    some_teams = teams
+    some_teams = teams[0..1]
     expect(some_teams).to eq(["Rockies", "Avalanche"])
   end
 
-  xit 'test 10' do
+  it 'test 10' do
     fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
     # Call a method on the fourteeners variable to remove the nils
-    fourteeners = fourteeners
+    fourteeners = fourteeners.compact
     expect(fourteeners).to eq(["Pikes Peak", "Mount Elbert", "Mount Evans"])
   end
 
