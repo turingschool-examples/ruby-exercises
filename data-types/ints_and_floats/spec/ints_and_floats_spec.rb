@@ -4,44 +4,44 @@ RSpec.describe 'ints and floats' do
     unlucky = 13
     # Using the two variables defined above,
     # add the lucky number and the unlucky number
-    sum = ________
+    sum = lucky + unlucky
     expect(sum).to eq(20)
   end
 
-  xit 'test 2' do
+  it 'test 2' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # subtract the unlucky from the lucky
-    difference = ________
+    difference = lucky - unlucky
     expect(difference).to eq(-6)
   end
 
-  xit 'test 3' do
+  it 'test 3' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # divide unlucky by lucky
     # NOTE: this is integer division
-    quotient = ________
+    quotient = unlucky/lucky
     expect(quotient).to eq(1)
   end
 
-  xit 'test 4' do
+  it 'test 4' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # divide unlucky by lucky
-    quotient = ________
+    quotient = unlucky/lucky.to_f
     expect(quotient).to eq(1.8571428571428572)
   end
 
-  xit 'test 5' do
+  it 'test 5' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
     # find the remainder of the unlucky divided by the lucky
-    remainder = ____________
+    remainder = unlucky % lucky 
     expect(remainder).to eq(6)
   end
 
