@@ -61,7 +61,7 @@ RSpec.describe 'Hashes' do
     expect(grapes).to eq("Grapes of Wrath")
   end
 
-  xit 'test 7' do
+  it 'test 7' do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -70,7 +70,7 @@ RSpec.describe 'Hashes' do
     # add a new key of "Ernest Hemmingway"
     # with a value of "For Whom the Bell Tolls"
     # in the line below
-    ______
+    books["Ernest Hemmingway"] = "For Whom the Bell Tolls"
     expected = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird",
@@ -79,7 +79,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  xit 'test 8' do
+  it 'test 8' do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
@@ -87,7 +87,7 @@ RSpec.describe 'Hashes' do
     # Using the books hash defined above,
     # change the value associated with
     # "John Steinbeck" to "Of Mice and Men"
-    ______
+    books["John Steinbeck"] = "Of Mice and Men"
     expected = {
       "John Steinbeck" => "Of Mice and Men",
       "Harper Lee" => "To Kill a Mockingbird"
