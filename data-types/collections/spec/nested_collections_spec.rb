@@ -20,18 +20,18 @@ RSpec.describe 'Nested Collections' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # set the last coordinates to [6, 55]
-    _________
+    coordinates[3] = [6, 55]
 
     expected = [[2,5],[87,2],[56,39],[6,55]]
     expect(coordinates).to eq(expected)
   end
 
-  xit 'test 4' do
+  it 'test 4' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # set the second element of the last coordinates
     # to 0
-    ________
+    coordinates.last[1] = 0
 
     expected = [[2,5],[87,2],[56,39],[3, 0]]
     expect(coordinates).to eq(expected)
