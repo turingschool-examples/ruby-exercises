@@ -122,25 +122,40 @@ RSpec.describe 'Nested Collections' do
     expect(kenny_is_pitcher).to eq(true)
   end
 
-  xit 'test 11' do
+  it 'test 11' do
     # HINT: You may find it valuable to break the three_day_forecast variable
     # into multiple lines to make it more readable
 
-    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
+    three_day_forecast = {
+      days: [
+              {high: 70,low: 63,summary: "Mostly Sunny"},
+              {high: 55,low: 47,summary: "Partly Cloudy"},
+              {high: 77,low: 64,summary: "Sunny"}
+            ],
+      "date" => "6-21-18",
+      ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
-    actual = ________
+    actual = three_day_forecast[:ref_num]
     expected = 3456789765456787656
     expect(actual).to eq(expected)
   end
 
-  xit 'test 12' do
-    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
+  it 'test 12' do
+    three_day_forecast = {
+      days: [
+              {high: 70,low: 63,summary: "Mostly Sunny"},
+              {high: 55,low: 47,summary: "Partly Cloudy"},
+              {high: 77,low: 64,summary: "Sunny"}
+            ],
+      "date" => "6-21-18",
+      ref_num: 3456789765456787656
+    }
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
-    actual = ________
+    actual = three_day_forecast[:days]
     expected = [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}]
     expect(actual).to eq(expected)
   end
