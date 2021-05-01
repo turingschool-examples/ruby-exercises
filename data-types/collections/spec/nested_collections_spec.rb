@@ -8,15 +8,15 @@ RSpec.describe 'Nested Collections' do
     expect(second).to eq([87, 2])
   end
 
-  xit 'test 2' do
+  it 'test 2' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # Retrive the value 39
-    thirty_nine = _________
+    thirty_nine = coordinates[2][1]
     expect(thirty_nine).to eq(39)
   end
 
-  xit 'test 3' do
+  it 'test 3' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # set the last coordinates to [6, 55]
@@ -223,5 +223,3 @@ RSpec.describe 'Nested Collections' do
     expect(three_day_forecast).to eq(expected)
   end
 end
-
-
