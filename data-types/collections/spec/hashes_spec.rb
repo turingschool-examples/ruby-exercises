@@ -205,7 +205,7 @@ RSpec.describe 'Hashes' do
     expect(age_list).to eq([4, 8, 9])
   end
 
-  xit 'test 17' do
+  it 'test 17' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -213,11 +213,11 @@ RSpec.describe 'Hashes' do
     }
     # Using the ages hash defined above
     # find the number of key/value pairs
-    num_pairs = ______
+    num_pairs = ages.count
     expect(num_pairs).to eq(3)
   end
 
-  xit 'test 18' do
+  it 'test 18' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -225,16 +225,15 @@ RSpec.describe 'Hashes' do
     }
     # Call a method on the ages hash defined above
     # to figure out if :Jimmy is a key
-    jimmy_in_hash = ______
+    jimmy_in_hash = ages.keys.include?(:Jimmy)
     expect(jimmy_in_hash).to eq(true)
 
     # Now figure out if :Jackie is in the hash
-
-    jackie_in_hash = ______
+    jackie_in_hash = ages.keys.include?(:Jackie)
     expect(jackie_in_hash).to eq(false)
   end
 
-  xit 'test 19' do
+  it 'test 19' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -242,7 +241,7 @@ RSpec.describe 'Hashes' do
     }
     # Call a method on the ages hash defined above
     # to make the keys the values and vice versa
-    opposite = _____
+    opposite = ages.invert
     expected = {
       4 => :Jimmy,
       8 => :Julio,
