@@ -155,21 +155,21 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  xit 'test 13' do
+  it 'test 13' do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
     }
     # Using the books hash defined above,
     # delete the key :Harper_Lee
-    ______
+    books.delete(:Harper_Lee)
     expected = {
       John_Steinbeck: "Grapes of Wrath"
     }
     expect(books).to eq(expected)
   end
 
-  xit 'test 14' do
+  it 'test 14' do
     ages = {
       "Jimmy" => 4,
       "Julio" => 8,
@@ -177,7 +177,7 @@ RSpec.describe 'Hashes' do
     }
     # Using the ages hash defined above
     # increment Julio's age by one
-    ______
+    ages["Julio"] += 1
     expect(ages["Julio"]).to eq(9)
   end
 
