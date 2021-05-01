@@ -118,38 +118,38 @@ RSpec.describe 'Arrays' do
     expect(fourteeners).to eq(["Pikes Peak", "Mount Elbert", "Mount Evans"])
   end
 
-  xit 'test 11' do
+  it 'test 11' do
     pokemon = [["Squirtle", "Charmander", "Bulbasaur"], ["Pikachu"], "Staryu"]
     # Call a method on the pokemon variable to remove the nesting
-    pokemon = pokemon
+    pokemon = pokemon.flatten
     expect(pokemon).to eq(["Squirtle", "Charmander", "Bulbasaur", "Pikachu", "Staryu"])
   end
 
-  xit 'test 12' do
+  it 'test 12' do
     scores = [23, 56, 34, 29, 48]
     # Call a method on the scores variables that will
     # move the elements two spots to the left
-    new_scores = scores
+    new_scores = scores.rotate(2)
     expect(new_scores).to eq([34, 29, 48, 23, 56])
 
     # Now call a method on the scores variables that will
     # move the elements one spot to the right
-    new_scores = scores
+    new_scores = scores.rotate(-1)
     expect(new_scores).to eq([48, 23, 56, 34, 29])
   end
 
-  xit 'test 13' do
+  it 'test 13' do
     vowels = ["a", "e", "y", "i", "o", "u", "y"]
     # Call a method on the vowels variable to remove "y"
-
+    vowels.delete("y")
     expect(vowels).to eq(["a", "e", "i", "o", "u"])
   end
 
-  xit 'test 14' do
+  it 'test 14' do
     furniture = ["couch", "bed", "table"]
     # Call a method on the furniture variable to add the element
     # "dresser" in between the elements "couch" and "bed"
-    new_furniture = furniture
+    new_furniture = furniture.insert(1, "dresser")
     expect(new_furniture).to eq(["couch", "dresser", "bed", "table"])
   end
 
