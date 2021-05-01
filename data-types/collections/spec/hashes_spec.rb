@@ -121,7 +121,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  xit 'test 11' do
+  it 'test 11' do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -130,7 +130,7 @@ RSpec.describe 'Hashes' do
     # add a new key of :Ernest_Hemmingway
     # with a value of "For Whom the Bell Tolls"
     # in the line below
-    ______
+    books[:Ernest_Hemmingway] = "For Whom the Bell Tolls"
     expected = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird",
@@ -139,7 +139,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  xit 'test 12' do
+  it 'test 12' do
     books = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
@@ -147,7 +147,7 @@ RSpec.describe 'Hashes' do
     # Using the books hash defined above,
     # change the value associated with
     # :John_Steinbeck to "Of Mice and Men"
-    ______
+    books[:John_Steinbeck] = "Of Mice and Men"
     expected =  {
       John_Steinbeck: "Of Mice and Men",
       Harper_Lee: "To Kill a Mockingbird"
