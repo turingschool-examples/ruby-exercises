@@ -98,7 +98,7 @@ RSpec.describe 'Nested Collections' do
     expect(team).to eq(expected)
   end
 
-  xit 'test 9' do
+  it 'test 9' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -106,11 +106,11 @@ RSpec.describe 'Nested Collections' do
     }
     # Using the team variable defined above
     # Find out how many fielders there are
-    num_fielders = ________
+    num_fielders = team[:fielders].count
     expect(num_fielders).to eq(5)
   end
 
-  xit 'test 10' do
+  it 'test 10' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -118,7 +118,7 @@ RSpec.describe 'Nested Collections' do
     }
     # Using the team variable defined above
     # Find out if "Kenny" is a pitcher
-    kenny_is_pitcher = ________
+    kenny_is_pitcher = team[:pitchers].include?("Kenny")
     expect(kenny_is_pitcher).to eq(true)
   end
 
