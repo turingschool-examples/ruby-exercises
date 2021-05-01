@@ -95,28 +95,29 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  xit 'test 9' do
+  it 'test 9' do
     books = {
       "John Steinbeck" => "Grapes of Wrath",
       "Harper Lee" => "To Kill a Mockingbird"
     }
     # Using the books hash defined above,
     # delete the key "Harper Lee"
-    ______
+    books.delete("Harper Lee")
     expected = {
       "John Steinbeck" => "Grapes of Wrath"
     }
     expect(books).to eq(expected)
   end
 
-  xit 'test 10' do
-    books = {
+  it 'test 10' do
+    books_hash = {
       John_Steinbeck: "Grapes of Wrath",
       Harper_Lee: "To Kill a Mockingbird"
     }
     # Using the books hash defined above,
     # access the value "Grapes of Wrath"  in the line below
-    grapes = ______
+    books = books_hash[:John_Steinbeck]
+    expected = "Grapes of Wrath"
     expect(books).to eq(expected)
   end
 
