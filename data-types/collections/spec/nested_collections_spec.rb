@@ -37,17 +37,17 @@ RSpec.describe 'Nested Collections' do
     expect(coordinates).to eq(expected)
   end
 
-  xit 'test 5' do
+  it 'test 5' do
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # add the coordinate [4, 14]
-    _________
+    coordinates << [4, 14]
 
     expected = [[2,5],[87,2],[56,39],[3,46],[4, 14]]
     expect(coordinates).to eq(expected)
   end
 
-  xit 'test 6' do
+  it 'test 6' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -55,12 +55,12 @@ RSpec.describe 'Nested Collections' do
     }
     # Using the team variable defined above
     # retrieve all of the pitchers
-    pitchers = _________
+    pitchers = team[:pitchers]
     expected = ["Kenny", "Joan", "Shabaz"]
     expect(pitchers).to eq(expected)
   end
 
-  xit 'test 7' do
+  it 'test 7' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -68,7 +68,7 @@ RSpec.describe 'Nested Collections' do
     }
     # Using the team variable defined above
     # add "Phil" as a pitcher
-    __________
+    team[:pitchers] << "Phil"
 
     expected = {
       pitchers: ["Kenny", "Joan", "Shabaz", "Phil"],
@@ -78,7 +78,7 @@ RSpec.describe 'Nested Collections' do
     expect(team).to eq(expected)
   end
 
-  xit 'test 8' do
+  it 'test 8' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -87,7 +87,7 @@ RSpec.describe 'Nested Collections' do
     # Using the team variable defined above
     # create a new key :coaches with the value
     # of an empty array
-    _________
+    team[:coaches] = []
 
     expected = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
