@@ -181,7 +181,7 @@ RSpec.describe 'Hashes' do
     expect(ages["Julio"]).to eq(9)
   end
 
-  xit 'test 15' do
+  it 'test 15' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -189,11 +189,11 @@ RSpec.describe 'Hashes' do
     }
     # Using the ages hash defined above
     # get an array of all the names
-    names = ______
+    names = ages.keys
     expect(names).to eq([:Jimmy, :Julio, :Juliet])
   end
 
-  xit 'test 16' do
+  it 'test 16' do
     ages = {
       Jimmy: 4,
       Julio: 8,
@@ -201,7 +201,7 @@ RSpec.describe 'Hashes' do
     }
     # Using the ages hash defined above
     # get an array of all the ages
-    age_list = ______
+    age_list = ages.values
     expect(age_list).to eq([4, 8, 9])
   end
 
