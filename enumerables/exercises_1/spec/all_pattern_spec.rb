@@ -8,35 +8,44 @@ RSpec.describe 'All Pattern' do
     expect(all_zeros).to eq(true)
   end
 
-  xit 'not all zeros' do
+  it 'not all zeros' do
     numbers = [0, 0, 0, 0, 1, 0, 0, 0]
     all_zeros = true
     numbers.each do |number|
-      # Your code goes here
+      all_zeros = false unless number.zero?
     end
     expect(all_zeros).to eq(false)
   end
 
-  xit 'all gone' do
+  it 'all gone' do
     words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
     all_gone = true
-    # Your code goes here
+    words.each do |word|
+      all_gone = false unless word == "gone"
+    end
     expect(all_gone).to eq(true)
   end
 
-  xit 'not all gone' do
+  it 'not all gone' do
     words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
-    # Your code goes here
+    # all_gone = words.all? == "gone"
+    all_gone = true
+    words.map do |word|
+      all_gone = false unless word == "gone"
+    end
     expect(all_gone).to eq(false)
   end
 
-  xit 'all empty' do
+  it 'all empty' do
     strings = ["", "", "", "", "", "", ""]
-    # Your code goes here
+    all_empty = true
+    strings.each do |string|
+      all_empty = false unless string.empty?
+    end
     expect(all_empty).to eq(true)
   end
 
-  xit 'not all empty' do
+  it 'not all empty' do
     strings = ["", "", "", "full", "", "", ""]
     # Your code goes here
     expect(all_empty).to eq(false)
