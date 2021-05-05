@@ -92,7 +92,10 @@ RSpec.describe 'All Pattern' do
 
   it 'all four letter words' do
     words = ["love", "hate", "fire", "bird", "call"]
-    # Your code goes here
+    all_4_letters = true
+    words.each do |word|
+      all_4_letters = false unless word.length == 4
+    end
     expect(all_4_letters).to eq(true)
   end
 end
