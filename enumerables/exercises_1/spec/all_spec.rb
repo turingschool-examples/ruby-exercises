@@ -23,21 +23,27 @@ RSpec.describe 'all test' do
     expect(all_gone).to eq(true)
   end
 
-  xit 'not all gone' do
+  it 'not all gone' do
     words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
-    # Your code goes here
+    all_gone = words.all? do |word|
+      word == "gone"
+    end
     expect(all_gone).to eq(false)
   end
 
-  xit 'all empty' do
+  it 'all empty' do
     strings = ["", "", "", "", "", "", ""]
-    # Your code goes here
+    all_empty = strings.all? do |string|
+      string.empty?
+    end
     expect(all_empty).to eq(true)
   end
 
-  xit 'not all empty' do
+  it 'not all empty' do
     strings = ["", "", "", "full", "", "", ""]
-    # Your code goes here
+    all_empty = strings.all? do |string|
+      string.empty?
+    end
     expect(all_empty).to eq(false)
   end
 
