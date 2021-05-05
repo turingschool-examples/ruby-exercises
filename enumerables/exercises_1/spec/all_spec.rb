@@ -7,17 +7,19 @@ RSpec.describe 'all test' do
     expect(all_zeros).to eq(true)
   end
 
-  xit 'not all zeroes' do
+  it 'not all zeroes' do
     numbers = [0, 0, 0, 0, 1, 0, 0, 0]
     all_zeros = numbers.all? do |number|
-      # Your code goes here
+      number.zero?
     end
     expect(all_zeros).to eq(false)
   end
 
-  xit 'all gone' do
+  it 'all gone' do
     words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
-    # Your code goes here
+    all_gone = words.all? do |word|
+      word == "gone"
+    end
     expect(all_gone).to eq(true)
   end
 
