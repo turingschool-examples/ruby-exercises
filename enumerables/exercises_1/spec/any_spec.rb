@@ -7,10 +7,10 @@ RSpec.describe 'Any test' do
     expect(has_zero).to eq(true)
   end
 
-  xit 'does not have zeroes' do
+  it 'does not have zeroes' do
     numbers = [3, 1, 3, 2, 4, 9, 8]
     has_zero = numbers.any? do |number|
-      # Your code goes here
+      number.zero?
     end
     expect(has_zero).to eq(false)
   end
