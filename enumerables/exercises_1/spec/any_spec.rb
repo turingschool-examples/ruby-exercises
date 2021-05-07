@@ -15,15 +15,19 @@ RSpec.describe 'Any test' do
     expect(has_zero).to eq(false)
   end
 
-  xit 'has at least one alice' do
+  it 'has at least one alice' do
     names = ["Bill", "Bob", "Burton", "Alice", "Brandon"]
-    # Your code goes here
+    has_alice = names.any? do |name|
+      name.include?("Alice")
+    end
     expect(has_alice).to eq(true)
   end
 
-  xit 'no alices' do
+  it 'no alices' do
     names = ["Chuck", "Charlene", "Cory", "Chris", "Carl"]
-    # Your code goes here
+    has_alice = names.any? do |name|
+      name.include?("Alice")
+    end
     expect(has_alice).to eq(false)
   end
 
