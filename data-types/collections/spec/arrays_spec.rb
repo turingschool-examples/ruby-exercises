@@ -50,12 +50,12 @@ RSpec.describe 'Arrays' do
   xit 'test 4' do
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # In the line below, add the element "Brazil" to the end of the world_cup array
-
-    expect(world_cup._____).to eq("Brazil")
+    world_cup.____
+    expect(world_cup.last).to eq("Brazil")
 
     # Use a different method to add the element "Japan" to the end of the array
-
-    expect(world_cup._____).to eq("Japan")
+    world_cup.____
+    expect(world_cup.last).to eq("Japan")
   end
 
   xit 'test 5' do
