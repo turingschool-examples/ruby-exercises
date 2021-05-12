@@ -64,7 +64,7 @@ RSpec.describe 'Arrays' do
     # the last element of the array
     last_element = world_cup.____
     expect(last_element).to eq("Portugal")
-    expect(world_cup).to eq(["Germany", "Mexico", "Iceland", "Portugal"])
+    expect(world_cup).to eq(["Germany", "Mexico", "Iceland"])
   end
 
   xit 'test 6' do
