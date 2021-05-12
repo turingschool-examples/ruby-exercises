@@ -71,12 +71,12 @@ RSpec.describe 'Arrays' do
     karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
     # Call a method on the karaoke variable to ask whether "Toxic"
     # is an element or not
-    toxic_in_array = karaoke
+    toxic_in_array = karaoke.____
     expect(toxic_in_array).to eq(false)
 
     # Now call a method on the karaoke variable to ask whether "Dancing Queen"
     # is an element or not
-    dancing_queen_in_array = karaoke
+    dancing_queen_in_array = karaoke.____
     expect(dancing_queen_in_array).to eq(true)
   end
 
