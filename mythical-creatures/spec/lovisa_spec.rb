@@ -14,7 +14,7 @@ RSpec.describe Lovisa do
     expect(lovisa.brilliant?).to be true
   end
 
-  it "she doesn't doesnt have to only be brilliant" do
+  it "she is more than brilliant" do
     loivsa = Lovisa.new('Lovisa the friend', ['brilliant', 'kind'])
     expect(loivsa.characteristics).to eq(['brilliant', 'kind'])
     expect(loivsa.brilliant?).to eq(true)
