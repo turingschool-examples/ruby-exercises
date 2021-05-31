@@ -50,12 +50,12 @@ RSpec.describe 'Arrays' do
   xit 'test 4' do
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # In the line below, add the element "Brazil" to the end of the world_cup array
-
-    expect(world_cup._____).to eq("Brazil")
+    world_cup.____
+    expect(world_cup.last).to eq("Brazil")
 
     # Use a different method to add the element "Japan" to the end of the array
-
-    expect(world_cup._____).to eq("Japan")
+    world_cup.____
+    expect(world_cup.last).to eq("Japan")
   end
 
   xit 'test 5' do
@@ -64,19 +64,19 @@ RSpec.describe 'Arrays' do
     # the last element of the array
     last_element = world_cup.____
     expect(last_element).to eq("Portugal")
-    expect(world_cup).to eq(["Germany", "Mexico", "Iceland", "Portugal"])
+    expect(world_cup).to eq(["Germany", "Mexico", "Iceland"])
   end
 
   xit 'test 6' do
     karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
     # Call a method on the karaoke variable to ask whether "Toxic"
     # is an element or not
-    toxic_in_array = karaoke
+    toxic_in_array = karaoke.____
     expect(toxic_in_array).to eq(false)
 
     # Now call a method on the karaoke variable to ask whether "Dancing Queen"
     # is an element or not
-    dancing_queen_in_array = karaoke
+    dancing_queen_in_array = karaoke.____
     expect(dancing_queen_in_array).to eq(true)
   end
 

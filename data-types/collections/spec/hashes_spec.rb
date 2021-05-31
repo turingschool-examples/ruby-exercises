@@ -27,15 +27,15 @@ RSpec.describe 'Hashes' do
     # a value of 6.
     ages = ______
     expect(ages.length).to eq(2)
-    expect(ages["ben"]).to eq(4)
-    expect(ages["kelly"]).to eq(6)
+    expect(ages[:ben]).to eq(4)
+    expect(ages[:kelly]).to eq(6)
 
-           # There are two different syntaxes for doing this. Use the other way to
-           # achieve the same result
-           ages = ______
-           assert_equal 2, ages.length
-           assert_equal 4, ages[:ben]
-           assert_equal 6, ages[:kelly]
+    # There are two different syntaxes for doing this. Use the other way to
+    # achieve the same result
+    ages = ______
+    expect(ages.length).to eq(2)
+    expect(ages[:ben]).to eq(4)
+    expect(ages[:kelly]).to eq(6)
   end
 
   xit 'test 5' do
