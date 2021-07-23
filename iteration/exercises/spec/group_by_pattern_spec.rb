@@ -25,7 +25,6 @@ RSpec.describe 'group by pattern' do
     words_by_first_letter = Hash.new {|hash, key| hash[key] = []}
     # Your code goes here
     expected = {"a"=>["ant", "axis", "albatross"], "b"=>["bolt", "badge", "butter"], "c"=>["car", "cdr", "column"]}
-    assert_equal expected, words_by_first_letter
     expect(words_by_first_letter).to eq(expected)
   end
 

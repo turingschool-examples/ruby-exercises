@@ -94,7 +94,6 @@ RSpec.describe 'all pattern' do
     snacks = ["GARLIC PLANTAINS", "SNICKERDOODLES", "Pretzels"]
     # Your Code Here
 
-    assert_equal false, all_caps
     expect(all_caps).to be false
   end
 

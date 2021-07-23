@@ -80,7 +80,6 @@ RSpec.describe 'count pattern' do
     family = ["alice", "bob", "charlie", "david", "eve"]
     # Your Code Here
 
-    assert_equal 2, names_with_three_letters
     expect(names_with_three_letters).to eq(2)
   end
 
@@ -94,7 +93,6 @@ RSpec.describe 'count pattern' do
     }
     # Your Code Here
 
-    assert_equal 2, names_with_three_letters
     expect(names_with_three_letters).to eq(2)
   end
 
@@ -102,7 +100,6 @@ RSpec.describe 'count pattern' do
     prices = [1.0, 3.9, 5.99, 18.5, 20.0]
     # Your code goes here
 
-    assert_equal 2, whole_numbers
     expect(whole_numbers).to eq(2)
   end
 
