@@ -56,7 +56,7 @@ RSpec.describe Student do
     student = Student.new
 
     100.times { student.slack_off }
-    student.slack_off
+    student.study
 
     expect(student.grade).to eq('B')
 
