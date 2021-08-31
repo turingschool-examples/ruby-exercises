@@ -12,6 +12,6 @@ RSpec.describe Dog do
     dog = Dog.new
     dog.eat
 
-    expect(dog.hungry).to be false
+    expect(dog.hungry?).to be false
   end
 end
