@@ -5,7 +5,7 @@ RSpec.describe Yak do
   it 'is hairy' do
     yak = Yak.new
 
-    expect(yak.hairy).to be true
+    expect(yak.hairy?).to be true
   end
 
   xit 'can be shaved' do
