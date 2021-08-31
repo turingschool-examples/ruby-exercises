@@ -16,36 +16,36 @@ These exercises focus on these two types of operations.
 
 ## Exercises
 
-- `leather_chair_test.rb`
-- `tire_test.rb`
-- `pills_test.rb`
-- `floor_test.rb`
-- `milk_bottle_test.rb`
-- `person_test.rb`
-- `door_test.rb`
-- `teeth_test.rb`
-- `music_test.rb`
-- `drops_test.rb`
-- `light_test.rb`
-- `baby_test.rb`
-- `kid_test.rb`
-- `beers_test.rb`
-- `teenager_test.rb`
-- `adult_test.rb`
-- `roll_call_test.rb`
-- `santa_test.rb`
-- `dog_test.rb`
-- `children_test.rb`
-- `water_test.rb`
-- `clock_test.rb`
-- `appointments_test.rb`
-- `yak_test.rb`
-- `money_test.rb`
-- `cupcake_test.rb`
-- `student_test.rb`
-- `catalogue_test.rb`
-- `wallet_test.rb`
-- `clearance_test.rb`
+- `leather_chair_spec.rb`
+- `tire_spec.rb`
+- `pills_spec.rb`
+- `floor_spec.rb`
+- `milk_bottle_spec.rb`
+- `person_spec.rb`
+- `door_spec.rb`
+- `teeth_spec.rb`
+- `music_spec.rb`
+- `drops_spec.rb`
+- `light_spec.rb`
+- `baby_spec.rb`
+- `kid_spec.rb`
+- `beers_spec.rb`
+- `teenager_spec.rb`
+- `adult_spec.rb`
+- `roll_call_spec.rb`
+- `santa_spec.rb`
+- `dog_spec.rb`
+- `children_spec.rb`
+- `water_spec.rb`
+- `clock_spec.rb`
+- `appointments_spec.rb`
+- `yak_spec.rb`
+- `money_spec.rb`
+- `cupcake_spec.rb`
+- `student_spec.rb`
+- `catalogue_spec.rb`
+- `wallet_spec.rb`
+- `clearance_spec.rb`
 
 ## Go make up more
 
