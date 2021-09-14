@@ -163,10 +163,10 @@ Run `rake generate` to generate the exercises.
 This should create 4 new files:
 
 ```plain
-exercises/count_test.rb
-exercises/count_pattern_test.rb
-test/solutions/count_test.rb
-test/solutions/count_pattern_test.rb
+exercises/count_spec_.rb
+exercises/count_pattern_spec.rb
+test/solutions/count_spec.rb
+test/solutions/count_pattern_spec.rb
 ```
 
 It should also update the `./lib/generator.rb` file.

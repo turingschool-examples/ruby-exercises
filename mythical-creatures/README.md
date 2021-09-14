@@ -11,7 +11,7 @@ In order to complete these exercises create a class for each of the mythical cre
 Navigate to the `mythical-creatures` directory in your terminal, and then run your first test:
 
 ```
-ruby test/unicorn_test.rb
+ruby test/unicorn_spec.rb
 ```
 
 If you get an error regarding a certain gem not being installed, you may need to run the following command from your terminal:
@@ -20,24 +20,24 @@ If you get an error regarding a certain gem not being installed, you may need to
 bundle install
 ```
 
-There's a video walk-through of the setup and the whole `unicorn_test.rb` file here: [https://youtu.be/mocwGsu41yw](https://youtu.be/mocwGsu41yw).
+There's a video walk-through of the setup and the whole `unicorn_spec.rb` file here: [https://youtu.be/mocwGsu41yw](https://youtu.be/mocwGsu41yw).
 
 Continue to follow the errors that your test provides until the test passes. Then, unskip the next test by removing the line that says `skip`. Continue until all tests pass for all creatures.
 
 ## Suggested Order
 
-* `unicorn_test.rb` [video walk-through](https://youtu.be/mocwGsu41yw) (watch this first)
-* `vampire_test.rb`
-* `dragon_test.rb` [video walk-through](https://youtu.be/NIPerY-xuCk)
-* `hobbit_test.rb` [video walk-through](https://youtu.be/uYGS-DCNR-0)
-* `pirate_test.rb`
-* `wizard_test.rb`
-* `medusa_test.rb`
-* `werewolf_test.rb`
-* `centaur_test.rb`
-* `ogre_test.rb`
-* `direwolf_test.rb`
-* `the_journey_test.rb` (see below)
+* `unicorn_spec.rb` [video walk-through](https://youtu.be/mocwGsu41yw) (watch this first)
+* `vampire_spec.rb`
+* `dragon_spec.rb` [video walk-through](https://youtu.be/NIPerY-xuCk)
+* `hobbit_spec.rb` [video walk-through](https://youtu.be/uYGS-DCNR-0)
+* `pirate_spec.rb`
+* `wizard_spec.rb`
+* `medusa_spec.rb`
+* `werewolf_spec.rb`
+* `centaur_spec.rb`
+* `ogre_spec.rb`
+* `direwolf_spec.rb`
+* `the_journey_spec.rb` (see below)
 
 ## Extra Challenges
 

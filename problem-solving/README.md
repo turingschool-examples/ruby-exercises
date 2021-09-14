@@ -1,8 +1,8 @@
 Suggested Order of Completion
 
-* `hello_test.rb`
-* `character_count_test.rb`
-* `escape_characters_test.rb`
-* `mad_lib_test.rb`
-* `simple_math_test.rb`
-* `retirement_test.rb`
+* `hello_spec.rb`
+* `character_count_spec.rb`
+* `escape_characters_spec.rb`
+* `mad_lib_spec.rb`
+* `simple_math_spec.rb`
+* `retirement_spec.rb`

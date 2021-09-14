@@ -6,15 +6,15 @@ That said, here's the summary:
 
 Open up `map_pattern_spec.rb` and `map_spec.rb` in Atom, side by side:
 
-![Set up map and map_pattern_test side by side](/images/enumerables-setup-map.jpg)
+![Set up map and map_pattern_spec side by side](/images/enumerables-setup-map.jpg)
 
-Notice how `map_pattern_test.rb` makes use of the `#each` method, while `map_test.rb` uses `#map`.
+Notice how `map_pattern_spec.rb` makes use of the `#each` method, while `map_spec.rb` uses `#map`.
 
-Remove the skip from `test_doubles` on `map_pattern_test`; run the tests to make sure there is a failure.
+Remove the skip from `test_doubles` on `map_pattern_spec`; run the tests to make sure there is a failure.
 
 Next, make the test pass.
 
-Now do the same thing for `map_test.rb`
+Now do the same thing for `map_spec.rb`
 
 Keep ping-ponging back-and-forth as you work through the files.
 

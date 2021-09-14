@@ -11,7 +11,7 @@ An alum has put together a video walk-through of the `arrays.rb` and `advanced_n
 Please check them out - you'll learn how to use `binding.pry` to quickly test ideas and assumptions, as well as many other useful approaches to solving problems with code. 
 
 - `arrays.rb` walkthrough: [https://youtu.be/RUnd1Uu0AyE](https://youtu.be/RUnd1Uu0AyE)
-- `advanced_nested_collections/nesting_test.rb` walkthrough: [https://youtu.be/9AaElA4elDU](https://youtu.be/9AaElA4elDU)
+- `advanced_nested_collections/nesting_spec.rb` walkthrough: [https://youtu.be/9AaElA4elDU](https://youtu.be/9AaElA4elDU)
 
 
 ### Methods you'll need to use for `arrays.rb`
