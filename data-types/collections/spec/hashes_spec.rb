@@ -115,7 +115,7 @@ RSpec.describe 'Hashes' do
     # Using the books hash defined above,
     # access the value "Grapes of Wrath"  in the line below
     grapes = ______
-    expect(books).to eq(expected)
+    expect(grapes).to eq("Grapes of Wrath")
   end
 
   xit 'test 11' do
@@ -248,4 +248,3 @@ RSpec.describe 'Hashes' do
     expect(opposite).to eq(expected)
   end
 end
-
