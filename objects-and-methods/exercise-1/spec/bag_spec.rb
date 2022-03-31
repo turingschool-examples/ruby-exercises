@@ -11,7 +11,7 @@ RSpec.describe Bag do
     expect(Bag.new.count).to eq(0)
   end
 
-  xit 'has no candies when it is empty' do
+  it 'has no candies when it is empty' do
     expect(Bag.new.candies).to eq([])
   end
 

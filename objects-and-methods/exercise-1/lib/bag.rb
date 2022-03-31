@@ -1,8 +1,8 @@
 class Bag
-  attr_reader
+  attr_reader :candies
 
   def initialize
-
+    @candies = []
   end
 
   def empty?
