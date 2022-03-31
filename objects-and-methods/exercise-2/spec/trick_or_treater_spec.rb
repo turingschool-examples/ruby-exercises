@@ -31,7 +31,7 @@ RSpec.describe TrickOrTreater do
 
   xit 'can get candies' do
     trick_or_treater = TrickOrTreater.new(Costume.new('Spaceship Mechanic'))
-    trick_or_treater.bag << Candy.new('Gummy bears')
+    trick_or_treater.bag.add_candy Candy.new('Gummy bears')
 
     expect(trick_or_treater.has_candy?).to be true
   end
@@ -41,16 +41,16 @@ RSpec.describe TrickOrTreater do
 
     expect(trick_or_treater.candy_count).to eq(0)
 
-    trick_or_treater.bag << Candy.new('Gummy bears')
+    trick_or_treater.bag.add_candy Candy.new('Gummy bears')
 
     expect(trick_or_treater.candy_count).to eq(1)
   end
 
   xit 'can eat candies' do
     trick_or_treater = TrickOrTreater.new(Costume.new('Baron'))
-    trick_or_treater.bag << Candy.new('Gummy worms')
-    trick_or_treater.bag << Candy.new('Liquorice')
-    trick_or_treater.bag << Candy.new('Salty Serpents')
+    trick_or_treater.bag.add_candy Candy.new('Gummy worms')
+    trick_or_treater.bag.add_candy Candy.new('Liquorice')
+    trick_or_treater.bag.add_candy Candy.new('Salty Serpents')
 
     expect(trick_or_treater.candy_count).to eq(3)
     trick_or_treater.eat
@@ -73,9 +73,9 @@ RSpec.describe TrickOrTreater do
   xit 'increases the sugar level when it eats candies' do
     trick_or_treater = TrickOrTreater.new(Costume.new('Hobbit'))
 
-    trick_or_treater.bag << Candy.new('Gummy worms', 88)
-    trick_or_treater.bag << Candy.new('Liquorice', 83)
-    trick_or_treater.bag << Candy.new('Salty Serpents', 71)
+    trick_or_treater.bag.add_candy Candy.new('Gummy worms', 88)
+    trick_or_treater.bag.add_candy Candy.new('Liquorice', 83)
+    trick_or_treater.bag.add_candy Candy.new('Salty Serpents', 71)
 
     trick_or_treater.eat
     trick_or_treater.eat
