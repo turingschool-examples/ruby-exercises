@@ -39,7 +39,7 @@ RSpec.describe Bag do
     expect(bag.count).to eq(1)
   end
 
-  xit 'contains candies and candies have a type' do
+  it 'contains candies and candies have a type' do
     bag = Bag.new
     bag << Candy.new("Hershey's Kisses")
     # You usually don't want to chain a bunch of different
