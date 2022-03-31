@@ -43,13 +43,15 @@ RSpec.describe Bag do
     expect(bag.count).to eq(1)
   end
 
+  # NOTE:
+  # You usually don't want to chain a bunch of
+  # different methods together like this:
+  #   type = bag.candies.first.type
+  # We'll talk about it more in a few weeks.
+  # However. it's important to understand how these methods work.
   xit 'contains candies and candies have a type' do
     bag = Bag.new
     bag.add_candy Candy.new("Hershey's Kisses")
-    # You usually don't want to chain a bunch of different
-    # types of things together like this.
-    # We'll talk about it more in a few weeks.
-    # It's important to understand how these methods work, though.
     type = bag.candies.first.type
 
     expect(type).to eq("Hershey's Kisses")
