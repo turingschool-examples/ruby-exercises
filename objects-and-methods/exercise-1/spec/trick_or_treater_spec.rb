@@ -11,7 +11,7 @@ RSpec.describe TrickOrTreater do
     expect(trick_or_treater.dressed_up_as).to eq('Cowboy')
   end
 
-  xit 'can have a different costume' do
+  it 'can have a different costume' do
     trick_or_treater = TrickOrTreater.new(Costume.new('Alien'))
 
     expect(trick_or_treater.dressed_up_as).to eq('Alien')
