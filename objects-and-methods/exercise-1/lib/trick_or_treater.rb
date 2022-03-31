@@ -13,4 +13,8 @@ class TrickOrTreater
   def has_candy?
     !@bag.empty?
   end
+
+  def candy_count
+    @bag.count
+  end
 end

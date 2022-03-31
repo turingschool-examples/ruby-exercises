@@ -36,7 +36,7 @@ RSpec.describe TrickOrTreater do
     expect(trick_or_treater.has_candy?).to be true
   end
 
-  xit 'it can count candies' do
+  it 'it can count candies' do
     trick_or_treater = TrickOrTreater.new(Costume.new('Spaceship Mechanic'))
 
     expect(trick_or_treater.candy_count).to eq(0)
