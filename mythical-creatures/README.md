@@ -11,7 +11,7 @@ In order to complete these exercises create a class for each of the mythical cre
 Navigate to the `mythical-creatures` directory in your terminal, and then run your first test:
 
 ```
-ruby test/unicorn_spec.rb
+ruby spec/unicorn_spec.rb
 ```
 
 If you get an error regarding a certain gem not being installed, you may need to run the following command from your terminal:
