@@ -9,4 +9,8 @@ class TrickOrTreater
   def dressed_up_as
     @costume.style
   end
+
+  def has_candy?
+    !@bag.empty?
+  end
 end
