@@ -15,7 +15,7 @@ RSpec.describe Bag do
     expect(Bag.new.candies).to eq([])
   end
 
-  xit 'can put a candy in a bag' do
+  it 'can put a candy in a bag' do
     bag = Bag.new
 
     candy = Candy.new('Sour frogs')
