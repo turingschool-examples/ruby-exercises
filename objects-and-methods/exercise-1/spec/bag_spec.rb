@@ -4,22 +4,26 @@ require_relative '../lib/candy'
 
 RSpec.describe Bag do
   it 'is empty' do
-    expect(Bag.new.empty?).to be true
+    bag = Bag.new
+    
+    expect(bag.empty?).to be true
   end
 
   xit 'can count the candy in an empty bag' do
+    bag = Bag.new
+
     expect(Bag.new.count).to eq(0)
   end
 
   xit 'has no candies when it is empty' do
+    bag = Bag.new
+
     expect(Bag.new.candies).to eq([])
   end
 
   xit 'can put a candy in a bag' do
     bag = Bag.new
-
     candy = Candy.new('Sour frogs')
-
     bag << candy
 
     expect(bag.candies).to eq([candy])
