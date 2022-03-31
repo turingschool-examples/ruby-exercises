@@ -9,4 +9,7 @@ class Bag
     true
   end
 
+  def count
+    0
+  end
 end
