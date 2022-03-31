@@ -46,7 +46,7 @@ RSpec.describe TrickOrTreater do
     expect(trick_or_treater.candy_count).to eq(1)
   end
 
-  xit 'can eat candies' do
+  it 'can eat candies' do
     trick_or_treater = TrickOrTreater.new(Costume.new("Baron"))
     trick_or_treater.bag << Candy.new("Gummy worms")
     trick_or_treater.bag << Candy.new("Liquorice")
