@@ -56,7 +56,7 @@ RSpec.describe Bag do
     bag << Candy.new('Lindt chocolate')
 
     expect(bag.contains?('Lindt chocolate')).to be true
-    expect(bag.contains?('Nerds')).to false
+    expect(bag.contains?('Nerds')).to be false
   end
 
   xit 'can get a particular type of candy' do
@@ -104,7 +104,3 @@ RSpec.describe Bag do
     expect(candy.type).to eq('Lifesavers')
   end
 end
-
-
-
-
