@@ -26,9 +26,9 @@ RSpec.describe Medusa do
     medusa = Medusa.new('Cassiopeia')
     victim = Person.new('Perseus')
 
-    assert(victim.stoned?).to be false
+    expect(victim.stoned?).to be false
     medusa.stare(victim)
-    assert(victim.stoned?).to be true
+    expect(victim.stoned?).to be true
   end
 
   it 'can only have three victims' do
