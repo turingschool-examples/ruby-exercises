@@ -1,4 +1,11 @@
-The `strings.rb` file has a number of exercises to help you better work with strings in ruby.
+The `strings_spec.rb` file has a number of exercises to help you better work with strings in ruby.
+
+1. Make sure you followed the instructions listed in `README.md` in the root ruby-exercises folder to install `rspec` via the bundler.
+2. Open `strings_spec.rb` in Atom.
+3. In terminal, use `rspec strings_spec.rb` to execute the file.
+  * **NOTE:** Test files (typically end with _spec.rb, `example_spec.rb`) execute with `rspec` instead of the `ruby` command you are used to.
+4. Read the error message, fill the blanks in each `strings_spec.rb` test, save the file in Atom, and execute until each test passes.
+  * **NOTE:** Remove the `x` in `xit` to enable each test as you go. Placing `skip` under the `do` line works similarly.
 
 Below is a list of methods that will help you complete the exercises - research each of them on the [Ruby Docs for Strings](https://ruby-doc.org/core-2.6.5/String.html) to learn more about what they do and how they are used.
 
