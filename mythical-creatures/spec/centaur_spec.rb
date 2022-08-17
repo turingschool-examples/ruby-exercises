@@ -1,4 +1,4 @@
-require './spec/spec-helper'
+require './spec/spec_helper'
 require './lib/centaur'
 
 RSpec.describe Centaur do

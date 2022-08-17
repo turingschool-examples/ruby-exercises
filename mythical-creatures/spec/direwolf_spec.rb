@@ -1,4 +1,4 @@
-require './spec/spec-helper'
+require './spec/spec_helper'
 require './lib/direwolf'
 
 RSpec.describe Direwolf do
