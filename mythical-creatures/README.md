@@ -6,12 +6,12 @@ Here's a guide that might be helpful in understanding the principles covered in 
 
 ## How to Run
 
-In order to complete these exercises create a class for each of the mythical creatures in the `test` directory.
+In order to complete these exercises create a class for each of the mythical creatures in the `spec` directory.
 
 Navigate to the `mythical-creatures` directory in your terminal, and then run your first test:
 
 ```
-ruby spec/unicorn_spec.rb
+rspec spec/unicorn_spec.rb
 ```
 
 If you get an error regarding a certain gem not being installed, you may need to run the following command from your terminal:
@@ -43,9 +43,6 @@ Continue to follow the errors that your test provides until the test passes. The
 
 ### Testing with RSpec
 
-For the majority of the class we use minitest because there's so little to
-learn about the API. But a huge part of the Ruby community favors the
-expressiveness of RSpec.
 
 * [How to use RSpec without Rails](https://gist.github.com/ap2322/d8081e38d448acccf2cdc25308be565f) for these exercises.
 * [You can check out one of our tutorials about RSpec](http://tutorials.jumpstartlab.com/topics/internal_testing/rspec_and_bdd.html)
@@ -62,7 +59,7 @@ a `case` is just a different form of `if`, so don't use it.
 
 ### Imagine Two Creatures
 
-Can you add two new creatures to the repository? How about a Hydra? Add minitest
+Can you add two new creatures to the repository? How about a Hydra? Add rspec
 tests exercising some of the following concepts:
 
 * Passing data into `initialize`
