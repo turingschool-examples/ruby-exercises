@@ -3,210 +3,215 @@ RSpec.describe 'Strings' do
     name = "alice"
     # In place of the line below, call a method on the name variable
     # defined above to acheive the expected output.
-    actual = name._____
-    expected = "Alice"
+    # actual = name._____
+    # expected = "Alice"
 
-    expect(actual).to eq(expected)
+    expect(name.capitalize).to eq("Alice")
   end
 
-  xit 'test 2' do
+  it 'test 2' do
     name = "aLiCe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = name._____
-    expected = "ALICE"
+    # actual = name._____
+    # expected = "ALICE"
 
-    expect(actual).to eq(expected)
+    expect(name.upcase).to eq("ALICE")
   end
 
-  xit 'test 3' do
+  it 'test 3' do
     name = "AlIcE"
     # In place of the line below, call a method to achieve the expected output.
-    actual = name._____
-    expected = "alice"
+    # actual = name._____
+    # expected = "alice"
 
-    expect(actual).to eq(expected)
+    expect(name.downcase).to eq("alice")
   end
 
-  xit 'test 4' do
+  it 'test 4' do
     rhyme = "peter piper picked a peck of picked peppers"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
-    expected = "sreppep dekcip fo kcep a dekcip repip retep"
+    # actual = rhyme._____
+    # expected = "sreppep dekcip fo kcep a dekcip repip retep"
 
-    expect(actual).to eq(expected)
+    expect(rhyme.reverse).to eq("sreppep dekcip fo kcep a dekcip repip retep")
   end
 
-  xit 'test 5' do
+  it 'test 5' do
     word = "ticking"
     # In place of the line below, call a method to achieve the expected output.
-    actual = word.______
-    expected = "kicking"
+    # actual = word.______
+    # expected = "kicking"
 
-    expect(actual).to eq(expected)
+    expect(word.replace("kicking")).to eq("kicking")
+    expect(word.gsub(/t/, "k")).to eq("kicking")
   end
 
-  xit 'test 6' do
+  it 'test 6' do
     word = "ticking"
     # In place of the line below, call a method to achieve the expected output.
-    actual = word.______
-    expected = "clocking"
+    # actual = word.______
+    # expected = "clocking"
 
-    expect(actual).to eq(expected)
+    expect(word.gsub(/ti/, "clo")).to eq("clocking")
+    expect(word.gsub(/i/, "*")).to eq("t*ck*ng")
   end
 
-  xit 'test 7' do
+  it 'test 7' do
     words = "five sleepy kittens"
     # In place of the line below, call a method to achieve the expected output.
-    actual = words.______
-    expected = "fiv* sl**py kitt*ns"
+    # actual = words.______
+    # expected = "fiv* sl**py kitt*ns"
 
-    expect(actual).to eq(expected)
+    expect(words.gsub(/e/, "*")).to eq("fiv* sl**py kitt*ns")
   end
 
-  xit 'test 8' do
+  it 'test 8' do
     greeting = "Hello!!"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
-    expected = "Hello!"
+    # actual = greeting._____
+    # expected = "Hello!"
 
-    expect(actual).to eq(expected)
+    expect(greeting.chop).to eq("Hello!")
   end
 
-  xit 'test 9' do
+  it 'test 9' do
     greeting = "Hello!!\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
-    expected = "Hello!!"
+    # actual = greeting._____
+    # expected = "Hello!!"
 
-    expect(actual).to eq(expected)
+    expect(greeting.chomp).to eq("Hello!!")
   end
 
-  xit 'test 10' do
+  it 'test 10' do
     greeting = "Hello!!\n\n"
     # In place of the line below, call a method to achieve the expected output.
-    actual = greeting._____
-    expected = "Hello!!\n"
+    # actual = greeting._____
+    # expected = "Hello!!\n"
 
-    expect(actual).to eq(expected)
+    expect(greeting.chomp).to eq("Hello!!\n")
+    expect(greeting.chomp.chomp).to eq("Hello!!")
   end
 
-  xit 'test 11' do
+  it 'test 11' do
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
-    expected = "ny, mny, miny, mo"
+    # actual = rhyme._____
+    # expected = "ny, mny, miny, mo"
 
-    expect(actual).to eq(expected)
+    expect(rhyme.delete("e")).to eq("ny, mny, miny, mo")
   end
 
-  xit 'test 12' do
+  it 'test 12' do
     rhyme = "eeny, meeny, miny, moe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
-    expected = "ny, mny, mny, m"
+    # actual = rhyme._____
+    # expected = "ny, mny, mny, m"
 
-    expect(actual).to eq(expected)
+    expect(rhyme.delete("eio")).to eq("ny, mny, mny, m")
+    expect(rhyme.delete("oei")).to eq("ny, mny, mny, m")
   end
 
-  xit 'test 13' do
+  it 'test 13' do
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
-    expected = 12
+    # actual = greeting._____
+    # expected = 12
 
-    expect(actual).to eq(expected)
+    expect(greeting.length).to eq(12)
   end
 
-  xit 'test 14' do
+  it 'test 14' do
     greeting = "Hello World!\n"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
-    expected = 13
+    # actual = greeting._____
+    # expected = 13
 
-    expect(actual).to eq(expected)
+    expect(greeting.length).to eq(13)
   end
 
-  xit 'test 15' do
+  it 'test 15' do
     greeting = "Hello       World!"
     # In place of the line below, call a method to get the number of characters in the string
-    actual = greeting._____
-    expected = 18
+    # actual = greeting._____
+    # expected = 18
 
-    expect(actual).to eq(expected)
+    expect(greeting.length).to eq(18)
   end
 
-  xit 'test 16' do
+  it 'test 16' do
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of 'o' in the string
-    actual = greeting._____
-    expected = 2
+    # actual = greeting._____
+    # expected = 2
 
-    expect(actual).to eq(expected)
+    expect(greeting.count("o")).to eq(2)
   end
 
-  xit 'test 17' do
+  it 'test 17' do
     greeting = "Hello World!"
     # In place of the line below, call a method to get the number of vowels in the string
-    actual = greeting._____
-    expected = 3
+    # actual = greeting._____
+    # expected = 3
 
-    expect(actual).to eq(expected)
+    expect(greeting.count("aeiou")).to eq(3)
   end
 
-  xit 'test 18' do
+  it 'test 18' do
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'llo'
-    actual = greeting._____
-    expected = true
+    # actual = greeting._____
+    # expected = true
 
-    expect(actual).to eq(expected)
+    expect(greeting.include?("llo")).to eq(true)
   end
 
-  xit 'test 19' do
+  it 'test 19' do
     greeting = "Hello World!"
     # In place of the line below, call a method to check if the string includes 'lol'
-    actual = greeting._____
-    expected = false
+    # actual = greeting._____
+    # expected = false
 
-    expect(actual).to eq(expected)
+    expect(greeting.include?("lol")).to eq(false)
   end
 
-  xit 'test 20' do
+  it 'test 20' do
     greeting = "Hello World, my name is"
     name = "Harry Potter"
     # In place of the line below, use string manipulation to combine the
     #greeting and name variables to acheive the expected outcome
-    actual = _________
-    expected = "Hello World, my name is Harry Potter"
+    # actual = _________
+    # expected = "Hello World, my name is Harry Potter"
 
-    expect(actual).to eq(expected)
+    expect("Hello World, my name is #{name}").to eq("Hello World, my name is Harry Potter")
   end
 
-  xit 'test 21' do
+  it 'test 21' do
     # See if you can use another method than the last test to achieve the same goal:
     greeting = "Hello World, my name is"
     name = "Harry Potter"
-    actual = ________
-    expected = "Hello World, my name is Harry Potter"
+    # actual = ________
+    # expected = "Hello World, my name is Harry Potter"
+    # .join(' ')
 
-    expect(actual).to eq(expected)
+    expect(greeting.concat(" ", name)).to eq("Hello World, my name is Harry Potter")
   end
 
-  xit 'test 22' do
+  it 'test 22' do
     greeting = "Hello World, my name is"
     name = "Harry Potter"
-    actual = ________
-    expected = "Hello World, my name is Harry Potter"
+    # actual = ________
+    # expected = "Hello World, my name is Harry Potter"
 
-    expect(actual).to eq(expected)
+    expect(greeting + " " + name).to eq("Hello World, my name is Harry Potter")
   end
 
-  xit 'test 23' do
+  it 'test 23' do
     phrase = "  \n\t to the moon\n\n\t    "
     # In place of the line below, call a method to acheive the expected outcome
-    actual = ________
-    expected = "to the moon"
+    # actual = ________
+    # expected = "to the moon"
 
-    expect(actual).to eq(expected)
+    expect(phrase.strip).to eq("to the moon")
   end
 end
