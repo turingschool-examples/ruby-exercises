@@ -27,7 +27,13 @@ RSpec.describe 'reduce pattern' do
   xit 'capitalizes key words in phrase' do
     keywords = ["fish", "blue"]
     phrase = 'one fish two fish red fish blue fish'
-    # Your code goes here
+
+    keywords.each do |keyword|
+      phrase = phrase.gsub(keyword, keyword.upcase) if keywords.include?(keyword)
+    end
+    # phrase.split.each do |keyword|
+    #   keyword.upcase if keywords.include?(keyword)
+    
     expect(phrase).to eq('one FISH two FISH red FISH BLUE FISH')
   end
 
