@@ -114,9 +114,10 @@ RSpec.describe 'max and min by pattern' do
     words_length_array = meals.map do |meal, dish|
       [dish.length, dish]
     end.sort
+    require 'pry'; binding.pry
 
     expect(words_length_array.first.last).to eq("cake")
-    #=> words_length_array: {[4, "cake"], [4, "nuts"], [5, "salad"], [5, "steak"], [6, "banana"]}
+    #=> words_length_array: [[4, "cake"], [4, "nuts"], [5, "salad"], [5, "steak"], [6, "banana"]]
     #=> words_length_array.first: [4, "cake"]
     #=> words_length_array.first.last: "cake"
 
