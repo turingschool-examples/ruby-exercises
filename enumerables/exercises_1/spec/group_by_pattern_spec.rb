@@ -3,28 +3,41 @@ RSpec.describe 'group by pattern' do
   it 'group words by length' do
     words = ["sue", "alice", "steve", "sally", "adam", "fort", "tops", "dog", "cat"]
     grouped = Hash.new {|hash, key| hash[key] = []}
+   
     words.each do |word|
       grouped[word.length] << word
     end
+
     expected = {3=>["sue", "dog", "cat"], 4=>["adam", "fort", "tops"], 5=>["alice", "steve", "sally"]}
     expect(grouped).to eq(expected)
   end
 
-  xit 'groups by odds and evens' do
+  it 'groups by odds and evens' do
     numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-    odd_and_even = Hash.new {|hash, key| hash[key] = []}
+    odd_and_even = Hash.new {|key, value| key[value] = []}
+    # everytime you assign a new key the value will be an array
+    
     numbers.each do |number|
-      # Your code goes here
+      if number.odd? 
+        odd_and_even[1] << number 
+      else
+        odd_and_even[0] << number
+      end
     end
+
     expected = {1=>[1, 1, 3, 5, 13, 21, 55], 0=>[2, 8, 34]}
     expect(odd_and_even).to eq(expected)
   end
 
-  xit 'groups by first letter' do
-    words = ["ant", "axis", "albatross", "bolt", "badge", "butter", "car", "cdr", "column"]
+  it 'groups by first letter' do
+    words = ["ant", "axis", "albatross", "bolt", "badge", "butter", "car", "cdr", "column", "1zebra"]
     words_by_first_letter = Hash.new {|hash, key| hash[key] = []}
-    # Your code goes here
-    expected = {"a"=>["ant", "axis", "albatross"], "b"=>["bolt", "badge", "butter"], "c"=>["car", "cdr", "column"]}
+
+    words.each do |word|
+      words_by_first_letter[word.chr] << word
+    end
+
+    expected = {"a"=>["ant", "axis", "albatross"], "b"=>["bolt", "badge", "butter"], "c"=>["car", "cdr", "column"], "1"=>["1zebra"]}
     expect(words_by_first_letter).to eq(expected)
   end
 
