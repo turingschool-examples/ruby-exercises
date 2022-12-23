@@ -1,6 +1,6 @@
 class Medusa
 	attr_reader :name,
-							:statues
+				:statues
 						
 	def initialize(name)
 		@name = name
