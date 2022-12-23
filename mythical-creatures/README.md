@@ -36,6 +36,7 @@ Continue to follow the errors that your test provides until the test passes. The
 * `werewolf_spec.rb`
 * `centaur_spec.rb`
 * `ogre_spec.rb`
+* `lovisa_spec.rb`
 * `direwolf_spec.rb`
 * `the_journey_spec.rb` (see below)
 

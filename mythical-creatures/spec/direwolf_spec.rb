@@ -66,20 +66,23 @@ RSpec.describe Direwolf do
   it 'can only protect two Starks at a time' do
     summer_wolf = Direwolf.new('Summer', "Winterfell")
     lady_wolf = Direwolf.new('Lady', "Winterfell")
+
     sansa_stark = Stark.new('Sansa')
-    john_stark = Stark.new('Jon')
+    jon_stark = Stark.new('Jon')
     rob_stark = Stark.new('Rob')
     bran_stark = Stark.new('Bran')
     arya_stark = Stark.new('Arya')
 
     summer_wolf.protects(sansa_stark)
-    summer_wolf.protects(john_stark)
+    summer_wolf.protects(jon_stark)
+
     lady_wolf.protects(rob_stark)
     lady_wolf.protects(bran_stark)
     lady_wolf.protects(arya_stark)
 
     expect(summer_wolf.starks_to_protect).to include(sansa_stark)
     expect(summer_wolf.starks_to_protect).to include(jon_stark)
+
     expect(lady_wolf.starks_to_protect).to include(rob_stark)
     expect(lady_wolf.starks_to_protect).to include(bran_stark)
     expect(lady_wolf.starks_to_protect).to_not include(arya_stark)
@@ -92,7 +95,7 @@ RSpec.describe Direwolf do
     expect(stark.house_words).to eq('Winter is Coming')
   end
 
-  it 'protects the Starks' do
+  xit 'protects the Starks' do
     wolf = Direwolf.new('Nymeria', "Winterfell")
     arya_stark = Stark.new('Arya')
     sansa_stark = Stark.new('Sansa')
@@ -103,13 +106,13 @@ RSpec.describe Direwolf do
     expect(sansa_stark.safe?).to be false
   end
 
-  it 'hunts white walkers' do
+  xit 'hunts white walkers' do
     wolf = Direwolf.new('Nymeria', 'Winterfell')
 
     expect(wolf.hunts_white_walkers?).to be true
   end
 
-  it 'will not hunt white walkers when protecting Starks' do
+  xit 'will not hunt white walkers when protecting Starks' do
     wolf = Direwolf.new('Nymeria', "Winterfell")
     arya_stark = Stark.new('Arya')
 
@@ -118,7 +121,7 @@ RSpec.describe Direwolf do
     expect(wolf.hunts_white_walkers?).to be false
   end
 
-  it 'can leave and stop protecting Starks' do
+  xit 'can leave and stop protecting Starks' do
     summer_wolf = Direwolf.new('Summer', "Winterfell")
     lady_wolf = Direwolf.new('Lady', "Winterfell")
     sansa_stark = Stark.new('Sansa')
@@ -133,7 +136,7 @@ RSpec.describe Direwolf do
     expect(arya_stark.safe?).to be false
   end
 
-  it 'returns the Stark object when it leaves' do
+  xit 'returns the Stark object when it leaves' do
     summer_wolf = Direwolf.new('Summer', "Winterfell")
     lady_wolf = Direwolf.new('Lady', "Winterfell")
     sansa_stark = Stark.new('Sansa')
