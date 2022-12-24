@@ -2,9 +2,8 @@ class Phoenix
 	attr_reader :name,
 							:color,
 							:mood,
-							:emotional_awareness
-
-	attr_accessor :feels_emotion(emotion)
+							:emotional_awareness,
+							:pharaoh
 
 	def initialize(name, color = "golden", mood = "stoic")
 		@name = name
@@ -12,12 +11,19 @@ class Phoenix
 		@mood = mood
 		@emotional_awareness = {}
 		@releases_tear = false
+		@pharaoh = nil
+	end
+
+	def follows_pharaoh(pharaoh)
+		@pharaoh = pharaoh
 	end
 
 	def burst_into_flame
 			@color = "golden"
 			@mood = "stoic"
 			@emotional_awareness = {}
+			@releases_tear = false
+			@pharaoh = nil
 	end
 
 	def feels_emotion(emotion)
@@ -28,7 +34,7 @@ class Phoenix
 				@color = "scarlet"
 				@mood = "fiery"
 			elsif @emotional_awareness[emotion] == 3
-				@releases_tear = true
+				releases_tear
 				@color = "crimson"
 				@mood = "ablaze"
 			elsif @emotional_awareness[emotion] == 4
@@ -49,18 +55,29 @@ class Phoenix
 	def releases_tear?
 		@releases_tear
 	end
+
+	def releases_tear
+		@releases_tear = true
+		if @pharaoh != nil
+		@pharaoh.health = true 
+		end
+	end 
 end
 
 
 class Pharaoh
 	attr_reader :name,
 				:reputation,
-				:dynastic_period
+				:dynastic_period,
+				:phoenix
 
-	def initialize(name, reputation, dynastic_period)
+	attr_accessor :health
+
+	def initialize(name, reputation, dynastic_period, phoenix)
 		@name = name
 		@reputation = reputation
 		@dynastic_period = dynastic_period
+		@phoenix = phoenix
 		@health = true
 		@alive = true
 	end
@@ -70,13 +87,14 @@ class Pharaoh
 	end
 
 	def age(number)
-		if number >= 30
+		if number >= 18
 			@health = false
 		end
+		@health
 	end
 
 	def takes_action(emotion)
-		phoenix.feels_emotion(emotion)
+		@phoenix.feels_emotion(emotion)
 	end
 
 	def alive?
@@ -84,8 +102,7 @@ class Pharaoh
 	end
 
 	def dies
-		@alive == false
-		5.times { phoenix.feels_emotion(:sorrow) }
+		5.times { @phoenix.feels_emotion(:sorrow) }
+		@alive = false
 	end
-
 end
