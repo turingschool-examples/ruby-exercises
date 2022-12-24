@@ -14,11 +14,7 @@ class Phoenix
 		@pharaoh = nil
 	end
 
-	def follows_pharaoh(pharaoh)
-		@pharaoh = pharaoh
-	end
-
-	def burst_into_flame
+	def bursts_into_flames
 			@color = "golden"
 			@mood = "stoic"
 			@emotional_awareness = {}
@@ -42,7 +38,7 @@ class Phoenix
 				@color = "deep violet"
 				@mood = "incandescent"
 			elsif @emotional_awareness[emotion] >= 5
-				burst_into_flame
+				bursts_into_flames
 			end
 
 		else
@@ -55,13 +51,17 @@ class Phoenix
 	def releases_tear?
 		@releases_tear
 	end
-
+	
 	def releases_tear
 		@releases_tear = true
 		if @pharaoh != nil
 		@pharaoh.health = true 
 		end
 	end 
+
+	def follows_pharaoh(pharaoh)
+		@pharaoh = pharaoh
+	end
 end
 
 
