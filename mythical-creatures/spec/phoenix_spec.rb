@@ -43,27 +43,27 @@ RSpec.describe Phoenix do
 			phoenix.feels_emotion(:exuberance)
 			phoenix.feels_emotion(:exuberance)
 
-			phoenix.feels_emotion(:wisdom)
-			phoenix.feels_emotion(:wisdom)
+			phoenix.feels_emotion(:gratitude)
+			phoenix.feels_emotion(:gratitude)
 
 			phoenix.feels_emotion(:autonomy)
 
-			expect(phoenix.emotional_awareness).to eq({:exuberance => 3, :wisdom => 2, :autonomy => 1})
+			expect(phoenix.emotional_awareness).to eq({:exuberance => 3, :gratitude => 2, :autonomy => 1})
 			expect(phoenix.emotional_awareness.include?(:sorrow)).to eq(false)
 		end
 
 		it "changes color & mood when feeling an emotion 2, 3, and 4 times" do
 			phoenix = Phoenix.new("Bennu")
 
-			2.times { phoenix.feels_emotion(:gratitude) }
+			2.times { phoenix.feels_emotion(:wisdom) }
 			expect(phoenix.color).to eq("scarlet")
 			expect(phoenix.mood).to eq("fiery")
 
-			phoenix.feels_emotion(:gratitude)
+			phoenix.feels_emotion(:wisdom)
 			expect(phoenix.color).to eq("crimson")
 			expect(phoenix.mood).to eq("ablaze")
 
-			phoenix.feels_emotion(:gratitude)
+			phoenix.feels_emotion(:wisdom)
 			expect(phoenix.color).to eq("deep violet")
 			expect(phoenix.mood).to eq("incandescent")
 		end
