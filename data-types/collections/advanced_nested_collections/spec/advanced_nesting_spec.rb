@@ -157,6 +157,7 @@ RSpec.describe 'Advanced Nested Collections' do
         full_menu[dish[:name]] = {:name => dish[:name], :ingredients => dish[:ingredients], :price => dish[:price]}
       end
     end
+    # Huy used <.map> twice to make the code "cleaner"
     
 
     expected = {

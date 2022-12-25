@@ -55,15 +55,15 @@ RSpec.describe Phoenix do
 		it "changes color & mood when feeling an emotion 2, 3, and 4 times" do
 			phoenix = Phoenix.new("Bennu")
 
-			2.times { phoenix.feels_emotion(:curiosity) }
+			2.times { phoenix.feels_emotion(:gratitude) }
 			expect(phoenix.color).to eq("scarlet")
 			expect(phoenix.mood).to eq("fiery")
 
-			phoenix.feels_emotion(:curiosity)
+			phoenix.feels_emotion(:gratitude)
 			expect(phoenix.color).to eq("crimson")
 			expect(phoenix.mood).to eq("ablaze")
 
-			phoenix.feels_emotion(:curiosity)
+			phoenix.feels_emotion(:gratitude)
 			expect(phoenix.color).to eq("deep violet")
 			expect(phoenix.mood).to eq("incandescent")
 		end
@@ -84,7 +84,7 @@ RSpec.describe Phoenix do
 		it "bursts into flames and is reborn after feeling the same emotion 5 times" do
 			phoenix = Phoenix.new("Bennu")
 
-			5.times { phoenix.feels_emotion(:gratitude) }
+			5.times { phoenix.feels_emotion(:revelation) }
 
 			expect(phoenix.color).to eq("golden")
 			expect(phoenix.mood).to eq("stoic")
