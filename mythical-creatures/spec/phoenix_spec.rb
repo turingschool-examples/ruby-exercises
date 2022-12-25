@@ -143,13 +143,13 @@ RSpec.describe Phoenix do
 			narmer = Pharaoh.new("Narmer", "The Unifer", "3100 BCE", phoenix)
 			phoenix.follows_pharaoh(narmer)
 
-			narmer.age(10)
+			narmer.age(17)
 			expect(narmer.healthy?).to eq(true)
 			
 			narmer.age(18)
 			expect(narmer.healthy?).to eq(false)
 
-			narmer.age(30)
+			narmer.age(19)
 			expect(narmer.healthy?).to eq(false)
 		end
 
