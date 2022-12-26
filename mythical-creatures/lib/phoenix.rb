@@ -20,19 +20,26 @@ class Phoenix
 			@emotional_awareness = {}
 			@releases_tear = false
 			@pharaoh = nil
+			# not have to se to nil
+			# could call follows pharaoh again
 	end
 
 	def feels_emotion(emotion)
 		if @emotional_awareness.has_key?(emotion)
 			@emotional_awareness[emotion] += 1
 		
+			#pharaoh dies!
 			if @emotional_awareness[emotion] == 2
 				@color = "scarlet"
 				@mood = "fiery"
 			elsif @emotional_awareness[emotion] == 3
-				releases_tear
 				@color = "crimson"
 				@mood = "ablaze"
+				@releases_tear = true
+				@pharaoh.healthy = true if @pharaoh != nil
+					# if @pharaoh != nil
+					# 	pharaoh.healthy = true 
+					# end
 			elsif @emotional_awareness[emotion] == 4
 				@releases_tear = false
 				@color = "deep violet"
@@ -51,13 +58,6 @@ class Phoenix
 	def releases_tear?
 		@releases_tear
 	end
-	
-	def releases_tear
-		@releases_tear = true
-		if @pharaoh != nil
-		@pharaoh.health = true 
-		end
-	end 
 
 	def follows_pharaoh(pharaoh)
 		@pharaoh = pharaoh
@@ -71,26 +71,27 @@ class Pharaoh
 				:dynastic_period,
 				:phoenix
 
-	attr_accessor :health
+	attr_accessor :age, :healthy
 
 	def initialize(name, reputation, dynastic_period, phoenix)
 		@name = name
 		@reputation = reputation
 		@dynastic_period = dynastic_period
 		@phoenix = phoenix
-		@health = true
-		@alive = true
+		@healthy = true
+		@dead = false
+		@age = 0
 	end
 
 	def healthy?
-		@health
+		@healthy
 	end
 
-	def age(number)
-		if number >= 18
-			@health = false
+	def ages
+		@age += 1
+		if @age >= 18
+			@healthy = false
 		end
-		@health
 	end
 
 	def takes_action(emotion)
@@ -98,11 +99,12 @@ class Pharaoh
 	end
 
 	def alive?
-		@alive
+		!@dead
 	end
 
 	def dies
+		#DOES this make sense here? NO = it should be in the Phoneix class
 		5.times { @phoenix.feels_emotion(:sorrow) }
-		@alive = false
+		@dead = true
 	end
 end

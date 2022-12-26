@@ -17,7 +17,8 @@ RSpec.describe Phoenix do
 			expect(phoenix.mood).to eq("stoic")
 		end
 
-		it "changes color & mood when feeling an emotion" do
+		#this test might NOT be needed?? Just skip to next one
+		it "changes color & mood when feeling any single emotion" do
 			phoenix = Phoenix.new("Bennu")
 
 			phoenix.feels_emotion(:cognizance)
@@ -68,7 +69,7 @@ RSpec.describe Phoenix do
 			expect(phoenix.mood).to eq("incandescent")
 		end
 
-		it "only releases a tear after feeling the same emotion 3 times" do
+		it "releases a tear only after feeling the same emotion on the 3rd time" do
 			phoenix = Phoenix.new("Bennu")
 			
 			2.times { phoenix.feels_emotion(:confusion) }
@@ -97,59 +98,40 @@ RSpec.describe Phoenix do
 	describe "Pharaohs can Exist" do
 		it "pharaohs have names, reputations, a dynastic period, and the phoenix" do
 			phoenix = Phoenix.new("Bennu")
-			
-			narmer = Pharaoh.new("Narmer", "The Unifer", "3100 BCE", phoenix)
-			khufu = Pharaoh.new("Khufu", "The Builder", "2600 BCE", phoenix)
-			tutankhamun = Pharaoh.new("Tutankhamun", "The Child", "1500 BCE", phoenix)
+			narmer = Pharaoh.new("Narmer", "The Unifier", "3100 BCE", phoenix)
 
 			expect(narmer.name).to eq("Narmer")
-			expect(narmer.reputation).to eq("The Unifer")
+			expect(narmer.reputation).to eq("The Unifier")
 			expect(narmer.dynastic_period).to eq("3100 BCE")
-
-			expect(khufu.name).to eq("Khufu")
-			expect(khufu.reputation).to eq("The Builder")
-			expect(khufu.dynastic_period).to eq("2600 BCE")
-
-			expect(tutankhamun.name).to eq("Tutankhamun")
-			expect(tutankhamun.reputation).to eq("The Child")
-			expect(tutankhamun.dynastic_period).to eq("1500 BCE")
 		end
 
 		it "pharaohs can check if they are healthy" do
 			phoenix = Phoenix.new("Bennu")
+			narmer = Pharaoh.new("Narmer", "The Unifier", "3100 BCE", phoenix)
 			
-			narmer = Pharaoh.new("Narmer", "The Unifer", "3100 BCE", phoenix)
-			khufu = Pharaoh.new("Khufu", "The Builder", "2600 BCE", phoenix)
-			tutankhamun = Pharaoh.new("Tutankhamun", "The Child", "1500 BCE", phoenix)
-
 			expect(narmer.healthy?).to eq(true)
-			expect(khufu.healthy?).to eq(true)
-			expect(tutankhamun.healthy?).to eq(true)
 		end
 	end
 
 	describe "The Phoenix throughout Ancient Egypt" do
 		it "the phoenix chooses to follow the pharaoh" do
 			phoenix = Phoenix.new("Bennu")
-			narmer = Pharaoh.new("Narmer", "The Unifer", "3100 BCE", phoenix)
+			narmer = Pharaoh.new("Narmer", "The Unifier", "3100 BCE", phoenix)
 			
 			phoenix.follows_pharaoh(narmer)
 
 			expect(phoenix.pharaoh).to eq(narmer)
 		end
 
-		it "the pharaoh becomes unhealth at the age of 18" do
+		it "the pharaoh is unhealthy at the age of 18 or older" do
 			phoenix = Phoenix.new("Bennu")
-			narmer = Pharaoh.new("Narmer", "The Unifer", "3100 BCE", phoenix)
+			narmer = Pharaoh.new("Narmer", "The Unifier", "3100 BCE", phoenix)
 			phoenix.follows_pharaoh(narmer)
 
-			narmer.age(17)
+			narmer.age = 17
 			expect(narmer.healthy?).to eq(true)
 			
-			narmer.age(18)
-			expect(narmer.healthy?).to eq(false)
-
-			narmer.age(19)
+			narmer.ages
 			expect(narmer.healthy?).to eq(false)
 		end
 
@@ -162,6 +144,7 @@ RSpec.describe Phoenix do
 			expect(phoenix.emotional_awareness[:perseverance]).to eq(1)
 		end
 
+		# This test is NOT necessary!
 		it "the phoenix releases a tear after the pharaoh takes the same 3 actions" do
 			phoenix = Phoenix.new("Bennu")
 			khufu = Pharaoh.new("Khufu", "The Builder", "3150 BCE", phoenix)
@@ -175,10 +158,8 @@ RSpec.describe Phoenix do
 			phoenix = Phoenix.new("Bennu")
 			tutankhamun = Pharaoh.new("Tutankhamun", "The Child", "1500 BCE", phoenix)
 			phoenix.follows_pharaoh(tutankhamun)
-
-			expect(tutankhamun.healthy?).to eq(true)
 			
-			tutankhamun.age(18)
+			18.times { tutankhamun.ages }
 			expect(tutankhamun.healthy?).to eq(false)
 
 			3.times { tutankhamun.takes_action(:compassion) }
@@ -192,8 +173,9 @@ RSpec.describe Phoenix do
 			tutankhamun = Pharaoh.new("Tutankhamun", "The Child", "1500 BCE", phoenix)
 			phoenix.follows_pharaoh(tutankhamun)
 
-			tutankhamun.age(19)
+			tutankhamun.age = 19
 			expect(tutankhamun.alive?).to eq(true)
+			# This should be it's own method, below a new method
 
 			4.times { tutankhamun.takes_action(:trepidation) }
 			expect(phoenix.emotional_awareness[:trepidation]).to eq(4)
