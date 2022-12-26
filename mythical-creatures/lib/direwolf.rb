@@ -29,7 +29,6 @@ class Direwolf
 		def leaves(a_stark)
 			a_stark.safe = false
 			@starks_to_protect.delete(a_stark)
-			a_stark
 		end
 
 end

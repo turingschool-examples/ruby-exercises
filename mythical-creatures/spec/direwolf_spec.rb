@@ -147,7 +147,7 @@ RSpec.describe Direwolf do
     rickon_stark = Stark.new('Rickon')
 
     summer_wolf.protects(arya_stark)
-    lady_wolf.protects(sansa_stark)
+    lady_wolf.protects(rickon_stark)
     
     summer_wolf.leaves(arya_stark)
 
