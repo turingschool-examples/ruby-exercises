@@ -2,38 +2,40 @@ RSpec.describe 'reduce pattern' do
   it 'sums a list of numbers' do
     numbers = [32, 1, 21, 5, 81, 333]
     sum = 0
+    
     numbers.each do |number|
       sum = sum + number
     end
+
     expect(sum).to eq(473)
   end
 
-  xit 'subtracts a list of numbers' do
+  it 'subtracts a list of numbers' do
     numbers = [28, 12, 38, 1, 91]
     difference = 0
     numbers.each do |number|
-      # Your code goes here
+      difference = difference - number
     end
     expect(difference).to eq(-170)
   end
 
-  xit 'multiplies a list of numbers' do
+  it 'multiplies a list of numbers' do
     numbers = [2, 3, 5, 7]
     product = 1
-    # Your code goes here
+    numbers.each do |number|
+      product = product * number
+    end
     expect(product).to eq(210)
   end
 
-  xit 'capitalizes key words in phrase' do
+  it 'capitalizes key words in phrase' do
     keywords = ["fish", "blue"]
     phrase = 'one fish two fish red fish blue fish'
 
     keywords.each do |keyword|
-      phrase = phrase.gsub(keyword, keyword.upcase) if keywords.include?(keyword)
+      phrase = phrase.gsub(keyword, keyword.upcase) 
     end
-    # phrase.split.each do |keyword|
-    #   keyword.upcase if keywords.include?(keyword)
-    
+
     expect(phrase).to eq('one FISH two FISH red FISH BLUE FISH')
   end
 
