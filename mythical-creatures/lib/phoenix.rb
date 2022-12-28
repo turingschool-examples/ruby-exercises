@@ -17,11 +17,9 @@ class Phoenix
 	def bursts_into_flames
 			@color = "golden"
 			@mood = "stoic"
+			@pharaoh = nil
 			@emotional_awareness = {}
 			@releases_tear = false
-			@pharaoh = nil
-			# not have to se to nil
-			# could call follows pharaoh again
 	end
 
 	def feels_emotion(emotion)
@@ -98,13 +96,14 @@ class Pharaoh
 		@phoenix.feels_emotion(emotion)
 	end
 
-	def alive?
-		!@dead
+	def dead?
+		@dead
 	end
 
 	def dies
 		#DOES this make sense here? NO = it should be in the Phoneix class
 		5.times { @phoenix.feels_emotion(:sorrow) }
 		@dead = true
+		@healthy = false
 	end
 end
