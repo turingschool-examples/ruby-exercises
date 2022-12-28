@@ -41,8 +41,8 @@ RSpec.describe 'reduce' do
   it 'divides 560 by a bunch of numbers' do
     numbers = [2, 2, 2, 5, 7]
     # initial value is 560
-    result = numbers.reduce(560) do |big_numero, number|
-      big_numero / number
+    result = numbers.reduce(560) do |quotient, number|
+      quotient / number
     end
     expect(result).to eq(2)
   end

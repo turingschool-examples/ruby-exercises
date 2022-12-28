@@ -39,24 +39,32 @@ RSpec.describe 'reduce pattern' do
     expect(phrase).to eq('one FISH two FISH red FISH BLUE FISH')
   end
 
-  xit 'divide 560 by a bunch of numbers' do
+  it 'divide 560 by a bunch of numbers' do
     numbers = [2, 2, 2, 5, 7]
     quotient = 560
-    # Your code goes here
+    
+    numbers.each do |num|
+      quotient = quotient / num
+    end
+
     expect(quotient).to eq(2)
   end
 
-  xit 'subtracts smallest numbers from 100' do
+  it 'subtracts smallest numbers from 100' do
     elements = [[8, 5, 3], [1, 9, 11], [4, 7, 2], [19, 34, 6]]
     difference = 100
-    # Your code goes here
+    elements.each do |element|
+      difference = difference - element.min
+    end
     expect(difference).to eq(88)
   end
 
-  xit 'adds all second values together' do
+  it 'adds all second values together' do
     elements = [["a", 1], ["b", 9], ["c", 21]]
     sum = 0
-    # Your code goes here
+    elements.each do |element|
+      sum = sum + element[1]
+    end
     expect(sum).to eq(31)
   end
 
