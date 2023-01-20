@@ -129,7 +129,7 @@ RSpec.describe Direwolf do
     summer_wolf.leaves(arya_stark)
 
     expect(summer_wolf.starks_to_protect).to be_empty
-    expect(lady_wolf.starks_to_protect.first.name).to be('Sansa')
+    expect(lady_wolf.starks_to_protect.first.name).to eq('Sansa')
     expect(arya_stark.safe?).to be false
   end
 
