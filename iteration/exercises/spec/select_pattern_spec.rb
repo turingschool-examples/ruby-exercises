@@ -63,7 +63,7 @@ RSpec.describe 'select pattern' do
       sixth: "indigo",
       seventh: "violet"
     }
-    expected(greater_than_four).to eq(expected)
+    expect(greater_than_four).to eq(expected)
   end
 
   xit 'test 5' do
@@ -95,7 +95,7 @@ RSpec.describe 'select pattern' do
     meals = ["chips and salsa", "chicken alfredo", "banana pudding"]
     #Your Code Here
 
-    expected(two_words).to eq(["chicken alfredo", "banana pudding"])
+    expect(two_words).to eq(["chicken alfredo", "banana pudding"])
   end
 
   xit 'test 8' do
