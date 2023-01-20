@@ -4,7 +4,7 @@ require_relative 'cupcakes'
 
 RSpec.describe Cupcakes do
   it 'has no sweetest when there are no cupcakes' do
-    cupcakes = Cupcake.new
+    cupcakes = Cupcakes.new
     expect(cupcakes.sweetest).to be_nil
   end
 
