@@ -58,7 +58,7 @@ RSpec.describe Student do
     100.times { student.slack_off }
     student.study
 
-    expect(student.grade).to eq('B')
+    expect(student.grade).to eq('D')
 
   end
 end
