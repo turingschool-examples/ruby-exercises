@@ -11,7 +11,7 @@ RSpec.describe Groundhog do
   it 'has a name' do
     gabby = Groundhog.new("Gabby")
 
-    expect(gabby.name).to be("Gabby")
+    expect(gabby.name).to eq("Gabby")
   end
 
   it 'can change name' do
