@@ -14,7 +14,7 @@ RSpec.describe Werewolf do
 
   it 'is by default human' do
     werewolf = Werewolf.new('David', 'London')
-    expect(werewolf.human?).to be false
+    expect(werewolf.human?).to be true
   end
 
   it 'when starting as a human, changing makes it turn into a werewolf' do

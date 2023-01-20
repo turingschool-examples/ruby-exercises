@@ -1,4 +1,4 @@
-recuire 'rspec'
+require 'rspec'
 require_relative '../lib/ferret'
 
 RSpec.describe Ferret do

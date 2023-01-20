@@ -176,6 +176,6 @@ RSpec.describe 'inject pattern test' do
                 "- blueberry, and vanilla scones (non gluten free)\n"\
                 "- blueberry, strawberry, and cherry parfaits (gluten free)\n"
 
-    expected(printable_menu).to eq(expected)
+    expect(printable_menu).to eq(expected)
   end
 end

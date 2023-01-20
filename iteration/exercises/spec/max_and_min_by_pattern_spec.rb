@@ -7,7 +7,7 @@ RSpec.describe 'max and min by pattern' do
         greatest = number
       end
     end
-    expect(greatest).to eq(100000)
+    expect(greatest).to eq(1000000)
   end
 
   it 'test 2' do

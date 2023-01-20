@@ -3,7 +3,7 @@ require "./lib/mad_lib"
 RSpec.describe MadLib do
 
   it 'can create a new mad lib' do
-    madlib = Madlib.new
+    madlib = MadLib.new
 
     madlib.noun("dog")
     madlib.verb("walk")
@@ -16,7 +16,7 @@ RSpec.describe MadLib do
   end
 
   it 'can create another mad lib' do
-    madlib = Madlib.new
+    madlib = MadLib.new
 
     madlib.noun("capybara")
     madlib.verb("pet")
