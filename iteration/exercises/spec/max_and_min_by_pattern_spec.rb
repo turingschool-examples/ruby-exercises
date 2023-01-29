@@ -192,20 +192,23 @@ RSpec.describe 'max and min by pattern' do
       miguel: 50
     }
 
-    # oldest = {}
+    oldest = {}
     # # We must have this variable set to something so it can be redefined inside the code block
-    # oldest_age = ages[ages.keys.first]
+    oldest_age = ages[ages.keys.first]
+    # oldest_age = ages.values.first #=> only this still passes the test
 
-    # ages.each do |name, age|
-    #   if age > oldest_age
-    #     oldest_age = age
-    #     oldest = {name: name.to_s, age: age}
-    #     # Here we redefine that previously made empty hash
-    #   end
-    # end
+# ages[ages.keys.first] =true= ages.values.first 
 
-    # expected = {name: "miguel", age: 50}
-    # expect(oldest).to eq(expected)
+    ages.each do |name, age|
+      if age > oldest_age
+        oldest_age = age
+        oldest = {name: name.to_s, age: age}
+        # Here we redefine that previously made empty hash
+      end
+    end
+
+    expected = {name: "miguel", age: 50}
+    expect(oldest).to eq(expected)
 
     ## ATTEMPT TO USE .MAP ##
 
@@ -216,6 +219,7 @@ RSpec.describe 'max and min by pattern' do
         {name: name.to_s, age: age}
       end
     end.compact
+    expected = {name: "miguel", age: 50}
     # we use .compact cuz .map returns nil for elements that's do NOT pass the if conditional!
     expect(oldest.last).to eq(expected)
     #if you don't put .last you will get an array returned cuz .map returns an array,

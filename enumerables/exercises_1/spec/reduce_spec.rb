@@ -29,6 +29,7 @@ RSpec.describe 'reduce' do
     expect(result).to eq(210)
   end
 
+  
   it 'capitalize key words in phrase' do
     keywords = ["fish", "blue"]
     # initial value is 'one fish two fish red fish blue fish'
@@ -37,6 +38,7 @@ RSpec.describe 'reduce' do
     end 
     expect(result).to eq('one FISH two FISH red FISH BLUE FISH')
   end
+
 
   it 'divides 560 by a bunch of numbers' do
     numbers = [2, 2, 2, 5, 7]

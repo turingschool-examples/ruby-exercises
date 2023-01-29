@@ -133,7 +133,7 @@ RSpec.describe Phoenix do
 
 			khufu.takes_action(:perseverance)
 			
-			expect(phoenix.emotional_awareness[:perseverance]).to eq(1)
+			expect(phoenix.emotional_awareness).to eq({:perseverance => 1})
 		end
 
 		it "the pharaoh is unhealthy at the age of 18 or older" do
@@ -171,9 +171,11 @@ RSpec.describe Phoenix do
 			phoenix.follows_pharaoh(tutankhamun)
 
 			4.times { tutankhamun.takes_action(:trepidation) }
-			expect(phoenix.emotional_awareness[:trepidation]).to eq(4)
+
 			expect(phoenix.color).to eq("deep violet")
 			expect(phoenix.mood).to eq("incandescent")
+			expect(phoenix.pharaoh).to eq(tutankhamun)
+			expect(phoenix.emotional_awareness).to eq({:trepidation => 4})
 
 			tutankhamun.dies 			
 			expect(tutankhamun.dead?).to eq(true)
