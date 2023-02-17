@@ -42,6 +42,4 @@ class Wizard
 		# "MAGIC MISSILE!"
 		# this last line is the return so it MUST go at the end
 	end
-
-
 end
