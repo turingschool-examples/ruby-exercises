@@ -18,4 +18,8 @@ class Unicorn
     def silver?
         @color == 'silver'
     end
+
+    def say(message)
+        "**;* #{message} **;*"
+    end
 end
