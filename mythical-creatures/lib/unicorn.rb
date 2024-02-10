@@ -1,5 +1,3 @@
-require 'pry'
-
 class Unicorn
 
     def initialize(name, color='silver')
